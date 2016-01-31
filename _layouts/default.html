@@ -53,6 +53,31 @@
                         console.log("searching", value);
                     }
                 </script>
+                <script>
+                    (function() {
+                        if(!location.search) {
+                            return;
+                        }
+
+                        var results = /[\?&]search=([^&#]*)/.exec(location.search);
+                        if(!results) {
+                            return;
+                        }
+
+                        var searchString = results[1];
+                        if(!searchString) {
+                            return;
+                        }
+
+                        searchString = decodeURIComponent(searchString);
+                        if(searchString == "") {
+                            return;
+                        }
+
+                        searchBar.focus();
+                        searchBar.value = searchString;
+                    })();
+                </script>
             </nav>
         </header>
         <div class="container">
