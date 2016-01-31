@@ -1,0 +1,12 @@
+collections:
+  m:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: m
+    output: true
+    values:
+      layout: maerke
+      permalink: /m/:path/index.html

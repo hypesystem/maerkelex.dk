@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% for m in site.m %}
+    <a class="maerke-box" href="{{ site.url }}{{ m.url }}">
+        <img src="{{ site.url }}/img/{{ m.image }}">
+        {{ m.name }}
+    </a>
+{% endfor %}
