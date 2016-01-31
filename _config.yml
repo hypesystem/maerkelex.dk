@@ -1,6 +1,7 @@
 collections:
   m:
     output: true
+    permalink: /m/:path/index.html
 
 defaults:
   - scope:
@@ -9,6 +10,5 @@ defaults:
     output: true
     values:
       layout: maerke
-      permalink: /m/:path/index.html
 
 baseurl: /spejdermaerker.dk
