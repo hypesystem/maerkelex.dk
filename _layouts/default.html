@@ -23,6 +23,34 @@
                         searchBar.focus();
                         return true;
                     });
+
+                    var search = debounced(rawSearch);
+
+                    searchBar.addEventListener("keyup", function(e) {
+                        search();
+                    });
+
+                    function debounced(fun, timeout) {
+                        if(!timeout) {
+                            timeout = 250;
+                        }
+                        var i = 0;
+                        return function() {
+                            var myI = ++i;
+                            var args = Array.prototype.slice.call(arguments);
+                            setTimeout(function() {
+                                if(i > myI) {
+                                    return;
+                                }
+                                fun.apply(fun, args);
+                            }, timeout);
+                        };
+                    }
+
+                    function rawSearch() {
+                        var value = searchBar.value;
+                        console.log("searching", value);
+                    }
                 </script>
             </nav>
         </header>
