@@ -16,6 +16,14 @@
                     <input type="text" placeholder="Søg ...">
                     <button>🔎</button>
                 </div>
+                <script>
+                    var searchBar = document.querySelector(".searchbar input");
+                    document.querySelector(".searchbar button").addEventListener("click", function(e) {
+                        e.preventDefault();
+                        searchBar.focus();
+                        return true;
+                    });
+                </script>
             </nav>
         </header>
         <div class="container">
