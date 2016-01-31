@@ -1,5 +1,7 @@
 ---
 ---
+$orange: rgb(251, 171, 68);
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -45,7 +47,7 @@ header nav img {
     opacity: 1;
 }
 .searchbar button {
-    color: rgb(251, 171, 68);
+    color: $orange;
     background: transparent;
     border: none;
     font-weight: bold;
@@ -70,3 +72,5 @@ header nav img {
 .maerke-box img {
     width: 100%;
 }
+
+@import "tag";
