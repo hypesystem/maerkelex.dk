@@ -2,7 +2,7 @@
 layout: default
 ---
 <h1>{{ page.name }}</h1>
-<img src="{{ site.url }}/img/{{ page.image }}">
+<img src="{{ site.baseurl }}/img/{{ page.image }}">
 <p>
     {{ page.description }}
 </p>
@@ -11,6 +11,6 @@ layout: default
 
 <div class="tags">
     {% for tag in page.tags %}
-        <a class="tag" href="{{ site.url }}/tag/{{ tag }}">{{ tag }}</a>
+        <a class="tag" href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
     {% endfor %}
 </div>
