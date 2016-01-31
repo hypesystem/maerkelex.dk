@@ -11,6 +11,6 @@ layout: default
 
 <div class="tags">
     {% for tag in page.tags %}
-        <a class="tag" href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>
+        <a class="tag" href="{{ site.baseurl }}/?search={{ tag }}">{{ tag }}</a>
     {% endfor %}
 </div>
