@@ -78,12 +78,26 @@ header nav img {
     color: inherit;
     text-decoration: inherit;
     overflow: hidden;
+    transition: margin 0.2s, width 0.2s, height 0.2s;
+    position: relative;
+}
+.maerke-box:hover {
+    color: inherit;
+    margin: -10px;
+    width: calc(33% + 20px);
+    height: calc(250px + 20px);
+    z-index: 100;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2), 0 0 10px rgba(255, 255, 255, 1) inset;
 }
 .maerke-box h1 {
     background: rgba(255, 255, 255, 0.8);
     margin: 0;
     padding: 10px 10px;
     font-size: 1.3em;
+    transition: padding 0.2s;
+}
+.maerke-box:hover h1 {
+    padding: 15px 10px 10px 15px;
 }
 .maerke-box img {
     width: 100%;
