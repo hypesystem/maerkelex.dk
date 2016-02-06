@@ -25,6 +25,7 @@
                     });
                 </script>
                 <script>
+                    var searchData = null;
                     var search = debounced(rawSearch);
 
                     searchBar.addEventListener("keyup", function(e) {
@@ -49,11 +50,64 @@
                     }
 
                     function rawSearch() {
-                        var value = searchBar.value;
+                        if(!searchData) {
+                            //return to search-with-debounce
+                            console.log("search data not yet loaded, returning to debounced search");
+                            return search();
+                        }
                         console.log("searching", value);
+                        var value = searchBar.value;
+
+                        var matches = [];
+                        searchData.forEach(function(maerke) {
+                            if(matchesMaerke(maerke, value)) {
+                                matches.push(maerke);
+                            }
+                        });
+
+                        console.log("Got " + matches.length + " matches for search");
+
+                        renderMatches(matches);
                     }
+
+                    function matchesMaerke(maerke, value) {
+                        for(var i = 0; i < maerke.tags.length; i++) {
+                            var tag = maerke.tags[i];
+                            if(tag.match(value)) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+
+                    function renderMatches(matches) {
+                        var renderedMatches = matches.map(function(match) {
+                            return [
+                                '<a class="maerke-box" href="{{ site.baseurl }}' + match.url + '" style="background-image: url(\'{{ site.baseurl }}/img/' + match.image + '\');">',
+                                '<h1>' + match.name + '</h1>',
+                                '</a>'
+                            ].join("");
+                        });
+
+                        var content = document.querySelector(".container .content");
+                        content.innerHTML = renderedMatches.join(" ");
+                    }
+
+                    function getSearchData() {
+                        var req = new XMLHttpRequest();
+                        req.open("GET", "{{ site.baseurl }}/m.json");
+                        req.onreadystatechange = function() {
+                            if(req.readyState == 4 && req.status == 200) {
+                                console.log("Got res", req.responseText);
+                                searchData = JSON.parse(req.responseText).m;
+                            }
+                        };
+                        req.send();
+                    }
+                    getSearchData();
                 </script>
                 <script>
+                    //set search bar value if any, and search
                     (function() {
                         if(!location.search) {
                             return;
@@ -76,6 +130,7 @@
 
                         searchBar.focus();
                         searchBar.value = searchString;
+                        search();
                     })();
                 </script>
             </nav>
