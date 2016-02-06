@@ -70,9 +70,20 @@ header nav img {
     box-sizing: border-box;
     display: inline-block;
     width: 33%;
+    height: 250px;
     border-radius: 5px;
-    padding: 10px 10px 5px;
-    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    box-shadow: 0 0 4px rgba(0,0,0,0.2), 0 0 10px rgba(255, 255, 255, 1) inset;
+    background-size: cover;
+    background-position: center;
+    color: inherit;
+    text-decoration: inherit;
+    overflow: hidden;
+}
+.maerke-box h1 {
+    background: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    padding: 10px 10px;
+    font-size: 1.3em;
 }
 .maerke-box img {
     width: 100%;
