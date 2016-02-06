@@ -55,8 +55,9 @@
                             console.log("search data not yet loaded, returning to debounced search");
                             return search();
                         }
-                        console.log("searching", value);
+
                         var value = searchBar.value;
+                        console.log("searching", value);
 
                         var matches = [];
                         searchData.forEach(function(maerke) {
@@ -71,9 +72,13 @@
                     }
 
                     function matchesMaerke(maerke, value) {
+                        var valueRegex = new RegExp(value, "i");
+                        if(maerke.name.match(valueRegex)) {
+                            return true;
+                        }
                         for(var i = 0; i < maerke.tags.length; i++) {
                             var tag = maerke.tags[i];
-                            if(tag.match(value)) {
+                            if(tag.match(valueRegex)) {
                                 return true;
                             }
                         }
