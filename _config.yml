@@ -10,5 +10,3 @@ defaults:
     output: true
     values:
       layout: maerke
-
-baseurl: /maerkelex.dk
