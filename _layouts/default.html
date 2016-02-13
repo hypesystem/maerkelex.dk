@@ -119,12 +119,25 @@
                         search(true);
                     };
 
-                    function getSearchData() {
+                    function getSearchData(retries) {
+                        if(!retries) {
+                            retries = 3;
+                        }
+
                         var req = new XMLHttpRequest();
                         req.open("GET", "{{ site.baseurl }}/m.json");
                         req.onreadystatechange = function() {
                             if(req.readyState != 4) {
                                 return;
+                            }
+                            if(req.status > 499 && req.status < 600) {
+                                console.warn("Server error happened while getting searchable data (status " + req.status + "): " + req.responseText);
+                                if(retries > 0) {
+                                    console.warn("Retrying getting of search data in 500 ms ...");
+                                    return setTimeout(function() {
+                                        getSearchData(retries - 1);
+                                    }, 500);
+                                }
                             }
                             if(req.status != 200) {
                                 return console.error("Failed to get searchable data (status " + req.status + "): " + req.responseText);
