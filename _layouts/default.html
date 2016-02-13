@@ -49,7 +49,7 @@
                         };
                     }
 
-                    function rawSearch() {
+                    function rawSearch(recovery) {
                         if(!searchData) {
                             //return to search-with-debounce
                             console.log("search data not yet loaded, returning to debounced search");
@@ -68,6 +68,9 @@
 
                         console.log("Got " + matches.length + " matches for search");
 
+                        if(!recovery) {
+                            addSearchHistoryFrame(value);
+                        }
                         renderMatches(matches);
                     }
 
@@ -85,6 +88,10 @@
                         return false;
                     }
 
+                    function addSearchHistoryFrame(value) {
+                        history.pushState({ search: value }, "Mærkelex", "/?search=" + value);
+                    }
+
                     function renderMatches(matches) {
                         var renderedMatches = matches.map(function(match) {
                             return [
@@ -97,6 +104,20 @@
                         var content = document.querySelector(".container .content");
                         content.innerHTML = renderedMatches.join(" ");
                     }
+
+                    window.onpopstate = function(event) {
+                        if(!event.state) {
+                            return window.location.reload();
+                        }
+                        if(typeof event.state.search != "string") {
+                            return;
+                        }
+                        if(searchBar.value == event.state.search) {
+                            return;
+                        }
+                        searchBar.value = event.state.search;
+                        search(true);
+                    };
 
                     function getSearchData() {
                         var req = new XMLHttpRequest();
@@ -115,27 +136,24 @@
                     //set search bar value if any, and search
                     (function() {
                         if(!location.search) {
-                            return;
+                            return searchBar.value = "";
                         }
 
                         var results = /[\?&]search=([^&#]*)/.exec(location.search);
                         if(!results) {
-                            return;
+                            return searchBar.value = "";
                         }
 
                         var searchString = results[1];
-                        if(!searchString) {
-                            return;
+                        if(typeof searchString != "string") {
+                            return searchBar.value = "";
                         }
 
                         searchString = decodeURIComponent(searchString);
-                        if(searchString == "") {
-                            return;
-                        }
 
                         searchBar.focus();
                         searchBar.value = searchString;
-                        search();
+                        search(true);
                     })();
                 </script>
             </nav>
