@@ -6,6 +6,24 @@
         <title>Mærkelex</title>
         <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/img/logo.png">
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
+        <script>
+            function debounced(fun, timeout) {
+                if(!timeout) {
+                    timeout = 250;
+                }
+                var i = 0;
+                return function() {
+                    var myI = ++i;
+                    var args = Array.prototype.slice.call(arguments);
+                    setTimeout(function() {
+                        if(i > myI) {
+                            return;
+                        }
+                        fun.apply(fun, args);
+                    }, timeout);
+                };
+            }
+        </script>
     </head>
     <body ontouchstart="">
         <header>
@@ -18,154 +36,30 @@
                     <button>🔎</button>
                 </div>
                 <script>
-                    var searchBar = document.querySelector(".searchbar input");
-                    document.querySelector(".searchbar button").addEventListener("click", function(e) {
-                        e.preventDefault();
-                        searchBar.focus();
-                        return true;
-                    });
-                </script>
-                <script>
                     var searchData = null;
-                    var search = debounced(rawSearch);
+                    var rawSearch = null;
+
+                    var search = debounced(function(recovery) {
+                        if(!rawSearch || !searchData) {
+                            console.log("Missing either rawSearch or searchData to perform search");
+                            return search(recovery);
+                        }
+                        rawSearch(recovery);
+                    });
+
+                    var searchBar = document.querySelector(".searchbar input");
 
                     searchBar.addEventListener("keyup", function(e) {
                         search();
                     });
 
-                    function debounced(fun, timeout) {
-                        if(!timeout) {
-                            timeout = 250;
-                        }
-                        var i = 0;
-                        return function() {
-                            var myI = ++i;
-                            var args = Array.prototype.slice.call(arguments);
-                            setTimeout(function() {
-                                if(i > myI) {
-                                    return;
-                                }
-                                fun.apply(fun, args);
-                            }, timeout);
-                        };
-                    }
+                    document.querySelector(".searchbar button").addEventListener("click", function(e) {
+                        e.preventDefault();
+                        searchBar.focus();
+                        return true;
+                    });
 
-                    function rawSearch(recovery) {
-                        if(!searchData) {
-                            //return to search-with-debounce
-                            console.log("search data not yet loaded, returning to debounced search");
-                            return search();
-                        }
-
-                        var value = searchBar.value;
-                        console.log("searching", value);
-
-                        var matches = [];
-                        searchData.forEach(function(maerke) {
-                            if(matchesMaerke(maerke, value)) {
-                                matches.push(maerke);
-                            }
-                        });
-
-                        console.log("Got " + matches.length + " matches for search");
-
-                        if(!recovery) {
-                            addSearchHistoryFrame(value);
-                        }
-                        renderMatches(matches);
-                    }
-
-                    function matchesMaerke(maerke, value) {
-                        var valueRegex = new RegExp(value, "i");
-                        if(maerke.name.match(valueRegex)) {
-                            return true;
-                        }
-                        for(var i = 0; i < maerke.tags.length; i++) {
-                            var tag = maerke.tags[i];
-                            if(tag.match(valueRegex)) {
-                                return true;
-                            }
-                        }
-                        return false;
-                    }
-
-                    function addSearchHistoryFrame(value) {
-                        history.pushState({ search: value }, "Mærkelex", "/?search=" + value);
-                    }
-
-                    function renderMatches(matches) {
-                        var content = document.querySelector(".container .content");
-
-                        if(matches.length < 1) {
-                            var noMatches = '<div class="no-search-matches">Ingen mærker matchede din søgning på <strong>' + searchBar.value + '</strong>.</div>';
-                            content.innerHTML = noMatches;
-                            return;
-                        }
-
-                        var renderedMatches = matches.map(function(match) {
-                            return [
-                                '<a class="maerke-box" href="{{ site.baseurl }}' + match.url + '" style="background-image: url(\'{{ site.baseurl }}/img/' + match.image + '\');">',
-                                '<h1>' + match.name + '</h1>',
-                                '</a>'
-                            ].join("");
-                        });
-
-                        content.innerHTML = renderedMatches.join(" ");
-                    }
-
-                    window.onpopstate = function(event) {
-                        if(!event.state) {
-                            return window.location.reload();
-                        }
-                        if(typeof event.state.search != "string") {
-                            return;
-                        }
-                        if(searchBar.value == event.state.search) {
-                            return;
-                        }
-                        searchBar.value = event.state.search;
-                        search(true);
-                    };
-
-                    function getSearchData(retries) {
-                        if(!retries) {
-                            retries = 3;
-                        }
-
-                        var req = new XMLHttpRequest();
-                        req.open("GET", "{{ site.baseurl }}/m.json");
-                        req.onreadystatechange = function() {
-                            if(req.readyState != 4) {
-                                return;
-                            }
-                            if(req.status > 499 && req.status < 600) {
-                                console.warn("Server error happened while getting searchable data (status " + req.status + "): " + req.responseText);
-                                if(retries > 0) {
-                                    console.warn("Retrying getting of search data in 500 ms ...");
-                                    return setTimeout(function() {
-                                        getSearchData(retries - 1);
-                                    }, 500);
-                                }
-                            }
-                            if(req.status != 200) {
-                                return console.error("Failed to get searchable data (status " + req.status + "): " + req.responseText);
-                            }
-                            var responseObj;
-                            try {
-                                responseObj = JSON.parse(req.responseText);
-                            }
-                            catch(e) {
-                                return console.warn("Received unparseable data", req.responseText);
-                            }
-                            searchData = responseObj.m;
-                        };
-                        req.send();
-                    }
-                    getSearchData();
-                </script>
-                <script>
-                    //set search bar value if any, and search
-                    (function() {
+                    (function getSearchValueFromQuery() {
                         if(!location.search) {
                             return searchBar.value = "";
                         }
@@ -186,6 +80,20 @@
                         searchBar.value = searchString;
                         search(true);
                     })();
+
+                    window.onpopstate = function(event) {
+                        if(!event.state) {
+                            return window.location.reload();
+                        }
+                        if(typeof event.state.search != "string") {
+                            return;
+                        }
+                        if(searchBar.value == event.state.search) {
+                            return;
+                        }
+                        searchBar.value = event.state.search;
+                        search(true);
+                    };
                 </script>
             </nav>
         </header>
@@ -197,5 +105,6 @@
         <footer>
             &copy; Mærkelex.dk 2016
         </footer>
+        <script src="{{ site.baseurl }}/js/raw-search.js"></script>
     </body>
 </html>
