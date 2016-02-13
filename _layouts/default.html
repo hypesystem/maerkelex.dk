@@ -103,6 +103,17 @@
                         content.innerHTML = renderedMatches.join(" ");
                     }
 
+                    window.onpopstate = function(event) {
+                        if(!event.state || !event.state.search) {
+                            return;
+                        }
+                        if(searchBar.value == event.state.search) {
+                            return;
+                        }
+                        searchBar.value = event.state.search;
+                        search();
+                    };
+
                     function getSearchData() {
                         var req = new XMLHttpRequest();
                         req.open("GET", "{{ site.baseurl }}/m.json");
