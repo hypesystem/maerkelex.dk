@@ -35,16 +35,9 @@
                     <button>🔎</button>
                 </div>
                 <script>
-                    var searchBar = document.querySelector(".searchbar input");
-                    document.querySelector(".searchbar button").addEventListener("click", function(e) {
-                        e.preventDefault();
-                        searchBar.focus();
-                        return true;
-                    });
-                </script>
-                <script>
                     var searchData = null;
                     var rawSearch = null;
+
                     var search = debounced(function(recovery) {
                         if(!rawSearch || !searchData) {
                             console.log("Missing either rawSearch or searchData to perform search");
@@ -53,27 +46,19 @@
                         rawSearch(recovery);
                     });
 
+                    var searchBar = document.querySelector(".searchbar input");
+
                     searchBar.addEventListener("keyup", function(e) {
                         search();
                     });
 
-                    window.onpopstate = function(event) {
-                        if(!event.state) {
-                            return window.location.reload();
-                        }
-                        if(typeof event.state.search != "string") {
-                            return;
-                        }
-                        if(searchBar.value == event.state.search) {
-                            return;
-                        }
-                        searchBar.value = event.state.search;
-                        search(true);
-                    };
-                </script>
-                <script>
-                    //set search bar value if any, and search
-                    (function() {
+                    document.querySelector(".searchbar button").addEventListener("click", function(e) {
+                        e.preventDefault();
+                        searchBar.focus();
+                        return true;
+                    });
+
+                    (function getSearchValueFromQuery() {
                         if(!location.search) {
                             return searchBar.value = "";
                         }
@@ -94,6 +79,20 @@
                         searchBar.value = searchString;
                         search(true);
                     })();
+
+                    window.onpopstate = function(event) {
+                        if(!event.state) {
+                            return window.location.reload();
+                        }
+                        if(typeof event.state.search != "string") {
+                            return;
+                        }
+                        if(searchBar.value == event.state.search) {
+                            return;
+                        }
+                        searchBar.value = event.state.search;
+                        search(true);
+                    };
                 </script>
             </nav>
         </header>
