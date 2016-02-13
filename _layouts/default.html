@@ -127,7 +127,7 @@
                         search(true);
                     };
 
-                    function getSearchData(retries) {
+                    (function getSearchData(retries) {
                         if(!retries) {
                             retries = 3;
                         }
@@ -160,8 +160,7 @@
                             searchData = responseObj.m;
                         };
                         req.send();
-                    }
-                    getSearchData();
+                    })();
                 </script>
                 <script>
                     //set search bar value if any, and search
