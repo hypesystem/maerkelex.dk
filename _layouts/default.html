@@ -5,6 +5,24 @@
         <title>Mærkelex</title>
         <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/img/logo.png">
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
+        <script>
+            function debounced(fun, timeout) {
+                if(!timeout) {
+                    timeout = 250;
+                }
+                var i = 0;
+                return function() {
+                    var myI = ++i;
+                    var args = Array.prototype.slice.call(arguments);
+                    setTimeout(function() {
+                        if(i > myI) {
+                            return;
+                        }
+                        fun.apply(fun, args);
+                    }, timeout);
+                };
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -31,23 +49,6 @@
                     searchBar.addEventListener("keyup", function(e) {
                         search();
                     });
-
-                    function debounced(fun, timeout) {
-                        if(!timeout) {
-                            timeout = 250;
-                        }
-                        var i = 0;
-                        return function() {
-                            var myI = ++i;
-                            var args = Array.prototype.slice.call(arguments);
-                            setTimeout(function() {
-                                if(i > myI) {
-                                    return;
-                                }
-                                fun.apply(fun, args);
-                            }, timeout);
-                        };
-                    }
 
                     function rawSearch(recovery) {
                         if(!searchData) {
