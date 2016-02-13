@@ -106,7 +106,7 @@
                     }
 
                     window.onpopstate = function(event) {
-                        if(!event.state || !event.state.search) {
+                        if(!event.state || typeof event.state.search != "string") {
                             return;
                         }
                         if(searchBar.value == event.state.search) {
@@ -147,9 +147,6 @@
                         }
 
                         searchString = decodeURIComponent(searchString);
-                        if(searchString == "") {
-                            return;
-                        }
 
                         searchBar.focus();
                         searchBar.value = searchString;
