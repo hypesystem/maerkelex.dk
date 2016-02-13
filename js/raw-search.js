@@ -14,10 +14,10 @@ rawSearch = function(recovery) {
     console.log("Got " + matches.length + " matches for search");
 
     if(!recovery) {
-        if(ga) {
-            ga('send', 'pageview');
-        }
         addSearchHistoryFrame(value);
+        if(ga) {
+            ga('send', 'pageview', "/?search=" + value);
+        }
     }
     renderMatches(matches);
 }
