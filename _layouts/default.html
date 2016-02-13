@@ -68,6 +68,7 @@
 
                         console.log("Got " + matches.length + " matches for search");
 
+                        addSearchHistoryFrame(value);
                         renderMatches(matches);
                     }
 
@@ -83,6 +84,10 @@
                             }
                         }
                         return false;
+                    }
+
+                    function addSearchHistoryFrame(value) {
+                        history.pushState({ search: value }, "Mærkelex", "/?search=" + value);
                     }
 
                     function renderMatches(matches) {
