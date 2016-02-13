@@ -81,7 +81,7 @@
                         search(true);
                     })();
 
-                    history.replaceState({ maerkelex: true });
+                    history.replaceState({ maerkelex: true }, "Mærkelex");
 
                     window.onpopstate = function(event) {
                         if(!event.state) {
