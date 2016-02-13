@@ -89,7 +89,7 @@ header nav img {
     color: inherit;
     text-decoration: inherit;
     overflow: hidden;
-    transition: margin 0.2s, width 0.2s, height 0.2s;
+    transition: transform 0.2s;
     position: relative;
 }
 
@@ -159,12 +159,8 @@ footer {
 
 @media screen and (min-width: 931px) {
   .maerke-box:hover {
-      color: inherit;
-      margin: -10px;
-      width: calc(33% + 20px);
-      height: calc(250px + 20px);
+      transform: scale(1.08);
       z-index: 100;
-      box-shadow: 0 0 4px rgba(0,0,0,0.2), 0 0 10px rgba(255, 255, 255, 1) inset;
   }
 }
 
