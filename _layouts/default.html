@@ -81,12 +81,17 @@
                         search(true);
                     })();
 
+                    history.replaceState({ maerkelex: true });
+
                     window.onpopstate = function(event) {
                         if(!event.state) {
-                            return window.location.reload();
+                            return;
+                        }
+                        if(!event.state.maerkelex) {
+                            return;
                         }
                         if(typeof event.state.search != "string") {
-                            return;
+                            return window.location.reload();
                         }
                         if(searchBar.value == event.state.search) {
                             return;
