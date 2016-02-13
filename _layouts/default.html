@@ -123,10 +123,20 @@
                         var req = new XMLHttpRequest();
                         req.open("GET", "{{ site.baseurl }}/m.json");
                         req.onreadystatechange = function() {
-                            if(req.readyState == 4 && req.status == 200) {
-                                console.log("Got res", req.responseText);
-                                searchData = JSON.parse(req.responseText).m;
+                            if(req.readyState != 4) {
+                                return;
                             }
+                            if(req.status != 200) {
+                                return console.error("Failed to get searchable data (status " + req.status + "): " + req.responseText);
+                            }
+                            var responseObj;
+                            try {
+                                responseObj = JSON.parse(req.responseText);
+                            }
+                            catch(e) {
+                                return console.warn("Received unparseable data", req.responseText);
+                            }
+                            searchData = responseObj.m;
                         };
                         req.send();
                     }
