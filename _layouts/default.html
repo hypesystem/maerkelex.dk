@@ -93,6 +93,14 @@
                     }
 
                     function renderMatches(matches) {
+                        var content = document.querySelector(".container .content");
+
+                        if(matches.length < 1) {
+                            var noMatches = '<div class="no-search-matches">Ingen mærker matchede din søgning på <strong>' + searchBar.value + '</strong>.</div>';
+                            content.innerHTML = noMatches;
+                            return;
+                        }
+
                         var renderedMatches = matches.map(function(match) {
                             return [
                                 '<a class="maerke-box" href="{{ site.baseurl }}' + match.url + '" style="background-image: url(\'{{ site.baseurl }}/img/' + match.image + '\');">',
@@ -101,7 +109,6 @@
                             ].join("");
                         });
 
-                        var content = document.querySelector(".container .content");
                         content.innerHTML = renderedMatches.join(" ");
                     }
 
@@ -119,14 +126,37 @@
                         search(true);
                     };
 
-                    function getSearchData() {
+                    function getSearchData(retries) {
+                        if(!retries) {
+                            retries = 3;
+                        }
+
                         var req = new XMLHttpRequest();
                         req.open("GET", "{{ site.baseurl }}/m.json");
                         req.onreadystatechange = function() {
-                            if(req.readyState == 4 && req.status == 200) {
-                                console.log("Got res", req.responseText);
-                                searchData = JSON.parse(req.responseText).m;
+                            if(req.readyState != 4) {
+                                return;
                             }
+                            if(req.status > 499 && req.status < 600) {
+                                console.warn("Server error happened while getting searchable data (status " + req.status + "): " + req.responseText);
+                                if(retries > 0) {
+                                    console.warn("Retrying getting of search data in 500 ms ...");
+                                    return setTimeout(function() {
+                                        getSearchData(retries - 1);
+                                    }, 500);
+                                }
+                            }
+                            if(req.status != 200) {
+                                return console.error("Failed to get searchable data (status " + req.status + "): " + req.responseText);
+                            }
+                            var responseObj;
+                            try {
+                                responseObj = JSON.parse(req.responseText);
+                            }
+                            catch(e) {
+                                return console.warn("Received unparseable data", req.responseText);
+                            }
+                            searchData = responseObj.m;
                         };
                         req.send();
                     }
