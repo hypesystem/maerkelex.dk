@@ -74,8 +74,9 @@ header nav img {
     border-radius: 5px;
     box-shadow: 0 0 4px rgba(0,0,0,0.2), 0 0 10px rgba(255, 255, 255, 1) inset;
     background-color: white;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     color: inherit;
     text-decoration: inherit;
     overflow: hidden;
