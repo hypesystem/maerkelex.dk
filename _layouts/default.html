@@ -106,7 +106,10 @@
                     }
 
                     window.onpopstate = function(event) {
-                        if(!event.state || typeof event.state.search != "string") {
+                        if(!event.state) {
+                            return window.location.reload();
+                        }
+                        if(typeof event.state.search != "string") {
                             return;
                         }
                         if(searchBar.value == event.state.search) {
