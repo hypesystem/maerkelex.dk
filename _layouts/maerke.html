@@ -1,16 +1,21 @@
 ---
 layout: default
 ---
-<h1>{{ page.name }}</h1>
-<img src="{{ site.baseurl }}/img/{{ page.image }}">
-<p>
-    {{ page.description }}
-</p>
 
-<a href="{{ page.buylink }}">Køb det</a>
-
-<div class="tags">
-    {% for tag in page.tags %}
-        <a class="tag" href="{{ site.baseurl }}/?search={{ tag }}">{{ tag }}</a>
-    {% endfor %}
+<div class="page-image col">
+  <img src="{{ site.baseurl }}/img/{{ page.image }}">
+</div>
+<div class="page-description col">
+  <h1>{{ page.name }}</h1>
+  <div class="tags">
+      {% for tag in page.tags %}
+          <a class="tag" href="{{ site.baseurl }}/?search={{ tag }}">{{ tag }}</a>
+      {% endfor %}
+  </div>
+  <p>
+      {{ page.description }}
+  </p>
+  <a href="{{ page.buylink }}">
+    <button>Find mærket her</button>
+  </a>
 </div>
