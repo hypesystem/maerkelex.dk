@@ -136,17 +136,17 @@
                     //set search bar value if any, and search
                     (function() {
                         if(!location.search) {
-                            return;
+                            return searchBar.value = "";
                         }
 
                         var results = /[\?&]search=([^&#]*)/.exec(location.search);
                         if(!results) {
-                            return;
+                            return searchBar.value = "";
                         }
 
                         var searchString = results[1];
-                        if(!searchString) {
-                            return;
+                        if(typeof searchString != "string") {
+                            return searchBar.value = "";
                         }
 
                         searchString = decodeURIComponent(searchString);
