@@ -34,7 +34,7 @@ function matchesMaerke(maerke, value) {
 }
 
 function addSearchHistoryFrame(value) {
-    history.pushState({ search: value }, "Mærkelex", "/?search=" + value);
+    history.pushState({ search: value, maerkelex: true }, "Mærkelex", "/?search=" + value);
 }
 
 function renderMatches(matches) {
