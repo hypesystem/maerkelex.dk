@@ -1,6 +1,7 @@
 ---
 ---
-{ "m": [{% for m in site.m %}
+{% assign shuffled_m = site.m | shuffle %}
+{ "m": [{% for m in shuffled_m %}
   {
     "name": {{ m.name | jsonify }},
     "description": {{ m.description | jsonify }},
