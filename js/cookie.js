@@ -18,7 +18,11 @@ function userHasVisitedBefore() {
 }
 
 function showCookieNotice() {
-    document.querySelector("body").innerHTML += '<div class="cookieNotice">Vi bruger cookies for at forbedre bruger&#173;oplevelsen. Ved at bruge siden giver du dit samtykke til at vi samler anonym information om hvilke sider der besøges mest på siden.</div>';
+    var body = document.querySelector("body");
+    body.innerHTML += '<div class="cookieNotice">Vi bruger cookies for at forbedre bruger&#173;oplevelsen. Ved at bruge siden giver du dit samtykke til at vi samler anonym information om hvilke sider der besøges mest på siden.</div>';
+    document.querySelector(".cookieNotice").addEventListener("click", function(event) {
+        this.className += " hidden";
+    });
 }
 
 function setUserHasVisitedBefore() {
