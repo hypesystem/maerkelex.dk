@@ -6,13 +6,13 @@ $darkblue: rgb(11, 93, 125);
 $dark: rgb(50, 50, 60);
 
 @font-face {
-    font-family: "Open sans";
+    font-family: "Open Sans";
     src: url('../font/OpenSans-Regular.ttf') format('truetype');
 }
 
 body {
     margin: 0;
-    font-family: "Open sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     background: rgb(245, 245, 245);
     margin-bottom: 150px;
 }
