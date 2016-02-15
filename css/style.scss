@@ -204,8 +204,14 @@ footer a:hover {
     width:100% !important;
     padding: 15px 10px;
   }
+  .searchbar {
+      width: auto !important;
+  }
+  .searchbar input {
+      font-size: 1.4em;
+  }
   .searchbar:hover input, .searchbar input:active, .searchbar input:focus {
-    width: 200px !important;
+    width: 150px !important;
   }
   .maerke-box {
     width: 46%;
