@@ -156,6 +156,22 @@ footer {
     z-index: -2;
     box-shadow: 0 3px 7px rgba(0,0,0,0.5) inset;
 }
+.footer-col {
+    display: inline-block;
+    width: 100%;
+    max-width: 220px;
+    vertical-align: top;
+    text-align: left;
+}
+.footer-col.small {
+    font-size: 0.8em;
+}
+footer a {
+    color: rgb(200, 200, 200);
+}
+footer a:hover {
+    color: rgb(250, 250, 250);
+}
 
 @media screen and (min-width: 931px) {
   .maerke-box:hover {
