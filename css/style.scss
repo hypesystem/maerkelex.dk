@@ -7,7 +7,11 @@ $dark: rgb(50, 50, 60);
 
 @font-face {
     font-family: "Open Sans";
-    src: url('../font/OpenSans-Regular.ttf') format('truetype');
+    src: url('/font/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Open Sans Light";
+    src: url('/font/OpenSans-Light.ttf') format('truetype');
 }
 
 body {
@@ -100,6 +104,7 @@ header nav img {
     padding: 10px 10px;
     font-size: 1.3em;
     transition: padding 0.2s;
+    font-family: "Open Sans Light", "Open Sans", sans-serif;
 }
 .maerke-box img {
     width: 100%;
@@ -128,6 +133,10 @@ header nav img {
 .page-description {
   width: 60%;
   display: inline-block;
+}
+
+.page-description h1 {
+    font-family: "Open Sans Light", "Open Sans", sans-serif;
 }
 
 .page-description button {
