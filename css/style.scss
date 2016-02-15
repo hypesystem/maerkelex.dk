@@ -18,6 +18,7 @@ body {
 }
 a {
     color: $blue;
+    transition: color 0.2s;
 }
 a:hover {
     color: $darkblue;
@@ -137,6 +138,7 @@ header nav img {
   color: white;
   font-weight: bold;
   border: none;
+  transition: background 0.2s;
 }
 
 .page-description button:hover {
