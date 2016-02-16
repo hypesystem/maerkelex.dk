@@ -6,18 +6,23 @@ $darkblue: rgb(11, 93, 125);
 $dark: rgb(50, 50, 60);
 
 @font-face {
-    font-family: "Open sans";
-    src: url('../font/OpenSans-Regular.ttf') format('truetype');
+    font-family: "Open Sans";
+    src: url('/font/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Open Sans Light";
+    src: url('/font/OpenSans-Light.ttf') format('truetype');
 }
 
 body {
     margin: 0;
-    font-family: "Open sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     background: rgb(245, 245, 245);
     margin-bottom: 150px;
 }
 a {
     color: $blue;
+    transition: color 0.2s;
 }
 a:hover {
     color: $darkblue;
@@ -41,6 +46,7 @@ header nav img {
 .searchbar {
     margin: 7px 0 5px;
     display: inline-block;
+    width: 425px;
 }
 .searchbar input {
     color: rgba(250, 250, 250, 1);
@@ -99,6 +105,7 @@ header nav img {
     padding: 10px 10px;
     font-size: 1.3em;
     transition: padding 0.2s;
+    font-family: "Open Sans Light", "Open Sans", sans-serif;
 }
 .maerke-box img {
     width: 100%;
@@ -129,6 +136,10 @@ header nav img {
   display: inline-block;
 }
 
+.page-description h1 {
+    font-family: "Open Sans Light", "Open Sans", sans-serif;
+}
+
 .page-description button {
   width: 100%;
   padding: 10px;
@@ -137,6 +148,7 @@ header nav img {
   color: white;
   font-weight: bold;
   border: none;
+  transition: background 0.2s;
 }
 
 .page-description button:hover {
@@ -154,7 +166,22 @@ footer {
     color: white;
     text-align: center;
     z-index: -2;
-    box-shadow: 0 3px 7px rgba(0,0,0,0.5) inset;
+}
+.footer-col {
+    display: inline-block;
+    width: 100%;
+    max-width: 220px;
+    vertical-align: top;
+    text-align: left;
+}
+.footer-col.small {
+    font-size: 0.8em;
+}
+footer a {
+    color: rgb(200, 200, 200);
+}
+footer a:hover {
+    color: rgb(250, 250, 250);
 }
 
 @media screen and (min-width: 931px) {
@@ -176,8 +203,14 @@ footer {
     width:100% !important;
     padding: 15px 10px;
   }
+  .searchbar {
+      width: auto !important;
+  }
+  .searchbar input {
+      font-size: 1.4em;
+  }
   .searchbar:hover input, .searchbar input:active, .searchbar input:focus {
-    width: 200px !important;
+    width: 150px !important;
   }
   .maerke-box {
     width: 46%;
