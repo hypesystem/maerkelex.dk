@@ -1,9 +1,7 @@
 ---
 layout: default
 ---
-
-{% assign shuffled_m = site.m | shuffle | take45 %}
-{% for m in shuffled_m %}
+{% for m in site.m limit:45 %}
     <a class="maerke-box" href="{{ site.baseurl }}{{ m.url }}" style="background-image: url('{{ site.baseurl }}/img/{{ m.image }}');">
         <h1>{{ m.name }}</h1>
     </a>
