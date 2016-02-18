@@ -14,10 +14,10 @@ rawSearch = function(recovery) {
     console.log("Got " + matches.length + " matches for search");
 
     if(!recovery) {
-        if(ga) {
-            ga('send', 'pageview');
-        }
         addSearchHistoryFrame(value);
+        if(ga) {
+            ga('send', 'pageview', "/?search=" + value);
+        }
     }
     renderMatches(matches);
 }
@@ -44,7 +44,9 @@ function renderMatches(matches) {
     var content = document.querySelector(".container .content");
 
     if(matches.length < 1) {
-        var noMatches = '<div class="no-search-matches">Ingen mærker matchede din søgning på <strong>' + searchBar.value + '</strong>.</div>';
+        var noMatches = '<div class="no-search-matches">Ingen mærker matchede din søgning på <strong>' + searchBar.value + '</strong>.' +
+            '<br><br>' +
+            'Mangler vi et mærke? <a href="mailto:kontakt@mærkelex.dk">Skriv os en email</a>, så retter vi det hurtigst muligt!</div>';
         content.innerHTML = noMatches;
         return;
     }
@@ -94,3 +96,15 @@ function renderMatches(matches) {
     };
     req.send();
 })();
+
+//set up searchyclick on tags
+var tags = document.querySelectorAll("a.tag");
+Array.prototype.forEach.call(tags, function(tag) {
+    tag.addEventListener("click", function(e) {
+        e.preventDefault();
+        searchBar.value = tag.innerHTML;
+        searchBar.focus();
+        search();
+        return true;
+    });
+});

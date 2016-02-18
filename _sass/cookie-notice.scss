@@ -1,0 +1,16 @@
+.cookieNotice {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    width: 80%;
+    max-width: 350px;
+    background: $dark;
+    color: white;
+    font-size: 0.7em;
+    padding: 20px 10px 10px;
+    cursor: pointer;
+    transition: bottom 1.5s;
+}
+.cookieNotice.hidden {
+    bottom: -400px;
+}
