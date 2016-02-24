@@ -18,14 +18,18 @@ function userHasVisitedBefore() {
 }
 
 function showCookieNotice() {
-    var utilityDiv = document.createElement("div");
-    utilityDiv.innerHTML = '<div class="cookieNotice">Vi bruger cookies for at forbedre bruger&#173;oplevelsen. Ved at bruge siden giver du dit samtykke til at vi samler anonym information om hvilke sider der besøges mest på siden.</div>';
-    var cookieNotice = utilityDiv.firstChild;
+    var cookieNotice = elementFromHtml('<div class="cookieNotice">Vi bruger cookies for at forbedre bruger&#173;oplevelsen. Ved at bruge siden giver du dit samtykke til at vi samler anonym information om hvilke sider der besøges mest på siden.</div>');
 
     document.body.appendChild(cookieNotice);
     cookieNotice.addEventListener("click", function(event) {
         this.className += " hidden";
     });
+}
+
+function elementFromHtml(html) {
+    var utilityDiv = document.createElement("div");
+    utilityDiv.innerHTML = html;
+    return utilityDiv.firstChild;
 }
 
 function setUserHasVisitedBefore() {
