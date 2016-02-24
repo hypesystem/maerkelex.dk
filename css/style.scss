@@ -58,6 +58,7 @@ header nav img {
     width: 0;
     opacity: 0;
     transition: width 0.2s, opacity 0.2s;
+    vertical-align: middle;
 }
 .searchbar:hover input, .searchbar input:active, .searchbar input:focus {
     width: 350px;
@@ -69,6 +70,7 @@ header nav img {
     border: none;
     font-weight: bold;
     font-size: 1.8em;
+    vertical-align: middle;
 }
 .container {
     text-align: center;
