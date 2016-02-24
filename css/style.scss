@@ -188,6 +188,26 @@ footer a:hover {
     color: rgb(250, 250, 250);
 }
 
+.first-visit-welcome {
+    margin-bottom: 25px;
+    background: $orange;
+}
+.first-visit-welcome-image {
+    background-image: url('../img/welcome-message-01.jpg');
+    height: 300px;
+    display: inline-block;
+    width: 400px;
+    background-size: cover;
+    vertical-align: middle;
+    background-position: top left;
+    -webkit-clip-path: polygon(25% 0%, 0% 100%, 75% 100%, 100% 0%);
+}
+.first-visit-welcome-text {
+    display: inline-block;
+    width: 500px;
+    vertical-align: middle;
+}
+
 @media screen and (min-width: 931px) {
   .maerke-box:hover {
       transform: scale(1.08);
