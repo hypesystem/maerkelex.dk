@@ -191,6 +191,27 @@ footer a:hover {
 .first-visit-welcome {
     margin-bottom: 25px;
     background: $orange;
+    position: relative;
+}
+.first-visit-welcome-remover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    color: white;
+    text-transform: uppercase;
+    z-index: 3;
+    font-size: 0.8em;
+    padding: 15px 0;
+    background: $dark;
+    opacity: 0;
+    transition: opacity 0.2s, padding 0.2s;
+    pointer: cursor;
+}
+.first-visit-welcome:hover .first-visit-welcome-remover {
+    opacity: 1;
+    padding-top: 25px;
 }
 .first-visit-welcome-image {
     background-image: url('../img/welcome-message-01.png');
