@@ -38,6 +38,10 @@ function showWelcomeMessage() {
 
     var container = document.querySelector(".container");
     container.insertBefore(welcomeMessage, container.firstChild);
+
+    document.querySelector(".first-visit-welcome-remover").addEventListener("click", function(event) {
+        welcomeMessage.className += " hidden";
+    });
 }
 
 function setUserHasVisitedBefore() {
