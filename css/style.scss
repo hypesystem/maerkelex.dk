@@ -193,7 +193,7 @@ footer a:hover {
     background: $orange;
     position: relative;
     height: 300px;
-    transition: height 0.5s, margin 0.5s;
+    transition: height 0.5s, margin 0.5s, padding 0.5s;
     overflow: hidden;
 }
 .first-visit-welcome.hidden {
@@ -269,6 +269,25 @@ footer a:hover {
     margin-bottom: 10px;
     margin-left: 10px;
     float: left;
+  }
+  .first-visit-welcome-image {
+      display: none;
+  }
+  .first-visit-welcome {
+      height: auto;
+      padding-top: 60px;
+  }
+  .first-visit-welcome.hidden {
+      padding-top: 0;
+  }
+  .first-visit-welcome-remover {
+      opacity: 1;
+  }
+  .first-visit-welcome-text {
+      max-width: 500px;
+      width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
   }
 }
 
