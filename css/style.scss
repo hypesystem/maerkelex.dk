@@ -193,14 +193,13 @@ footer a:hover {
     background: $orange;
 }
 .first-visit-welcome-image {
-    background-image: url('../img/welcome-message-01.jpg');
+    background-image: url('../img/welcome-message-01.png');
     height: 300px;
     display: inline-block;
     width: 400px;
     background-size: cover;
     vertical-align: middle;
-    background-position: top left;
-    -webkit-clip-path: polygon(25% 0%, 0% 100%, 75% 100%, 100% 0%);
+    background-position: center;
 }
 .first-visit-welcome-text {
     display: inline-block;
