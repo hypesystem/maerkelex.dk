@@ -200,6 +200,7 @@ footer a:hover {
     background-size: cover;
     vertical-align: middle;
     background-position: center;
+    filter: saturate(130%) contrast(120%);
 }
 .first-visit-welcome-text {
     display: inline-block;
