@@ -190,6 +190,54 @@ footer a:hover {
     color: rgb(250, 250, 250);
 }
 
+.first-visit-welcome {
+    margin-bottom: 25px;
+    background: $orange;
+    position: relative;
+    height: 300px;
+    transition: height 0.5s, margin 0.5s, padding 0.5s;
+    overflow: hidden;
+}
+.first-visit-welcome.hidden {
+    height: 0px;
+    margin-bottom: 0;
+}
+.first-visit-welcome-remover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    color: white;
+    text-transform: uppercase;
+    z-index: 3;
+    font-size: 0.8em;
+    padding: 15px 0;
+    background: $dark;
+    opacity: 0;
+    transition: opacity 0.2s, padding 0.2s;
+    cursor: pointer;
+}
+.first-visit-welcome:hover .first-visit-welcome-remover {
+    opacity: 1;
+    padding-top: 25px;
+}
+.first-visit-welcome-image {
+    background-image: url('../img/welcome-message-01.png');
+    height: 300px;
+    display: inline-block;
+    width: 400px;
+    background-size: cover;
+    vertical-align: middle;
+    background-position: center;
+    filter: saturate(130%) contrast(120%);
+}
+.first-visit-welcome-text {
+    display: inline-block;
+    width: 500px;
+    vertical-align: middle;
+}
+
 @media screen and (min-width: 931px) {
   .maerke-box:hover {
       transform: scale(1.08);
@@ -223,6 +271,25 @@ footer a:hover {
     margin-bottom: 10px;
     margin-left: 10px;
     float: left;
+  }
+  .first-visit-welcome-image {
+      display: none;
+  }
+  .first-visit-welcome {
+      height: auto;
+      padding-top: 60px;
+  }
+  .first-visit-welcome.hidden {
+      padding-top: 0;
+  }
+  .first-visit-welcome-remover {
+      opacity: 1;
+  }
+  .first-visit-welcome-text {
+      max-width: 500px;
+      width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
   }
 }
 
