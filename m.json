@@ -1,6 +1,7 @@
 ---
 ---
-{ "m": [{% for m in site.m %}
+{% assign sorted_m = site.m | sort: "name" %}
+{ "m": [{% for m in sorted_m %}
   {
     "name": {{ m.name | jsonify }},
     "description": {{ m.description | jsonify }},
