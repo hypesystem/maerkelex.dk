@@ -1,5 +1,7 @@
 ---
 ---
+var titleTag = document.head.querySelector("title");
+
 rawSearch = function(recovery) {
     var value = searchBar.value;
     console.log("searching", value);
@@ -19,6 +21,7 @@ rawSearch = function(recovery) {
             ga('send', 'pageview', "/?search=" + value);
         }
     }
+    titleTag.innerHTML = "Søg: " + value + " | Mærkelex";
     renderMatches(matches);
 }
 
