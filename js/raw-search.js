@@ -68,7 +68,7 @@ function renderMatches(matches) {
     }
 
     var req = new XMLHttpRequest();
-    req.open("GET", "{{ site.baseurl }}/m.json");
+    req.open("GET", "{{ site.baseurl }}/m.summary.json");
     req.onreadystatechange = function() {
         if(req.readyState != 4) {
             return;
