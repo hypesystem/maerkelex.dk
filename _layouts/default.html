@@ -8,10 +8,12 @@
         <meta name="description" content="Mærkelex er et leksikon over mærker. {{ page_description }}">
 
         <meta property="og:title" content="{% if page.name != 'index.html' %}{{ page.name }}{% else %}Mærkelex{% endif %}">
+        <meta property="og:site_name" content="Mærkelex">
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://xn--mrkelex-mxa.dk{{ page.url }}">
         <meta property="og:image" content="http://xn--mrkelex-mxa.dk/img/{% if page.image %}{{ page.image }}{% else %}logo.png{% endif %}">
         <meta property="og:description" content="{{ page_description }}">
+        <meta property="og:locale" content="da_DK">
 
         <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/img/logo.png">
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
