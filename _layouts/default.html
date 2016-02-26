@@ -1,15 +1,17 @@
+{% capture page_description %}{% if page.description %}{{ page.description | strip_html | replace:'"',"'" }}{% else %}Her kan du finde mærker (spejdermærker) for Det Danske Spejderkorps (DDS), KFUM eller De Grønne Pigespejdere, samt alle de uofficielle mærker der florerer i Danmark.{% endif %}{% endcapture %}
 <!DOCTYPE html>
 <html lang="da" prefix="og: http://ogp.me/ns#">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <title>{% if page.title %}{{ page.title }} | {% elsif page.name != "index.html" %}{{ page.name }} | {% endif %}Mærkelex</title>
-        <meta name="description" content="Mærkelex er et leksikon over mærker. {% if page.description %}{{ page.description | strip_html | replace:'"',"'" }}{% else %}Her kan du finde mærker (spejdermærker) for Det Danske Spejderkorps (DDS), KFUM eller De Grønne Pigespejdere, samt alle de uofficielle mærker der florerer i Danmark.{% endif %}">
+        <meta name="description" content="Mærkelex er et leksikon over mærker. {{ page_description }}">
 
         <meta property="og:title" content="{% if page.name != 'index.html' %}{{ page.name }}{% else %}Mærkelex{% endif %}">
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://xn--mrkelex-mxa.dk{{ page.url }}">
         <meta property="og:image" content="http://xn--mrkelex-mxa.dk/img/{% if page.image %}{{ page.image }}{% else %}logo.png{% endif %}">
+        <meta property="og:description" content="{{ page_description }}">
 
         <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/img/logo.png">
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
