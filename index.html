@@ -3,7 +3,7 @@ layout: default
 title: Søg efter spejdermærker
 ---
 {% assign sorted_m = site.m | sort: "name" %}
-{% for m in sorted_m limit:45 %}
+{% for m in sorted_m limit:24 %}
     <a class="maerke-box" href="{{ site.baseurl }}{{ m.url }}" style="background-image: url('{{ site.baseurl }}/img/{{ m.image }}');">
         <h1>{{ m.name }}</h1>
     </a>
