@@ -8,3 +8,13 @@ title: Søg efter spejdermærker
         <h1>{{ m.name }}</h1>
     </a>
 {% endfor %}
+
+<a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
+<script>
+    document.querySelector(".see-more-button").addEventListener("click", function(e) {
+        e.preventDefault();
+        searchBar.value = "";
+        search();
+        return false;
+    });
+</script>
