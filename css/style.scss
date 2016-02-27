@@ -238,6 +238,23 @@ footer a:hover {
     vertical-align: middle;
 }
 
+.see-more-button {
+    display: block;
+    text-align: center;
+    background: $blue;
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    padding: 20px 0;
+    transition: background 0.2s;
+    float: left;
+    width: 100%;
+}
+.see-more-button:hover {
+    color: white;
+    background: $darkblue;
+}
+
 @media screen and (min-width: 931px) {
   .maerke-box:hover {
       transform: scale(1.08);
