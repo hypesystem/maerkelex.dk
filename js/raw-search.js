@@ -38,6 +38,13 @@ function allTermsMatchMaerke(maerke, terms) {
 }
 
 function matchesMaerke(maerke, term) {
+    if(term.indexOf("tag:") == 0) {
+        var termTag = term.substring(4);
+        return maerke.tags.some(function(maerkeTag) {
+            return maerkeTag.match(new RegExp("^" + termTag + "$", "i"));
+        });
+    }
+
     var valueRegex = new RegExp(term, "i");
     if(maerke.name.replace(/&.+;/, '').match(valueRegex)) {
         return true;
