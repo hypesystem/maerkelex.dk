@@ -87,11 +87,18 @@ header nav img {
     padding: 0;
     color: white;
 }
-.searchbar button img {
+.searchbar .search-button img {
     width: 40px;
     height: 69px;
     margin-bottom: -6px;
     margin-top: -4px;
+}
+.searchbar .clear-button img {
+    width: 27px;
+    height: 55px;
+    margin-bottom: -4px;
+    margin-left: -4px;
+    margin-right: -4px;
 }
 .container {
     text-align: center;
