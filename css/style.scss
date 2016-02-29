@@ -32,7 +32,6 @@ header {
     background: $dark;
     text-align: center;
     margin-bottom: 40px;
-    height: 95px;
 }
 header nav {
     display: inline-block;
@@ -43,7 +42,6 @@ header nav {
 }
 header nav a.logo {
     float: left;
-    height: 64px;
 }
 header nav img {
     width: 64px;
@@ -53,6 +51,7 @@ header nav img {
     display: inline-block;
     width: 425px;
     float: right;
+    position: relative;
 }
 .searchbar input {
     color: rgba(250, 250, 250, 1);
@@ -66,14 +65,24 @@ header nav img {
     transition: width 0.2s, opacity 0.2s;
     vertical-align: middle;
 }
+.searchbar .clear {
+  opacity: 0;
+  font-size: 1.5em;
+  transition: opacity 0.2s;
+}
 .searchbar:hover input, .searchbar input:active, .searchbar input:focus {
     width: 350px;
+    opacity: 1;
+}
+.searchbar:hover .clear, .searchbar .clear:active, .searchbar .clear:focus {
     opacity: 1;
 }
 .searchbar button {
     background: transparent;
     border: none;
     vertical-align: middle;
+    padding: 0;
+    color: white;
 }
 .searchbar button img {
     width: 40px;
@@ -269,6 +278,9 @@ footer a:hover {
       transform: scale(1.08);
       z-index: 100;
   }
+  .clear {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 930px) {
@@ -279,9 +291,12 @@ footer a:hover {
     max-width: 100% !important;
     padding: 10px;
   }
+  header {
+    height: 68px;
+  }
   header nav {
     width:100% !important;
-    padding: 15px 10px;
+    padding: 10px 10px;
   }
   .searchbar {
       width: auto !important;
@@ -289,8 +304,18 @@ footer a:hover {
   .searchbar input {
       font-size: 1.4em;
   }
+  .searchbar button {
+    padding: 0 5px;
+  }
   .searchbar:hover input, .searchbar input:active, .searchbar input:focus {
     width: 150px !important;
+  }
+  header nav img {
+    width: 45px;
+    height: 45px;
+  }
+  .searchbar button img {
+    height: 55px;
   }
   .maerke-box {
     width: 46%;
