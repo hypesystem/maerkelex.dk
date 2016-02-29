@@ -4,11 +4,13 @@ var titleTag = document.head.querySelector("title");
 
 rawSearch = function(recovery) {
     var value = searchBar.value;
-    console.log("searching", value);
+    var terms = getTermsFromSearchString(value);
+
+    console.log("searching", terms);
 
     var matches = [];
     searchData.forEach(function(maerke) {
-        if(matchesMaerke(maerke, value)) {
+        if(allTermsMatchMaerke(maerke, terms)) {
             matches.push(maerke);
         }
     });
@@ -25,8 +27,25 @@ rawSearch = function(recovery) {
     renderMatches(matches);
 }
 
-function matchesMaerke(maerke, value) {
-    var valueRegex = new RegExp(value, "i");
+function getTermsFromSearchString(str) {
+    return str.replace(/\s+/, ' ').split(' ');
+}
+
+function allTermsMatchMaerke(maerke, terms) {
+    return terms.every(function(term) {
+        return matchesMaerke(maerke, term);
+    });
+}
+
+function matchesMaerke(maerke, term) {
+    if(term.indexOf("tag:") == 0) {
+        var termTag = term.substring(4);
+        return maerke.tags.some(function(maerkeTag) {
+            return maerkeTag.match(new RegExp("^" + termTag + "$", "i"));
+        });
+    }
+
+    var valueRegex = new RegExp(term, "i");
     if(maerke.name.replace(/&.+;/, '').match(valueRegex)) {
         return true;
     }
@@ -105,7 +124,7 @@ var tags = document.querySelectorAll("a.tag");
 Array.prototype.forEach.call(tags, function(tag) {
     tag.addEventListener("click", function(e) {
         e.preventDefault();
-        searchBar.value = tag.innerHTML;
+        searchBar.value = "tag:" + tag.innerHTML;
         searchBar.focus();
         search();
         return true;
