@@ -55,10 +55,6 @@ header nav img {
     float: right;
     position: relative;
 }
-.searchbar .clear {
-  position: absolute;
-  color: $orange;
-}
 .searchbar input {
     color: rgba(250, 250, 250, 1);
     background: transparent;
@@ -71,14 +67,23 @@ header nav img {
     transition: width 0.2s, opacity 0.2s;
     vertical-align: middle;
 }
+.searchbar .clear {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
 .searchbar:hover input, .searchbar input:active, .searchbar input:focus {
     width: 350px;
+    opacity: 1;
+}
+.searchbar:hover .clear, .searchbar .clear:active, .searchbar .clear:focus {
     opacity: 1;
 }
 .searchbar button {
     background: transparent;
     border: none;
     vertical-align: middle;
+    padding: 0;
+    color: $orange;
 }
 .searchbar button img {
     width: 40px;
