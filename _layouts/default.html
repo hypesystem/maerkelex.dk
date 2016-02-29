@@ -45,10 +45,10 @@
                 </a>
                 <div class="searchbar">
                     <input type="text" placeholder="Søg ...">
-                    <button class="clear">
+                    <button class="clear clear-button">
                         &#x2716;
                     </button>
-                    <button>
+                    <button class="search-button">
                         <img src="{{ site.baseurl }}/img/search.svg">
                     </button>
                 </div>
@@ -70,7 +70,7 @@
                         search();
                     });
 
-                    document.querySelector(".searchbar button").addEventListener("click", function(e) {
+                    document.querySelector(".searchbar .search-button").addEventListener("click", function(e) {
                         e.preventDefault();
                         searchBar.focus();
                         return true;
