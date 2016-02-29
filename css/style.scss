@@ -53,6 +53,11 @@ header nav img {
     display: inline-block;
     width: 425px;
     float: right;
+    position: relative;
+}
+.searchbar .clear {
+  position: absolute;
+  color: $orange;
 }
 .searchbar input {
     color: rgba(250, 250, 250, 1);

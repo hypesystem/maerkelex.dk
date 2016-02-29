@@ -45,6 +45,7 @@
                 </a>
                 <div class="searchbar">
                     <input type="text" placeholder="Søg ...">
+                    <button class="clear">&#x2716;</button>
                     <button>
                         <img src="{{ site.baseurl }}/img/search.svg">
                     </button>
@@ -113,6 +114,13 @@
                         searchBar.value = event.state.search;
                         search(true);
                     };
+
+                    var clearIcon = document.querySelector(".searchbar .clear");
+
+                    clearIcon.addEventListener("click", function(e) {
+                      searchBar.value = "";
+                      search();
+                    });
                 </script>
             </nav>
         </header>
