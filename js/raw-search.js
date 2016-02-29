@@ -124,7 +124,7 @@ var tags = document.querySelectorAll("a.tag");
 Array.prototype.forEach.call(tags, function(tag) {
     tag.addEventListener("click", function(e) {
         e.preventDefault();
-        searchBar.value = tag.innerHTML;
+        searchBar.value = "tag:" + tag.innerHTML;
         searchBar.focus();
         search();
         return true;
