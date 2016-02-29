@@ -27,7 +27,7 @@ rawSearch = function(recovery) {
 
 function matchesMaerke(maerke, value) {
     var valueRegex = new RegExp(value, "i");
-    if(maerke.name.match(valueRegex)) {
+    if(maerke.name.replace(/&.+;/, '').match(valueRegex)) {
         return true;
     }
     for(var i = 0; i < maerke.tags.length; i++) {
