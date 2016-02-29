@@ -74,7 +74,7 @@ header nav img {
     width: 350px;
     opacity: 1;
 }
-.searchbar:hover .clear, .searchbar .clear:active, .searchbar .clear:focus {
+.searchbar:hover .clear {
     opacity: 1;
 }
 .serachbar input:focus + .clear, .searchbar input:active + .clear {
