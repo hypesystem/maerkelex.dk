@@ -4,11 +4,13 @@ var titleTag = document.head.querySelector("title");
 
 rawSearch = function(recovery) {
     var value = searchBar.value;
-    console.log("searching", value);
+    var terms = getTermsFromSearchString(value);
+
+    console.log("searching", terms);
 
     var matches = [];
     searchData.forEach(function(maerke) {
-        if(matchesMaerke(maerke, value)) {
+        if(allTermsMatchMaerke(maerke, terms)) {
             matches.push(maerke);
         }
     });
@@ -25,8 +27,18 @@ rawSearch = function(recovery) {
     renderMatches(matches);
 }
 
-function matchesMaerke(maerke, value) {
-    var valueRegex = new RegExp(value, "i");
+function getTermsFromSearchString(str) {
+    return str.replace(/\s+/, ' ').split(' ');
+}
+
+function allTermsMatchMaerke(maerke, terms) {
+    return terms.every(function(term) {
+        return matchesMaerke(maerke, term);
+    });
+}
+
+function matchesMaerke(maerke, term) {
+    var valueRegex = new RegExp(term, "i");
     if(maerke.name.replace(/&.+;/, '').match(valueRegex)) {
         return true;
     }
