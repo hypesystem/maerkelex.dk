@@ -77,6 +77,9 @@ header nav img {
 .searchbar:hover .clear, .searchbar .clear:active, .searchbar .clear:focus {
     opacity: 1;
 }
+.serachbar input:focus + .clear, .searchbar input:active + .clear {
+    opacity: 1;
+}
 .searchbar button {
     background: transparent;
     border: none;
