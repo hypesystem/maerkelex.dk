@@ -89,13 +89,10 @@ header nav img {
 }
 .searchbar .search-button img {
     width: 40px;
-    height: 69px;
     margin-bottom: -6px;
-    margin-top: -4px;
 }
 .searchbar .clear-button img {
     width: 27px;
-    height: 55px;
     margin-bottom: -4px;
     margin-left: -4px;
     margin-right: -4px;
@@ -317,6 +314,9 @@ footer a:hover {
   .searchbar button {
     padding: 0 5px;
   }
+  .searchbar .search-button img {
+    margin-top: 0;
+  }
   .searchbar:hover input, .searchbar input:active, .searchbar input:focus {
     width: 150px !important;
   }
@@ -325,7 +325,7 @@ footer a:hover {
     height: 45px;
   }
   .searchbar button img {
-    height: 55px;
+    height: 50px;
   }
   .maerke-box {
     width: 46%;
