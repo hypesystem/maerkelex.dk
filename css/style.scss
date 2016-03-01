@@ -126,6 +126,44 @@ header nav img {
     position: relative;
 }
 
+.maerke-box2 {
+  width: 100%;
+  // border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  background-color: white;
+  color: inherit;
+  text-decoration: inherit;
+  overflow: hidden;
+  transition: transform 0.2s;
+  position: relative;
+  text-align: center;
+  display: block;
+}
+
+.maerke-col {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 33%;
+  padding: 0 5px;
+}
+
+.maerke-box2 img {
+  max-height: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.maerke-box2 .card-content {
+  position: relative;
+  height: 50px;
+}
+
+.maerke-box2 .card-content h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .maerke-box h1 {
     background: rgba(255, 255, 255, 0.8);
     margin: 0;
