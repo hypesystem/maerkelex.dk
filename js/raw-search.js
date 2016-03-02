@@ -68,7 +68,7 @@ function renderMatches(matches) {
     if(matches.length < 1) {
         var noMatches = '<div class="no-search-matches">Ingen mærker matchede din søgning på <strong>' + searchBar.value + '</strong>.' +
             '<br><br>' +
-            'Mangler vi et mærke? <a href="mailto:kontakt@mærkelex.dk">Skriv os en email</a>, så retter vi det hurtigst muligt!</div>';
+            'Mangler vi et mærke? <a href="mailto:kontakt@maerkelex.dk">Skriv os en email</a>, så retter vi det hurtigst muligt!</div>';
         content.innerHTML = noMatches;
         return;
     }
