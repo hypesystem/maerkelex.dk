@@ -5,7 +5,7 @@ title: Søg efter spejdermærker
 {% assign sorted_m = site.m | sort: "name" %}
 {% for m in sorted_m limit:24 %}
   <div class="maerke-col">
-    <div class="maerke-box2">
+    <div class="maerke-box">
       <a class="maerke-link" href="{{ site.baseurl }}{{ m.url }}">
         <img src="{{ site.baseurl }}/img/{{ m.image }}" />
         <div class="card-content">

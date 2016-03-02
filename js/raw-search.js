@@ -75,7 +75,7 @@ function renderMatches(matches) {
 
     var renderedMatches = matches.map(function(match) {
         return [
-          '<div class="maerke-col"><div class="maerke-box2">',
+          '<div class="maerke-col"><div class="maerke-box">',
           '<a class="maerke-link" href="{{ site.baseurl }}' + match.url + '">',
           '<img src="{{ site.baseurl }}/img/' + match.image + '"/>',
           '<div class="card-content">',
