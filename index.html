@@ -20,6 +20,7 @@ title: Søg efter spejdermærker
         e.preventDefault();
         searchBar.value = "";
         search();
+        ga("send", "event", "BadgeList", "view_all", "initial overview");
         return false;
     });
 </script>
