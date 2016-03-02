@@ -123,6 +123,18 @@
                       searchBar.value = "";
                       search();
                     });
+
+                    document.addEventListener("keypress", function(e) {
+                        if(e.which != 115) {
+                            return;
+                        }
+                        if(document.activeElement == searchBar) {
+                            return;
+                        }
+                        e.preventDefault();
+                        searchBar.focus();
+                        return true;
+                    });
                 </script>
             </nav>
         </header>
