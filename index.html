@@ -5,13 +5,18 @@ title: Søg efter spejdermærker
 {% assign sorted_m = site.m | sort: "name" %}
 {% for m in sorted_m limit:24 %}
   <div class="maerke-col">
-    <a class="maerke-box2" href="{{ site.baseurl }}{{ m.url }}">
-      <img src="{{ site.baseurl }}/img/{{ m.image }}" />
-      <div class="card-content">
-        <h3>{{ m.name }}</h3>
+    <div class="maerke-box2">
+      <a class="maerke-link" href="{{ site.baseurl }}{{ m.url }}">
+        <img src="{{ site.baseurl }}/img/{{ m.image }}" />
+        <div class="card-content">
+          <h3>{{ m.name }}</h3>
+        </div>
+      </a>
+      <div class="card-link">
+        <a href="{{ m.buylink }}">Find her</a>
+        <a href="{{ site.baseurl }}{{ m.url }}">Læs Mere</a>
       </div>
-      <div class="card-link">Link</div>
-    </a>
+    </div>
   </div>
 {% endfor %}
 

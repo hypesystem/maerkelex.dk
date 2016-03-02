@@ -130,15 +130,20 @@ header nav img {
   width: 100%;
   // border-radius: 5px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 0 4px rgba(0,0,0,0.2), 0 0 10px rgba(255, 255, 255, 1) inset;
   background-color: white;
   color: inherit;
   text-decoration: inherit;
   overflow: hidden;
   transition: transform 0.2s;
   position: relative;
-  text-align: center;
   display: block;
   padding-top: 10px;
+}
+
+.maerke-box2 .maerke-link {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .maerke-col {
@@ -165,6 +170,7 @@ header nav img {
 .maerke-box2 .card-content {
   position: relative;
   height: 50px;
+  text-align: center;
 }
 
 .maerke-box2 .card-content h3 {
@@ -174,6 +180,19 @@ header nav img {
   bottom: 0;
   width: 100%;
   padding: 0 10px;
+}
+
+.maerke-box2 .card-link {
+  border-top: 1px solid rgba(160,160,160,0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.maerke-box2 .card-link a {
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-decoration: none;
 }
 
 .maerke-box h1 {
@@ -385,6 +404,9 @@ footer a:hover {
   }
   .maerke-box2 .card-content h3 {
     font-size: 1rem;
+  }
+  .maerke-box2 .card-link {
+    display: none;
   }
   .maerke-box {
     width: 46%;

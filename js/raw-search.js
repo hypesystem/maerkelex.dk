@@ -75,9 +75,15 @@ function renderMatches(matches) {
 
     var renderedMatches = matches.map(function(match) {
         return [
-            '<a class="maerke-box" href="{{ site.baseurl }}' + match.url + '" style="background-image: url(\'{{ site.baseurl }}/img/' + match.image + '\');">',
-            '<h1>' + match.name + '</h1>',
-            '</a>'
+          '<div class="maerke-col"><div class="maerke-box2">',
+          '<a class="maerke-link" href="{{ site.baseurl }}' + match.url + '">',
+          '<img src="{{ site.baseurl }}/img/' + match.image + '"/>',
+          '<div class="card-content">',
+          '<h3>' + match.name + '</h3>',
+          '</div></a><div class="card-link">',
+          '<a href="' + match.buylink + '">Find her</a>',
+          '<a href="{{ site.baseurl }}' + match.url + '">Læs Mere</a>',
+          '</div></div></div>'
         ].join("");
     });
 
