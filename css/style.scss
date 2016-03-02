@@ -138,19 +138,28 @@ header nav img {
   position: relative;
   text-align: center;
   display: block;
+  padding-top: 10px;
 }
 
 .maerke-col {
   box-sizing: border-box;
   display: inline-block;
-  width: 33%;
+  width: 33.33333%;
   padding: 0 5px;
+  float: left;
+  margin-bottom: 10px;
 }
 
 .maerke-box2 img {
-  max-height: 200px;
+  height: 200px;
+  max-width: 100%;
   margin: 0 auto;
   display: block;
+  transition: all 0.2s ease;
+}
+
+.maerke-box2 img:hover {
+  transform:scale(1.1);
 }
 
 .maerke-box2 .card-content {
@@ -159,9 +168,12 @@ header nav img {
 }
 
 .maerke-box2 .card-content h3 {
+  font-size: 1.2em;
+  box-sizing: border-box;
   position: absolute;
   bottom: 0;
   width: 100%;
+  padding: 0 10px;
 }
 
 .maerke-box h1 {
@@ -364,6 +376,15 @@ footer a:hover {
   }
   .searchbar button img {
     height: 50px;
+  }
+  .maerke-col {
+    width: 50%;
+  }
+  .maerke-box2 img {
+    height: 40vw;
+  }
+  .maerke-box2 .card-content h3 {
+    font-size: 1rem;
   }
   .maerke-box {
     width: 46%;
