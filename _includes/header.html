@@ -4,13 +4,15 @@
             <img src="{{ site.baseurl }}/img/logo.svg">
         </a>
         <div class="searchbar">
-            <input type="text" placeholder="Søg ...">
+            <form method="get">
+            <input type="text" name="search" placeholder="Søg ...">
             <button class="clear clear-button">
                 <img src="{{ site.baseurl }}/img/cross.svg">
             </button>
-            <button class="search-button">
+            <button class="search-button" type="submit">
                 <img src="{{ site.baseurl }}/img/search.svg">
             </button>
+            </form>
         </div>
         <script>
             var searchData = null;
@@ -35,6 +37,11 @@
                 searchBar.focus();
                 return true;
             });
+
+            document.querySelector(".searchbar form").onsubmit = function() {
+                searchBar.blur();
+                return false;
+            };
 
             (function getSearchValueFromQuery() {
                 if(!location.search) {
