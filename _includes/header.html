@@ -28,12 +28,35 @@
 
             var searchBar = document.querySelector(".searchbar input");
 
+            var searchBarHasFocus = false;
+
+            searchBar.addEventListener("focus", function(e) {
+                searchBarHasFocus = true;
+            });
+
+            searchBar.addEventListener("blur", function(e) {
+                setTimeout(function() {
+                    searchBarHasFocus = false;
+                }, 10);
+            });
+
             searchBar.addEventListener("keyup", function(e) {
                 search();
             });
 
+            var searchBarHadFocusAtMouseDown = false;
+
+            document.querySelector(".searchbar .search-button").addEventListener("mousedown", function(e) {
+                searchBarHadFocusAtMouseDown = searchBarHasFocus;
+            });
+
             document.querySelector(".searchbar .search-button").addEventListener("click", function(e) {
                 e.preventDefault();
+                if(searchBarHadFocusAtMouseDown || searchBarHasFocus) {
+                    searchBarHadFocusAtMouseDown = false;
+                    searchBar.blur();
+                    return true;
+                }
                 searchBar.focus();
                 return true;
             });
