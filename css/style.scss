@@ -80,12 +80,13 @@ header nav img {
 .searchbar input:focus + .clear, .searchbar input:active + .clear {
     opacity: 1;
 }
-.searchbar button {
+.searchbar .search-button, .searchbar .clear-button {
     background: transparent;
     border: none;
     vertical-align: middle;
     padding: 0;
     color: white;
+    display: inline-block;
 }
 .searchbar .search-button img {
     width: 40px;
@@ -311,7 +312,7 @@ footer a:hover {
   .searchbar input {
       font-size: 1.4em;
   }
-  .searchbar button {
+  .searchbar .search-button, .searchbar .clear-button {
     padding: 0 5px;
   }
   .searchbar .search-button img {
