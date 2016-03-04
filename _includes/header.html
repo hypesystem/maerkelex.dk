@@ -4,13 +4,15 @@
             <img src="{{ site.baseurl }}/img/logo.svg">
         </a>
         <div class="searchbar">
-            <input type="text" placeholder="Søg ...">
-            <button class="clear clear-button">
-                <img src="{{ site.baseurl }}/img/cross.svg">
-            </button>
-            <button class="search-button">
-                <img src="{{ site.baseurl }}/img/search.svg">
-            </button>
+            <form method="get">
+                <input type="text" name="search" placeholder="Søg ...">
+                <a class="clear clear-button">
+                    <img src="{{ site.baseurl }}/img/cross.svg">
+                </a>
+                <button class="search-button" type="submit">
+                    <img src="{{ site.baseurl }}/img/search.svg">
+                </button>
+            </form>
         </div>
         <script>
             var searchData = null;
@@ -26,12 +28,36 @@
 
             var searchBar = document.querySelector(".searchbar input");
 
+            var searchBarHasFocus = false;
+
+            searchBar.addEventListener("focus", function(e) {
+                searchBarHasFocus = true;
+            });
+
+            searchBar.addEventListener("blur", function(e) {
+                setTimeout(function() {
+                    searchBarHasFocus = false;
+                }, 10);
+            });
+
             searchBar.addEventListener("keyup", function(e) {
                 search();
             });
 
+            var searchBarHadFocusAtMouseDown = false;
+
+            document.querySelector(".searchbar .search-button").addEventListener("mousedown", function(e) {
+                searchBarHadFocusAtMouseDown = searchBarHasFocus;
+            });
+
             document.querySelector(".searchbar .search-button").addEventListener("click", function(e) {
                 e.preventDefault();
+                if(searchBarHadFocusAtMouseDown || searchBarHasFocus) {
+                    searchBarHadFocusAtMouseDown = false;
+                    searchBar.blur();
+                    document.querySelector(".container").scrollIntoView();
+                    return true;
+                }
                 searchBar.focus();
                 return true;
             });
@@ -93,6 +119,7 @@
                 }
                 e.preventDefault();
                 searchBar.focus();
+                document.querySelector("header").scrollIntoView();
                 return true;
             });
         </script>
