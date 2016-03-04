@@ -38,11 +38,6 @@
                 return true;
             });
 
-            document.querySelector(".searchbar form").onsubmit = function() {
-                searchBar.blur();
-                return false;
-            };
-
             (function getSearchValueFromQuery() {
                 if(!location.search) {
                     return searchBar.value = "";
