@@ -81,7 +81,6 @@ function renderMatches(matches) {
           '<div class="card-content">',
           '<h3>' + match.name + '</h3>',
           '</div></a><div class="card-link">',
-          '<a target="_blank" href="' + match.buylink + '">Find her</a>',
           '<a href="{{ site.baseurl }}' + match.url + '">Læs Mere</a>',
           '</div></div></div>'
         ].join("");
