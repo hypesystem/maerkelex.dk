@@ -4,9 +4,19 @@ title: Søg efter spejdermærker
 ---
 {% assign sorted_m = site.m | sort: "name" %}
 {% for m in sorted_m limit:24 %}
-    <a class="maerke-box" href="{{ site.baseurl }}{{ m.url }}" style="background-image: url('{{ site.baseurl }}/img/{{ m.image }}');">
-        <h1>{{ m.name }}</h1>
-    </a>
+  <div class="maerke-col">
+    <div class="maerke-box">
+      <a class="maerke-link" href="{{ site.baseurl }}{{ m.url }}">
+        <img src="{{ site.baseurl }}/img/{{ m.image }}" />
+        <div class="card-content">
+          <h3>{{ m.name }}</h3>
+        </div>
+      </a>
+      <div class="card-link">
+        <a href="{{ site.baseurl }}{{ m.url }}">Læs Mere</a>
+      </div>
+    </div>
+  </div>
 {% endfor %}
 
 <a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
