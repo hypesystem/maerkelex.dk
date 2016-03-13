@@ -12,6 +12,17 @@ layout: default
           <a class="tag" href="{{ site.baseurl }}/?search=tag:{{ tag }}">{{ tag }}</a>
       {% endfor %}
   </div>
+  <script>
+    var tagLinks = document.querySelectorAll(".tag");
+    for(var i = 0; i < tagLinks.length; i++) {
+      setUpTagLinkListener(tagLinks[i]);
+    }
+    function setUpTagLinkListener(tagLink) {
+      tagLink.addEventListener("click", function(e) {
+        ga("send", "event", "Badge", "taglink_click", tagLink.innerHTML);
+      });
+    }
+  </script>
   <p>
       {{ page.description }}
   </p>

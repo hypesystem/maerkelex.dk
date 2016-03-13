@@ -108,6 +108,7 @@
             clearIcon.addEventListener("click", function(e) {
                 searchBar.value = "";
                 search();
+                ga("send", "event", "SearchBar", "clear");
             });
 
             document.addEventListener("keypress", function(e) {
