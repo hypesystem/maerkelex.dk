@@ -28,3 +28,17 @@
     border-left: 1px solid rgba(0,0,0,0.1);
     padding-bottom: 25px;
 }
+
+@media screen and (max-width: 930px) {
+    .content-col {
+        padding: 0;
+    }
+    .content-col h1 {
+        margin-top: 0;
+    }
+    .aside-col {
+        border: none;
+        padding: 0;
+        font-size: 1em;
+    }
+}
