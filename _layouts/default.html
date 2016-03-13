@@ -7,7 +7,7 @@
         <title>{% if page.title %}{{ page.title }} | {% elsif page.name != "index.html" %}{{ page.name }} | {% endif %}Mærkelex</title>
         <meta name="description" content="Mærkelex er et leksikon over mærker. {{ page_description }}">
 
-        <meta property="og:title" content="{% if page.name != 'index.html' %}{{ page.name }}{% else %}Mærkelex{% endif %}">
+        <meta property="og:title" content="{% if page.name == 'index.html' %}Mærkelex{% elsif page.name contains '.html' %}{{ page.title }}{% else %}{{ page.name }}{% endif %}">
         <meta property="og:site_name" content="Mærkelex">
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://xn--mrkelex-mxa.dk{{ page.url }}">
