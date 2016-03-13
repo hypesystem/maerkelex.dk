@@ -1,0 +1,23 @@
+.contact-info {
+    padding: 3px 0;
+    display: block;
+    color: #aaaabb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.contact-info:hover {
+    color: black;
+}
+.contact-info:before {
+    content: ' ';
+    width: 20px;
+    height: 14px;
+    vertical-align: middle;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.contact-info-email:before {
+    background-image: url('/img/envelope.svg');
+}

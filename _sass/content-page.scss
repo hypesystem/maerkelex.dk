@@ -1,0 +1,30 @@
+.content-col {
+    width: 70%;
+    float: left;
+    padding-right: 25px;
+}
+.content-col h1 {
+    font-size: 2.3em;
+    font-family: 'Open Sans Light', 'Open Sans', sans-serif;
+    font-weight: 200;
+}
+.content-col h2 {
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.content-col h1, .aside-col h1 {
+    margin-bottom: 0;
+}
+.content-col p, .aside-col p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.aside-col {
+    width: 30%;
+    float: left;
+    font-size: 0.8em;
+    padding-left: 10px;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 25px;
+}
