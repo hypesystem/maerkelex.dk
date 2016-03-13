@@ -121,6 +121,7 @@
                 e.preventDefault();
                 searchBar.focus();
                 document.querySelector("header").scrollIntoView();
+                ga("send", "event", "KeyboardShortcut", "search", "pressed:S");
                 return true;
             });
         </script>
