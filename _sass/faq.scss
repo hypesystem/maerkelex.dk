@@ -17,7 +17,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    margin-bottom: 2px;
 }
 .contact-info-email:before {
     background-image: url('/img/envelope.svg');
+}
+.contact-info-facebook:before {
+    background-image: url('/img/facebook.png');
 }
