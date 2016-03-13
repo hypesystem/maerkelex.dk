@@ -15,11 +15,10 @@ footer {
     font-size: 0.8em;
 }
 .footer-col a {
-  display: inline-block;
+  text-align: left;
+  display: block;
   font-size: 1.2em;
-}
-.footer-col a+a {
-  margin-left: 15px;
+  text-decoration: none;
 }
 footer a {
     color: rgb(200, 200, 200);
