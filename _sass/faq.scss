@@ -25,3 +25,9 @@
 .contact-info-facebook:before {
     background-image: url('/img/facebook.png');
 }
+
+@media screen and (max-width: 930px) {
+    .contact-info {
+        padding: 8px 0;
+    }
+}
