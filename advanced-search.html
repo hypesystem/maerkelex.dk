@@ -1,0 +1,106 @@
+---
+layout: default
+permalink: advanced-search/
+title: Avanceret søgning
+---
+
+{% assign tags_str = "" %}
+{% for m in site.m %}
+    {% for tag in m.tags %}
+        {% assign tags_arr = tags_str | split: "," %}
+        {% unless tags_arr contains tag %}
+            {% assign tags_str = tags_str | append: "," | append: tag %}
+        {% endunless %}
+    {% endfor %}
+{% endfor %}
+{% assign tags = tags_str | remove_first: "," | split: "," | sort %}
+
+<h1>Avanceret søgning</h1>
+
+<section class="advanced-search-result">
+    <strong>Søgning:</strong>
+    <span id="searchResult"></span>
+    <button type="submit" id="searchButton">Søg</button>
+</section>
+
+<section class="advanced-search-setting-box">
+    <h2>Tekst</h2>
+    <p>
+        Hvert ord (adskilt af mellemrum) søges efter individuelt.
+        Der ledes i mærkernes titel og tags.
+    </p>
+    <input type="text" id="plaintextInput">
+</section>
+
+<section class="advanced-search-setting-box">
+    <h2>Alder</h2>
+    <input type="range" min="0" max="30" id="ageInput" disabled>
+    <input type="checkbox" id="ageInputEnabled"> til?
+</section>
+
+<section class="advanced-search-setting-box">
+    <h2>Tags</h2>
+    <p>
+        Tryk på et tag for at slå det til/fra.
+        Resultatet af søgningen bliver mærker der har alle de valgte tags.
+    </p>
+    {% for tag in tags %}
+        <a class="toggle-tag">{{ tag }}</a>
+    {% endfor %}
+</section>
+
+<script>
+    var ageSlider = document.querySelector("#ageInput");
+    var plaintextInput = document.querySelector("#plaintextInput");
+
+    document.querySelector("#ageInputEnabled").addEventListener("click", function(e) {
+        ageSlider.disabled = !this.checked;
+        reloadSearchString();
+    });
+
+    ageSlider.addEventListener("change", function(e) {
+        reloadSearchString();
+    });
+
+    plaintextInput.addEventListener("keyup", function(e) {
+        reloadSearchString();
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll(".toggle-tag"), function(toggleTag) {
+        toggleTag.addEventListener("click", function(e) {
+            if(toggleTag.className.indexOf("tagged-in") == -1) {
+                toggleTag.className += " tagged-in";
+            }
+            else {
+                toggleTag.className = "toggle-tag";
+            }
+            reloadSearchString();
+        });
+    });
+
+    var searchResultContainer = document.querySelector("#searchResult");
+
+    function reloadSearchString() {
+        var searchTerms = [];
+
+        if(plaintextInput.value != "") {
+            searchTerms = searchTerms.concat(plaintextInput.value.split(" "));
+        }
+
+        if(!ageSlider.disabled) {
+            searchTerms.push("alder:" + ageSlider.value);
+        }
+
+        Array.prototype.forEach.call(document.querySelectorAll(".toggle-tag.tagged-in"), function(includedTag) {
+            searchTerms.push("tag:" + includedTag.innerHTML);
+        });
+
+        searchResultContainer.innerHTML = searchTerms.join(" ");
+    }
+
+    document.querySelector("#searchButton").addEventListener("click", function() {
+        searchBar.value = searchResultContainer.innerHTML;
+        searchBar.focus();
+        search();
+    });
+</script>
