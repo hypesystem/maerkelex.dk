@@ -45,6 +45,22 @@ function matchesMaerke(maerke, term) {
         });
     }
 
+    if(term.indexOf("alder:") == 0) {
+        var termAge = parseInt(term.substring(6));
+        if(isNaN(termAge)) {
+            console.warn("User input in 'alder' invalid (should be number, is NaN)", term);
+            return false;
+        }
+        if(maerke.age == "*") {
+            return true;
+        }
+        if(maerke.age.indexOf("-") == -1) {
+            return termAge == maerke.age;
+        }
+        var maerkeRange = maerke.age.split("-");
+        return termAge >= maerkeRange[0] && termAge <= maerkeRange[1];
+    }
+
     var valueRegex = new RegExp(term, "i");
     if(maerke.name.replace(/&.+;/, '').match(valueRegex)) {
         return true;
