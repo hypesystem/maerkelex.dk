@@ -8,9 +8,9 @@ layout: default
 <div class="page-description col">
   <h1>{{ page.name }}</h1>
   {% if page.age %}
-    <p class="age">Egnet til: {{ page.age }} år</p>
+    <p class="age">Egnet til {{ page.age }} år</p>
     {% else %}
-    <p class="age">Egnet til: Alle aldre</p>
+    <p class="age">Egnet til Alle aldre</p>
   {% endif %}
   <div class="tags">
       {% for tag in page.tags %}
