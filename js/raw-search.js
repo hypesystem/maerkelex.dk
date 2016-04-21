@@ -54,6 +54,9 @@ function matchesMaerke(maerke, term) {
         if(maerke.age == "*") {
             return true;
         }
+        if(maerke.age.indexOf("+") == maerke.age.length - 1) {
+            return termAge >= maerke.age.slice(0, -1);
+        }
         if(maerke.age.indexOf("-") == -1) {
             return termAge == maerke.age;
         }
