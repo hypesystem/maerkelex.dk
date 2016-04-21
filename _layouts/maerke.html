@@ -7,6 +7,7 @@ layout: default
 </div>
 <div class="page-description col">
   <h1>{{ page.name }}</h1>
+  <p class="age">Egnet til: {{ page.age }} år</p>
   <div class="tags">
       {% for tag in page.tags %}
           <a class="tag" href="{{ site.baseurl }}/?search=tag:{{ tag }}">{{ tag }}</a>
@@ -26,6 +27,7 @@ layout: default
   <p>
       {{ page.description }}
   </p>
+
   <a target="_blank" href="{{ page.buylink }}" class="buylink">
     <button>Find mærket her</button>
   </a>
