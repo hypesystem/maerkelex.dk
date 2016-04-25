@@ -7,14 +7,7 @@ title: Søg efter spejdermærker
   <div class="maerke-col">
     <div class="maerke-box">
       <div class="maerke-info">
-        <div class="maerke-corps" style="
-        {% if m.tags.first == 'KFUM' %}
-        border-color: #006649;color: #006649;
-        {% elsif m.tags.first == 'DGP' %}
-        border-color: #005723;color: #005723;
-        {% elsif m.tags.first == 'DDS' %}
-        border-color: #003466;color: #003466;
-        {% endif %}">
+        <div class="maerke-corps {{m.tags.first}}">
           {{m.tags.first}}
         </div>
         <div class="maerke-age">
