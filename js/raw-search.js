@@ -93,10 +93,10 @@ function renderMatches(matches) {
     }
 
     var renderedMatches = matches.map(function(match) {
-      var age = match.age;
+        var age = match.age;
         if(age == "*") {
           age = "Alle aldre";
-        }else{
+        } else {
           age = match.age + " år";
         };
         return [
