@@ -93,11 +93,17 @@ function renderMatches(matches) {
     }
 
     var renderedMatches = matches.map(function(match) {
+      var age = match.age;
+        if(age == "*") {
+          age = "Alle aldre";
+        }else{
+          age = match.age + " år";
+        };
         return [
           '<div class="maerke-col"><div class="maerke-box">',
           '<div class="maerke-info">',
           '<div class="maerke-corps ' + match.tags[0] + '">' + match.tags[0] + '</div>',
-          '<div class="maerke-age">' + match.age + ' år</div></div>',
+          '<div class="maerke-age">' + age + '</div></div>',
           '<a class="maerke-link" href="{{ site.baseurl }}' + match.url + '">',
           '<img src="{{ site.baseurl }}/img/' + match.image + '"/>',
           '<div class="card-content">',
