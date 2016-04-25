@@ -135,6 +135,40 @@ header nav img {
   text-decoration: inherit;
 }
 
+.maerke-box .maerke-info {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  color: #fafafa;
+  margin-right: 10px;
+}
+
+.maerke-box .maerke-info div {
+  padding: 5px;
+  font-size: 0.8em;
+  padding: 5px 8px;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(0, 0, 0, 0.4);
+  transition: background 0.2s;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.maerke-box .maerke-corps {
+  text-transform: capitalize;
+  background-color: gray;
+}
+
+.maerke-box .maerke-corps img {
+  height: 100%;
+}
+
+.maerke-box .maerke-age {
+  background-color: $blue;
+}
+
 .maerke-col {
   box-sizing: border-box;
   display: inline-block;
@@ -381,6 +415,20 @@ header nav img {
       width: 100%;
       padding: 0 10px;
       box-sizing: border-box;
+  }
+  .maerke-box .maerke-info {
+    position: static;
+    margin-right: 0px;
+  }
+  .maerke-box {
+    padding-top: 0;
+  }
+  .maerke-box .maerke-info div {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    width: 50%;
+    display: inline-block;
+    float: left;
   }
 }
 

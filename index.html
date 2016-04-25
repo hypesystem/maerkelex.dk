@@ -6,6 +6,19 @@ title: Søg efter spejdermærker
 {% for m in sorted_m limit:24 %}
   <div class="maerke-col">
     <div class="maerke-box">
+      <div class="maerke-info">
+        <div class="maerke-corps" style="
+        {% if m.tags.first == 'KFUM' %}
+        background-color: #006649;
+        {% elsif m.tags.first == 'DGP' %}
+        background-color: #005723;
+        {% elsif m.tags.first == 'DDS' %}
+        background-color: #003466;
+        {% endif %}">
+          {{m.tags.first}}
+        </div>
+        <div class="maerke-age">{{m.age}} år</div>
+      </div>
       <a class="maerke-link" href="{{ site.baseurl }}{{ m.url }}">
         <img src="{{ site.baseurl }}/img/{{ m.image }}" />
         <div class="card-content">
