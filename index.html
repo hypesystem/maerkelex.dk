@@ -17,7 +17,13 @@ title: Søg efter spejdermærker
         {% endif %}">
           {{m.tags.first}}
         </div>
-        <div class="maerke-age">{{m.age}} år</div>
+        <div class="maerke-age">
+          {% if m.age %}
+            {{m.age}} år
+          {% else %}
+            Alle aldre
+          {% endif %}
+          </div>
       </div>
       <a class="maerke-link" href="{{ site.baseurl }}{{ m.url }}">
         <img src="{{ site.baseurl }}/img/{{ m.image }}" />
