@@ -117,7 +117,6 @@ header nav img {
 
 .maerke-box {
   width: 100%;
-  // border-radius: 5px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   box-shadow: 0 0 4px rgba(0,0,0,0.2), 0 0 10px rgba(255, 255, 255, 1) inset;
   background-color: white;
@@ -133,6 +132,60 @@ header nav img {
 .maerke-box .maerke-link {
   color: inherit;
   text-decoration: inherit;
+}
+
+.maerke-box .maerke-info {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  color: #fafafa;
+  margin-right: 10px;
+}
+
+.maerke-box .maerke-info div {
+  padding: 5px;
+  font-size: 0.8em;
+  padding: 5px 8px;
+  font-weight: bold;
+  transition: background 0.2s;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px;
+  border-style: solid;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.95);
+}
+
+.maerke-box .maerke-corps {
+  text-transform: capitalize;
+  color: gray;
+  border-color: gray;
+}
+
+.maerke-box .maerke-corps.DDS {
+  border-color: #003466;
+  color: #003466;
+}
+
+.maerke-box .maerke-corps.DGP {
+  border-color: #005723;
+  color: #005723;
+}
+
+.maerke-box .maerke-corps.KFUM {
+  border-color: #006649;
+  color: #006649;
+}
+
+.maerke-box .maerke-corps img {
+  height: 100%;
+}
+
+.maerke-box .maerke-age {
+  color: $blue;
+  border-color: $blue;
 }
 
 .maerke-col {
@@ -381,6 +434,17 @@ header nav img {
       width: 100%;
       padding: 0 10px;
       box-sizing: border-box;
+  }
+  .maerke-box .maerke-info {
+    position: static;
+    margin-right: 0px;
+  }
+  .maerke-box .maerke-info div {
+    margin: 0 1vw;
+    width: 45%;
+    display: inline-block;
+    float: left;
+    font-size: 2.5vw;
   }
 }
 
