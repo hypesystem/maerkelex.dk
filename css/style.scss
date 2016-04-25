@@ -148,17 +148,20 @@ header nav img {
   font-size: 0.8em;
   padding: 5px 8px;
   font-weight: bold;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(0, 0, 0, 0.4);
   transition: background 0.2s;
   border-radius: 3px;
   margin-bottom: 5px;
   text-align: center;
   box-sizing: border-box;
+  border: 1px;
+  border-style: solid;
+  background-color: #fff;
 }
 
 .maerke-box .maerke-corps {
   text-transform: capitalize;
-  background-color: gray;
+  color: gray;
+  border-color: gray;
 }
 
 .maerke-box .maerke-corps img {
@@ -166,7 +169,8 @@ header nav img {
 }
 
 .maerke-box .maerke-age {
-  background-color: $blue;
+  color: $blue;
+  border-color: $blue;
 }
 
 .maerke-col {
@@ -429,6 +433,7 @@ header nav img {
     width: 50%;
     display: inline-block;
     float: left;
+    border: 0px;
   }
 }
 
