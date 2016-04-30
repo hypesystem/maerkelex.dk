@@ -102,10 +102,10 @@ function renderMatches(matches) {
         }
         return [
           '<div class="maerke-col"><div class="maerke-box">',
+          '<a class="maerke-link" href="{{ site.baseurl }}' + match.url + '">',
           '<div class="maerke-info">',
           '<div class="maerke-corps ' + match.tags[0] + '">' + match.tags[0] + '</div>',
           '<div class="maerke-age">' + age + '</div></div>',
-          '<a class="maerke-link" href="{{ site.baseurl }}' + match.url + '">',
           '<img src="{{ site.baseurl }}/img/' + match.image + '"/>',
           '<div class="card-content">',
           '<h3>' + match.name + '</h3>',
