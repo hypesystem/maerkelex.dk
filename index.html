@@ -4,33 +4,7 @@ title: Søg efter spejdermærker
 ---
 {% assign sorted_m = site.m | sort: "name" %}
 {% for m in sorted_m limit:24 %}
-  <div class="maerke-col">
-    <div class="maerke-box">
-      <a class="maerke-link" href="{{ site.baseurl }}{{ m.url }}">
-        <div class="maerke-info">
-          <div class="maerke-corps {{m.tags.first}}">
-            {{m.tags.first}}
-          </div>
-          <div class="maerke-age">
-            {% if m.age %}
-              {{m.age}} år
-            {% else %}
-              Alle aldre
-            {% endif %}
-            </div>
-        </div>
-        <img src="{{ site.baseurl }}/img/{{ m.image }}" />
-        <div class="card-content">
-          <h3>{{ m.name }}</h3>
-        </div>
-      </a>
-      <a href="{{ site.baseurl }}{{ m.url }}">
-      <div class="card-link">
-        Læs Mere
-      </div>
-      </a>
-    </div>
-  </div>
+  {% include maerkebox.html %}
 {% endfor %}
 
 <a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
