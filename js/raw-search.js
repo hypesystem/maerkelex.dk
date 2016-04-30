@@ -98,7 +98,7 @@ function renderMatches(matches) {
           age = "Alle aldre";
         } else {
           age = match.age + " år";
-        };
+        }
         return [
           '<div class="maerke-col"><div class="maerke-box">',
           '<div class="maerke-info">',
