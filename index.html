@@ -6,7 +6,7 @@ title: Søg efter spejdermærker
 {% for m in sorted_m limit:24 %}
   {% assign m_url = m.url %}
   {% assign m_first_tag = m.tags.first %}
-  {% capture m_age %}{% if m_age %}{{ m_age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
+  {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
   {% assign m_image = m.image %}
   {% assign m_name = m.name %}
   {% include maerkebox.html %}
