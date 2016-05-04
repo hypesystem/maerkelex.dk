@@ -159,6 +159,8 @@ header nav img {
   border-style: solid;
   background-color: #fff;
   background-color: rgba(255,255,255,0.95);
+  position: relative;
+  z-index: 200;
 }
 
 .maerke-box .maerke-corps {
