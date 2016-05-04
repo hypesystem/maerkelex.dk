@@ -37,6 +37,9 @@ header {
     background: $dark;
     text-align: center;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3), 0 0 3px rgba(0,0,0,0.3);
 }
 header nav {
     display: inline-block;
@@ -301,6 +304,8 @@ header nav img {
     height: 300px;
     transition: height 0.5s, margin 0.5s, padding 0.5s;
     overflow: hidden;
+    z-index: 1;
+    top: -40px;
 }
 .first-visit-welcome.hidden {
     height: 0px;
