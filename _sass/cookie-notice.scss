@@ -10,6 +10,7 @@
     padding: 20px 10px 10px;
     cursor: pointer;
     transition: bottom 1.5s;
+    z-index: 300;
 }
 .cookieNotice.hidden {
     bottom: -400px;
