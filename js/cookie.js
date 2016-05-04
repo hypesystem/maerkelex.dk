@@ -49,5 +49,5 @@ function showWelcomeMessage() {
 }
 
 function setUserHasVisitedBefore() {
-    document.cookie = "maerkelexCookieNoticeShown=1;max-age=" + (60 * 60 * 24 * 30) + ";path=/";
+    document.cookie = "maerkelexCookieNoticeShown=1;expires=" + new Date(Date.now() + (1000 * 60 * 60 * 24 * 30)).toUTCString() + ";path=/";
 }
