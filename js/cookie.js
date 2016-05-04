@@ -42,6 +42,10 @@ function showWelcomeMessage() {
     document.querySelector(".first-visit-welcome-remover").addEventListener("click", function(event) {
         welcomeMessage.className += " hidden";
     });
+
+    onSearchListeners.push(function() {
+        welcomeMessage.className += " hidden";
+    });
 }
 
 function setUserHasVisitedBefore() {
