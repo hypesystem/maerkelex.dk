@@ -2,6 +2,15 @@
 ---
 var titleTag = document.head.querySelector("title");
 
+onSearchListeners.push(function(value, recovery) {
+    if(!recovery) {
+        addSearchHistoryFrame(value);
+        if(ga) {
+            ga('send', 'pageview', "/?search=" + value);
+        }
+    }
+});
+
 rawSearch = function(recovery) {
     var value = searchBar.value;
     var terms = getTermsFromSearchString(value);
@@ -17,12 +26,10 @@ rawSearch = function(recovery) {
 
     console.log("Got " + matches.length + " matches for search");
 
-    if(!recovery) {
-        addSearchHistoryFrame(value);
-        if(ga) {
-            ga('send', 'pageview', "/?search=" + value);
-        }
-    }
+    onSearchListeners.forEach(function(listener) {
+        listener(value, recovery);
+    });
+
     titleTag.innerHTML = "Søg: " + value + " | Mærkelex";
     renderMatches(matches);
 }

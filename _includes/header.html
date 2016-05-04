@@ -17,6 +17,7 @@
         <script>
             var searchData = null;
             var rawSearch = null;
+            var onSearchListeners = [];
 
             var search = debounced(function(recovery) {
                 if(!rawSearch || !searchData) {

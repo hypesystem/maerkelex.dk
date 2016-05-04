@@ -37,6 +37,9 @@ header {
     background: $dark;
     text-align: center;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3), 0 0 3px rgba(0,0,0,0.3);
 }
 header nav {
     display: inline-block;
@@ -295,28 +298,29 @@ header nav img {
 }
 
 .first-visit-welcome {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     background: $orange;
     position: relative;
     height: 300px;
-    transition: height 0.5s, margin 0.5s, padding 0.5s;
+    transition: height 0.5s, margin 0.5s, padding 0.5s, max-height 0.5s;
     overflow: hidden;
+    z-index: 1;
+    margin-top: -40px;
 }
 .first-visit-welcome.hidden {
-    height: 0px;
-    margin-bottom: 0;
+    margin-top: -340px;
 }
 .first-visit-welcome-remover {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 50%;
-    margin-left: -100px;
-    width: 200px;
+    margin-left: -75px;
+    width: 150px;
     color: white;
     text-transform: uppercase;
     z-index: 3;
-    font-size: 0.8em;
-    padding: 15px 0;
+    font-size: 0.6em;
+    padding: 8px 0;
     background: $dark;
     opacity: 0;
     transition: opacity 0.2s, padding 0.2s;
@@ -324,7 +328,6 @@ header nav img {
 }
 .first-visit-welcome:hover .first-visit-welcome-remover {
     opacity: 1;
-    padding-top: 25px;
 }
 .first-visit-welcome-image {
     background-image: url('../img/welcome-message-01.png');
@@ -421,10 +424,13 @@ header nav img {
   }
   .first-visit-welcome {
       height: auto;
-      padding-top: 60px;
+      padding-bottom: 40px;
+      max-height: 600px;
   }
   .first-visit-welcome.hidden {
-      padding-top: 0;
+      margin-top: -40px;
+      max-height: 0px;
+      padding-bottom: 0;
   }
   .first-visit-welcome-remover {
       opacity: 1;
