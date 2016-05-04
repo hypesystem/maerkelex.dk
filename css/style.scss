@@ -302,7 +302,7 @@ header nav img {
     background: $orange;
     position: relative;
     height: 300px;
-    transition: height 0.5s, margin 0.5s, padding 0.5s;
+    transition: height 0.5s, margin 0.5s, padding 0.5s, max-height 0.5s;
     overflow: hidden;
     z-index: 1;
     margin-top: -40px;
@@ -424,10 +424,13 @@ header nav img {
   }
   .first-visit-welcome {
       height: auto;
-      padding-top: 60px;
+      padding-bottom: 40px;
+      max-height: 600px;
   }
   .first-visit-welcome.hidden {
-      padding-top: 0;
+      margin-top: -40px;
+      max-height: 0px;
+      padding-bottom: 0;
   }
   .first-visit-welcome-remover {
       opacity: 1;
