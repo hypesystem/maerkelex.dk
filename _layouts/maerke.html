@@ -5,45 +5,45 @@ layout: default
   <div class="cover-img" {% if page.coverimage %} style="background-image: url('{{ site.baseurl }}/img/{{ page.coverimage }}');"{% endif %}></div>
 </div>
 <div class="main-maerke-content">
-<div class="page-image col">
-  <img src="{{ site.baseurl }}/img/{{ page.image }}">
-</div>
-<div class="page-description col">
-  <h1>{{ page.name }}</h1>
-  <div class="page-description-color">
-    {% if page.age %}
-      <p class="age">Egnet til {{ page.age }} år</p>
-    {% else %}
-      <p class="age">Egnet til alle aldre</p>
-    {% endif %}
-  <div class="tags">
-      {% for tag in page.tags %}
-          <a class="tag" href="{{ site.baseurl }}/?search=tag:{{ tag }}">{{ tag }}</a>
-      {% endfor %}
+  <div class="page-image col">
+    <img src="{{ site.baseurl }}/img/{{ page.image }}">
   </div>
-  <script>
-    var tagLinks = document.querySelectorAll(".tag");
-    for(var i = 0; i < tagLinks.length; i++) {
-      setUpTagLinkListener(tagLinks[i]);
-    }
-    function setUpTagLinkListener(tagLink) {
-      tagLink.addEventListener("click", function(e) {
-        ga("send", "event", "Badge", "taglink_click", tagLink.innerHTML);
-      });
-    }
-  </script>
-  <p>
-      {{ page.description }}
-  </p>
+  <div class="page-description col">
+    <h1>{{ page.name }}</h1>
+    <div class="page-description-color">
+      {% if page.age %}
+        <p class="age">Egnet til {{ page.age }} år</p>
+      {% else %}
+        <p class="age">Egnet til alle aldre</p>
+      {% endif %}
+      <div class="tags">
+          {% for tag in page.tags %}
+              <a class="tag" href="{{ site.baseurl }}/?search=tag:{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+      </div>
+      <script>
+        var tagLinks = document.querySelectorAll(".tag");
+        for(var i = 0; i < tagLinks.length; i++) {
+          setUpTagLinkListener(tagLinks[i]);
+        }
+        function setUpTagLinkListener(tagLink) {
+          tagLink.addEventListener("click", function(e) {
+            ga("send", "event", "Badge", "taglink_click", tagLink.innerHTML);
+          });
+        }
+      </script>
+      <p>
+          {{ page.description }}
+      </p>
 
-  <a target="_blank" href="{{ page.buylink }}" class="buylink">
-    <button>Find mærket her</button>
-  </a>
-  <script>
-    document.querySelector(".buylink").addEventListener("click", function(e) {
-      ga("send", "event", "Badge", "buylink_click", "{{ page.url }}");
-    });
-  </script>
-</div>
-</div>
+      <a target="_blank" href="{{ page.buylink }}" class="buylink">
+        <button>Find mærket her</button>
+      </a>
+      <script>
+        document.querySelector(".buylink").addEventListener("click", function(e) {
+          ga("send", "event", "Badge", "buylink_click", "{{ page.url }}");
+        });
+      </script>
+    </div>
+  </div>
 </div>
