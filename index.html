@@ -1,7 +1,15 @@
 ---
 layout: default
 title: Søg efter spejdermærker
+sponsored:
+ - dds-faerdighed-oekse
+ - dds-udeliv
+ - dds-faerdighed-telt
+sponsor: Spejdersport
+sponsor_link: https://www.spejdersport.dk/maerkerogpraemier.aspx
 ---
+{% include sponsored-badges.html %}
+
 {% assign sorted_m = site.m | sort: "name" %}
 {% for m in sorted_m limit:24 %}
   {% assign m_url = m.url %}
