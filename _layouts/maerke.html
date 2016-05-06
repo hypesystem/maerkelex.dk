@@ -1,12 +1,16 @@
 ---
 layout: default
 ---
-
+<div class="cover">
+  <div class="cover-img" {% if page.coverimage %} style="background-image: url('{{ site.baseurl }}/img/{{ page.coverimage }}');"{% endif %}></div>
+</div>
+<div class="main-maerke-content">
 <div class="page-image col">
   <img src="{{ site.baseurl }}/img/{{ page.image }}">
 </div>
 <div class="page-description col">
   <h1>{{ page.name }}</h1>
+  <div class="page-description-color">
     {% if page.age %}
       <p class="age">Egnet til {{ page.age }} år</p>
     {% else %}
@@ -40,4 +44,6 @@ layout: default
       ga("send", "event", "Badge", "buylink_click", "{{ page.url }}");
     });
   </script>
+</div>
+</div>
 </div>
