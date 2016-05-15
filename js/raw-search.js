@@ -99,7 +99,11 @@ function renderMatches(matches) {
         return;
     }
 
-    var renderedMatches = matches.map(function(match) {
+    content.innerHTML = renderResults(matches);
+}
+
+function renderResults(matches) {
+    return matches.map(function(match) {
         var age = match.age;
         if(age == "*") {
           age = "Alle aldre";
@@ -114,9 +118,7 @@ function renderMatches(matches) {
         {% assign m_name = "' + match.name + '" %}
         {% capture maerke_result %}'{% include maerkebox.html %}';{% endcapture %}
         return {{ maerke_result | strip_newlines }}
-    });
-
-    content.innerHTML = renderedMatches.join(" ");
+    }).join("");
 }
 
 (function getSearchData(retries) {
