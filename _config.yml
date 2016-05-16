@@ -2,6 +2,9 @@ collections:
   m:
     output: true
     permalink: /m/:path/
+  m_redirects:
+    output: true
+    permalink: /m/:path/
 
 defaults:
   - scope:
