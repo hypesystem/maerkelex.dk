@@ -35,10 +35,12 @@ layout: default
       <p>
           {{ page.description }}
       </p>
-
-      <a target="_blank" href="{{ page.buylink }}" class="buylink">
-        <button>Find mærket her</button>
-      </a>
+      <div class="btn-container">
+        {% if page.infolink %}
+        <a target="_blank" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
+        {% endif %}
+        <a target="_blank" href="{{ page.buylink }}" class="btn buylink">Køb mærket her</a>
+      </div>
       <script>
         document.querySelector(".buylink").addEventListener("click", function(e) {
           ga("send", "event", "Badge", "buylink_click", "{{ page.url }}");
