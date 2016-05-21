@@ -1,8 +1,10 @@
 ---
 ---
 $orange: rgb(251, 171, 68);
+$darkorange: darken($orange, 15%);
 $blue: rgb(8, 159, 218);
-$darkblue: rgb(11, 93, 125);
+$darkblue: darken($blue, 15%);
+$shadowonblue: rgb(11, 93, 125);
 $dark: rgb(50, 50, 60);
 
 @font-face {
@@ -323,7 +325,8 @@ header nav img {
     font-family: "Open Sans Light", "Open Sans", sans-serif;
 }
 
-.page-description button {
+.page-description .btn {
+  text-align: center;
   width: 100%;
   padding: 10px;
   cursor: pointer;
@@ -332,10 +335,34 @@ header nav img {
   font-weight: bold;
   border: none;
   transition: background 0.2s;
+  text-decoration: none;
 }
 
-.page-description button:hover {
+.page-description .btn:hover {
   background: $darkblue;
+}
+
+.page-description .infolink {
+  background: $orange;
+}
+
+.page-description .infolink:hover {
+  background: $darkorange;
+}
+
+.btn-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btn+.btn {
+  margin-left: 10px;
 }
 
 .first-visit-welcome {
@@ -509,6 +536,15 @@ header nav img {
     margin: 0;
     display: block;
     text-align: center;
+  }
+  .btn-container {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;;
+  }
+  .btn+.btn {
+    margin-left: 0;
+    margin-top: 10px;
   }
 }
 
