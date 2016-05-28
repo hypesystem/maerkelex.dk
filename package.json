@@ -1,0 +1,29 @@
+{
+  "name": "maerkelex",
+  "version": "1.0.0",
+  "description": "Badge overview for badges dk",
+  "scripts": {
+    "start": "npm-run-all -p start:jekyll watch:js",
+      "start:jekyll": "jekyll serve",
+    "build": "npm-run-all build:*",
+      "build:jekyll": "jekyll build",
+      "build:js": "uglifyjs _site/js/raw-search.js _site/js/cookie.js -m -o js/output.js",
+    "watch": "npm-run-all -p watch:*",
+      "watch:js": "watch \"npm run build:js\" _site/js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypesystem/maerkelex.dk.git"
+  },
+  "author": "Mærkelex IVS <kontakt@maerkelex.dk>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/hypesystem/maerkelex.dk/issues"
+  },
+  "homepage": "https://github.com/hypesystem/maerkelex.dk#readme",
+  "dependencies": {
+    "npm-run-all": "^2.1.1",
+    "uglify-js": "^2.6.2",
+    "watch": "^0.18.0"
+  }
+}
