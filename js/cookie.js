@@ -54,6 +54,9 @@ function setUserHasVisitedBefore() {
 
 function hideSponsor() {
   document.querySelector(".sponsored-badges").className += " hide";
+  setTimeout(function () {
+    document.querySelector(".sponsored-badges").style.opacity = "0";
+  }, 750);
 }
 
 document.querySelector(".sponsor-hide").addEventListener("click", function(event) {
