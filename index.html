@@ -1,24 +1,36 @@
 ---
-layout: default
+layout: default-no-container
 title: Søg efter spejdermærker
+sponsored:
+ - dds-faerdighed-oekse
+ - dds-udeliv
+ - dds-faerdighed-telt
+sponsor: Spejdersport
+sponsor_link: https://www.spejdersport.dk/maerkerogpraemier.aspx
 ---
-{% assign sorted_m = site.m | sort: "name" %}
-{% for m in sorted_m limit:24 %}
-  {% assign m_url = m.url %}
-  {% assign m_first_tag = m.tags.first %}
-  {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
-  {% assign m_image = m.image %}
-  {% assign m_name = m.name %}
-  {% include maerkebox.html %}
-{% endfor %}
+{% include sponsored-badges.html %}
 
-<a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
-<script>
-    document.querySelector(".see-more-button").addEventListener("click", function(e) {
-        e.preventDefault();
-        searchBar.value = "";
-        search();
-        ga("send", "event", "BadgeList", "view_all", "initial overview");
-        return false;
-    });
-</script>
+<div class="container">
+    <div class="content">
+      {% assign sorted_m = site.m | sort: "name" %}
+      {% for m in sorted_m limit:24 %}
+        {% assign m_url = m.url %}
+        {% assign m_first_tag = m.tags.first %}
+        {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
+        {% assign m_image = m.image %}
+        {% assign m_name = m.name %}
+        {% include maerkebox.html %}
+      {% endfor %}
+
+    <a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
+    <script>
+        document.querySelector(".see-more-button").addEventListener("click", function(e) {
+            e.preventDefault();
+            searchBar.value = "";
+            search();
+            ga("send", "event", "BadgeList", "view_all", "initial overview");
+            return false;
+        });
+    </script>
+  </div>
+</div>

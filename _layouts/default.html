@@ -1,63 +1,8 @@
-{% capture page_description %}{% if page.description %}{{ page.description | strip_html | replace:'"',"'" }}{% else %}Her kan du finde mærker (spejdermærker) for Det Danske Spejderkorps (DDS), KFUM eller De Grønne Pigespejdere, samt alle de uofficielle mærker der florerer i Danmark.{% endif %}{% endcapture %}
-<!DOCTYPE html>
-<html lang="da" prefix="og: http://ogp.me/ns#">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">
-        <title>{% if page.name contains '.html' %}{{ page.title }} | {% else %}{{ page.name }} | {% endif %}Mærkelex</title>
-        <meta name="description" content="Mærkelex er et leksikon over mærker. {{ page_description }}">
-
-        <meta property="og:title" content="{% if page.name == 'index.html' %}Mærkelex{% elsif page.name contains '.html' %}{{ page.title }}{% else %}{{ page.name }}{% endif %}">
-        <meta property="og:site_name" content="Mærkelex">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="http://xn--mrkelex-mxa.dk{{ page.url }}">
-        <meta property="og:image" content="http://xn--mrkelex-mxa.dk/img/{% if page.image %}{{ page.image }}{% else %}logo.svg{% endif %}">
-        <meta property="og:description" content="{{ page_description }}">
-        <meta property="og:locale" content="da_DK">
-
-        <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/img/favicon.png">
-        <link rel="shortcut icon" type="image/svg+xml" href="{{ site.baseurl }}/img/logo.svg">
-        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
-        <script>
-            function debounced(fun, timeout) {
-                if(!timeout) {
-                    timeout = 250;
-                }
-                var i = 0;
-                return function() {
-                    var myI = ++i;
-                    var args = Array.prototype.slice.call(arguments);
-                    setTimeout(function() {
-                        if(i > myI) {
-                            return;
-                        }
-                        fun.apply(fun, args);
-                    }, timeout);
-                };
-            }
-        </script>
-    </head>
-    <body ontouchstart="">
-      <main>
-        {% include header.html %}
-        <div class="container">
-            <div class="content">
-                {{content}}
-            </div>
-        </div>
-      </main>
-        {% include footer.html %}
-        <script src="{{ site.baseurl }}/js/raw-search.js"></script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-57878677-2', 'auto');
-            ga('send', 'pageview');
-        </script>
-        <script src="{{ site.baseurl }}/js/cookie.js"></script>
-
-    </body>
-</html>
+---
+layout: default-no-container
+---
+<div class="container">
+    <div class="content">
+        {{content}}
+    </div>
+</div>
