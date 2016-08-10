@@ -5,7 +5,9 @@
     padding: 8px 15px;
     margin-bottom: 40px;
     margin-top: -40px;
-    transition: all 1.5s;
+    transition: all 0.75s ease;
+    max-height: 500px;
+    overflow: hidden;
 }
 .sponsor-message {
     color: white;
@@ -15,7 +17,7 @@
     padding: 20px 6px;
 }
 .ad-politics {
-  text-align: center;
+  text-align: right;
   font-size: 0.75em;
 }
 .sponsor-message a {
@@ -27,8 +29,7 @@
 }
 
 .sponsored-badges.hide {
-  height: 0;
-  display: none;
+  margin-top: -422px;
 }
 
 .sponsor-hide {
@@ -39,6 +40,8 @@
 @media screen and (max-width: 930px) {
   .sponsored-badges {
     padding: 0px;
+    margin-top: -10px;
+    margin-bottom: 10px;
   }
   .sponsored-badges .maerke-box {
     padding-top: 0;
@@ -57,5 +60,9 @@
   }
   .sponsored-badges .maerke-box .card-content {
     height: 10px;
+  }
+  .sponsored-badges.hide {
+    margin-top: -10px;
+    max-height: 0;
   }
 }
