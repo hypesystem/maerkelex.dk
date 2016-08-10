@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <title>{% if page.title %}{{ page.title }} | {% elsif page.name != "index.html" %}{{ page.name }} | {% endif %}Mærkelex</title>
+        <title>{% if page.name contains '.html' %}{{ page.title }} | {% else %}{{ page.name }} | {% endif %}Mærkelex</title>
         <meta name="description" content="Mærkelex er et leksikon over mærker. {{ page_description }}">
 
         <meta property="og:title" content="{% if page.name == 'index.html' %}Mærkelex{% elsif page.name contains '.html' %}{{ page.title }}{% else %}{{ page.name }}{% endif %}">
