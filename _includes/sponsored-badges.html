@@ -1,21 +1,27 @@
 {% assign num_sponsored = page.sponsored | size %}
 {% if num_sponsored == 3 %}
 <div class="sponsored-badges">
-    <div class="sponsor-message">
-        Fremhævet af
-        <a href="{{ page.sponsor_link }}" target="_blank">{{ page.sponsor }}</a>
+    <div class="content">
+      <div class="sponsor-message">
+          Fremhævet af
+          <a href="{{ page.sponsor_link }}" target="_blank">{{ page.sponsor }}</a>
+          <span class="sponsor-hide">skjul</span>
+      </div>
+      {% for sponsored_badge in page.sponsored %}
+          {% for m in site.m %}
+              {% if m.url contains sponsored_badge %}
+                  {% assign m_url = m.url %}
+                  {% assign m_first_tag = m.tags.first %}
+                  {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
+                  {% assign m_image = m.image %}
+                  {% assign m_name = m.name %}
+                  {% include maerkebox.html %}
+              {% endif %}
+          {% endfor %}
+      {% endfor %}
+      <div class="sponsor-message ad-politics">
+          <a href="/reklamer">Læs vores reklamepolitik</a>
+      </div>
     </div>
-    {% for sponsored_badge in page.sponsored %}
-        {% for m in site.m %}
-            {% if m.url contains sponsored_badge %}
-                {% assign m_url = m.url %}
-                {% assign m_first_tag = m.tags.first %}
-                {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
-                {% assign m_image = m.image %}
-                {% assign m_name = m.name %}
-                {% include maerkebox.html %}
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
 </div>
 {% endif %}

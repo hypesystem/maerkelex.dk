@@ -32,6 +32,7 @@ rawSearch = function(recovery) {
 
     titleTag.innerHTML = "Søg: " + value + " | Mærkelex";
     renderMatches(matches);
+    hideSponsor();
 }
 
 function getTermsFromSearchString(str) {

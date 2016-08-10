@@ -51,3 +51,11 @@ function showWelcomeMessage() {
 function setUserHasVisitedBefore() {
     document.cookie = "maerkelexCookieNoticeShown=1;expires=" + new Date(Date.now() + (1000 * 60 * 60 * 24 * 30)).toUTCString() + ";path=/";
 }
+
+function hideSponsor() {
+  document.querySelector(".sponsored-badges").className += " hide";
+}
+
+document.querySelector(".sponsor-hide").addEventListener("click", function(event) {
+    hideSponsor();
+});

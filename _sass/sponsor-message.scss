@@ -1,15 +1,22 @@
 .sponsored-badges {
-    background: $dark;
+    display: flex;
+    justify-content: center;
+    background: lighten($dark, 3%);
     padding: 8px 15px;
-    height: 340px;
     margin-bottom: 40px;
+    margin-top: -40px;
+    transition: all 1.5s;
 }
 .sponsor-message {
     color: white;
     text-transform: uppercase;
-    font-size: 0.75em;
+    font-size: 0.9em;
     font-weight: bold;
     padding: 20px 6px;
+}
+.ad-politics {
+  text-align: center;
+  font-size: 0.75em;
 }
 .sponsor-message a {
     color: inherit;
@@ -17,4 +24,38 @@
 }
 .sponsored-badges .card-link {
     display: none;
+}
+
+.sponsored-badges.hide {
+  height: 0;
+  display: none;
+}
+
+.sponsor-hide {
+  float: right;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 930px) {
+  .sponsored-badges {
+    padding: 0px;
+  }
+  .sponsored-badges .maerke-box {
+    padding-top: 0;
+  }
+  .sponsored-badges .maerke-col {
+    width: 33%;
+  }
+  .sponsored-badges .maerke-info {
+    display: none;
+  }
+  .sponsored-badges .maerke-info .maerke-age {
+    display: none;
+  }
+  .sponsored-badges .maerke-box img {
+    height: auto;
+  }
+  .sponsored-badges .maerke-box .card-content {
+    height: 10px;
+  }
 }
