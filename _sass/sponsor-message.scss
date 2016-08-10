@@ -4,7 +4,7 @@
     background: lighten($dark, 3%);
     padding: 8px 15px;
     margin-bottom: 40px;
-    margin-top: -40px;
+    margin-top: 0px;
     transition: all 0.75s ease;
     max-height: 500px;
     overflow: hidden;
@@ -29,7 +29,7 @@
 }
 
 .sponsored-badges.hide {
-  margin-top: -422px;
+  margin-top: -392px;
 }
 
 .sponsor-hide {
@@ -40,7 +40,7 @@
 @media screen and (max-width: 930px) {
   .sponsored-badges {
     padding: 0px;
-    margin-top: -10px;
+    padding-top: 20px;
     margin-bottom: 10px;
   }
   .sponsored-badges .maerke-box {
@@ -62,7 +62,7 @@
     height: 10px;
   }
   .sponsored-badges.hide {
-    margin-top: -10px;
+    margin-top: 10px;
     max-height: 0;
   }
 }

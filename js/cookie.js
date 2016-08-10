@@ -36,7 +36,7 @@ function elementFromHtml(html) {
 function showWelcomeMessage() {
     var welcomeMessage = elementFromHtml('<div class="first-visit-welcome"><div class="first-visit-welcome-remover">Fjern besked</div><div class="first-visit-welcome-image"></div><div class="first-visit-welcome-text"><p>Velkommen til Mærkelex!</p><p>Vi prøver at samle alle forløbs- og dueligheds&#173;mærker fra danske spejder&#173;korps, inklusiv de hjemme&#173;lavede, som folk selv laver og sælger.</p><p>Hvis du finder ud af at vi mangler et mærke, eller der står noget på siden der er forkert, kan du <a href="mailto:kontakt@mærkelex.dk">sende os en email</a>.</p></div></div>');
 
-    var container = document.querySelector(".container");
+    var container = document.querySelector(".intro-message");
     container.insertBefore(welcomeMessage, container.firstChild);
 
     document.querySelector(".first-visit-welcome-remover").addEventListener("click", function(event) {
@@ -54,9 +54,6 @@ function setUserHasVisitedBefore() {
 
 function hideSponsor() {
   document.querySelector(".sponsored-badges").className += " hide";
-  setTimeout(function () {
-    document.querySelector(".sponsored-badges").style.display = "none";
-  }, 750);
 }
 
 document.querySelector(".sponsor-hide").addEventListener("click", function(event) {
