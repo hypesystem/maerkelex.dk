@@ -111,6 +111,7 @@ header nav img {
 .container {
     text-align: center;
     padding-bottom: 50px;
+    padding-top: 20px;
 }
 .content {
     text-align: left;
@@ -502,7 +503,7 @@ header nav img {
   .first-visit-welcome {
       height: auto;
       max-height: 600px;
-      margin-top: 30px;
+      // margin-top: 30px;
       margin-bottom: 0;
   }
   .first-visit-welcome.hidden {
@@ -511,13 +512,16 @@ header nav img {
       padding-bottom: 0;
   }
   .first-visit-welcome-remover {
-      opacity: 1;
+      position: static;
   }
   .first-visit-welcome-text {
       max-width: 500px;
       width: 100%;
       padding: 0 10px;
       box-sizing: border-box;
+  }
+  .intro-message {
+    margin-top: -10px;
   }
   .maerke-box .maerke-info {
     position: static;
