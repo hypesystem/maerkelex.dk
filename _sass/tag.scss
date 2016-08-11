@@ -1,4 +1,6 @@
-.tag {
+.tag,
+.toggle-tag {
+    cursor: pointer;
     color: rgb(250, 250, 250);
     background-color: $orange;
     font-size: 0.8em;
@@ -11,7 +13,9 @@
     margin-bottom: 4px;
 }
 
-.tag:hover {
+.tag:hover,
+.toggle-tag:hover,
+.tagged-in {
   background-color: $dark;
   color: rgb(250, 250, 250);
 }

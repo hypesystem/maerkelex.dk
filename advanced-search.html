@@ -15,39 +15,66 @@ title: Avanceret søgning
 {% endfor %}
 {% assign tags = tags_str | remove_first: "," | split: "," | sort %}
 
-<h1>Avanceret søgning</h1>
+<div class="advanced-search-container">
+  <h1>Avanceret søgning</h1>
+  <p>
+      Ved hjælp af advanceret søgning har du mulighed for at søge på meget specifikke typer af mærker. Det er også muligt at søge på denne måde i den normale søgebar, men her hjælper vi dig med at søge med de rigtige tags.
+  </p>
+  <p>
+      <strong>Tekst</strong>
+      &mdash; Hvert ord (adskilt af mellemrum) søges efter individuelt.
+      Der ledes i mærkernes titel og tags.
+  </p>
 
-<section class="advanced-search-result">
-    <strong>Søgning:</strong>
-    <span id="searchResult"></span>
-    <button type="submit" id="searchButton">Søg</button>
-</section>
+  <p>
+      <strong>Alder</strong>
+      &mdash; Det er også muligt at tilpasse med en alder i din søgning.
+      Du vil kun få resultater som er i eller under den aldersgruppe du tilhøre.
+  </p>
+  <p>
+      <strong>Tags</strong>
+      &mdash; Tryk på et tag for at slå det til/fra.
+      Resultatet af søgningen bliver mærker der har alle de valgte tags.
+  </p>
 
-<section class="advanced-search-setting-box">
-    <h2>Tekst</h2>
-    <p>
-        Hvert ord (adskilt af mellemrum) søges efter individuelt.
-        Der ledes i mærkernes titel og tags.
-    </p>
-    <input type="text" id="plaintextInput">
-</section>
+  <hr class="advanced-search-divider" />
 
-<section class="advanced-search-setting-box">
-    <h2>Alder</h2>
-    <input type="range" min="0" max="30" id="ageInput" disabled>
-    <input type="checkbox" id="ageInputEnabled"> til?
-</section>
+  <section class="advanced-search-setting-box">
+      <label class="index-label" for="plaintextInput">Tekst:</label>
+      <input type="text" id="plaintextInput">
+  </section>
 
-<section class="advanced-search-setting-box">
-    <h2>Tags</h2>
-    <p>
-        Tryk på et tag for at slå det til/fra.
-        Resultatet af søgningen bliver mærker der har alle de valgte tags.
-    </p>
-    {% for tag in tags %}
-        <a class="toggle-tag">{{ tag }}</a>
-    {% endfor %}
-</section>
+  <section class="advanced-search-setting-box">
+
+      <div class="ageInput">
+        <div class="checkbox">
+          <input type="checkbox" id="ageInputEnabled">
+          <label for="ageInputEnabled"></label>
+        </div>
+        <label for="ageInputEnabled">Aktiver alderssøgning</label>
+      </div>
+      <div id="ageInputContainer">
+        <label class="index-label" for="ageInputEnabled">Alder:</label>
+        <input type="number" min="0" max="30" id="ageInput" disabled>
+      </div>
+  </section>
+
+  <section class="advanced-search-setting-box advanced-search-tags">
+      {% for tag in tags %}
+          <a class="toggle-tag">{{ tag }}</a>
+      {% endfor %}
+  </section>
+
+  <section class="advanced-search-result">
+    <div class="advanced-search-result-container">
+        <p>
+          <strong>Søgning:</strong>
+          <span id="searchResult"></span>
+        </p>
+        <button type="submit" id="searchButton">Søg</button>
+    </div>
+  </section>
+</div>
 
 <script>
     var ageSlider = document.querySelector("#ageInput");
@@ -55,6 +82,11 @@ title: Avanceret søgning
 
     document.querySelector("#ageInputEnabled").addEventListener("click", function(e) {
         ageSlider.disabled = !this.checked;
+        if(this.checked == true){
+          document.querySelector("#ageInputContainer").style.display = "block";
+        } else {
+          document.querySelector("#ageInputContainer").style.display = "none";
+        }
         reloadSearchString();
     });
 
