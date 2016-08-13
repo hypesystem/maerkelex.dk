@@ -97,6 +97,10 @@ title: Avanceret søgning
         reloadSearchString();
     });
 
+    plaintextInput.addEventListener("keypress", function(e) {
+        e.stopPropagation();
+    });
+
     plaintextInput.addEventListener("keyup", function(e) {
         reloadSearchString();
     });
