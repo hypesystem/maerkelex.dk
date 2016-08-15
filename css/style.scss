@@ -40,7 +40,7 @@ header {
     margin-bottom: 40px;
     text-align: center;
     position: relative;
-    z-index: 10;
+    z-index: 300;
     box-shadow: 0 0 6px rgba(0,0,0,0.3), 0 0 3px rgba(0,0,0,0.3);
 }
 header nav {
@@ -49,6 +49,7 @@ header nav {
     width: 900px;
     padding: 15px 0;
     box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 header nav a.logo {
     float: left;
@@ -56,6 +57,38 @@ header nav a.logo {
 header nav img {
     width: 64px;
     height: 64px;
+}
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+}
+header.sticky nav {
+  height: 50px !important;
+  padding: 10px 0;
+}
+@media(max-width: 930px){
+  header.sticky nav {
+    padding: 10px;
+  }
+}
+header.sticky nav img {
+  width: 30px;
+  height: 100%;
+}
+header.sticky nav .searchbar .search-button img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0;
+}
+header.sticky nav .searchbar {
+  bottom: 7px;
+}
+@media(max-width: 930px){
+  header.sticky nav .searchbar {
+    bottom: 0px;
+  }
 }
 .searchbar {
     display: inline-block;
@@ -74,6 +107,7 @@ header nav img {
     opacity: 0;
     transition: width 0.2s, opacity 0.2s;
     vertical-align: middle;
+    outline: none;
 }
 .searchbar .clear {
   opacity: 0;
@@ -465,9 +499,6 @@ header nav img {
   }
   .searchbar input {
       font-size: 1.4em;
-  }
-  .searchbar .search-button, .searchbar .clear-button {
-    padding: 0 5px;
   }
   .searchbar .search-button img {
     margin-top: 0;
