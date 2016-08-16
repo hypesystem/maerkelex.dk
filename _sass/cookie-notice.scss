@@ -1,16 +1,23 @@
 .cookieNotice {
     position: fixed;
     bottom: 0;
-    right: 10px;
-    width: 80%;
+    right: 0;
+    width: 100%;
     max-width: 350px;
+    text-align: center;
     background: $dark;
     color: white;
     font-size: 0.7em;
-    padding: 20px 10px 10px;
+    padding: 10px;
     cursor: pointer;
     transition: bottom 1.5s;
-    z-index: 300;
+    z-index: 3000;
+    box-sizing: border-box;
+}
+@media(max-width: 930px){
+  .cookieNotice {
+    max-width: 100%;
+  }
 }
 .cookieNotice.hidden {
     bottom: -400px;
