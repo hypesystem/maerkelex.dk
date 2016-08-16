@@ -26,6 +26,12 @@ body {
 }
 main {
   flex: 1 0 auto;
+  padding-top: 144px;
+}
+@media(max-width:930px){
+  main {
+      padding-top: 85px;
+  }
 }
 a {
     color: $blue;
@@ -149,12 +155,6 @@ header.sticky nav .searchbar input {
     text-align: center;
     padding-bottom: 50px;
     padding-top: 20px;
-    padding-top: 165px;
-}
-@media(max-width:930px){
-  .container {
-      padding-top: 100px;
-  }
 }
 .content {
     text-align: left;
@@ -427,7 +427,6 @@ header.sticky nav .searchbar input {
     top: 0;
     right: 0;
     padding: 10px 0;
-    color: white;
     text-transform: uppercase;
     z-index: 3;
     font-size: 0.9em;
