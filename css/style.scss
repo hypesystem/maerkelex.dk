@@ -1,5 +1,6 @@
 ---
 ---
+$small: 930px;
 $orange: rgb(251, 171, 68);
 $darkorange: darken($orange, 15%);
 $blue: rgb(8, 159, 218);
@@ -28,7 +29,7 @@ main {
   flex: 1 0 auto;
   padding-top: 144px;
 }
-@media(max-width:930px){
+@media(max-width: $small){
   main {
       padding-top: 85px;
   }
@@ -39,131 +40,6 @@ a {
 }
 a:hover {
     color: $darkblue;
-}
-header {
-    width: 100%;
-    background: $dark;
-    margin-bottom: 40px;
-    text-align: center;
-    position: relative;
-    z-index: 300;
-    box-shadow: 0 0 6px rgba(0,0,0,0.3), 0 0 3px rgba(0,0,0,0.3);
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-header nav {
-    display: flex;
-    justify-content: space-between;
-    text-align: right;
-    width: 900px;
-    margin: 0 auto;
-    padding: 15px 0;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-header nav a.logo {
-    float: left;
-    padding: 0 5px;
-    height: 64px;
-}
-@media(max-width: 930px){
-  header nav a.logo {
-    height: 45px;
-  }
-}
-header nav img {
-    width: 64px;
-    height: 64px;
-    transition: all 0.3s ease;
-}
-header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-header.sticky nav {
-  padding: 10px 0;
-}
-@media(max-width: 930px){
-  header.sticky nav {
-    padding: 10px;
-  }
-}
-header.sticky nav img,
-header.sticky nav .logo {
-  width: 30px;
-  height: 30px;
-}
-header.sticky nav .searchbar .search-button img {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 0;
-}
-@media(max-width: 930px){
-  header.sticky nav .searchbar {
-    bottom: 0px;
-  }
-}
-.searchbar {
-    display: inline-block;
-    width: 425px;
-    float: right;
-}
-.searchbar input {
-    color: rgba(250, 250, 250, 1);
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.3);
-    font-size: 1.8em;
-    padding: 5px 0;
-    width: 0;
-    opacity: 0;
-    transition: width 0.2s, opacity 0.2s;
-    vertical-align: middle;
-    outline: none;
-}
-header.sticky nav .searchbar input {
-  padding: 0;
-  font-size: 1.3em;
-}
-.searchbar .clear {
-  opacity: 0;
-  font-size: 1.5em;
-  transition: opacity 0.2s;
-}
-.searchbar:hover input, .searchbar input:active, .searchbar input:focus {
-    width: 350px;
-    opacity: 1;
-}
-header.sticky nav .searchbar:hover input,
-header.sticky nav .searchbar input:active,
-header.sticky nav .searchbar input:focus {
-    width: 250px;
-}
-.searchbar:hover .clear {
-    opacity: 1;
-}
-.searchbar input:focus + .clear, .searchbar input:active + .clear {
-    opacity: 1;
-}
-.searchbar .search-button, .searchbar .clear-button {
-    background: transparent;
-    border: none;
-    vertical-align: middle;
-    padding: 0;
-    color: white;
-    display: inline-block;
-}
-.searchbar .search-button img {
-    width: 40px;
-    margin-bottom: -6px;
-}
-.searchbar .clear-button img {
-    width: 27px;
-    margin-bottom: -4px;
-    margin-left: -4px;
-    margin-right: -4px;
 }
 .container {
     text-align: center;
@@ -182,7 +58,7 @@ header.sticky nav .searchbar input:focus {
   height: 350px;
   position: absolute;
   left: 0;
-  top: 104px;
+  top: 96px;
   overflow: hidden;
 }
 
@@ -202,7 +78,7 @@ header.sticky nav .searchbar input:focus {
 }
 
 .main-maerke-content {
-  margin-top: 80px;
+  margin-top: 70px;
   position: relative;
 }
 
@@ -501,39 +377,13 @@ header.sticky nav .searchbar input:focus {
   }
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: $small) {
   .col {
     width: 100% !important;
   }
   .content {
     max-width: 100% !important;
     padding: 10px;
-  }
-  header {
-    margin-bottom: 10px;
-  }
-  header nav {
-    width:100% !important;
-    padding: 10px 10px;
-  }
-  .searchbar {
-      width: auto !important;
-  }
-  .searchbar input {
-      font-size: 1.4em;
-  }
-  .searchbar .search-button img {
-    margin-top: 0;
-  }
-  .searchbar:hover input, .searchbar input:active, .searchbar input:focus {
-    width: 150px !important;
-  }
-  header nav img {
-    width: 45px;
-    height: 45px;
-  }
-  .searchbar button img {
-    height: 50px;
   }
   .cover {
     top: 68px;
@@ -611,6 +461,7 @@ header.sticky nav .searchbar input:focus {
   }
 }
 
+@import "header.scss";
 @import "tag";
 @import "advanced-search.scss";
 @import "cookie-notice";
