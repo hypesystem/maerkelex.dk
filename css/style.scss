@@ -53,15 +53,24 @@ header {
     left: 0;
 }
 header nav {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     text-align: right;
     width: 900px;
+    margin: 0 auto;
     padding: 15px 0;
     box-sizing: border-box;
     transition: all 0.3s ease;
 }
 header nav a.logo {
     float: left;
+    padding: 0 5px;
+    height: 64px;
+}
+@media(max-width: 930px){
+  header nav a.logo {
+    height: 45px;
+  }
 }
 header nav img {
     width: 64px;
@@ -116,7 +125,7 @@ header.sticky nav .searchbar .search-button img {
 }
 header.sticky nav .searchbar input {
   padding: 0;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .searchbar .clear {
   opacity: 0;
@@ -126,6 +135,11 @@ header.sticky nav .searchbar input {
 .searchbar:hover input, .searchbar input:active, .searchbar input:focus {
     width: 350px;
     opacity: 1;
+}
+header.sticky nav .searchbar:hover input,
+header.sticky nav .searchbar input:active,
+header.sticky nav .searchbar input:focus {
+    width: 250px;
 }
 .searchbar:hover .clear {
     opacity: 1;
