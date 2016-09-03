@@ -64,6 +64,9 @@ function hideSponsor() {
   }, 750);
 }
 
-document.querySelector(".sponsor-hide").addEventListener("click", function(event) {
-    hideSponsor();
-});
+var hideSponsorsLink = document.querySelector(".sponsor-hide");
+if(hideSponsorsLink) {
+    hideSponsorsLink.addEventListener("click", function(event) {
+        hideSponsor();
+    })
+}
