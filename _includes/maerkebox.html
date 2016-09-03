@@ -9,7 +9,7 @@
           {{ m_age }}
         </div>
       </div>
-      <img src="{{ site.baseurl }}/img/{{ m_image }}" alt="{{ m_name }} spejdermærke" />
+      <img src="{{ site.baseurl }}/img/{{ m_image }}" alt="{{ m_name | remove: '&#173;' }} spejdermærke" />
       <div class="card-content">
         <h3>{{ m_name }}</h3>
       </div>
