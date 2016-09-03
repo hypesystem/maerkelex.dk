@@ -55,16 +55,16 @@ a:hover {
 
 .cover {
   width: 100%;
-  height: 350px;
+  height: 380px;
   position: absolute;
   left: 0;
-  top: 96px;
+  top: 65px;
   overflow: hidden;
 }
 
 .cover .cover-img {
   width: 105%;
-  height: 365px;
+  height: 390px;
   background-image: url("../img/cover.jpg");
   background-size: cover;
   background-position: center;
@@ -386,7 +386,7 @@ a:hover {
     padding: 10px;
   }
   .cover {
-    top: 68px;
+    top: 63px;
     height: 300px
   }
   .maerke-col {
