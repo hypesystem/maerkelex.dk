@@ -46,14 +46,14 @@ function allTermsMatchMaerke(maerke, terms) {
 }
 
 function matchesMaerke(maerke, term) {
-    if(term.indexOf("tag:") == 0) {
+    if(term.match(/^tag:/i)) {
         var termTag = term.substring(4);
         return maerke.tags.some(function(maerkeTag) {
             return maerkeTag.match(new RegExp("^" + termTag + "$", "i"));
         });
     }
 
-    if(term.indexOf("alder:") == 0) {
+    if(term.match(/^alder:/i)) {
         var termAge = parseInt(term.substring(6));
         if(isNaN(termAge)) {
             console.warn("User input in 'alder' invalid (should be number, is NaN)", term);

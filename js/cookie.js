@@ -53,12 +53,20 @@ function setUserHasVisitedBefore() {
 }
 
 function hideSponsor() {
-  document.querySelector(".sponsored-badges").className += " hide";
+  var sponsoredBadgesSection = document.querySelector(".sponsored-badges");
+  if(!sponsoredBadgesSection) {
+      return;
+  }
+
+  sponsoredBadgesSection.className += " hide";
   setTimeout(function () {
-    document.querySelector(".sponsored-badges").style.opacity = "0";
+    sponsoredBadgesSection.style.opacity = "0";
   }, 750);
 }
 
-document.querySelector(".sponsor-hide").addEventListener("click", function(event) {
-    hideSponsor();
-});
+var hideSponsorsLink = document.querySelector(".sponsor-hide");
+if(hideSponsorsLink) {
+    hideSponsorsLink.addEventListener("click", function(event) {
+        hideSponsor();
+    })
+}
