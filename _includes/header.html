@@ -1,4 +1,4 @@
-<header>
+<header id="header">
     <nav>
         <a href="{{ site.baseurl }}/" class="logo">
             <img src="{{ site.baseurl }}/img/logo.svg">
@@ -125,6 +125,20 @@
                 ga("send", "event", "KeyboardShortcut", "search", "pressed:S");
                 return true;
             });
+
+            window.onscroll = changePos;
+
+function changePos() {
+    var header = document.getElementById("header");
+    if (window.pageYOffset > 50) {
+      if(header.classList.contains("sticky")){
+      } else {
+        header.className += "sticky";
+      }
+    } else {
+        header.className = "";
+    }
+}
         </script>
     </nav>
 </header>
