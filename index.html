@@ -13,6 +13,12 @@ title: Søg efter spejdermærker
         {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
         {% assign m_image = m.image %}
         {% assign m_name = m.name %}
+        {% assign m_highlight_class = m.highlight %}
+        {% if m_highlight_class == "popular" %}
+          {% assign m_highlight_text = "Mest populære!" %}
+        {% else %}
+          {% assign m_highlight_text = false %}
+        {% endif %}
         {% include maerkebox.html %}
       {% endfor %}
 
