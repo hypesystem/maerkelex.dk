@@ -38,6 +38,31 @@
         </script>
     </head>
     <body ontouchstart="">
+        <script>
+            // A/B test highlights (50/50)
+            var highlightsEnabled;
+            var cookies = document.cookie.split(";");
+            if(cookies.length < 1) {
+                highlightsEnabled = false;
+            }
+            else {
+                var match = cookies.map(function(cookie) {
+                    return cookie.trim().match(/^maerkelexHighlightsEnabled=(1|0)/);
+                }).find(match => !!match);
+                if(!match) {
+                    highlightsEnabled = Math.random() >= 0.5;
+                    var highlightsEnabledAsNumber = highlightsEnabled ? 1 : 0;
+                    document.cookie = "maerkelexHighlightsEnabled=" + highlightsEnabledAsNumber + ";expires=" + new Date(Date.now() + (1000 * 60 * 60 * 24 * 60)).toUTCString() + ";path=/";
+                }
+                else {
+                    highlightsEnabled = match[1] == "1";
+                }
+            }
+            
+            if(highlightsEnabled) {
+                document.body.classList += " highlights-enabled";
+            }
+        </script>
         {% include header.html %}
         <main>
             {{content}}

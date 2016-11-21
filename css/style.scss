@@ -96,7 +96,7 @@ a:hover {
   padding-top: 10px;
 }
 
-.maerke-box.highlight-popular {
+.highlights-enabled .maerke-box.highlight-popular {
     box-shadow: 1px 0 0px $orange, -1px 0 0 $orange, -1px -1px 0 $orange, 1px -1px 0 $orange, 0 0 13px $orange;
     overflow: hidden;
 }
@@ -208,7 +208,7 @@ a:hover {
   text-align: center;
 }
 
-.maerke-box.highlight-popular .card-link {
+.highlights-enabled .maerke-box.highlight-popular .card-link {
     background: $orange;
     color: white;
 }
