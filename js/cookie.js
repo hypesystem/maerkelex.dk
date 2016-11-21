@@ -49,7 +49,7 @@ function showWelcomeMessage() {
 }
 
 function setUserHasVisitedBefore() {
-    document.cookie = "maerkelexCookieNoticeShown=1;expires=" + new Date(Date.now() + (1000 * 60 * 60 * 24 * 30)).toUTCString() + ";path=/";
+    document.cookie = "maerkelexCookieNoticeShown=1;expires=" + new Date(Date.now() + (1000 * 60 * 60 * 24 * 365)).toUTCString() + ";path=/";
 }
 
 function hideSponsor() {
