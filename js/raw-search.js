@@ -118,7 +118,7 @@ function renderResults(matches) {
         {% assign m_image = "' + match.image + '" %}
         {% assign m_name = "' + match.name + '" %}
         {% assign m_highlight_class = "' + match.highlight + '" %}
-        {% assign m_highlight_text = "' + (match.highlight == 'popular' ? 'Mest populære' : 'Læs mere') + '" %}
+        {% assign m_highlight_text = "' + (match.highlight == 'popular' ? 'Mest populære!' : match.highlight == 'new' ? 'Nyhed!' : 'Læs mere') + '" %}
         {% capture maerke_result %}'{% include maerkebox.html %}';{% endcapture %}
         return {{ maerke_result | strip_newlines }}
     }).join("");

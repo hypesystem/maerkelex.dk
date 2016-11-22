@@ -16,6 +16,8 @@ title: Søg efter spejdermærker
         {% assign m_highlight_class = m.highlight %}
         {% if m_highlight_class == "popular" %}
           {% assign m_highlight_text = "Mest populære!" %}
+        {% elsif m_highlight_class == "new" %}
+          {% assign m_highlight_text = "Nyhed!" %}
         {% else %}
           {% assign m_highlight_text = false %}
         {% endif %}
