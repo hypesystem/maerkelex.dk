@@ -12,6 +12,7 @@
       "{{ tag }}"{% unless forloop.last %},{% endunless %}{% endfor %}
     ],
     "age": "{% if m.age %}{{ m.age }}{% else %}*{% endif %}",
-    "url": {{ m.url | jsonify }}
+    "url": {{ m.url | jsonify }},
+    "highlight": {% if m.highlight %}"{{ m.highlight }}"{% else %}null{% endif %}
   }{% unless forloop.last %},{% endunless %}{% endfor %}
 ] }
