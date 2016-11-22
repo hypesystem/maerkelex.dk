@@ -6,6 +6,7 @@ $darkorange: darken($orange, 15%);
 $blue: rgb(8, 159, 218);
 $darkblue: darken($blue, 15%);
 $shadowonblue: rgb(11, 93, 125);
+$green: rgb(30,255,0);
 $dark: rgb(50, 50, 60);
 
 @font-face {
@@ -98,6 +99,11 @@ a:hover {
 
 .highlights-enabled .maerke-box.highlight-popular {
     box-shadow: 1px 0 0px $orange, -1px 0 0 $orange, -1px -1px 0 $orange, 1px -1px 0 $orange, 0 0 13px $orange;
+    overflow: hidden;
+}
+
+.highlights-enabled .maerke-box.highlight-new {
+    box-shadow: 1px 0 0px $green, -1px 0 0 $green, -1px -1px 0 $green, 1px -1px 0 $green, 0 0 13px $green;
     overflow: hidden;
 }
 
@@ -210,6 +216,11 @@ a:hover {
 
 .highlights-enabled .maerke-box.highlight-popular .card-link {
     background: $orange;
+    color: white;
+}
+
+.highlights-enabled .maerke-box.highlight-new .card-link {
+    background: $green;
     color: white;
 }
 
