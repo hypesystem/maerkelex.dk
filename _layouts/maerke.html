@@ -2,11 +2,11 @@
 layout: default
 ---
 <div class="cover">
-  <div class="cover-img" {% if page.coverimage %} style="background-image: url('{{ site.baseurl }}/img/{{ page.coverimage }}');"{% endif %}></div>
+  <div class="cover-img" {% if page.coverimage %} style="background-image: url('{{ site.baseurl }}/img/covers/{{ page.coverimage }}');"{% endif %}></div>
 </div>
 <div class="main-maerke-content">
   <div class="page-image col">
-    <img src="{{ site.baseurl }}/img/{{ page.image }}" alt='{{ page.name | remove: "&#173;" }} spejdermærke'>
+    <img src="{{ site.baseurl }}/img/compressed/{{ page.image }}" alt='{{ page.name | remove: "&#173;" }} spejdermærke'>
   </div>
   <div class="page-description col">
     <h1>{{ page.name }}</h1>
