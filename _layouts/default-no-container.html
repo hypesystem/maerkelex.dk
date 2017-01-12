@@ -58,7 +58,7 @@
                     highlightsEnabled = match[1] == "1";
                 }
             }
-            
+
             if(highlightsEnabled) {
                 document.body.classList += " highlights-enabled";
             }
@@ -68,7 +68,7 @@
             {{content}}
         </main>
         {% include footer.html %}
-        <script src="{{ site.baseurl }}/js/raw-search.js"></script>
+        <script src="{{ site.baseurl }}/js/raw-search.js" defer></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -78,7 +78,7 @@
             ga('create', 'UA-57878677-2', 'auto');
             ga('send', 'pageview');
         </script>
-        <script src="{{ site.baseurl }}/js/cookie.js"></script>
+        <script src="{{ site.baseurl }}/js/cookie.js" defer></script>
 
     </body>
 </html>
