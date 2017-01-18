@@ -38,9 +38,136 @@ layout: default
       <div class="btn-container">
         {% if page.infolink %}
         <a target="_blank" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
+        {% else %}
+          {% unless page.price %}
+          <a target="_blank" href="{{ page.buylink }}" class="btn buylink">Køb mærket her</a>
+          {% endunless %}
         {% endif %}
-        <a target="_blank" href="{{ page.buylink }}" class="btn buylink">Køb mærket her</a>
       </div>
+      {% if page.price %}
+      <div class="purchase-form">
+        <style scoped>
+            .delivery-address-part {
+                display: none;
+            }
+            label {
+                font-size: 0.9em;
+                color: rgb(45,45,45);
+            }
+            input {
+                padding: 8px 4px;
+                font-size: 1.1em;
+                box-sizing: border-box;
+            }
+            input[type=text], input[type=tel], input[type=email] {
+                display: block;
+                width: 100%;
+            }
+            label.postal-code {
+                display: inline-block;
+                width: 30%;
+            }
+            label.city {
+                display: inline-block;
+                width: 65%;
+            }
+        </style>
+        <h2>Køb mærket her</h2>
+        <form method="post" action="{{ site.paymentsSiteUrl }}">
+          <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
+          <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}">
+          <div class="order-part">
+            <label for="count">
+                Antal:
+                <input type="number" name="count" value="1" id="count">
+            </label>
+            <div class="price-preview">
+                <span class="count-preview">1</span> mærke(r) á {{ page.price }} kr = <span class="total-preview">{{ page.price }}</span> kr
+            </div>
+            <script>
+                var countPreview = document.querySelector(".count-preview");
+                var totalPreview = document.querySelector(".total-preview");
+                var badgePrice = {{ page.price }};
+                document.querySelector("#count").addEventListener("change", function() {
+                    var count = this.value;
+                    countPreview.innerHTML = count;
+                    totalPreview.innerHTML = count * badgePrice;
+                });
+            </script>
+          </div>
+          <div class="invoicing-address-part">
+            <h3>Faktureringsadresse</h3>
+            <label for="invoicing-name">
+                Navn:
+                <input type="text" name="invoicing-name" id="invoicing-name">
+            </label>
+            <label for="invoicing-address">
+                Vej og husnummer:
+                <input type="text" name="invoicing-address" id="invoicing-address">
+            </label>
+            <label for="invoicing-postal-code" class="postal-code">
+                Postnr.:
+                <input type="text" name="invoicing-postal-code" id="invoicing-postal-code">
+            </label>
+            <label for="invoicing-city" class="city">
+                By:
+                <input type="text" name="invoicing-city">
+            </label>
+            <label for="delivery-address-differs">
+                <input type="checkbox" name="delivery-address-differs" id="delivery-address-differs">
+                Leveringsadressen er forskellig fra faktureringsadressen
+            </label>
+          </div>
+          <div class="delivery-address-part">
+            <h3>Leveringsadresse</h3>
+            <label for="delivery-name">
+                Navn:
+                <input type="text" name="delivery-name" id="delivery-name">
+            </label>
+            <label for="delivery-address">
+                Vej og husnummer:
+                <input type="text" name="delivery-address" id="delivery-address">
+            </label>
+            <label for="delivery-postal-code" class="postal-code">
+                Postnr.:
+                <input type="text" name="delivery-postal-code" id="delivery-postal-code">
+            </label>
+            <label for="delivery-city" class="city">
+                By:
+                <input type="text" name="delivery-city">
+            </label>
+          </div>
+          <script>
+              var deliveryPart = document.querySelector(".delivery-address-part");
+              document.querySelector("#delivery-address-differs").addEventListener("change", function() {
+                  if(this.checked) {
+                      deliveryPart.style = "display: block;";
+                  }
+                  else {
+                      deliveryPart.style = "";
+                  }
+              });
+          </script>
+          <div class="contact-information-part">
+            <h3>Kontaktinformation</h3>
+            <label for="email">
+                Email:
+                <input type="email" name="email" id="email">
+            </label>
+            <label for="phone-number">
+                Telefonnummer:
+                <input type="tel" name="phone-number" id="phone-number">
+            </label>
+          </div>
+          <p>
+              Levering koster {{ if page.shippingPrice }}{{ page.shippingPrice }}{{ else }}{{ site.defaultShippingPrice }}{{ endif }} kr.
+              Vi leverer i hele landet, men desværre ikke internationalt.
+              <a href="mailto:kontakt@maerkelex.dk">Kontakt os</a> for en særlig aftale, hvis du ønsker international levering.
+          </p>
+          <button class="btn buylink">Bestil mærke</button>
+        </form>
+      </div>
+      {% endif %}
       <script>
         document.querySelector(".buylink").addEventListener("click", function(e) {
           ga("send", "event", "Badge", "buylink_click", "{{ page.url }}");

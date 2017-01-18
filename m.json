@@ -1,18 +1,24 @@
 ---
 ---
 {% assign sorted_m = site.m | sort: "name" %}
-{ "m": [{% for m in sorted_m %}
-  {
-    "name": {{ m.name | jsonify }},
-    "description": {{ m.description | jsonify }},
-    "image": {{ m.image | jsonify }},
-    "buylink": {{ m.buylink | jsonify }},
-    "infolink": {{ m.infolink | jsonify }},
-    "tags": [{% for tag in m.tags %}
-      "{{ tag }}"{% unless forloop.last %},{% endunless %}{% endfor %}
-    ],
-    "age": "{% if m.age %}{{ m.age }}{% else %}*{% endif %}",
-    "url": {{ m.url | jsonify }},
-    "highlight": {% if m.highlight %}"{{ m.highlight }}"{% else %}null{% endif %}
-  }{% unless forloop.last %},{% endunless %}{% endfor %}
-] }
+{
+  "m": [{% for m in sorted_m %}
+    {
+      "id": {{ m.id | remove_first: "/m/" | jsonify }},
+      "name": {{ m.name | jsonify }},
+      "description": {{ m.description | jsonify }},
+      "image": {{ m.image | jsonify }},
+      "buylink": {{ m.buylink | jsonify }},
+      "infolink": {{ m.infolink | jsonify }},
+      "tags": [{% for tag in m.tags %}
+        "{{ tag }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+      ],
+      "age": "{% if m.age %}{{ m.age }}{% else %}*{% endif %}",
+      "url": {{ m.url | jsonify }},
+      "highlight": {% if m.highlight %}"{{ m.highlight }}"{% else %}null{% endif %},
+      "price": {% if m.price %}{{ m.price }}{% else %}null{% endif %},
+      "shippingPrice": {% if m.shippingprice %}{{ m.shippingprice }}{% else %}null{% endif %}
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ],
+  "defaultShippingPrice": {{ site.defaultShippingPrice }}
+}
