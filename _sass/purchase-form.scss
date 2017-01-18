@@ -4,6 +4,7 @@
     padding: 10px;
     margin: 0 -10px;
     background: rgba(255, 255, 255, 0.80);
+    position: relative;
 
     h2 {
       margin-top: 0;
@@ -12,6 +13,22 @@
       padding: 10px;
       margin: -10px;
       margin-bottom: 20px;
+    }
+  }
+
+  .collapse-purchase {
+    position: absolute;
+    color: white;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    font-size: 1.5em;
+    transform: rotate(90deg);
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      color: $orange;
     }
   }
 

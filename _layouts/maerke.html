@@ -50,6 +50,7 @@ layout: default
           <a class="btn buylink" id="order-expand-btn">Køb fra Mærkelex</a>
         </div>
         <form method="post" action="{{ site.paymentsSiteUrl }}" id="order-form">
+          <span class="collapse-purchase">&lsaquo;</span>
           <h2>Køb {{page.name}} mærke</h2>
           <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
           <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}">
@@ -74,6 +75,10 @@ layout: default
                 document.querySelector("#order-expand-btn").addEventListener("click", function() {
                   document.querySelector("#order-form").style.display = "block";
                   document.querySelector("#order-expand-btn").style.display = "none";
+                });
+                document.querySelector(".collapse-purchase").addEventListener("click", function() {
+                  document.querySelector("#order-form").style.display = "none";
+                  document.querySelector("#order-expand-btn").style.display = "block";
                 });
             </script>
           </div>
