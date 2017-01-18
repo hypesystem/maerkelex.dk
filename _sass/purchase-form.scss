@@ -1,0 +1,53 @@
+.purchase-form {
+  #order-form {
+    border: 1px solid #32323c;
+    padding: 10px;
+    margin: 0 -10px;
+    background: rgba(255, 255, 255, 0.80);
+
+    h2 {
+      margin-top: 0;
+      background: #32323c;
+      color: white;
+      padding: 10px;
+      margin: -10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .delivery-address-part {
+      display: none;
+  }
+
+  label {
+      font-size: 0.9em;
+      color: rgb(45,45,45);
+  }
+
+  input {
+      padding: 8px 4px;
+      font-size: 1.1em;
+      box-sizing: border-box;
+  }
+
+  input[type=text], input[type=tel], input[type=email] {
+      display: block;
+      width: 100%;
+  }
+
+  label.postal-code {
+      display: inline-block;
+      width: 30%;
+  }
+
+  label.city {
+      display: inline-block;
+      width: 65%;
+  }
+
+  .price-preview {
+    padding: 10px 0;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}

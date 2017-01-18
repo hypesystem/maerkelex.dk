@@ -225,6 +225,11 @@ a:hover {
     color: white;
 }
 
+.maerke-box.purchasable .card-link {
+    background: $blue;
+    color: white;
+}
+
 .maerke-box .card-link a {
   text-transform: uppercase;
   font-size: 15px;
@@ -294,7 +299,7 @@ a:hover {
     font-family: "Open Sans Light", "Open Sans", sans-serif;
 }
 
-.page-description .btn {
+a.btn, button.btn, input[type=submit] {
   text-align: center;
   width: 100%;
   padding: 20px;
@@ -306,10 +311,10 @@ a:hover {
   transition: background 0.2s;
   text-decoration: none;
   box-sizing: border-box;
-}
-
-.page-description .btn:hover {
-  background: $darkblue;
+  font-size: 1em;
+  &:hover {
+    background: $darkblue;
+  }
 }
 
 .page-description .infolink {
@@ -505,3 +510,4 @@ a:hover {
 @import "faq";
 @import "footer";
 @import "sponsor-message";
+@import "purchase-form";

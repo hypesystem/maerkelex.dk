@@ -46,34 +46,11 @@ layout: default
       </div>
       {% if page.price %}
       <div class="purchase-form">
-        <style scoped>
-            .delivery-address-part {
-                display: none;
-            }
-            label {
-                font-size: 0.9em;
-                color: rgb(45,45,45);
-            }
-            input {
-                padding: 8px 4px;
-                font-size: 1.1em;
-                box-sizing: border-box;
-            }
-            input[type=text], input[type=tel], input[type=email] {
-                display: block;
-                width: 100%;
-            }
-            label.postal-code {
-                display: inline-block;
-                width: 30%;
-            }
-            label.city {
-                display: inline-block;
-                width: 65%;
-            }
-        </style>
-        <h2>Køb mærket her</h2>
-        <form method="post" action="{{ site.paymentsSiteUrl }}">
+        <div class="btn-container">
+          <a class="btn buylink" id="order-expand-btn">Køb fra Mærkelex</a>
+        </div>
+        <form method="post" action="{{ site.paymentsSiteUrl }}" id="order-form">
+          <h2>Køb {{page.name}} mærke</h2>
           <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
           <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}">
           <div class="order-part">
@@ -92,6 +69,11 @@ layout: default
                     var count = this.value;
                     countPreview.innerHTML = count;
                     totalPreview.innerHTML = count * badgePrice;
+                });
+                document.querySelector("#order-form").style.display = "none";
+                document.querySelector("#order-expand-btn").addEventListener("click", function() {
+                  document.querySelector("#order-form").style.display = "block";
+                  document.querySelector("#order-expand-btn").style.display = "none";
                 });
             </script>
           </div>
