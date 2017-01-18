@@ -13,3 +13,6 @@ defaults:
     output: true
     values:
       layout: maerke
+
+paymentsSiteUrl: "http://localhost:3000"
+defaultShippingPrice: 35
