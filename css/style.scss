@@ -97,12 +97,12 @@ a:hover {
   padding-top: 10px;
 }
 
-.highlights-enabled .maerke-box.highlight-popular {
+.maerke-box.highlight-popular {
     box-shadow: 1px 0 0px $orange, -1px 0 0 $orange, -1px -1px 0 $orange, 1px -1px 0 $orange, 0 0 13px $orange;
     overflow: hidden;
 }
 
-.highlights-enabled .maerke-box.highlight-new {
+.maerke-box.highlight-new {
     box-shadow: 1px 0 0px $green, -1px 0 0 $green, -1px -1px 0 $green, 1px -1px 0 $green, 0 0 13px $green;
     overflow: hidden;
 }
@@ -214,12 +214,12 @@ a:hover {
   text-align: center;
 }
 
-.highlights-enabled .maerke-box.highlight-popular .card-link {
+.maerke-box.highlight-popular .card-link {
     background: $orange;
     color: white;
 }
 
-.highlights-enabled .maerke-box.highlight-new .card-link {
+.maerke-box.highlight-new .card-link {
     background: $green;
     color: white;
 }
