@@ -407,6 +407,12 @@ a:hover {
   margin-top: -40px;
 }
 
+.blog-post-date {
+    font-size: 0.8em;
+    color: rgba(0,0,0,0.75);
+    margin-bottom: 2em;
+}
+
 @media screen and (min-width: 931px) {
   .clear {
     display: none;
