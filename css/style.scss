@@ -294,9 +294,8 @@ a:hover {
     font-family: "Open Sans Light", "Open Sans", sans-serif;
 }
 
-.page-description .btn {
+.btn {
   text-align: center;
-  width: 100%;
   padding: 20px;
   cursor: pointer;
   background: $blue;
@@ -308,7 +307,11 @@ a:hover {
   box-sizing: border-box;
 }
 
-.page-description .btn:hover {
+.page-description .btn {
+  width: 100%;
+}
+
+.btn:hover {
   background: $darkblue;
 }
 
