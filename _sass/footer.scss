@@ -39,10 +39,9 @@ footer .copyright {
 }
 
 @media screen and (max-width: 930px) {
-  .footer-col span {
-    display: block;
-  }
   .footer-col .dot {
-    display: none;
+    display: block;
+    visibility: hidden;
+    height: 1px;
   }
 }
