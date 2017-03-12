@@ -116,7 +116,8 @@
                 if(e.which != 115) {
                     return;
                 }
-                if(document.activeElement == searchBar) {
+                var currentElementType = document.activeElement.tagName.toLowerCase();
+                if(currentElementType == "input" || currentElementType == "textarea") {
                     return;
                 }
                 e.preventDefault();
