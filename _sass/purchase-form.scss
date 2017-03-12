@@ -6,6 +6,16 @@
     background: rgba(255, 255, 255, 0.80);
     position: relative;
     max-width: 500px;
+    transition: max-height 0.3s, opacity 0.3s;
+    &.hidden-order {
+      max-height: 0px;
+      overflow: hidden;
+      opacity: 0;
+    }
+    &.show-order {
+      display: block;
+      max-height: 2000px;
+    }
 
     h2 {
       font-size: 1.4em;

@@ -49,7 +49,7 @@ layout: default
         <div class="btn-container">
           <a class="btn buylink" id="order-expand-btn">Køb fra Mærkelex</a>
         </div>
-        <form method="post" action="{{ site.paymentsSiteUrl }}" id="order-form">
+        <form method="post" action="{{ site.paymentsSiteUrl }}" id="order-form" class="hidden-order">
           <span class="collapse-purchase">&lsaquo;</span>
           <h2>Køb {{page.name}} mærke</h2>
           <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
@@ -69,14 +69,14 @@ layout: default
                     countPreview.innerHTML = count;
                     totalPreview.innerHTML = count * badgePrice;
                 });
-                document.querySelector("#order-form").style.display = "none";
                 document.querySelector("#order-expand-btn").addEventListener("click", function() {
-                  document.querySelector("#order-form").style.display = "block";
+                  document.querySelector("#order-form").className = "show-order";
                   document.querySelector("#order-expand-btn").style.display = "none";
                 });
                 document.querySelector(".collapse-purchase").addEventListener("click", function() {
-                  document.querySelector("#order-form").style.display = "none";
-                  document.querySelector("#order-expand-btn").style.display = "block";
+                  document.querySelector("#order-form").className = "hidden-order";
+                  setTimeout(function(){document.querySelector("#order-expand-btn").style.display = "block"}, 220);
+
                 });
             </script>
           </div>
