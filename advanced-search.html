@@ -58,7 +58,7 @@ title: Avanceret søgning
       </div>
       <div id="ageInputContainer">
         <label class="index-label" for="ageInputEnabled">Alder:</label>
-        <input type="number" min="0" max="30" id="ageInput" disabled>
+        <input type="number" min="0" max="30" id="ageInput" value="12" disabled>
       </div>
   </section>
 
@@ -70,11 +70,13 @@ title: Avanceret søgning
 
   <section class="advanced-search-result">
     <div class="advanced-search-result-container">
-        <p>
+        <div class="search-result-container">
           <strong>Søgning:</strong>
-          <span id="searchResult"></span>
-        </p>
-        <button type="submit" id="searchButton">Søg</button>
+          "<span id="searchResult"></span>"
+        </div>
+        <div class="search-submit-button-container">
+          <button type="submit" class="btn search-submit-button" id="searchButton">Søg</button>
+        </div>
     </div>
   </section>
 </div>
