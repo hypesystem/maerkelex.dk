@@ -20,8 +20,19 @@
     margin-top: 0;
     margin-bottom: 10px;
 }
+.content-col p {
+    font-size: 19px;
+    line-height: 1.58;
+    @media(max-width: 767px) {
+      font-size: 17px;
+    }
+}
 .content-col img {
-    max-width: 100%;
+    width: 120%;
+    margin: 10px 0;
+    @media(max-width: 930px){
+      width: 100%;
+    }
 }
 .aside-col {
     width: 30%;
@@ -34,14 +45,14 @@
 
 @media screen and (max-width: 930px) {
     .content-col {
-        padding: 0;
+        padding: 10px;
     }
     .content-col h1 {
         margin-top: 0;
     }
     .aside-col {
         border: none;
-        padding: 0;
+        padding: 10px;
         font-size: 1em;
     }
 }
