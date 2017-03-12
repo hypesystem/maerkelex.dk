@@ -299,7 +299,7 @@ a:hover {
     font-family: "Open Sans Light", "Open Sans", sans-serif;
 }
 
-.btn {
+.btn, a.btn, button, input[type=submit] {
   text-align: center;
   padding: 20px;
   cursor: pointer;

@@ -55,16 +55,14 @@ layout: default
           <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
           <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}">
           <div class="order-part">
+            <h3>Vælg antal</h3>
             <label for="count">
-                Antal:
-                <input type="number" name="count" value="1" id="count">
+                <input class="count-preview" type="number" name="count" value="1" id="count">
+                mærke(r) til {{ page.price }} kr stk = <strong class="total-preview"><span class="total-preview-price">{{ page.price }}</span> kr</strong>
             </label>
-            <div class="price-preview">
-                <span class="count-preview">1</span> mærke(r) á {{ page.price }} kr = <span class="total-preview">{{ page.price }}</span> kr
-            </div>
             <script>
                 var countPreview = document.querySelector(".count-preview");
-                var totalPreview = document.querySelector(".total-preview");
+                var totalPreview = document.querySelector(".total-preview-price");
                 var badgePrice = {{ page.price }};
                 document.querySelector("#count").addEventListener("change", function() {
                     var count = this.value;
