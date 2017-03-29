@@ -11,7 +11,7 @@
 .content-col h2 {
     font-size: 1.2em;
     margin-top: 30px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 .content-col h1, .aside-col h1 {
     margin: 0;
@@ -33,6 +33,11 @@
     @media(max-width: 930px){
       width: 100%;
     }
+}
+.content-col figcaption {
+  margin-top: -5px;
+  font-size: 0.8em;
+  text-align: center;
 }
 .aside-col {
     width: 30%;
