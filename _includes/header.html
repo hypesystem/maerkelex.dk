@@ -126,14 +126,15 @@
                 return true;
             });
 
-            window.onscroll = changePos;
+            window.onscroll = debounced(changePos, 50);
+
+var header = document.getElementById("header");
 
 function changePos() {
-    var header = document.getElementById("header");
     if (window.pageYOffset > 50) {
-      if(header.classList.contains("sticky")){
+      if(header.classList.contains("hide")){
       } else {
-        header.className += "sticky";
+        header.className += "hide";
       }
     } else {
         header.className = "";
