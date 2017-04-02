@@ -61,6 +61,7 @@
 
   input {
       padding: 8px 4px;
+      margin-top: 3px;
       font-size: 1.1em;
       box-sizing: border-box;
       &.count-preview {
@@ -74,20 +75,26 @@
       width: 100%;
   }
 
+  .city-info-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   label.postal-code {
-      display: inline-block;
-      width: 29%;
-      float: left;
+      width: 30%;
+      margin-right: 8px;
   }
 
   label.city {
-      display: inline-block;
       width: 70%;
-      float: right;
   }
 
   .total-preview {
     font-weight: bold;
     border-bottom: 4px double currentColor;
+  }
+
+  .checkbox-label {
+    margin-top: 8px;
   }
 }
