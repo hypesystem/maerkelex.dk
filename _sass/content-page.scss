@@ -11,17 +11,33 @@
 .content-col h2 {
     font-size: 1.2em;
     margin-top: 30px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 .content-col h1, .aside-col h1 {
-    margin-bottom: 0;
+    margin: 0;
 }
 .content-col p, .aside-col p {
     margin-top: 0;
     margin-bottom: 10px;
 }
+.content-col p {
+    font-size: 19px;
+    line-height: 1.58;
+    @media(max-width: 767px) {
+      font-size: 17px;
+    }
+}
 .content-col img {
-    max-width: 100%;
+    width: 100%;
+    margin: 10px 0;
+    @media(max-width: 930px){
+      width: 100%;
+    }
+}
+.content-col figcaption {
+  margin-top: -5px;
+  font-size: 0.8em;
+  text-align: center;
 }
 .aside-col {
     width: 30%;
@@ -34,14 +50,14 @@
 
 @media screen and (max-width: 930px) {
     .content-col {
-        padding: 0;
+        padding: 10px;
     }
     .content-col h1 {
         margin-top: 0;
     }
     .aside-col {
         border: none;
-        padding: 0;
+        padding: 10px;
         font-size: 1em;
     }
 }
