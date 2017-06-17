@@ -149,7 +149,7 @@ layout: default
             </label>
           </div>
           <p>
-              Levering koster {{ if page.shippingPrice }}{{ page.shippingPrice }}{{ else }}{{ site.defaultShippingPrice }}{{ endif }} kr.
+              Levering koster {{ page.shippingPrice | default: site.defaultShippingPrice }} kr.
               Vi leverer i hele landet, men desværre ikke internationalt.
               <a href="mailto:kontakt@maerkelex.dk">Kontakt os</a> for en særlig aftale, hvis du ønsker international levering.
           </p>
