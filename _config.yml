@@ -14,5 +14,5 @@ defaults:
     values:
       layout: maerke
 
-paymentsSiteUrl: "http://localhost:3000"
+paymentsSiteUrl: "https://salg.mærkelex.dk"
 defaultShippingPrice: 35
