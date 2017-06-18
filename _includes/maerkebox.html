@@ -1,5 +1,5 @@
 <div class="maerke-col">
-  <div class="maerke-box {% if m_highlight_class %}highlight-{{ m_highlight_class }}{% endif %}">
+  <div class="maerke-box{% if m_highlight_class %} highlight-{{ m_highlight_class }}{% endif %}{% if m_purchasable %} {{ m_purchasable }}{% endif %}">
     <a class="maerke-link" href="{{ site.baseurl }}{{ m_url }}">
       <div class="maerke-info">
         <div class="maerke-corps {{ m_first_tag }}">
