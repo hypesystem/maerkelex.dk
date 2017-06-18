@@ -13,3 +13,6 @@ defaults:
     output: true
     values:
       layout: maerke
+
+paymentsSiteUrl: "https://salg.mærkelex.dk"
+defaultShippingPrice: 35

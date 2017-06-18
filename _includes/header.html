@@ -1,16 +1,16 @@
 <header id="header">
     <nav>
         <a href="{{ site.baseurl }}/" class="logo">
-            <img src="{{ site.baseurl }}/img/logo.svg">
+            <img src="{{ site.baseurl }}/img/logo.svg" alt="mærkelex logo">
         </a>
         <div class="searchbar">
             <form method="get">
                 <input type="text" name="search" placeholder="Søg ...">
                 <a class="clear clear-button">
-                    <img src="{{ site.baseurl }}/img/cross.svg">
+                    <img src="{{ site.baseurl }}/img/cross.svg" alt="clear symbol">
                 </a>
                 <button class="search-button" type="submit">
-                    <img src="{{ site.baseurl }}/img/search.svg">
+                    <img src="{{ site.baseurl }}/img/search.svg" alt="search symbol">
                 </button>
             </form>
         </div>
@@ -116,7 +116,8 @@
                 if(e.which != 115) {
                     return;
                 }
-                if(document.activeElement == searchBar) {
+                var currentElementType = document.activeElement.tagName.toLowerCase();
+                if(currentElementType == "input" || currentElementType == "textarea") {
                     return;
                 }
                 e.preventDefault();

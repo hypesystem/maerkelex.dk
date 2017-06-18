@@ -1,0 +1,100 @@
+.purchase-form {
+  #order-form {
+    border: 1px solid #32323c;
+    padding: 10px;
+    margin: 0 -10px;
+    background: rgba(255, 255, 255, 0.80);
+    position: relative;
+    max-width: 500px;
+    transition: max-height 0.3s, opacity 0.3s;
+    &.hidden-order {
+      max-height: 0px;
+      overflow: hidden;
+      opacity: 0;
+    }
+    &.show-order {
+      display: block;
+      max-height: 2000px;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      margin-top: 0;
+      background: #32323c;
+      color: white;
+      padding: 10px;
+      margin: -10px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .collapse-purchase {
+    position: absolute;
+    color: white;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    font-size: 1.5em;
+    transform: rotate(90deg);
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  .delivery-address-part {
+      display: none;
+  }
+
+  label {
+      font-size: 0.9em;
+      color: rgb(45,45,45);
+      display: block;
+      margin-bottom: 8px;
+  }
+
+  input {
+      padding: 8px 4px;
+      margin-top: 3px;
+      font-size: 1.1em;
+      box-sizing: border-box;
+      &.count-preview {
+        width: 70px;
+        margin-right: 5px;
+      }
+  }
+
+  input[type=text], input[type=tel], input[type=email] {
+      display: block;
+      width: 100%;
+  }
+
+  .city-info-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  label.postal-code {
+      width: 30%;
+      margin-right: 8px;
+  }
+
+  label.city {
+      width: 70%;
+  }
+
+  .total-preview {
+    font-weight: bold;
+    border-bottom: 4px double currentColor;
+  }
+
+  .checkbox-label {
+    margin-top: 8px;
+  }
+}
