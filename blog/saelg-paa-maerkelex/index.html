@@ -2,7 +2,7 @@
 layout: default
 title: Sælg dit mærke direkte på Mærkelex
 type: blogpost
-image: saelg-maerker.png
+image: kuvert-med-maerker.png
 ---
 <article class="col content-col">
     <h1>Sælg dit mærke direkte på Mærkelex</h1>
@@ -22,7 +22,8 @@ image: saelg-maerker.png
         Et af problemerne, vi har set, er at der ofte er usikkerhed omkring køb og salg af mærker.
     </p>
     <figure>
-      <img src="kuvert-med-maerker.jpg" alt="en kuvert der indeholder netop modtagne mærker">
+      <img src="kuvert-med-maerker.png" alt="en kuvert der indeholder netop modtagne mærker">
+      <figcaption>Mærkerne bliver pakket og sendt.</figcaption>
     </figure>
     <p>
         Der er ledere, der gerne vil købe mærker til deres spejdere, men ikke synes de får svar hurtigt nok, og ikke ved om deres ordre er gået igennem.
@@ -62,12 +63,12 @@ image: saelg-maerker.png
     <br>
     <h1>Køb mærket Overlevelsestur lige nu</h1>
     <p>
-        { % TODO include maerkeCard.html maerke="overlevelsestur" % }
+        {% include maerkeIncludeAside.html maerke="overlevelsestur" %}
     </p>
     <br>
     <h1>Køb mærket 10-minutters-tårn lige nu</h1>
     <p>
-        { % TODO include maerkeCard.html maerke="10-min-taarn" % }
+        {% include maerkeIncludeAside.html maerke="10-min-taarn" %}
     </p>
     <br>
     <h1>Se alle vores blog posts</h1>
