@@ -1,0 +1,43 @@
+{% assign this_m = site.m | first %}
+{% for m in site.m %}
+    {% assign cur_id = m.id | remove_first: "/m/" %}
+    {% if cur_id == include.maerke %}
+    {% assign this_m = m %}
+    {% endif %}
+{% endfor %}
+{% capture m_age %}{% if this_m.age %}{{ this_m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
+{% if this_m.price != null %}
+    {% assign m_purchasable = "purchasable" %}
+    {% assign m_highlight_text = "<strong>Køb for " | append: this_m.price | append: " kr</strong>" %}
+{% elsif this_m.highlight == "popular" %}
+    {% assign m_highlight_text = "Mest populære!" %}
+{% elsif this_m.highlight == "new" %}
+    {% assign m_highlight_text = "Nyhed!" %}
+{% else %}
+    {% assign m_highlight_text = false %}
+{% endif %}
+<div class="maerke-box{% if this_m.highlight %} highlight-{{ this_m.highlight }}{% endif %}{% if m_purchasable %} {{ m_purchasable }}{% endif %}">
+    <a class="maerke-link" href="{{ site.baseurl }}{{ this_m.url }}">
+      <div class="maerke-info">
+        <div class="maerke-corps {{ this_m.tags | first }}">
+          {{ this_m.tags | first }}
+        </div>
+        <div class="maerke-age">
+          {{ m_age }}
+        </div>
+      </div>
+      <img src="{{ site.baseurl }}/img/compressed/{{ this_m.image }}" alt="{{ this_m.name | remove: '&#173;' }} spejdermærke" />
+      <div class="card-content">
+        <h3>{{ this_m.name }}</h3>
+      </div>
+    </a>
+    <a href="{{ site.baseurl }}{{ this_m.url }}">
+      <div class="card-link">
+        {% if m_highlight_text %}
+          {{ m_highlight_text }}
+        {% else %}
+          Læs mere
+        {% endif %}
+      </div>
+    </a>
+</div>
