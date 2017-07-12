@@ -38,11 +38,10 @@ layout: default
       <div class="btn-container">
         {% if page.infolink %}
         <a target="_blank" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
-        {% else %}
-          {% unless page.price %}
-          <a target="_blank" href="{{ page.buylink }}" class="btn buylink">Køb mærket her</a>
-          {% endunless %}
         {% endif %}
+        {% unless page.price %}
+        <a target="_blank" href="{{ page.buylink }}" class="btn buylink">Køb mærket her</a>
+        {% endunless %}
       </div>
       {% if page.price %}
       <div class="purchase-form">
