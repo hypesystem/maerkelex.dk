@@ -15,6 +15,12 @@
 }
 .content-col h1, .aside-col h1 {
     margin: 0;
+    margin-bottom: 5px;
+}
+.content-col h3 {
+  font-size: 1.4em;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .content-col p, .aside-col p {
     margin-top: 0;
@@ -26,6 +32,12 @@
     @media(max-width: 767px) {
       font-size: 17px;
     }
+}
+.content-col section {
+  margin: 30px 0;
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 .content-col img {
     width: 100%;
