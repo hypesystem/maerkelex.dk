@@ -37,10 +37,10 @@ layout: default
       </p>
       <div class="btn-container">
         {% if page.infolink %}
-        <a target="_blank" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
+        <a target="noopener" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
         {% endif %}
         {% unless page.price %}
-        <a target="_blank" href="{{ page.buylink }}" class="btn buylink">Køb mærket her</a>
+        <a target="noopener" href="{{ page.buylink }}" class="btn buylink">Køb mærket her</a>
         {% endunless %}
       </div>
       {% if page.price %}
