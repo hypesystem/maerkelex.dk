@@ -27,6 +27,17 @@
         <meta name="apple-mobile-web-app-title" content="M&aelig;rkelex">
         <meta name="application-name" content="M&aelig;rkelex">
         <meta name="theme-color" content="#f5f5f5">
+        <script>/* SERVICE WORKER */
+            if(navigator.serviceWorker) {
+                window.addEventListener("load", function() {
+                    navigator.serviceWorker.register("/sw.js").then(function(registration) {
+                        console.log("[sw.js] Registration with scope", registration.scope);
+                    }, function(error) {
+                        console.error("[sw.js] Registration failed", err);
+                    });
+                });
+            }
+        </script>
         <script>
             function debounced(fun, timeout) {
                 if(!timeout) {
@@ -63,6 +74,5 @@
             ga('send', 'pageview');
         </script>
         <script src="{{ site.baseurl }}/js/cookie.js" defer></script>
-
     </body>
 </html>
