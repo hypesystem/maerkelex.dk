@@ -7,10 +7,17 @@ self.addEventListener("install", function(e) {
             .then(function(cache) {
                 return cache.addAll([
                     "{{ site.baseUrl }}/",
-                    "{{ site.baseUrl }}/index.html",
+                    "{{ site.baseUrl }}/faq/",
+                    "{{ site.baseUrl }}/hvem-er/",
+                    "{{ site.baseUrl }}/reklamer/",
+                    "{{ site.baseUrl }}/blog/",
+                    "{{ site.baseUrl }}/font/OpenSans-Regular.ttf",
+                    "{{ site.baseUrl }}/font/OpenSans-Light.ttf",
+                    "{{ site.baseUrl }}/img/logo.svg",
                     "{{ site.baseUrl }}/css/style.css",
                     "{{ site.baseUrl }}/js/raw-search.js",
                     "{{ site.baseUrl }}/js/cookie.js",
+                    "{{ site.baseUrl }}/sw.js",
                     {% for m in site.m %}
                     "{{ site.baseUrl }}{{ m.url }}",
                     "{{ site.baseUrl }}/img/compressed/{{ m.image }}",
