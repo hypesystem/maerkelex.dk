@@ -15,6 +15,12 @@
 }
 .content-col h1, .aside-col h1 {
     margin: 0;
+    margin-bottom: 5px;
+}
+.content-col h3 {
+  font-size: 1.4em;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .content-col p, .aside-col p {
     margin-top: 0;
@@ -26,6 +32,12 @@
     @media(max-width: 767px) {
       font-size: 17px;
     }
+}
+.content-col section {
+  margin: 30px 0;
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 .content-col img {
     width: 100%;
@@ -46,6 +58,11 @@
     padding-left: 10px;
     border-left: 1px solid rgba(0,0,0,0.1);
     padding-bottom: 25px;
+
+    .maerke-box {
+        margin: 10% 5% 5%;
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 930px) {
@@ -59,5 +76,38 @@
         border: none;
         padding: 10px;
         font-size: 1em;
+    }
+}
+.badge-seller {
+    font-size:0.9em;
+    background:white;
+    padding:10px;
+}
+.blog-badges {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    @media(max-width: 900px) {
+        justify-content: space-around;
+    }
+
+    .maerke-box {
+        flex-basis: 170px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 10px;
+
+        @media(max-width: 900px) {
+            flex-basis: 45%;
+            margin: 0;
+        }
+    }
+
+    img {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
     }
 }

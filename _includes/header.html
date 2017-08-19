@@ -5,12 +5,12 @@
         </a>
         <div class="searchbar">
             <form method="get">
-                <input type="text" name="search" placeholder="Søg ...">
+                <label aria-label="searchbar"><input type="text" name="search" placeholder="Søg ..."></label>
                 <a class="clear clear-button">
-                    <img src="{{ site.baseurl }}/img/cross.svg" alt="clear symbol">
+                    <img src="{{ site.baseurl }}/img/cross.svg" alt="clear button">
                 </a>
                 <button class="search-button" type="submit">
-                    <img src="{{ site.baseurl }}/img/search.svg" alt="search symbol">
+                    <img src="{{ site.baseurl }}/img/search.svg" alt="search button">
                 </button>
             </form>
         </div>
@@ -127,19 +127,16 @@
                 return true;
             });
 
-            window.onscroll = changePos;
-
-function changePos() {
-    var header = document.getElementById("header");
-    if (window.pageYOffset > 50) {
-      if(header.classList.contains("sticky")){
-      } else {
-        header.className += "sticky";
-      }
-    } else {
-        header.className = "";
-    }
-}
+            window.addEventListener("scroll", function changePos() {
+                var header = document.getElementById("header");
+                if (window.pageYOffset > 50) {
+                    if(!header.classList.contains("sticky")){
+                        header.className += "sticky";
+                    }
+                } else {
+                    header.className = "";
+                }
+            }, { passive: true });
         </script>
     </nav>
 </header>
