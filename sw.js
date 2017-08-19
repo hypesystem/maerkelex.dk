@@ -1,9 +1,10 @@
 ---
 ---
+{% capture cacheName %}maerkelex-cache-v1.0.1-{{ site.time | replace: ' ', '-' | replace: ':', '-' | replace: '+', '' }}{% endcapture %}
 self.addEventListener("install", function(e) {
     e.waitUntil(
         caches
-            .open("maerkelex-cache-v1.0.1")
+            .open("{{ cacheName }}")
             .then(function(cache) {
                 return cache.addAll([
                     "{{ site.baseUrl }}/",
@@ -19,7 +20,6 @@ self.addEventListener("install", function(e) {
                     "{{ site.baseUrl }}/css/style.css",
                     "{{ site.baseUrl }}/js/raw-search.js",
                     "{{ site.baseUrl }}/js/cookie.js",
-                    "{{ site.baseUrl }}/sw.js",
                     {% for m in site.m %}
                     "{{ site.baseUrl }}{{ m.url }}",
                     "{{ site.baseUrl }}/img/compressed/{{ m.image }}",
@@ -30,12 +30,30 @@ self.addEventListener("install", function(e) {
     );
 });
 
+self.addEventListener("activate", function(event) {
+    event.waitUntil(
+        caches
+            .keys()
+            .then(function(keyList) {
+                return Promise.all(keyList.map(function(key) {
+                    if(key != "{{ cacheName }}") {
+                        return caches.delete(key);
+                    }
+                }));
+            })
+    );
+});
+
 self.addEventListener("fetch", function(e) {
     e.respondWith(
         caches
-            .match(e.request)
-            .then(function(response) {
-                return response || fetch(e.request);
+            .open("{{ cacheName }}")
+            .then(function(cache) {
+                return cache
+                    .match(e.request)
+                    .then(function(response) {
+                        return response || fetch(e.request);
+                    });
             })
     );
 });
