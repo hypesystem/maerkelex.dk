@@ -19,7 +19,6 @@ self.addEventListener("install", function(e) {
                     "{{ site.baseUrl }}/css/style.css",
                     "{{ site.baseUrl }}/js/raw-search.js",
                     "{{ site.baseUrl }}/js/cookie.js",
-                    "{{ site.baseUrl }}/sw.js",
                     {% for m in site.m %}
                     "{{ site.baseUrl }}{{ m.url }}",
                     "{{ site.baseUrl }}/img/compressed/{{ m.image }}",
