@@ -23,7 +23,7 @@ type: blogpost
         </ul>
     </p>
     <figure>
-      <img src="missing.jpg" alt="et møde med mærker">
+      <img src="missing.jpg" alt="TODO et møde med mærker">
       <figcaption>Her holdes et møde, der slutter med at spejderne får et mærke.</figcaption>
     </figure>
     <h2 id="hvad-er-et-maerke">Hvad er et mærke og hvilke typer findes der?</h2>
@@ -48,13 +48,13 @@ type: blogpost
         Færdighedsmærker og duelighedstegn stiller krav til evner, og specificerer ofte en test, man skal klare, for at gøre sig fortjent til mærket.
         For eksempel er kniv-beviset fra de forskellige korps et færdighedsmærke, men der findes også uofficielle færdighedsmærker, som f.eks. <a href="/m/knotnut">Knotnut</a>.
     </p>
-    { % TODO include maerkebox.html maerke=knotnut % }
+    {% include maerkeIncludeBody.html maerke="knotnut" %}
     <p>
         Den sidste kategori er forløbsmærker, som man får for at have gennemført et forløb.
         I modsætning til færdighedsmærker er der altså ikke fokus på at kunne noget, men på at have klaret sig igennem noget.
         I Det Danske Spejderkorps findes f.eks. forløbet <a href="/m/dds-kammeratskab/">En god kammerat</a>, og der er mange uofficielle forløbsmærker, som f.eks. <a href="/m/spejd365/">Spejd365</a>.
     </p>
-    { % TODO include maerkebox.html maerke=spejd365 % }
+    {% include maerkeIncludeBody.html maerke="spejd365" %}
     <h2 id="hvordan-bruger-man-maerker">Hvordan bruger man mærker i spejdersammenhæng?</h2>
     <p>
         Der er forskellige slags mærker, der egner sig til forskellige ting.
@@ -80,11 +80,11 @@ type: blogpost
     </p>
     TODO: In the following, fix tag quotings to link.
     <p>
-        Vi har inddelt alle mærkerne efter korps, så hvis du kun vil se mærker fra DDS, kan du søge på ”tag:DDS”.
-        Det samme gælder for ”tag:DGP” og ”tag:KFUM”.
+        Vi har inddelt alle mærkerne efter korps, så hvis du kun vil se mærker fra DDS, kan du søge på <a href="/?search=tag:DDS">"tag:DDS"</a>.
+        Det samme gælder for <a href="/?search=tag:DGP">"tag:DGP"</a> og <a href="/?search=tag:KFUM">"tag:KFUM"</a>.
     </p>
     <p>
-        Hvis du kun vil se mærker, som andre spejdere selv har lavet, altså uofficielle mærker, kan du søge på ”tag:uofficielt”.
+        Hvis du kun vil se mærker, som andre spejdere selv har lavet, altså uofficielle mærker, kan du søge på <a href="/?search=tag:uofficielt">"tag:uofficielt"</a>.
     </p>
     <p>
         Du har nok allerede opdaget at man kan søge i normal tekst, også. Her søger man kun i mærkets navn og tags, så det virker bedst, hvis du ved hvad du kigger efter.
@@ -108,7 +108,7 @@ type: blogpost
     <h2 id="hvordan-koeber-man-maerker">Hvordan får man fingrene i et mærke, når man har besluttet sig for at bruge det?</h2>
     <p>
         Vi har kun mærker på Mærkelex, som man stadig kan købe.
-        Når du er gået ind på siden for et mærke, er der en knap, hvor der står ”Køb mærket...”.
+        Når du er gået ind på siden for et mærke, er der en knap, hvor der står "Køb mærket...".
     </p>
     <p>
         Hvis sælgeren har sin egen side, eller har lagt kontaktinformation op i en facebook-post, bliver den relevante side åbnet.
@@ -134,7 +134,7 @@ type: blogpost
     <h1>Køb mærker direkte på Mærkelex</h1>
     <p>
         For nylig begyndte vi at sælge mærker direkte på Mærkelex.
-        Det kan du læse mere om i den seneste blog post, ... TODO
+        Det kan du læse mere om i en <a href="/blog/saelg-paa-maerkelex/">tidligere blog post</a>.
     </p>
     <br>
     <h1>Se alle vores blog posts</h1>
