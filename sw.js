@@ -30,6 +30,20 @@ self.addEventListener("install", function(e) {
     );
 });
 
+self.addEventListener("activate", function(event) {
+    event.waitUntil(
+        caches
+            .keys()
+            .then(function(keyList) {
+                return Promise.all(keyList.map(function(key) {
+                    if(key != "{{ cacheName }}") {
+                        return caches.delete(key);
+                    }
+                }));
+            })
+    );
+});
+
 self.addEventListener("fetch", function(e) {
     e.respondWith(
         caches
