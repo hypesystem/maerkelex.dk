@@ -1,9 +1,10 @@
 ---
 ---
+{% capture cacheName %}maerkelex-cache-v1.0.1-{{ site.time | replace: ' ', '-' | replace: ':', '-' | replace: '+', '' }}{% endcapture %}
 self.addEventListener("install", function(e) {
     e.waitUntil(
         caches
-            .open("maerkelex-cache-v1.0.1-{{ site.time | replace: ' ', '-' | replace: ':', '-' | replace: '+', '' }}")
+            .open("{{ cacheName }}")
             .then(function(cache) {
                 return cache.addAll([
                     "{{ site.baseUrl }}/",
@@ -32,6 +33,7 @@ self.addEventListener("install", function(e) {
 self.addEventListener("fetch", function(e) {
     e.respondWith(
         caches
+            .open("{{ cacheName }}")
             .match(e.request)
             .then(function(response) {
                 return response || fetch(e.request);
