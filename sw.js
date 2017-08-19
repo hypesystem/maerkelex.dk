@@ -3,7 +3,7 @@
 self.addEventListener("install", function(e) {
     e.waitUntil(
         caches
-            .open("maerkelex-cache-v1.0.1")
+            .open("maerkelex-cache-v1.0.1-{{ site.time | replace: ' ', '-' | replace: ':', '-' | replace: '+', '' }}")
             .then(function(cache) {
                 return cache.addAll([
                     "{{ site.baseUrl }}/",
