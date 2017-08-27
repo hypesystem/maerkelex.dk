@@ -31,7 +31,7 @@ image: hvilket-maerke-bliver-det.jpg
         Eller nogen, som har været gift i noget tid, og som måske snart har sølvbryllup?
         Mærket <a href="/m/gift-med-en-spejder/">Gift med en spejder</a> er en fin måde at markere de spejdere, der virkelig har gjort spejderi til deres liv.
     </p>
-    { { include mærke } }
+    {% include maerkeIncludeBody.html maerke="gift-med-en-spejder" %}
     <h2>Et mærke bliver til</h2>
     <p>
         "Ideen kom til min kæreste og jeg en tre måneder før min kærestes søsters bryllup," forklarer Anna Liv Bolther, der præsenterede ideen for os hos Mærkelex.
@@ -95,7 +95,10 @@ image: hvilket-maerke-bliver-det.jpg
         Eller den udfordring det er at gifte sig med en spejder.
         Derfor skal parret også have et spejdermærke i belønning så de kan blære sig lidt."
     </p>
-    TODO: billede af parret
+    <figure>
+        <img src="toerklaede-paa-kage.jpg" alt="blog image">
+        <figcaption>En ægte spejderkage!</figcaption>
+    </figure>
     <p>
         "Det hele startede lidt i sjov, men ideen til mærket er dog først og fremmest baseret på min kærestes søster og hendes mands søde fælles historie," reflekterer Anna.
         "Mærket skal tænkes som en besked til parret om at alle omkring dem synes de er det sejeste par nogensinde og dét kan de godt være stolte af."
@@ -106,6 +109,7 @@ image: hvilket-maerke-bliver-det.jpg
         Og det er det så blevet.
         Du kan finde og købe det her på siden: <a href="/m/gift-med-en-spejder/">Gift med en spejder-mærket</a>.
     </p>
+    <br>
     <p>
         Vi håber du nød denne her hyggelige historie fra hverdagen.
         Vi synes i hvert fald den giver et godt perspektiv på hvordan spejdermærker ses udefra, og hvordan de kan bruges til at opbygge en fælles forståelse mellem spejdere og ikke-spejdere.
@@ -128,4 +132,13 @@ image: hvilket-maerke-bliver-det.jpg
     <br>
     <h1>Har du spørgsmål?</h1>
     <p>Hvis der er noget vi mangler at gøre helt klart, kan du skrive til os og få hjælp på <a href="mailto:kontakt@maerkelex.dk">kontakt@mærkelex.dk</a>.</p>
+    <br>
+    <h1>Har du tropsspejdere, der mangler udfordringer?</h1>
+    <p>
+        Kan dine tropsspejdere planlægge og overleve en weekend uden ledere?
+        Så er mærket for dem.
+    </p>
+    <p>
+        {% include maerkeIncludeAside.html maerke="overlevelsestur" %}
+    </p>
 </aside>
