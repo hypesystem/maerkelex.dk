@@ -1,0 +1,105 @@
+.price-calculator {
+    .price-inputs {
+        background: $dark;
+        color: white;
+        font-size: 2em;
+        font-weight: 100;
+        font-family: 'Open Sans Light';
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 15px 0;
+
+        .input-container, .price-input-container {
+            padding: 15px;
+            text-align: center;
+
+            label {
+                font-size: 0.5em;
+                display: block;
+            }
+
+            .input-field-container {
+                input {
+                    font-family: inherit;
+                    font-size: inherit;
+                    color: inherit;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid white;
+                    width: 120px;
+                    text-align: center;
+                }
+            }
+        }
+        .price-input-container {
+            .input-field-container {
+                &:after {
+                    content: 'DKK';
+                }
+
+                input {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .calculations {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 10px;
+
+        .calculation {
+            border: 1px solid $dark;
+            margin: 3px;
+            width: 33%;
+            flex-basis: 33%;
+
+            h1 {
+                margin-top: 0;
+                font-size: 1.3em;
+                background: $dark;
+                color: white;
+                padding: 10px;
+                text-align: center;
+            }
+
+            table {
+                border-collapse: collapse;
+
+                tr {
+                    td {
+                        font-size: 0.9em;
+                        padding: 0 4px;
+
+                        &:nth-child(2) {
+                            text-align: right;
+                            width: 100px;
+
+                            &:after {
+                                content: ' DKK';
+                            }
+                        }
+
+                        .explain {
+                            font-size: 0.8em;
+                            display: block;
+                        }
+                    }
+
+                    &.note {
+                        color: white;
+                        background: $dark;
+                        font-size: 0.8em;
+
+                        td {
+                            padding: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
