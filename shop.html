@@ -1,0 +1,37 @@
+---
+layout: default-no-container
+title: Køb mærker
+---
+<div class="container">
+    <h1>Shop</h1>
+    <p>
+        Her er en oversigt over de mærker, du kan købe direkte på Mærkelex.
+    </p>
+    <br>
+    <br>
+    <div class="content">
+        {% assign sorted_m = site.m | sort: "name" %}
+        {% for m in sorted_m %}
+            {% if m.price %}
+                {% assign m_url = m.url %}
+                {% assign m_first_tag = m.tags.first %}
+                {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
+                {% assign m_image = m.image %}
+                {% assign m_name = m.name %}
+                {% assign m_purchasable = "" %}
+                {% assign m_highlight_class = m.highlight %}
+                {% if m.price != null %}
+                {% assign m_purchasable = "purchasable" %}
+                {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
+                {% elsif m_highlight_class == "popular" %}
+                {% assign m_highlight_text = "Mest populære!" %}
+                {% elsif m_highlight_class == "new" %}
+                {% assign m_highlight_text = "Nyhed!" %}
+                {% else %}
+                {% assign m_highlight_text = false %}
+                {% endif %}
+                {% include maerkebox.html %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
