@@ -52,52 +52,92 @@
         margin-top: 10px;
 
         .calculation {
-            border: 1px solid $dark;
-            margin: 3px;
             width: 33%;
             flex-basis: 33%;
+            margin-right: 6px;
 
-            h1 {
-                margin-top: 0;
-                font-size: 1.3em;
-                background: $dark;
-                color: white;
-                padding: 10px;
-                text-align: center;
+            &:last-child {
+                margin-right: 0;
             }
 
-            table {
-                border-collapse: collapse;
+            .calculation-box {
+                border: 1px solid $dark;
+                border-bottom: none;
 
-                tr {
-                    td {
-                        font-size: 0.9em;
-                        padding: 0 4px;
+                h1 {
+                    margin: 0;
+                    font-size: 1.3em;
+                    background: $dark;
+                    color: white;
+                    padding: 10px;
+                    text-align: center;
+                }
 
-                        &:nth-child(2) {
-                            text-align: right;
-                            width: 100px;
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
 
-                            &:after {
-                                content: ' DKK';
+                    tr {
+                        height: 41px;
+                        box-sizing: border-box;
+                        border-bottom: 1px solid rgba(0,0,0,0.15);
+
+                        td {
+                            font-size: 0.9em;
+                            padding: 0 4px;
+
+                            &:nth-child(2) {
+                                text-align: right;
+                                width: 100px;
+
+                                &:after {
+                                    content: ' DKK';
+                                }
+                            }
+
+                            .explain {
+                                font-size: 0.8em;
+                                display: block;
                             }
                         }
 
-                        .explain {
-                            font-size: 0.8em;
-                            display: block;
+                        &.row-not-in-use {
+                            background: rgba(0,0,0,0.15);
+                        }
+
+                        &.row-emphasis {
+                            background: white;
+                            font-weight: bold;
                         }
                     }
+                }
+            }
 
-                    &.note {
-                        color: white;
-                        background: $dark;
-                        font-size: 0.8em;
+            .note {
+                color: white;
+                background: $dark;
+                font-size: 0.75em;
+                padding: 5px;
+                margin-top: 1px;
+            }
 
-                        td {
-                            padding: 4px;
-                        }
-                    }
+            .call-to-action {
+                display: block;
+                font-size: 1.1em;
+                background: $orange;
+                color: white;
+                text-decoration: inherit;
+                text-align: center;
+                padding: 15px 5px;
+                margin-bottom: 15px;
+
+                &.weak {
+                    background: white;
+                    color: black;
+                    border: 1px solid $dark;
+                    border-top: none;
+                    margin-bottom: 14px;
+                    cursor: default;
                 }
             }
         }

@@ -55,132 +55,127 @@ title: Prisberegner
 
     <div class="calculations">
         <div class="calculation">
-            <h1>Traditionel model</h1>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Produktion, stk.</td>
-                        <td class="production-price-field">8</td>
-                    </tr>
-                    <tr>
-                        <td>Rådighedsbeløb</td>
-                        <td class="calc1-profit-field">8</td>
-                    </tr>
-                    <tr>
-                        <td>Pris før moms</td>
-                        <td class="price-before-vat-field">16</td>
-                    </tr>
-                    <tr>
-                        <td>Pris efter moms</td>
-                        <td class="sales-price-field">20</td>
-                    </tr>
-                    <tr class="note">
-                        <td colspan="2">
-                            Hvis en kunde køber 5 mærker á 20 kr (total 100 kr), vil rådighedsbeløbet være (5 * 8) = 40 kr.<br>
-                            Hvis en kunde køber 15 mærker á 20 kr (total 300 kr), vil rådighedsbeløbet være (15 * 8) = 120 kr.
-                        </td>
-                    </tr>
-                    <tr class="note">
-                        <td colspan="2">
-                            Med denne model skal du selv stå for at holde styr på bestillinger af dine mærker, om de har betalt.
-                            Du skal selv stå for at bestille mærkerne hos producenten, og bestille flere når du er ved at løbe tør.
-                            Og du skal selv stå for at sende mærkerne ud med posten.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="calculation-box">
+                <h1>Traditionel model</h1>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Produktion</td>
+                            <td class="production-price-field">8</td>
+                        </tr>
+                        <tr class="row-emphasis">
+                            <td>Din profit</td>
+                            <td class="calc1-profit-field">8</td>
+                        </tr>
+                        <tr class="row-not-in-use">
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>Pris før moms</td>
+                            <td class="price-before-vat-field">16</td>
+                        </tr>
+                        <tr>
+                            <td>Pris efter moms</td>
+                            <td class="sales-price-field">20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a class="call-to-action weak">
+                Held og lykke!
+            </a>
+            <div class="note">
+                Med denne model skal du selv stå for at holde styr på bestillinger af dine mærker, om de har betalt.
+                Du skal selv stå for at bestille mærkerne hos producenten, og bestille flere når du er ved at løbe tør.
+                Og du skal selv stå for at sende mærkerne ud med posten.
+            </div>
         </div>
 
         <div class="calculation">
-            <h1>Mærkelex Salg-platform</h1>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Produktion, stk.</td>
-                        <td class="production-price-field">8</td>
-                    </tr>
-                    <tr>
-                        <td>Rådighedsbeløb</td>
-                        <td class="calc2-profit-field">7,2</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Mærkelex' gebyr*
-                            <span class="explain">(5% af pris før moms)</span>
-                        </td>
-                        <td class="calc2-maerkelex-field">0,8</td>
-                    </tr>
-                    <tr>
-                        <td>Pris før moms</td>
-                        <td class="price-before-vat-field">16</td>
-                    </tr>
-                    <tr>
-                        <td>Pris efter moms</td>
-                        <td class="sales-price-field">20</td>
-                    </tr>
-                    <tr class="note">
-                        <td colspan="2">
-                            * Udover gebyret på 5% tager Mærkelex 3 kr pr. transaktion.<br>
-                            <br>
-                            Hvis en kunde køber 5 mærker á 20 kr (total 100 kr), vil rådighedsbeløbet være (5 * 7,2) - 3 = 33 kr.<br>
-                            Hvis en kunde køber 15 mærker á 20 kr (total 300 kr), vil rådighedsbeløbet være (15 * 7,2) - 3 = 105 kr.
-                        </td>
-                    </tr>
-                    <tr class="note">
-                        <td colspan="2">
-                            Med denne model hjælper Mærkelex dig ved at tage imod kortbetaling for dine mærker.
-                            Du er altså sikker på at have modtaget pengene, og får en email-notifikation, når der er kommet en ordre.<br>
-                            <br>
-                            Du skal selv stå for at sende mærkerne ud med posten.
-                            Du kan definere dit eget forsendelsesgebyr, som opkræves én gang pr. bestilling.
-                            Du skal også stadig selv stå for lagerstyring.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="calculation-box">
+                <h1>Mærkelex Salg-platform</h1>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Produktion</td>
+                            <td class="production-price-field">8</td>
+                        </tr>
+                        <tr class="row-emphasis">
+                            <td>Din profit</td>
+                            <td class="calc2-profit-field">7,2</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Mærkelex' gebyr*
+                                <span class="explain">(5% af pris før moms)</span>
+                            </td>
+                            <td class="calc2-maerkelex-field">0,8</td>
+                        </tr>
+                        <tr>
+                            <td>Pris før moms</td>
+                            <td class="price-before-vat-field">16</td>
+                        </tr>
+                        <tr>
+                            <td>Pris efter moms</td>
+                            <td class="sales-price-field">20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a class="call-to-action" href="mailto:kontakt@maerkelex.dk?subject=Jeg vil gerne sælge mine mærker via Mærkelex Salg&body=Hej Mærkelex,%0A%0AJeg vil gerne sælge mit mærke [skriv mærke navn her] via Mærkelex Salg. [udfyld evt. mere info]%0A%0ASpejderhilsen,%0A[dit navn]">
+                Lav aftale
+            </a>
+            <div class="note">
+                * Udover gebyret på 5% tager Mærkelex 3 kr pr. transaktion.<br>
+            </div>
+            <div class="note">
+                Med denne model hjælper Mærkelex dig ved at tage imod kortbetaling for dine mærker.
+                Du er altså sikker på at have modtaget pengene, og får en email-notifikation, når der er kommet en ordre.<br>
+                <br>
+                Du skal selv stå for at sende mærkerne ud med posten.
+                Du kan definere dit eget forsendelsesgebyr, som opkræves én gang pr. bestilling.
+                Du skal også stadig selv stå for lagerstyring.
+            </div>
         </div>
 
         <div class="calculation">
-            <h1>Licensér til Mærkelex</h1>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Produktion, stk.</td>
-                        <td class="production-price-field">8</td>
-                    </tr>
-                    <tr>
-                        <td>Rådighedsbeløb</td>
-                        <td class="calc3-profit-field">2,2</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Mærkelex' gebyr
-                            <span class="explain">(5 kr stk. + 5% af pris før moms)</span>
-                        </td>
-                        <td class="calc3-maerkelex-field">5,8</td>
-                    </tr>
-                    <tr>
-                        <td>Pris før moms</td>
-                        <td class="price-before-vat-field">16</td>
-                    </tr>
-                    <tr>
-                        <td>Pris efter moms</td>
-                        <td class="sales-price-field">20</td>
-                    </tr>
-                    <tr class="note">
-                        <td colspan="2">
-                            Hvis en kunde køber 5 mærker á 20 kr (total 100 kr), vil rådighedsbeløbet være (5 * 2,2) = 11 kr.<br>
-                            Hvis en kunde køber 15 mærker á 20 kr (total 300 kr), vil rådighedsbeløbet være (15 * 2,2) = 33 kr.
-                        </td>
-                    </tr>
-                    <tr class="note">
-                        <td colspan="2">
-                            Med denne model overtager Mærkelex produktions-, salgs- og leveringsansvar.
-                            Til gengæld modtager du et beløb pr. mærke solgt.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="calculation-box">
+                <h1>Licensér til Mærkelex</h1>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Produktion</td>
+                            <td class="production-price-field">8</td>
+                        </tr>
+                        <tr class="row-emphasis">
+                            <td>Din profit</td>
+                            <td class="calc3-profit-field">2,2</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Mærkelex' gebyr
+                                <span class="explain">(5 kr stk. + 5% af pris før moms)</span>
+                            </td>
+                            <td class="calc3-maerkelex-field">5,8</td>
+                        </tr>
+                        <tr>
+                            <td>Pris før moms</td>
+                            <td class="price-before-vat-field">16</td>
+                        </tr>
+                        <tr>
+                            <td>Pris efter moms</td>
+                            <td class="sales-price-field">20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a class="call-to-action" href="mailto:kontakt@maerkelex.dk?subject=Jeg vil gerne licensere mine mærker til Mærkelex&body=Hej Mærkelex,%0A%0AJeg vil gerne licensere mit mærke [skriv mærke navn her] til jer. [udfyld evt. mere info]%0A%0ASpejderhilsen,%0A[dit navn]">
+                Lav aftale
+            </a>
+            <div class="note">
+                Med denne model overtager Mærkelex produktions-, salgs- og leveringsansvar.
+                Til gengæld modtager du et beløb pr. mærke solgt.
+            </div>
         </div>
     </div>
 </div>
