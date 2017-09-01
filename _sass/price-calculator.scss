@@ -1,4 +1,6 @@
 .price-calculator {
+    margin-top: 35px;
+
     .price-inputs {
         background: $dark;
         color: white;
@@ -52,7 +54,6 @@
         margin-top: 10px;
 
         .calculation {
-            width: 33%;
             flex-basis: 33%;
             margin-right: 6px;
 
@@ -138,6 +139,44 @@
                     border-top: none;
                     margin-bottom: 14px;
                     cursor: default;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .price-calculator {
+        .price-inputs {
+            display: block;
+
+            .input-container, .price-input-container {
+                display: block;
+            }
+        }
+
+        .calculations {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .calculation {
+                flex-basis: 300px;
+                max-width: 300px;
+                flex-grow: 0;
+                flex-shrink: 1;
+                margin-top: 75px;
+
+                .call-to-action {
+                    margin-bottom: 6px;
+
+                    &.weak {
+                        margin-bottom: 5px;
+                    }
+                }
+
+                table tr.row-not-in-use {
+                    display: none;
                 }
             }
         }
