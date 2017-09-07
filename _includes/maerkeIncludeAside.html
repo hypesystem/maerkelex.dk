@@ -16,28 +16,29 @@
 {% else %}
     {% assign m_highlight_text = false %}
 {% endif %}
-<div class="maerke-box{% if this_m.highlight %} highlight-{{ this_m.highlight }}{% endif %}{% if m_purchasable %} {{ m_purchasable }}{% endif %}">
-    <a class="maerke-link" href="{{ site.baseurl }}{{ this_m.url }}">
-      <div class="maerke-info">
-        <div class="maerke-corps {{ this_m.tags | first }}">
-          {{ this_m.tags | first }}
-        </div>
-        <div class="maerke-age">
-          {{ m_age }}
-        </div>
+
+<div class="badge{% if m_highlight_class %} highlight-{{ m_highlight_class }}{% endif %}{% if m_purchasable %} {{ m_purchasable }}{% endif %}">
+  <a class="badge-link" href="{{ site.baseurl }}{{ m_url }}">
+    <div class="badge-info">
+      <div class="badge-corps {{ this_m.tags | first }}">
+        {{ this_m.tags | first }}
       </div>
-      <img src="{{ site.baseurl }}/img/compressed/{{ this_m.image }}" alt="{{ this_m.name | remove: '&#173;' }} spejdermærke" />
-      <div class="card-content">
-        <h3>{{ this_m.name }}</h3>
+      <div class="badge-age">
+        {{ m_age }}
       </div>
-    </a>
-    <a href="{{ site.baseurl }}{{ this_m.url }}">
-      <div class="card-link">
-        {% if m_highlight_text %}
-          {{ m_highlight_text }}
-        {% else %}
-          Læs mere
-        {% endif %}
-      </div>
-    </a>
+    </div>
+    <div>
+    <img class="badge-image" src="{{ site.baseurl }}/img/compressed/{{ this_m.image }}" alt="{{ this_m.name | remove: '&#173;' }} spejdermærke">
+  </div>
+    <p class="badge-title">
+      {{ m_name }}
+    </p>
+    <div class="badge-cta">
+      {% if m_highlight_text %}
+        {{ m_highlight_text }}
+      {% else %}
+        Læs mere
+      {% endif %}
+    </div>
+  </a>
 </div>

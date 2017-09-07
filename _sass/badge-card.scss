@@ -87,21 +87,21 @@
     text-transform: capitalize;
     color: gray;
     border-color: gray;
-  }
 
-  .badge-corps.DDS {
-    border-color: #003466;
-    color: #003466;
-  }
+    &.DDS {
+      border-color: #003466;
+      color: #003466;
+    }
 
-  .badge-corps.DGP {
-    border-color: #005723;
-    color: #005723;
-  }
+    &.DGP {
+      border-color: #005723;
+      color: #005723;
+    }
 
-  .badge-corps.KFUM {
-    border-color: #006649;
-    color: #006649;
+    &.KFUM {
+      border-color: #006649;
+      color: #006649;
+    }
   }
 
   .badge-age {
