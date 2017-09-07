@@ -1,0 +1,115 @@
+.cover {
+  width: 100%;
+  height: 380px;
+  position: absolute;
+  left: 0;
+  top: 65px;
+  overflow: hidden;
+
+  .cover-img {
+    width: 105%;
+    height: 390px;
+    background-image: url("../img/covers/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+          -webkit-filter: blur(2px);
+          -moz-filter: blur(2px);
+          -o-filter: blur(2px);
+          -ms-filter: blur(2px);
+    margin-left: -10px;
+    margin-top: -8px;
+  }
+}
+
+.main-maerke-content {
+  margin-top: 70px;
+  position: relative;
+
+  .col {
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+
+  .page-image {
+    float: left;
+    width: 40%;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    box-sizing: border-box;
+
+    img {
+      max-width: 100%;
+      height: 300px;
+      border: 7px solid rgb(245, 245, 245);
+      box-sizing: border-box;
+
+      @media screen and (max-width: $small){
+        height: auto;
+      }
+    }
+  }
+
+  .page-description {
+    width: 60%;
+    display: inline-block;
+    margin-top: 50px;
+
+    h1 {
+      font-family: "Open Sans Light", "Open Sans", sans-serif;
+      background-color: whitesmoke;
+      padding: 8px 20px;
+      display: inline-block;
+
+      @media screen and (max-width: $mobile){
+        padding: 8px 0px;
+      }
+    }
+
+    .age {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    ul em {
+      font-family: "Open Sans Light", "Open Sans", sans-serif;
+    }
+
+    .btn {
+      width: 100%;
+    }
+
+    .infolink {
+      background: $orange;
+
+      &:hover {
+        background: $darkorange;
+      }
+    }
+  }
+
+  .page-description-color {
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+
+    @media screen and (max-width: $mobile){
+      padding: 0px;
+    }
+  }
+
+  .btn-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .btn+.btn {
+    margin-left: 10px;
+  }
+}

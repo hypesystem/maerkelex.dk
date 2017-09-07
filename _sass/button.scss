@@ -1,0 +1,21 @@
+.btn,
+a.btn,
+button,
+input[type=submit] {
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  background: $blue;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: background 0.2s;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 1em;
+
+  &:hover {
+    background: $darkblue;
+    color: white;
+  }
+}
