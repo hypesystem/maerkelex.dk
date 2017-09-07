@@ -1,0 +1,138 @@
+.badge {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 0 4px rgba(0,0,0,0.2), 0 0 10px #fff inset;
+  position: relative;
+  overflow: hidden;
+
+  .badge-link {
+    height: 100%;
+    color: inherit;
+    text-decoration: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .badge-image {
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 0;
+    transition: all 0.2s ease;
+
+    @media(max-width: $mobile) {
+      padding-top: 0;
+    }
+
+    &:hover {
+      transform:scale(1.1);
+    }
+  }
+
+  .badge-title {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+
+  .badge-cta {
+    padding: 10px;
+    border-top: 1px solid rgba(160,160,160,0.2);
+    color: $blue;
+  }
+
+  .badge-info {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+    color: #fafafa;
+
+    @media(max-width: $mobile) {
+      position: static;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .badge-age,
+  .badge-corps {
+    padding: 5px;
+    font-size: 0.8em;
+    padding: 5px 8px;
+    font-weight: bold;
+    transition: background 0.2s;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px;
+    border-style: solid;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.95);
+    position: relative;
+    z-index: 200;
+
+    @media(max-width: $mobile) {
+      width: 100%;
+      font-size: 2.8vw;
+      padding: 0.67vw 1.07vw;
+      margin: 10px 2px 0;
+    }
+  }
+
+  .badge-corps {
+    text-transform: capitalize;
+    color: gray;
+    border-color: gray;
+  }
+
+  .badge-corps.DDS {
+    border-color: #003466;
+    color: #003466;
+  }
+
+  .badge-corps.DGP {
+    border-color: #005723;
+    color: #005723;
+  }
+
+  .badge-corps.KFUM {
+    border-color: #006649;
+    color: #006649;
+  }
+
+  .badge-age {
+    color: $blue;
+    border-color: $blue;
+  }
+
+  // Hightligths
+
+  &.highlight-popular {
+    box-shadow: 1px 0 0px $orange, -1px 0 0 $orange, -1px -1px 0 $orange, 1px -1px 0 $orange, 0 0 13px $orange;
+    overflow: hidden;
+
+    .badge-cta {
+      background: $orange;
+      color: white;
+    }
+  }
+
+  &.highlight-new {
+    box-shadow: 1px 0 0px $green, -1px 0 0 $green, -1px -1px 0 $green, 1px -1px 0 $green, 0 0 13px $green;
+    overflow: hidden;
+
+    .badge-cta {
+      background: $green;
+      color: white;
+    }
+  }
+
+  &.purchasable .badge-cta {
+    background: $blue;
+    color: white;
+  }
+}
