@@ -1,14 +1,6 @@
 ---
 ---
-$small: 930px;
-$mobile: 600px;
-$orange: rgb(251, 171, 68);
-$darkorange: darken($orange, 15%);
-$blue: rgb(8, 159, 218);
-$darkblue: darken($blue, 15%);
-$shadowonblue: rgb(11, 93, 125);
-$green: #45BF55;
-$dark: rgb(50, 50, 60);
+@import "variables.scss";
 
 @font-face {
     font-family: "Open Sans";
@@ -52,34 +44,6 @@ a:hover {
   max-width: 1100px;
   width: 93%;
   margin: 0 auto;
-}
-
-// Fallback for browsers that does not support CSS grid
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-
-  .badge {
-    width: calc(33.33% - 12px);
-    margin: 6px;
-  }
-}
-
-@supports (display: grid) {
-  .grid .badge {
-    width: auto;
-    margin: 0;
-  }
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  grid-gap: 12px;
-
-  @media(max-width: 600px) {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 .content {
@@ -277,7 +241,7 @@ a:hover {
     background: $blue;
     color: white;
     text-decoration: none;
-    margin-top: 30px;
+    margin: 30px 0;
     padding: 20px 0;
     transition: background 0.2s;
     float: left;
@@ -294,6 +258,12 @@ a:hover {
   margin-right: auto;
   display: flex;
   justify-content: center;
+  margin-top: -40px;
+  margin-bottom: 30px;
+
+  @media(max-width: $mobile) {
+    margin-top: -18px;
+  }
 }
 
 .blog-post-date {
@@ -367,6 +337,7 @@ a:hover {
 
 @import "header.scss";
 @import "badge-card.scss";
+@import "badge-grid.scss";
 @import "tag";
 @import "advanced-search.scss";
 @import "cookie-notice";

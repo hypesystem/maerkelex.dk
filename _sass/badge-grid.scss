@@ -1,0 +1,28 @@
+// Fallback for browsers that does not support CSS grid
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  .badge {
+    width: calc(33.33% - 12px);
+    margin: 6px;
+  }
+}
+
+@supports (display: grid) {
+  .grid .badge {
+    width: auto;
+    margin: 0;
+  }
+}
+
+// Actual grid used in modern browsers
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 12px;
+
+  @media(max-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -27,17 +27,16 @@ title: Søg efter spejdermærker
         {% endif %}
         {% include maerkebox.html %}
       {% endfor %}
-
-    <a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
-    <script>
-        document.querySelector(".see-more-button").addEventListener("click", function(e) {
-            e.preventDefault();
-            searchBar.value = "";
-            search();
-            ga("set", "dimension1", highlightsEnabled);
-            ga("send", "event", "BadgeList", "view_all", "initial overview");
-            return false;
-        });
-    </script>
   </div>
+  <a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
+  <script>
+      document.querySelector(".see-more-button").addEventListener("click", function(e) {
+          e.preventDefault();
+          searchBar.value = "";
+          search();
+          ga("set", "dimension1", highlightsEnabled);
+          ga("send", "event", "BadgeList", "view_all", "initial overview");
+          return false;
+      });
+  </script>
 </div>
