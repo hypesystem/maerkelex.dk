@@ -3,12 +3,13 @@
 @import "variables.scss";
 
 @font-face {
-    font-family: "Open Sans";
-    src: url('/font/OpenSans-Regular.ttf') format('truetype');
+  font-family: "Open Sans";
+  src: url('/font/OpenSans-Regular.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: "Open Sans Light";
-    src: url('/font/OpenSans-Light.ttf') format('truetype');
+  font-family: "Open Sans Light";
+  src: url('/font/OpenSans-Light.ttf') format('truetype');
 }
 
 * {
@@ -16,28 +17,30 @@
 }
 
 body {
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
-    background: rgb(245, 245, 245);
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: rgb(245, 245, 245);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
+
 main {
   flex: 1 0 auto;
   padding-top: 137px;
-}
-@media(max-width: $small){
-  main {
-      padding-top: 85px;
+
+  @media(max-width: $small){
+    padding-top: 85px;
   }
 }
+
 a {
-    color: $blue;
-    transition: color 0.2s;
-}
-a:hover {
+  color: $blue;
+  transition: color 0.2s;
+
+  &:hover {
     color: $darkblue;
+  }
 }
 
 .container {
@@ -62,9 +65,11 @@ a:hover {
     z-index: 1;
     text-align: center;
 }
+
 .first-visit-welcome.hidden {
     margin-top: -340px;
 }
+
 .first-visit-welcome-remover {
     position: absolute;
     top: 0;
@@ -76,9 +81,11 @@ a:hover {
     font-weight: bold;
     cursor: pointer;
 }
+
 .first-visit-welcome:hover .first-visit-welcome-remover {
     opacity: 1;
 }
+
 .first-visit-welcome-image {
     background-image: url('../img/welcome-message-01.png');
     height: 300px;
@@ -104,7 +111,7 @@ a:hover {
   background: $blue;
   color: white;
   text-decoration: none;
-  margin: 30px 0;
+  margin-top: 30px;
   padding: 20px 0;
   transition: background 0.2s;
   float: left;
