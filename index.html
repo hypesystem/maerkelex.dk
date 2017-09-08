@@ -28,7 +28,7 @@ title: Søg efter spejdermærker
         {% include maerkebox.html %}
       {% endfor %}
   </div>
-  <a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
+  <a class="see-more-button js-see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
   <script>
       document.querySelector(".see-more-button").addEventListener("click", function(e) {
           e.preventDefault();

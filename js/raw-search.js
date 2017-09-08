@@ -90,7 +90,7 @@ function addSearchHistoryFrame(value) {
 }
 
 function renderMatches(matches) {
-    var content = document.querySelector(".container .content");
+    var content = document.querySelector(".container .grid");
 
     if(matches.length < 1) {
         var noMatches = '<div class="no-search-matches">Ingen mærker matchede din søgning på <strong>' + searchBar.value + '</strong>. ' +
@@ -102,6 +102,7 @@ function renderMatches(matches) {
     }
 
     content.innerHTML = renderResults(matches);
+    document.querySelector(".js-see-more-button").style.display = 'none';
 }
 
 function renderResults(matches) {
