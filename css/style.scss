@@ -27,11 +27,6 @@ body {
 
 main {
   flex: 1 0 auto;
-  padding-top: 137px;
-
-  @media(max-width: $small){
-    padding-top: 85px;
-  }
 }
 
 a {
@@ -129,12 +124,7 @@ a {
   margin-right: auto;
   display: flex;
   justify-content: center;
-  margin-top: -40px;
   margin-bottom: 30px;
-
-  @media(max-width: $mobile) {
-    margin-top: -18px;
-  }
 }
 
 .blog-post-date {

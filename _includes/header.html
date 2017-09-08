@@ -1,142 +1,153 @@
 <header id="header">
-    <nav>
-        <a href="{{ site.baseurl }}/" class="logo">
-            <img src="{{ site.baseurl }}/img/logo.svg" alt="mærkelex logo">
-        </a>
-        <div class="searchbar">
-            <form method="get">
-                <label aria-label="searchbar"><input type="text" name="search" placeholder="Søg ..."></label>
-                <a class="clear clear-button">
-                    <img src="{{ site.baseurl }}/img/cross.svg" alt="clear button">
-                </a>
-                <button class="search-button" type="submit">
-                    <img src="{{ site.baseurl }}/img/search.svg" alt="search button">
-                </button>
-            </form>
-        </div>
-        <script>
-            var searchData = null;
-            var rawSearch = null;
-            var onSearchListeners = [];
+  <div class="container">
+    <a href="{{ site.baseurl }}/" class="logo">
+      <img src="{{ site.baseurl }}/img/logo.svg" alt="mærkelex logo">
+    </a>
+    <div class="searchbar">
+        <form method="get">
+          <label aria-label="searchbar"><input type="text" name="search" placeholder="Søg ..."></label>
+          <a class="clear clear-button">
+            <img src="{{ site.baseurl }}/img/cross.svg" alt="clear button">
+          </a>
+          <button class="search-button" type="submit">
+            <img src="{{ site.baseurl }}/img/search.svg" alt="search button">
+          </button>
+        </form>
+    </div>
+      <script>
+          var searchData = null;
+          var rawSearch = null;
+          var onSearchListeners = [];
 
-            var search = debounced(function(recovery) {
-                if(!rawSearch || !searchData) {
-                    console.log("Missing either rawSearch or searchData to perform search");
-                    return search(recovery);
-                }
-                rawSearch(recovery);
-            });
+          var search = debounced(function(recovery) {
+              if(!rawSearch || !searchData) {
+                  console.log("Missing either rawSearch or searchData to perform search");
+                  return search(recovery);
+              }
+              rawSearch(recovery);
+          });
 
-            var searchBar = document.querySelector(".searchbar input");
+          var searchBar = document.querySelector(".searchbar input");
 
-            var searchBarHasFocus = false;
+          var searchBarHasFocus = false;
 
-            searchBar.addEventListener("focus", function(e) {
-                searchBarHasFocus = true;
-            });
+          searchBar.addEventListener("focus", function(e) {
+              searchBarHasFocus = true;
+          });
 
-            searchBar.addEventListener("blur", function(e) {
-                setTimeout(function() {
-                    searchBarHasFocus = false;
-                }, 10);
-            });
+          searchBar.addEventListener("blur", function(e) {
+              setTimeout(function() {
+                  searchBarHasFocus = false;
+              }, 10);
+          });
 
-            searchBar.addEventListener("keyup", function(e) {
-                search();
-            });
+          searchBar.addEventListener("keyup", function(e) {
+              search();
+          });
 
-            var searchBarHadFocusAtMouseDown = false;
+          var searchBarHadFocusAtMouseDown = false;
 
-            document.querySelector(".searchbar .search-button").addEventListener("mousedown", function(e) {
-                searchBarHadFocusAtMouseDown = searchBarHasFocus;
-            });
+          document.querySelector(".searchbar .search-button").addEventListener("mousedown", function(e) {
+              searchBarHadFocusAtMouseDown = searchBarHasFocus;
+          });
 
-            document.querySelector(".searchbar .search-button").addEventListener("click", function(e) {
-                e.preventDefault();
-                if(searchBarHadFocusAtMouseDown || searchBarHasFocus) {
-                    searchBarHadFocusAtMouseDown = false;
-                    searchBar.blur();
-                    document.querySelector(".container").scrollIntoView();
-                    return true;
-                }
-                searchBar.focus();
-                return true;
-            });
+          document.querySelector(".searchbar .search-button").addEventListener("click", function(e) {
+              e.preventDefault();
+              if(searchBarHadFocusAtMouseDown || searchBarHasFocus) {
+                  searchBarHadFocusAtMouseDown = false;
+                  searchBar.blur();
+                  document.querySelector(".container").scrollIntoView();
+                  return true;
+              }
+              searchBar.focus();
+              return true;
+          });
 
-            (function getSearchValueFromQuery() {
-                if(!location.search) {
-                    return searchBar.value = "";
-                }
+          (function getSearchValueFromQuery() {
+              if(!location.search) {
+                  return searchBar.value = "";
+              }
 
-                var results = /[\?&]search=([^&#]*)/.exec(location.search);
-                if(!results) {
-                    return searchBar.value = "";
-                }
+              var results = /[\?&]search=([^&#]*)/.exec(location.search);
+              if(!results) {
+                  return searchBar.value = "";
+              }
 
-                var searchString = results[1];
-                if(typeof searchString != "string") {
-                    return searchBar.value = "";
-                }
+              var searchString = results[1];
+              if(typeof searchString != "string") {
+                  return searchBar.value = "";
+              }
 
-                searchString = decodeURIComponent(searchString);
+              searchString = decodeURIComponent(searchString);
 
-                searchBar.focus();
-                searchBar.value = searchString;
-                search(true);
-            })();
+              searchBar.focus();
+              searchBar.value = searchString;
+              search(true);
+          })();
 
-            history.replaceState({ maerkelex: true }, "Mærkelex");
+          history.replaceState({ maerkelex: true }, "Mærkelex");
 
-            window.onpopstate = function(event) {
-                if(!event.state) {
-                    return;
-                }
-                if(!event.state.maerkelex) {
-                    return;
-                }
-                if(typeof event.state.search != "string") {
-                    return window.location.reload();
-                }
-                if(searchBar.value == event.state.search) {
-                    return;
-                }
-                searchBar.value = event.state.search;
-                search(true);
-            };
+          window.onpopstate = function(event) {
+              if(!event.state) {
+                  return;
+              }
+              if(!event.state.maerkelex) {
+                  return;
+              }
+              if(typeof event.state.search != "string") {
+                  return window.location.reload();
+              }
+              if(searchBar.value == event.state.search) {
+                  return;
+              }
+              searchBar.value = event.state.search;
+              search(true);
+          };
 
-            var clearIcon = document.querySelector(".searchbar .clear");
+          var clearIcon = document.querySelector(".searchbar .clear");
 
-            clearIcon.addEventListener("click", function(e) {
-                searchBar.value = "";
-                search();
-                ga("send", "event", "SearchBar", "clear");
-            });
+          clearIcon.addEventListener("click", function(e) {
+              searchBar.value = "";
+              search();
+              ga("send", "event", "SearchBar", "clear");
+          });
 
-            document.addEventListener("keypress", function(e) {
-                if(e.which != 115) {
-                    return;
-                }
-                var currentElementType = document.activeElement.tagName.toLowerCase();
-                if(currentElementType == "input" || currentElementType == "textarea") {
-                    return;
-                }
-                e.preventDefault();
-                searchBar.focus();
-                document.querySelector("header").scrollIntoView();
-                ga("send", "event", "KeyboardShortcut", "search", "pressed:S");
-                return true;
-            });
+          document.addEventListener("keypress", function(e) {
+              if(e.which != 115) {
+                  return;
+              }
+              var currentElementType = document.activeElement.tagName.toLowerCase();
+              if(currentElementType == "input" || currentElementType == "textarea") {
+                  return;
+              }
+              e.preventDefault();
+              searchBar.focus();
+              document.querySelector("header").scrollIntoView();
+              ga("send", "event", "KeyboardShortcut", "search", "pressed:S");
+              return true;
+          });
 
-            window.addEventListener("scroll", function changePos() {
-                var header = document.getElementById("header");
-                if (window.pageYOffset > 50) {
-                    if(!header.classList.contains("sticky")){
-                        header.className += "sticky";
-                    }
-                } else {
-                    header.className = "";
-                }
-            }, { passive: true });
-        </script>
-    </nav>
+          window.addEventListener("scroll", function changePos() {
+              var header = document.getElementById("header");
+              if (window.pageYOffset > 50) {
+                  if(!header.classList.contains("sticky")){
+                      header.className += "sticky";
+                  }
+              } else {
+                  header.className = "";
+              }
+          }, { passive: true });
+      </script>
+    </div>
 </header>
+
+<nav>
+  <div class="nav-container">
+    <a>Hvem er Mærkelex?</a>
+    <a>Avanceret søgning</a>
+    <a>Blog</a>
+    <a>FAQ</a>
+    <a>Facebook</a>
+    <a>Kontakt</a>
+  </div>
+</nav>

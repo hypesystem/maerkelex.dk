@@ -1,94 +1,38 @@
 header {
-    width: 100%;
-    background: $dark;
-    margin-bottom: 40px;
-    text-align: center;
-    position: relative;
-    z-index: 300;
-    box-shadow: 0 0 6px rgba(0,0,0,0.3), 0 0 3px rgba(0,0,0,0.3);
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-@media(max-width: $small){
-  header {
-    margin-bottom: 10px;
-  }
-}
-header nav {
+  width: 100%;
+  background: $dark;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+
+  .container {
     display: flex;
     justify-content: space-between;
     text-align: right;
-    width: 900px;
-    margin: 0 auto;
-    padding: 15px 5px;
-    box-sizing: border-box;
     transition: all 0.3s ease;
-}
-@media(max-width: $small){
-  header nav {
-    width:100% !important;
-    padding: 10px 15px;
+  }
+
+  a.logo {
+    height: 50px;
+
+    img {
+      height: 100%;
+    }
   }
 }
-header nav a.logo {
-    float: left;
-    height: 64px;
-}
-@media(max-width: $small){
-  header nav a.logo {
-    height: 45px;
-  }
-}
-header nav img {
-    width: 64px;
-    height: 64px;
-    transition: all 0.3s ease;
-}
-@media(max-width: $small){
-  header nav img {
-    width: 45px;
-    height: 45px;
-  }
-}
-header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-header.sticky nav {
-  padding: 10px 5px;
-}
-@media(max-width: $small){
-  header.sticky nav {
-    padding: 10px 15px;
-  }
-}
-header.sticky nav img,
-header.sticky nav .logo {
-  width: 30px;
-  height: 30px;
-}
-header.sticky nav .searchbar .search-button img {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 0;
-}
-@media(max-width: $small){
-  header.sticky nav .searchbar {
-    bottom: 0px;
-  }
-}
+
 .searchbar {
     display: inline-block;
     width: 425px;
     float: right;
 }
+
 @media(max-width: $small){
   .searchbar {
       width: auto !important;
   }
 }
+
 .searchbar input {
     color: rgba(250, 250, 250, 1);
     background: transparent;
@@ -161,5 +105,31 @@ header.sticky nav .searchbar input:focus {
   }
   .searchbar button img {
     height: 50px;
+  }
+}
+
+nav {
+  color: white;
+  background-color: darken(#32323c, 5%);
+  overflow-y: hidden!important;
+  height: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  .nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: hidden!important;
+    white-space: nowrap;
+    padding: 10px;
+    padding-bottom: 100px;
+
+    a {
+      padding-right: 20px;
+      display: inline-block;
+      color: white;
+    }
   }
 }
