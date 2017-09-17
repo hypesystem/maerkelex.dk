@@ -1,26 +1,10 @@
 ---
-layout: blogpost
+layout: default
 title: "Spotlight: Skirty-mærket"
-date: ??. ?? 2017
+date: 3. oktober 2017
 image: skirty-tegning.jpg
-aside: >
-    <h1>Hvad mangler Mærkelex?</h1>
-    <p>Sidder du med ideen til den der ene feature, vi ikke har, og som er helt oplagt?</p>
-    <p>Du er meget velkommen til at skrive til os på <a href="mailto:kontakt@maerkelex.dk">kontakt@mærkelex.dk</a>!</p>
-    <br>
-    <h1>Andre mærker, der kan inspirere dig</h1>
-    <p>{% include maerkeIncludeAside.html maerke="10-min-taarn" %}</p>
-    <p>{% include maerkeIncludeAside.html maerke="24-timer-i-sovepose" %}</p>
-    <br>
-    <h1>Sælg dit mærke gennem Mærkelex</h1>
-    <p>
-        Når du engang har lavet dit mærke, skal det jo også sælges og distribueres.
-        Nu kan man sælge mærker direkte gennem Mærkelex.
-        Hvis du er interesseret, kan du læse mere i vores blog post <a href="/blog/saelg-paa-maerkelex">Sælg dit mærke direkte på Mærkelex</a> eller skrive til os direkte på <a href="mailto:kontakt@maerkelex.dk">kontakt@maerkelex.dk</a> hvis du er interesseret.
-    </p>
-    <h1>Se alle vores blog posts</h1>
-    <p>Hvis du vil se om du er gået glip af noget, kan du tjekke oversigten over <a href="/blog/">alle blog posts</a>, vi har skrevet.</p>
 ---
+{% capture blog-post-content %}
 <p>
     Her hos Mærkelex er vi store tilhængere af alle de forskellige, kreative mærker, der findes.
     Derfor prøver vi en gang imellem at sætte fokus på et af de mærker, du sikkert kender til, for at høre historien bag.
@@ -31,7 +15,8 @@ aside: >
 <p>
     I denne blog post har vi fokus på Skrity-mærket, som man får ved at gå med nederdel i et år.
 </p>
-TODO: Include skirty mærke
+
+{% include maerkeIncludeBody.html maerke="skirty" %}
 
 <h2>Ideen til mærket</h2>
 <p>
@@ -59,6 +44,10 @@ TODO: Include skirty mærke
     Det hedder at X'e mærket, og man får så lov til at sy et rødt kryds ovenpå mærket, for at vise at man har klaret sig lige lidt bedre.
     Derfor fandt de på reglerne for at X'e Skirty: man skal have bare ben.
 </p>
+<figure style="text-align: center;">
+    <img src="astrid-i-melonkjole.jpg" alt="en pige i en hjemmesyet kjole, der ligner en melon" style="max-width: 330px;">
+    <figcaption>Da Astrid tog skirty, syede hun også sin egen melonkjole til formålet.</figcaption>
+</figure>
 
 <h2>Hvordan blev mærket til virkelighed?</h2>
 <p>
@@ -160,3 +149,8 @@ TODO: Include skirty mærke
     Spejderhilsen,<br>
     Niels og Anders fra Mærkelex
 </p>
+{% endcapture %}
+{% include blogpost.html %}
+<aside class="col aside-col">
+    {% include_relative aside.html %}
+</aside>
