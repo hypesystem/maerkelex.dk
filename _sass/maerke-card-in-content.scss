@@ -1,0 +1,99 @@
+$maerkeCardInContentHeight: 284px;
+
+.maerke-card-in-content {
+    height: $maerkeCardInContentHeight;
+    display: flex;
+    margin: 30px 0;
+    background: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 0 10px white inset;
+
+    .maerke-box-in-content {
+        height: $maerkeCardInContentHeight;
+        width: 220px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+
+        .maerke-box {
+            margin-top: 0;
+            height: $maerkeCardInContentHeight - 10px;
+            box-shadow: none;
+
+            .card-link {
+                display: none;
+            }
+        }
+    }
+
+    .maerke-description-in-content {
+        height: 100%;
+        overflow: hidden;
+        flex-shrink: 1;
+        flex-grow: 1;
+        min-width: 220px;
+        font-size: 0.75em;
+        box-sizing: border-box;
+        position: relative;
+
+        .maerke-description-in-content-scroller {
+            padding: 5px 15px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            transition: transform 2s;
+        }
+    }
+
+    &:hover {
+        .maerke-description-in-content {
+            .maerke-description-in-content-scroller {
+                transform: translateY(calc(-100% + 230px));
+                transition: transform 20s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $small) {
+    .maerke-card-in-content .maerke-box-in-content .maerke-box {
+        .maerke-info div {
+            font-size: 0.8em;
+            margin: 0 1%;
+        }
+        img {
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .maerke-card-in-content {
+        height: auto;
+        justify-content: center;
+
+        .maerke-box-in-content {
+            height: auto;
+            width: auto;
+
+            .maerke-box {
+                height: auto;
+
+                .card-link {
+                    display: block;
+                }
+
+                .maerke-info div {
+                    font-size: 2.8vw;
+                    margin: 0 1vw;
+                }
+                img {
+                    height: 40vw;
+                    width: auto;
+                }
+            }
+        }
+        .maerke-description-in-content {
+            display: none;
+        }
+    }
+}

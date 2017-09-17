@@ -28,6 +28,10 @@ self.addEventListener("install", function(e) {
                 ]);
             })
     );
+
+    
+    self.skipWaiting();
+    self.clients.claim();
 });
 
 self.addEventListener("activate", function(event) {
