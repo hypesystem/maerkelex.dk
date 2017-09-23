@@ -1,14 +1,21 @@
 header {
   width: 100%;
   background: $dark;
-  padding: 10px;
   text-align: center;
-  position: relative;
+  transition: all 0.3s;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+
+  &.hide {
+    transform: translateY(-115px);
+  }
 
   .container {
     display: flex;
     justify-content: space-between;
     text-align: right;
+    padding: 10px;
     transition: all 0.3s ease;
   }
 
@@ -113,9 +120,7 @@ nav {
   background-color: darken(#32323c, 5%);
   overflow-y: hidden!important;
   height: 40px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  text-align: left;
 
   .nav-container {
     max-width: 1100px;

@@ -127,27 +127,36 @@
               return true;
           });
 
-          window.addEventListener("scroll", function changePos() {
-              var header = document.getElementById("header");
-              if (window.pageYOffset > 50) {
-                  if(!header.classList.contains("sticky")){
-                      header.className += "sticky";
+          // Nav show on scroll up
+          var lastScrollTop = 0;
+          window.addEventListener("scroll", function(){
+             var st = window.pageYOffset || document.documentElement.scrollTop;
+             if (st > lastScrollTop){
+                 // downscroll code
+                 if(!header.classList.contains("hide")){
+                   header.classList.remove("show");
+                    header.className += "hide";
                   }
-              } else {
-                  header.className = "";
-              }
-          }, { passive: true });
+             } else {
+                // upscroll code
+                if(!header.classList.contains("show")){
+                  header.classList.remove("hide");
+                  header.className += "show";
+                 }
+             }
+             lastScrollTop = st;
+          }, false);
       </script>
     </div>
-</header>
 
-<nav>
-  <div class="nav-container">
-    <a>Hvem er Mærkelex?</a>
-    <a>Avanceret søgning</a>
-    <a>Blog</a>
-    <a>FAQ</a>
-    <a>Facebook</a>
-    <a>Kontakt</a>
-  </div>
-</nav>
+    <nav>
+      <div class="nav-container">
+        <a>Hvem er Mærkelex?</a>
+        <a>Avanceret søgning</a>
+        <a>Blog</a>
+        <a>FAQ</a>
+        <a>Facebook</a>
+        <a>Kontakt</a>
+      </div>
+    </nav>
+</header>
