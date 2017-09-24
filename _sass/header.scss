@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: right;
-    padding: 10px;
+    padding: 10px 0;
     transition: all 0.3s ease;
   }
 
@@ -121,7 +121,6 @@ nav {
   background-color: darken(#32323c, 5%);
   overflow-y: hidden!important;
   height: 40px;
-  padding: 2px;
   text-align: left;
 
   .nav-container {
@@ -131,6 +130,11 @@ nav {
     overflow-y: hidden!important;
     white-space: nowrap;
     padding-bottom: 100px;
+
+    @media(max-width: 1200px) {
+      margin-left: 0;
+      padding-left: 3.5%;
+    }
 
     a {
       padding: 10px 20px;
@@ -142,9 +146,7 @@ nav {
       font-size: 0.85em;
 
       &:first-of-type {
-        @media(min-width: $mobile) {
-          padding-left: 0;
-        }
+        padding-left: 0;
       }
     }
   }
