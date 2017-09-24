@@ -1,56 +1,92 @@
-.content-col {
-    width: 70%;
-    float: left;
-    padding-right: 25px;
+.blog {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
 }
-.content-col h1 {
+
+figure {
+  @media(max-width: $mobile) {
+    margin: 30px -20px;
+  }
+}
+
+.content-col {
+  width: 70%;
+  float: left;
+
+  @media(min-width: $mobile) {
+    padding-right: 25px;
+  }
+
+  h1 {
     font-size: 2.3em;
     font-family: 'Open Sans Light', 'Open Sans', sans-serif;
     font-weight: 200;
-}
-.content-col h2 {
+
+    @media(max-width: $mobile) {
+      margin-top: 0;
+    }
+  }
+
+  h2 {
     font-size: 1.2em;
     margin-top: 30px;
     margin-bottom: 5px;
-}
-.content-col h1, .aside-col h1 {
-    margin: 0;
-    margin-bottom: 5px;
-}
-.content-col h3 {
-  font-size: 1.4em;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-.content-col p, .aside-col p {
-    margin-top: 0;
+  }
+
+  h3 {
+    font-size: 1.4em;
+    margin-top: 30px;
     margin-bottom: 10px;
-}
-.content-col p {
+  }
+
+  p {
     font-size: 1.187em;
     line-height: 1.58;
-    @media(max-width: 767px) {
+
+    @media(max-width: $mobile) {
       font-size: 17px;
     }
-}
-.content-col section {
-  margin: 30px 0;
-  &:first-of-type {
-    margin-top: 0;
   }
-}
-.content-col img {
+
+  section {
+    margin: 30px 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  img {
     width: 100%;
     margin: 10px 0;
+
     @media(max-width: 930px){
       width: 100%;
     }
+  }
+
+  figcaption {
+    margin-top: -5px;
+    font-size: 0.8em;
+    text-align: center;
+  }
 }
-.content-col figcaption {
-  margin-top: -5px;
-  font-size: 0.8em;
-  text-align: center;
+
+
+.content-col h1,
+.aside-col h1 {
+    margin: 0;
+    margin-bottom: 5px;
 }
+
+.content-col p,
+.aside-col p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
 .aside-col {
     width: 30%;
     float: left;
@@ -59,30 +95,24 @@
     border-left: 1px solid rgba(0,0,0,0.1);
     padding-bottom: 25px;
 
+    @media(max-width: $mobile) {
+      border: none;
+      padding: 10px;
+      font-size: 1em;
+    }
+
     .maerke-box {
         margin: 10% 5% 5%;
         width: 90%;
     }
 }
 
-@media screen and (max-width: 930px) {
-    .content-col {
-        padding: 10px;
-    }
-    .content-col h1 {
-        margin-top: 0;
-    }
-    .aside-col {
-        border: none;
-        padding: 10px;
-        font-size: 1em;
-    }
-}
 .badge-seller {
     font-size:0.9em;
     background:white;
     padding:10px;
 }
+
 .blog-badges {
     display: flex;
     justify-content: center;

@@ -56,6 +56,10 @@
     display: inline-block;
     margin-top: 50px;
 
+    @media screen and (max-width: $mobile){
+      margin-top: 0px;
+    }
+
     h1 {
       font-family: "Open Sans Light", "Open Sans", sans-serif;
       background-color: whitesmoke;
@@ -64,6 +68,7 @@
 
       @media screen and (max-width: $mobile){
         padding: 8px 0px;
+        display: block;
       }
     }
 
