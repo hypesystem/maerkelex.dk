@@ -2,8 +2,7 @@
 var lastScrollTop = 0;
 window.addEventListener("scroll", function(){
    var st = window.pageYOffset || document.documentElement.scrollTop;
-   console.log(st);
-   if (st > lastScrollTop){
+   if (st > lastScrollTop && st > 100){
        // downscroll code
        if(!header.classList.contains("hide")){
          header.classList.remove("show");
