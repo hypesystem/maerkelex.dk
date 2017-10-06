@@ -25,6 +25,11 @@
       padding-top: 0;
     }
 
+    @supports (display: grid) {
+      max-height: 278px;
+      object-fit: contain;
+    }
+
     &:hover {
       transform:scale(1.1);
     }
