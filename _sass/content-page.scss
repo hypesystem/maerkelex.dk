@@ -100,11 +100,6 @@ figure {
       padding: 10px;
       font-size: 1em;
     }
-
-    .maerke-box {
-        margin: 10% 5% 5%;
-        width: 90%;
-    }
 }
 
 .badge-seller {
@@ -121,18 +116,6 @@ figure {
 
     @media(max-width: 900px) {
         justify-content: space-around;
-    }
-
-    .maerke-box {
-        flex-basis: 170px;
-        flex-grow: 0;
-        flex-shrink: 1;
-        margin: 10px;
-
-        @media(max-width: 900px) {
-            flex-basis: 45%;
-            margin: 0;
-        }
     }
 
     img {
