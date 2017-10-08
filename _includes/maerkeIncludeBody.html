@@ -25,7 +25,7 @@
               {{ this_m.tags | first }}
             </div>
             <div class="badge-age">
-              {{ m_age }}
+              {{ this_m.age }}
             </div>
           </div>
           <img class="badge-image" src="{{ site.baseurl }}/img/compressed/{{ this_m.image }}" alt="{{ this_m.name | remove: '&#173;' }} spejdermærke" />
@@ -33,8 +33,8 @@
             {{ this_m.name }}
           </p>
           <div class="badge-cta">
-            {% if m_highlight_text %}
-              {{ m_highlight_text }}
+            {% if this_m.highlight_text %}
+              {{ this_m.highlight_text }}
             {% else %}
               Læs mere
             {% endif %}
