@@ -6,6 +6,12 @@
   position: relative;
   overflow: hidden;
 
+  &:hover {
+    .badge-cta {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
   .badge-link {
     height: 100%;
     color: inherit;
@@ -37,6 +43,7 @@
 
   .badge-title {
     font-size: 1.2em;
+    font-weight: 400;
     margin-top: 0;
     margin-bottom: 10px;
     padding: 0 10px;
@@ -47,6 +54,7 @@
     padding: 10px;
     border-top: 1px solid rgba(160,160,160,0.2);
     color: $blue;
+    transition: all 0.3s ease;
   }
 
   .badge-info {
@@ -122,8 +130,14 @@
     overflow: hidden;
 
     .badge-cta {
-      background: $orange;
+      background-color: $orange;
       color: white;
+    }
+
+    &:hover {
+      .badge-cta {
+        background-color: darken($orange, 10%);
+      }
     }
   }
 
@@ -135,10 +149,24 @@
       background: $green;
       color: white;
     }
+
+    &:hover {
+      .badge-cta {
+        background-color: $darkgreen;
+      }
+    }
   }
 
-  &.purchasable .badge-cta {
-    background: $blue;
-    color: white;
+  &.purchasable {
+    .badge-cta {
+      background: $blue;
+      color: white;
+    }
+
+    &:hover {
+      .badge-cta {
+        background-color: $darkblue;
+      }
+    }
   }
 }
