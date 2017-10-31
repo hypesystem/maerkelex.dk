@@ -15,4 +15,4 @@ defaults:
       layout: maerke
 
 paymentsSiteUrl: "https://salg.mærkelex.dk"
-defaultShippingPrice: 35
+defaultShippingPrice: 20
