@@ -9,6 +9,7 @@ $darkblue: darken($blue, 15%);
 $shadowonblue: rgb(11, 93, 125);
 $green: #45BF55;
 $dark: rgb(50, 50, 60);
+$font-color: #212529;
 
 $native-font:
   // Safari for OS X and iOS (San Francisco)
@@ -28,6 +29,9 @@ $native-font:
 body {
     margin: 0;
     font-family: $native-font;
+    font-weight: 400;
+    color: $font-color;
+    line-height: 1.5;
     background: rgb(245, 245, 245);
     display: flex;
     min-height: 100vh;
@@ -205,6 +209,7 @@ a:hover {
 
 .maerke-box .card-content h3 {
   font-size: 1.2em;
+  font-weight: 600;
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
@@ -286,7 +291,7 @@ a:hover {
 }
 
 .page-description h1 {
-    font-weight: 100;
+    font-weight: 400;
     background-color: whitesmoke;
     padding: 8px 20px;
     display: inline-block;
