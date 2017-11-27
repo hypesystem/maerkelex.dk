@@ -3,13 +3,15 @@ layout: default-no-container
 title: Køb mærker
 ---
 <div class="container">
-    <h1>Shop</h1>
-    <p>
-        Her er en oversigt over de mærker, du kan købe direkte på Mærkelex.
-    </p>
-    <br>
-    <br>
     <div class="content">
+        <div class="align-center">
+            <h1>Shop</h1>
+            <p>
+                Her er en oversigt over de mærker, du kan købe direkte på Mærkelex.
+            </p>
+            <br>
+            <br>
+        </div>
         {% assign sorted_m = site.m | sort: "name" %}
         {% for m in sorted_m %}
             {% if m.price %}
