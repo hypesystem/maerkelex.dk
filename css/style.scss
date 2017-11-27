@@ -1,7 +1,13 @@
 ---
 ---
+
+// Variables
+
+// Viewport sizes:
 $small: 930px;
 $mobile: 600px;
+
+// Colors:
 $orange: rgb(251, 171, 68);
 $darkorange: darken($orange, 15%);
 $blue: rgb(8, 159, 218);
@@ -11,6 +17,7 @@ $green: #45BF55;
 $dark: rgb(50, 50, 60);
 $font-color: #212529;
 
+// Fonts:
 $native-font:
   // Safari for OS X and iOS (San Francisco)
   -apple-system,
@@ -24,7 +31,7 @@ $native-font:
   "Helvetica Neue", Arial, sans-serif,
   // Emoji fonts
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-
+$font-weight--bold: 500;
 
 body {
     margin: 0;
@@ -37,8 +44,17 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+
 main {
   flex: 1 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: $font-weight--bold;
 }
 
 a {
