@@ -35,6 +35,16 @@ layout: default
       <p>
           {{ page.description }}
       </p>
+      {% if page.soldout %}
+      <p>
+        <div style="background: rgba(0,0,0,0.025); padding: 15px; font-size: 0.8em;">
+          <strong>Mærket er midlertidigt udsolgt.</strong>
+          Vi har bestilt flere hos leverandøren, og de er på vej.
+          Hvis du bestiller nu, kan der gå et par uger, før vi får sendt mærket.
+          Vi holder dig selvfølgelig opdateret pr. mail.
+        </div>
+      </p>
+      {% endif %}
       <div class="btn-container">
         {% if page.infolink %}
         <a target="noopener" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
