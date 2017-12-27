@@ -2,8 +2,12 @@
   <div class="maerke-box{% if m_highlight_class %} highlight-{{ m_highlight_class }}{% endif %}{% if m_purchasable %} {{ m_purchasable }}{% endif %}">
     <a class="maerke-link" href="{{ site.baseurl }}{{ m_url }}">
       <div class="maerke-info">
-        <div class="maerke-corps {{ m_first_tag }}">
-          {{ m_first_tag }}
+        <div class="maerke-corps {{ m_first_tag }} {% if m_first_tag == "Det Danske Spejderkorps (DDS)" %}DDS{% endif %}" title="{{ m_first_tag }}">
+            {% if m_first_tag == "Det Danske Spejderkorps (DDS)" %}DDS (works)
+            {% elsif m_first_tag == "KFUM" %}KFUM
+            {% elsif m_first_tag == "DGP" %}DGP
+            {% else %}{{ m_first_tag }} lel
+            {% endif %}
         </div>
         <div class="maerke-age">
           {{ m_age }}
