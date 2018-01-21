@@ -110,11 +110,23 @@ a:hover {
 }
 
 .maerke-box .maerke-info {
+  box-sizing: border-box;
   position: absolute;
   right: 0;
   z-index: 2;
   color: #fafafa;
-  margin-right: 10px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media screen and (max-width: $small) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 8px;
+  }
 }
 
 .maerke-box .maerke-info div {
@@ -133,36 +145,50 @@ a:hover {
   background-color: rgba(255,255,255,0.95);
   position: relative;
   z-index: 3;
+
+  @media screen and (max-width: $small) {
+    margin: 0 1vw;
+    font-size: 2.8vw;
+    padding: 0.67vw 1.07vw;
+  }
 }
 
 .maerke-box .maerke-corps {
   text-transform: capitalize;
   color: gray;
   border-color: gray;
-}
 
-.maerke-box .maerke-corps.DDS {
-  border-color: #003466;
-  color: #003466;
-}
+  @media screen and (max-width: $small) {
+    width: calc(57% - 2px);
+  }
 
-.maerke-box .maerke-corps.DGP {
-  border-color: #005723;
-  color: #005723;
-}
+  img {
+    height: 100%;
+  }
 
-.maerke-box .maerke-corps.KFUM {
-  border-color: #006649;
-  color: #006649;
-}
+  &.DDS {
+    border-color: #003466;
+    color: #003466;
+  }
 
-.maerke-box .maerke-corps img {
-  height: 100%;
+  &.pigespejdere {
+    border-color: #005723;
+    color: #005723;
+  }
+
+  &.KFUM-Spejderne {
+    border-color: #006649;
+    color: #006649;
+  }
 }
 
 .maerke-box .maerke-age {
   color: $blue;
   border-color: $blue;
+
+  @media screen and (max-width: $small) {
+    width: calc(43% - 2px);
+  }
 }
 
 .maerke-col {
@@ -180,10 +206,15 @@ a:hover {
   margin: 0 auto;
   display: block;
   transition: all 0.2s ease;
-}
 
-.maerke-box img:hover {
-  transform:scale(1.1);
+  &:hover {
+    transform:scale(1.1);
+  }
+
+  @media screen and (max-width: $small) {
+    height: 40vw;
+    margin-top: 6vw;
+  }
 }
 
 .maerke-box .card-content {
@@ -440,9 +471,6 @@ a:hover {
   .maerke-col {
     width: 50%;
   }
-  .maerke-box img {
-    height: 40vw;
-  }
   .maerke-box .card-content h3 {
     font-size: 0.9rem;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
@@ -471,19 +499,7 @@ a:hover {
       padding: 0 10px;
       box-sizing: border-box;
   }
-  .maerke-box .maerke-info {
-    position: static;
-    margin-right: 1vw;
-    margin-left: 1vw;
-  }
-  .maerke-box .maerke-info div {
-    margin: 0 1vw;
-    width: 45%;
-    display: inline-block;
-    float: left;
-    font-size: 2.8vw;
-    padding: 0.67vw 1.07vw;
-  }
+  
   .main-maerke-content {
     margin-top: 0px;
   }
