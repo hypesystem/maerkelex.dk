@@ -2,13 +2,41 @@
 layout: default
 title: Blog
 ---
-<article class="col content-col">
+<article class="col">
     <h1>Blog</h1>
     <p>
         Vi vil gerne hjælpe dig med at få inspiration, lave mærker og få delt dine ideer.
         Derfor skriver vi engang imellem blog posts for at hjæpe.
         Her kan du se alt, vi har skrevet (fra senest til først).
     </p>
+    <section>
+        <div class="blog-card">
+            <a class="blog-card__link" href="/blog/skirty-maerket/">
+                <img class="blog-card__image" src="{{ site.baseurl }}/blog/skirty-maerket/gustav-skirty.jpg" alt="">
+                <div class="blog-card__description">
+                    <p class="blog-card__date">03/10 2017</p>
+                    <h2 class="blog-card__title">Spotlight: Skirty-mærket</h2>
+                    <p class="blog-card__summary">
+                        Her hos Mærkelex er vi store tilhængere af alle de forskellige, kreative mærker, der findes.
+                        Derfor prøver vi en gang imellem at sætte fokus på et af de mærker, du sikkert kender til, for at høre historien bag.
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="blog-card">
+                <a class="blog-card__link" href="/blog/vinder-af-maerkeide/">
+                    <img class="blog-card__image" src="{{ site.baseurl }}/blog/vinder-af-maerkeide/makkermarch-paa-uniform.jpg" alt="">
+                    <div class="blog-card__description">
+                        <p class="blog-card__date">12/9 2017</p>
+                        <h2 class="blog-card__title">Makkermarch &mdash; vinderen af konkurrencen om bedste mærkeide</h2>
+                        <p class="blog-card__summary">
+                            For et par måneder siden sluttede vores konkurrence om at finde på den bedste mærkeide, og nu er vi klar til at afsløre vinderen!
+                        </p>
+                    </div>
+                </a>
+            </div>
+    </section>
     <ul>
         <li>03/10 2017 <a href="/blog/skirty-maerket/">Spotlight: Skirty-mærket</a></li>
         <li>12/9 2017 <a href="/blog/vinder-af-maerkeide/">Makkermarch &mdash; vinderen af konkurrencen om bedste mærkeide</a></li>
