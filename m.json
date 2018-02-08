@@ -6,7 +6,7 @@
     {
       "id": {{ m.id | remove_first: "/m/" | jsonify }},
       "name": {{ m.name | jsonify }},
-      "description": {{ m.description | jsonify }},
+      "description": {{ m.description | append: m.content | jsonify }},
       "image": {{ m.image | jsonify }},
       "buylink": {{ m.buylink | jsonify }},
       "infolink": {{ m.infolink | jsonify }},

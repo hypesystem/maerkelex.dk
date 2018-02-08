@@ -1,0 +1,183 @@
+.price-calculator {
+    margin-top: 35px;
+
+    .price-inputs {
+        background: $dark;
+        color: white;
+        font-size: 2em;
+        font-weight: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 15px 0;
+
+        .input-container, .price-input-container {
+            padding: 15px;
+            text-align: center;
+
+            label {
+                font-size: 0.5em;
+                display: block;
+            }
+
+            .input-field-container {
+                input {
+                    font-family: inherit;
+                    font-size: inherit;
+                    color: inherit;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid white;
+                    width: 120px;
+                    text-align: center;
+                }
+            }
+        }
+        .price-input-container {
+            .input-field-container {
+                &:after {
+                    content: 'DKK';
+                }
+
+                input {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .calculations {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 10px;
+
+        .calculation {
+            flex-basis: 33%;
+            margin-right: 6px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .calculation-box {
+                border: 1px solid $dark;
+                border-bottom: none;
+
+                h1 {
+                    margin: 0;
+                    font-size: 1.3em;
+                    background: $dark;
+                    color: white;
+                    padding: 10px;
+                    text-align: center;
+                }
+
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+
+                    tr {
+                        height: 41px;
+                        box-sizing: border-box;
+                        border-bottom: 1px solid rgba(0,0,0,0.15);
+
+                        td {
+                            font-size: 0.9em;
+                            padding: 0 4px;
+
+                            &:nth-child(2) {
+                                text-align: right;
+                                width: 100px;
+
+                                &:after {
+                                    content: ' DKK';
+                                }
+                            }
+
+                            .explain {
+                                font-size: 0.8em;
+                                display: block;
+                            }
+                        }
+
+                        &.row-not-in-use {
+                            background: rgba(0,0,0,0.15);
+                        }
+
+                        &.row-emphasis {
+                            background: white;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .note {
+                color: white;
+                background: $dark;
+                font-size: 0.75em;
+                padding: 5px;
+                margin-top: 1px;
+            }
+
+            .call-to-action {
+                display: block;
+                font-size: 1.1em;
+                background: $orange;
+                color: white;
+                text-decoration: inherit;
+                text-align: center;
+                padding: 15px 5px;
+                margin-bottom: 15px;
+
+                &.weak {
+                    background: white;
+                    color: black;
+                    border: 1px solid $dark;
+                    border-top: none;
+                    margin-bottom: 14px;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .price-calculator {
+        .price-inputs {
+            display: block;
+
+            .input-container, .price-input-container {
+                display: block;
+            }
+        }
+
+        .calculations {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .calculation {
+                flex-basis: 300px;
+                max-width: 300px;
+                flex-grow: 0;
+                flex-shrink: 1;
+                margin-top: 75px;
+
+                .call-to-action {
+                    margin-bottom: 6px;
+
+                    &.weak {
+                        margin-bottom: 5px;
+                    }
+                }
+
+                table tr.row-not-in-use {
+                    display: none;
+                }
+            }
+        }
+    }
+}

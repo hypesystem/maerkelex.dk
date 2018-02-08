@@ -47,8 +47,8 @@ $maerkeCardInContentHeight: 284px;
     &:hover {
         .maerke-description-in-content {
             .maerke-description-in-content-scroller {
-                transform: translateY(-100%);
-                transition: transform 40s;
+                transform: translateY(calc(-100% + 230px));
+                transition: transform 20s;
             }
         }
     }
@@ -88,6 +88,7 @@ $maerkeCardInContentHeight: 284px;
                 }
                 img {
                     height: 40vw;
+                    width: auto;
                 }
             }
         }

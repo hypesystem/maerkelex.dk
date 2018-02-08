@@ -1,0 +1,24 @@
+// Viewport sizes:
+$small: 930px;
+$mobile: 600px;
+
+// Colors:
+$orange: rgb(251, 171, 68);
+$darkorange: darken($orange, 15%);
+$blue: rgb(8, 159, 218);
+$darkblue: darken($blue, 15%);
+$shadowonblue: rgb(11, 93, 125);
+$green: #45BF55;
+$dark: rgb(50, 50, 60);
+$font-color: #212529;
+
+// Fonts:
+$native-font:
+  -apple-system, // Safari for OS X and iOS (San Francisco)
+  BlinkMacSystemFont, // Chrome < 56 for OS X (San Francisco)
+  "Segoe UI", // Windows
+  "Roboto", // Android
+  "Helvetica Neue", Arial, sans-serif, // Basic web fallback
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default; // Emoji fonts
+$font-weight--bold: 500;
+$font-weight--light: 300;

@@ -1,41 +1,31 @@
 ---
 ---
-$small: 930px;
-$mobile: 600px;
-$orange: rgb(251, 171, 68);
-$darkorange: darken($orange, 15%);
-$blue: rgb(8, 159, 218);
-$darkblue: darken($blue, 15%);
-$shadowonblue: rgb(11, 93, 125);
-$green: #45BF55;
-$dark: rgb(50, 50, 60);
-
-@font-face {
-    font-family: "Open Sans";
-    src: url('/font/OpenSans-Regular.ttf') format('truetype');
-}
-@font-face {
-    font-family: "Open Sans Light";
-    src: url('/font/OpenSans-Light.ttf') format('truetype');
-}
+@import "variables.scss";
 
 body {
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: $native-font;
+    font-weight: 400;
+    color: $font-color;
+    line-height: 1.5;
     background: rgb(245, 245, 245);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
+
 main {
   flex: 1 0 auto;
-  padding-top: 137px;
 }
-@media(max-width: $small){
-  main {
-      padding-top: 85px;
-  }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: $font-weight--bold;
 }
+
 a {
     color: $blue;
     transition: color 0.2s;
@@ -44,15 +34,21 @@ a:hover {
     color: $darkblue;
 }
 .container {
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 20px;
+  max-width: 1100px;
+  width: 93%;
+  margin: 0 auto;
 }
+
+.align-center {
+  text-align: center;
+}
+
 .content {
     text-align: left;
     width: 900px;
     display: inline-block;
     box-sizing: border-box;
+    margin-top: 40px;
 }
 
 .cover {
@@ -114,11 +110,23 @@ a:hover {
 }
 
 .maerke-box .maerke-info {
+  box-sizing: border-box;
   position: absolute;
   right: 0;
   z-index: 2;
   color: #fafafa;
-  margin-right: 10px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media screen and (max-width: $small) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 8px;
+  }
 }
 
 .maerke-box .maerke-info div {
@@ -136,37 +144,51 @@ a:hover {
   background-color: #fff;
   background-color: rgba(255,255,255,0.95);
   position: relative;
-  z-index: 200;
+  z-index: 3;
+
+  @media screen and (max-width: $small) {
+    margin: 0 1vw;
+    font-size: 2.8vw;
+    padding: 0.67vw 1.07vw;
+  }
 }
 
 .maerke-box .maerke-corps {
   text-transform: capitalize;
   color: gray;
   border-color: gray;
-}
 
-.maerke-box .maerke-corps.DDS {
-  border-color: #003466;
-  color: #003466;
-}
+  @media screen and (max-width: $small) {
+    width: calc(57% - 2px);
+  }
 
-.maerke-box .maerke-corps.DGP {
-  border-color: #005723;
-  color: #005723;
-}
+  img {
+    height: 100%;
+  }
 
-.maerke-box .maerke-corps.KFUM {
-  border-color: #006649;
-  color: #006649;
-}
+  &.DDS {
+    border-color: #003466;
+    color: #003466;
+  }
 
-.maerke-box .maerke-corps img {
-  height: 100%;
+  &.pigespejdere {
+    border-color: #005723;
+    color: #005723;
+  }
+
+  &.KFUM-Spejderne {
+    border-color: #006649;
+    color: #006649;
+  }
 }
 
 .maerke-box .maerke-age {
   color: $blue;
   border-color: $blue;
+
+  @media screen and (max-width: $small) {
+    width: calc(43% - 2px);
+  }
 }
 
 .maerke-col {
@@ -184,10 +206,15 @@ a:hover {
   margin: 0 auto;
   display: block;
   transition: all 0.2s ease;
-}
 
-.maerke-box img:hover {
-  transform:scale(1.1);
+  &:hover {
+    transform:scale(1.1);
+  }
+
+  @media screen and (max-width: $small) {
+    height: 40vw;
+    margin-top: 6vw;
+  }
 }
 
 .maerke-box .card-content {
@@ -198,6 +225,7 @@ a:hover {
 
 .maerke-box .card-content h3 {
   font-size: 1.2em;
+  font-weight: 600;
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
@@ -279,7 +307,7 @@ a:hover {
 }
 
 .page-description h1 {
-    font-family: "Open Sans Light", "Open Sans", sans-serif;
+    font-weight: 400;
     background-color: whitesmoke;
     padding: 8px 20px;
     display: inline-block;
@@ -291,12 +319,12 @@ a:hover {
 }
 
 .page-description .age {
-    margin-top: 5px;
-    font-weight: bold;
+  margin-top: 5px;
+  font-weight: bold;
 }
 
 .page-description ul em {
-    font-family: "Open Sans Light", "Open Sans", sans-serif;
+  font-weight: 100;
 }
 
 .btn, a.btn, button, input[type=submit] {
@@ -413,7 +441,7 @@ a:hover {
   margin-right: auto;
   display: flex;
   justify-content: center;
-  margin-top: -40px;
+  // margin-bottom: 30px;
 }
 
 .blog-post-date {
@@ -431,10 +459,10 @@ a:hover {
 @media screen and (max-width: $small) {
   .col {
     width: 100% !important;
+    padding: 0 10px 10px;
   }
   .content {
     max-width: 100% !important;
-    padding: 10px;
   }
   .cover {
     top: 63px;
@@ -442,9 +470,6 @@ a:hover {
   }
   .maerke-col {
     width: 50%;
-  }
-  .maerke-box img {
-    height: 40vw;
   }
   .maerke-box .card-content h3 {
     font-size: 0.9rem;
@@ -474,24 +499,9 @@ a:hover {
       padding: 0 10px;
       box-sizing: border-box;
   }
-  .intro-message {
-    margin-top: -10px;
-  }
-  .maerke-box .maerke-info {
-    position: static;
-    margin-right: 1vw;
-    margin-left: 1vw;
-  }
-  .maerke-box .maerke-info div {
-    margin: 0 1vw;
-    width: 45%;
-    display: inline-block;
-    float: left;
-    font-size: 2.8vw;
-    padding: 0.67vw 1.07vw;
-  }
+  
   .main-maerke-content {
-    margin-top: 40px;
+    margin-top: 0px;
   }
   .page-description {
     margin-top: 0px;
@@ -522,3 +532,4 @@ a:hover {
 @import "sponsor-message";
 @import "purchase-form";
 @import "maerke-card-in-content";
+@import "price-calculator";
