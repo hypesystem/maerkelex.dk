@@ -7,6 +7,12 @@
 
   &:hover {
     transform: translateY(-2px);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 0 4px $blue, 0 0 10px rgba(255, 255, 255, 1) inset;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   .blog-card__link {
@@ -20,18 +26,37 @@
   }
 
   .blog-card__image {
-    height: 250px;
     width: 60%;
-    object-fit: cover;
+    min-height: 240px;
+    background-size: cover;
+    background-position: center;
 
     @media(max-width: $mobile) {
       width: 100%;
       height: 50vw;
+      min-height: 0;
+    }
+  }
+
+  &.blog-card--imageless {
+    .blog-card__image {
+      display: none;
     }
   }
 
   .blog-card__description {
+    width: 40%;
     padding: 20px;
+
+    @media(max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &.blog-card--imageless {
+    .blog-card__description {
+      width: 100%;
+    }
   }
 
   .blog-card__date {
