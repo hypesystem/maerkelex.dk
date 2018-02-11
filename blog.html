@@ -3,17 +3,29 @@ layout: default
 title: Blog
 permalink: /blog/
 ---
-<article class="col content-col">
+<article class="col">
     <h1>Blog</h1>
     <p>
         Vi vil gerne hjælpe dig med at få inspiration, lave mærker og få delt dine ideer.
         Derfor skriver vi engang imellem blog posts for at hjæpe.
         Her kan du se alt, vi har skrevet (fra senest til først).
     </p>
-    <ul>
+    <section>
         {% assign blog_sorted = site.blog | sort: "date" | reverse %}
         {% for blog in blog_sorted %}
-            <li>{{ blog.da_date }} <a href='{{ blog.url | replace: "/index", "/" }}'>{{ blog.title }}</a> (img: {{ blog.image }})</li>
+            {% assign blog_url = blog.url | replace: "/index", "/" %}
+        <div class="blog-card">
+            <a class="blog-card__link" href="{{ blog_url }}">
+                <div class="blog-card__image" style="background-image: url('{{ site.baseurl }}{% if blog.image %}{{ blog_url }}{{ blog.image }}{% else %}/img/covers/cover-{{ blog.image_stock }}.jpg{% endif %}')"></div>
+                <div class="blog-card__description">
+                    <p class="blog-card__date">{{ blog.da_date }}</p>
+                    <h2 class="blog-card__title">{{ blog.title }}</h2>
+                    <p class="blog-card__summary">
+                        {% if blog.summary %}{{ blog.summary }}{% else %}{% assign paragraphs = blog.content | split: "<p>" %}{{ paragraphs[1] | split: "</p>" | first | strip_html | strip }}{% endif %}
+                    </p>
+                </div>
+            </a>
+        </div>
         {% endfor %}
-    </ul>
+    </section>
 </article>
