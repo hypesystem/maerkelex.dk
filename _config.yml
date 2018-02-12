@@ -26,5 +26,7 @@ defaults:
       type: blogpost
       image_stock: diary
 
+future: true
+
 paymentsSiteUrl: "https://salg.mærkelex.dk"
 defaultShippingPrice: 20
