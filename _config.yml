@@ -5,6 +5,9 @@ collections:
   m_redirects:
     output: true
     permalink: /m/:path/
+  blog:
+    output: true
+    permalink: /blog/:path
 
 defaults:
   - scope:
@@ -13,6 +16,17 @@ defaults:
     output: true
     values:
       layout: maerke
+      type: maerke
+  - scope:
+      path: ""
+      type: blog
+    output: true
+    values:
+      layout: blogpost
+      type: blogpost
+      image_stock: diary
+
+future: true
 
 paymentsSiteUrl: "https://salg.mærkelex.dk"
 defaultShippingPrice: 20
