@@ -1,4 +1,9 @@
 .glorified {
+    /** re-reset because this max-width is changed below **/
+    header .container {
+        max-width: 1100px;
+    }
+
     .cover {
         height: 100vh;
         top: 0;

@@ -16,8 +16,13 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: right;
-    padding: 10px 0;
+    padding: 10px 20px;
+    box-sizing: border-box;
     transition: all 0.3s ease;
+
+    @media (max-width: 600px) {
+      padding: 10px 10px;
+    }
   }
 
   a.logo {
@@ -133,7 +138,6 @@ nav {
 
     @media(max-width: 1200px) {
       margin-left: 0;
-      padding-left: 3.5%;
     }
 
     a {
@@ -144,10 +148,6 @@ nav {
       text-transform: uppercase;
       font-weight: bold;
       font-size: 0.85em;
-
-      &:first-of-type {
-        padding-left: 0;
-      }
     }
   }
 }
