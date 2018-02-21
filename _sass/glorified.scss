@@ -1,3 +1,5 @@
+$glorified-splash-min-height: 600px;
+
 .glorified {
     /** re-reset because this max-width is changed below **/
     header .container {
@@ -6,20 +8,25 @@
 
     .cover {
         height: 100vh;
+        min-height: $glorified-splash-min-height;
         top: 0;
         border-bottom: 50px solid $blue;
+
+        @media (max-width: 900px) {
+            position: fixed;
+        }
     }
 
     .cover-img {
-        height: calc(100vh + 10px);
+        height: calc(100% + 10px);
     }
 
     .maerke-splash {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        position: relative;
+        z-index: 2;
+        top: -110px; /* header's height */
         height: 100vh;
+        min-height: $glorified-splash-min-height;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -27,11 +34,26 @@
         box-sizing: border-box;
         padding: 40px;
         padding-left: 60px;
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 200px;
+            height: auto;
+        }
+
+        @media (max-width: 460px) {
+            padding: 20px;
+            padding-top: 200px;
+        }
     }
 
     .maerke-splash__image {
+        box-sizing: border-box;
         img {
             border: 5px solid $background-grey;
+            box-sizing: border-box;
+            max-width: 100%;
         }
     }
 
@@ -41,12 +63,22 @@
         flex-direction: column;
         align-items: flex-start;
 
+        @media (max-width: 900px) {
+            margin-left: 0;
+            height: calc(80vh + 150px);
+        }
+
         h1 {
             background: $background-grey;
             padding: 8px 20px;
             font-weight: 400;
             margin: 0;
             margin-bottom: 7px;
+
+            @media (max-width: 900px) {
+                position: sticky;
+                top: 10px;
+            }
         }
 
         .maerke-splash__age {
@@ -61,11 +93,21 @@
             display: flex;
             flex-direction: row;
 
+            @media (max-width: 900px) {
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 460px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             .maerke-splash__action {
                 padding: 6px 12px;
                 display: inline-block;
                 text-decoration: none;
                 margin-right: 7px;
+                margin-bottom: 7px;
                 font-weight: 600;
                 font-size: 1.07em;
                 transition: background 0.3s;
@@ -128,31 +170,35 @@
     .container {
         width: 100%;
         max-width: 100%;
-
-        /***
-         * Resetting the value of max-width to that outside of glorified, once
-         * we are at small screen size, because other padding (.page-description-
-         * color) is removed at 600px, so we need this again.
-         * Yes, using width as a way of getting padding is bad. Should be
-         * replaced (TODO!).
-         */
-        @media (max-width: 600px) {
-            max-width: 93%;
-        }
     }
 
     .content {
         width: 100%;
+        margin-top: 0;
     }
 
     .main-maerke-content {
         margin-left: 100px;
-        margin-top: calc(100vh - 100px);
+        margin-top: -45px;
         max-width: 500px * 2 + 40px;
 
         @media (max-width: 1200px) {
             margin-left: 0;
         }
+
+        @media (max-width: 900px) {
+            border-top: 50px solid $blue;
+        }
+    }
+
+    .page-description-color {
+        @media (max-width: 600px) {
+            padding-top: 8px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        padding-bottom: 28px; /* replaces bottom's margin-top which is set to 0 below */
     }
 
     .btn.buylink {
@@ -179,5 +225,15 @@
     p {
         margin-top: 0;
         margin-bottom: 1em;
+    }
+
+    .purchase-form {
+        max-width: 500px;
+    }
+
+    footer {
+        position: relative; /* otherwise it is covered by the cover */
+        z-index: 1;
+        margin-top: 0; /* is replaced by margin-bottom on .page-description-color */
     }
 }
