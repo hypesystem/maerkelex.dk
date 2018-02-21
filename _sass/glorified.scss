@@ -120,12 +120,59 @@
         }
     }
 
+    .container {
+        width: 100%;
+        max-width: 100%;
+
+        /***
+         * Resetting the value of max-width to that outside of glorified, once
+         * we are at small screen size, because other padding (.page-description-
+         * color) is removed at 600px, so we need this again.
+         * Yes, using width as a way of getting padding is bad. Should be
+         * replaced (TODO!).
+         */
+        @media (max-width: 600px) {
+            max-width: 93%;
+        }
+    }
+
+    .content {
+        width: 100%;
+    }
+
     .main-maerke-content {
+        margin-left: 100px;
         margin-top: calc(100vh - 100px);
-        max-width: 540px;
+        max-width: 500px * 2 + 40px;
+
+        @media (max-width: 1200px) {
+            margin-left: 0;
+        }
     }
 
     .btn.buylink {
         width: 100%;
+    }
+
+    figure {
+        background: white;
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+
+        figcaption {
+            text-align: left;
+            font-size: 0.9em;
+        }
+
+        .figure__license {
+            font-size: 0.75em;
+            opacity: 0.5;
+        }
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1em;
     }
 }
