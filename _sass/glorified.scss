@@ -24,8 +24,7 @@ $glorified-splash-min-height: 600px;
     .maerke-splash {
         position: relative;
         z-index: 2;
-        top: -110px; /* header's height */
-        height: 100vh;
+        height: calc(100vh - 110px);
         min-height: $glorified-splash-min-height;
         display: flex;
         flex-direction: row;
@@ -38,18 +37,23 @@ $glorified-splash-min-height: 600px;
         @media (max-width: 900px) {
             flex-direction: column;
             align-items: flex-start;
-            padding-top: 200px;
+            justify-content: flex-end;
             height: auto;
+            min-height: calc(100vh - 110px);
         }
 
         @media (max-width: 460px) {
             padding: 20px;
-            padding-top: 200px;
         }
     }
 
     .maerke-splash__image {
         box-sizing: border-box;
+
+        @media (max-width: $mobile) {
+            width: 150px;
+        }
+
         img {
             border: 5px solid $background-grey;
             box-sizing: border-box;
@@ -65,7 +69,6 @@ $glorified-splash-min-height: 600px;
 
         @media (max-width: 900px) {
             margin-left: 0;
-            height: calc(80vh + 150px);
         }
 
         h1 {
@@ -95,11 +98,6 @@ $glorified-splash-min-height: 600px;
 
             @media (max-width: 900px) {
                 margin-bottom: 0;
-            }
-
-            @media (max-width: 460px) {
-                flex-direction: column;
-                align-items: flex-start;
             }
 
             .maerke-splash__action {
@@ -179,7 +177,6 @@ $glorified-splash-min-height: 600px;
 
     .main-maerke-content {
         margin-left: 100px;
-        margin-top: -45px;
         max-width: 500px * 2 + 40px;
 
         @media (max-width: 1200px) {
@@ -193,9 +190,7 @@ $glorified-splash-min-height: 600px;
 
     .page-description-color {
         @media (max-width: 600px) {
-            padding-top: 8px;
-            padding-left: 8px;
-            padding-right: 8px;
+            padding: 20px;
         }
 
         padding-bottom: 28px; /* replaces bottom's margin-top which is set to 0 below */
