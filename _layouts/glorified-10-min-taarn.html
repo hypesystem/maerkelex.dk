@@ -82,7 +82,7 @@
                             {% endif %}
                             <div class="maerke-splash__actions">
                                 {% if page.price %}
-                                    <a href="#buy" class="maerke-splash__action maerke-splash__action--buy">
+                                    <a href="#buy" class="maerke-splash__action maerke-splash__action--buy" data-action-buy>
                                         {{ page.price }} kr.
                                     </a>
                                 {% endif %}
@@ -150,19 +150,29 @@
                                     var countPreview = document.querySelector(".count-preview");
                                     var totalPreview = document.querySelector(".total-preview-price");
                                     var badgePrice = {{ page.price }};
+
                                     document.querySelector("#count").addEventListener("change", function() {
                                         var count = this.value;
                                         countPreview.innerHTML = count;
                                         totalPreview.innerHTML = count * badgePrice;
                                     });
-                                    document.querySelector("#order-expand-btn").addEventListener("click", function() {
+
+                                    function expandOrderForm() {
                                         document.querySelector("#order-form").className = "show-order";
                                         document.querySelector("#order-expand-btn").style.display = "none";
+                                    };
+
+                                    document.querySelector("#order-expand-btn").addEventListener("click", function() {
+                                        expandOrderForm();
                                     });
+
+                                    document.querySelector('[data-action-buy]').addEventListener("click", function() {
+                                        expandOrderForm();
+                                    });
+
                                     document.querySelector(".collapse-purchase").addEventListener("click", function() {
                                         document.querySelector("#order-form").className = "hidden-order";
                                         setTimeout(function(){document.querySelector("#order-expand-btn").style.display = "block"}, 220);
-
                                     });
                                 </script>
                                 </div>
