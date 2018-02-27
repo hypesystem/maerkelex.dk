@@ -203,6 +203,10 @@ $glorified-splash-min-height: 600px;
         padding: 10px;
         text-align: center;
 
+        img, svg {
+            max-width: 100%;
+        }
+
         figcaption {
             text-align: left;
             font-size: 0.9em;
