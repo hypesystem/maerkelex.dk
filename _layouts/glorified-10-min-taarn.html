@@ -82,7 +82,7 @@
                             {% endif %}
                             <div class="maerke-splash__actions">
                                 {% if page.price %}
-                                    <a href="#buy" class="maerke-splash__action maerke-splash__action--buy" data-action-buy>
+                                    <a class="maerke-splash__action maerke-splash__action--buy" data-action-buy>
                                         {{ page.price }} kr.
                                     </a>
                                 {% endif %}
@@ -166,8 +166,13 @@
                                         expandOrderForm();
                                     });
 
-                                    document.querySelector('[data-action-buy]').addEventListener("click", function() {
+                                    document.querySelector("[data-action-buy]").addEventListener("click", function() {
                                         expandOrderForm();
+                                        document.querySelector('#order-form').scrollIntoView({ 
+                                            behavior: 'smooth',
+                                            block: "start",
+                                            inline: "nearest"
+                                        });
                                     });
 
                                     document.querySelector(".collapse-purchase").addEventListener("click", function() {

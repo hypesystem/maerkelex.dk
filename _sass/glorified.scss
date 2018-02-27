@@ -1,4 +1,4 @@
-$glorified-splash-min-height: 600px;
+$glorified-splash-min-height: $mobile;
 
 .glorified {
     /** re-reset because this max-width is changed below **/
@@ -30,7 +30,7 @@ $glorified-splash-min-height: 600px;
         padding: 40px;
         padding-left: 60px;
 
-        @media (max-width: 900px) {
+        @media (max-width: $small) {
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-end;
@@ -63,7 +63,7 @@ $glorified-splash-min-height: 600px;
         flex-direction: column;
         align-items: flex-start;
 
-        @media (max-width: 900px) {
+        @media (max-width: $small) {
             margin-left: 0;
         }
 
@@ -74,7 +74,7 @@ $glorified-splash-min-height: 600px;
             margin: 0;
             margin-bottom: 7px;
 
-            @media (max-width: 900px) {
+            @media (max-width: $small) {
                 position: sticky;
                 top: 10px;
             }
@@ -91,8 +91,9 @@ $glorified-splash-min-height: 600px;
             margin-bottom: 35px;
             display: flex;
             flex-direction: row;
+            cursor: pointer;
 
-            @media (max-width: 900px) {
+            @media (max-width: $small) {
                 margin-bottom: 0;
             }
 
@@ -180,13 +181,13 @@ $glorified-splash-min-height: 600px;
             margin-left: 0;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: $small) {
             border-top: 20px solid $blue;
         }
     }
 
     .page-description-color {
-        @media (max-width: 600px) {
+        @media (max-width: $mobile) {
             padding: 20px;
         }
 
