@@ -39,7 +39,7 @@ $glorified-splash-min-height: $mobile;
             align-items: flex-start;
             justify-content: flex-end;
             height: auto;
-            min-height: 100vh;
+            min-height: calc(100vh - 40px);
         }
 
         @media (max-width: 460px) {
