@@ -2,6 +2,10 @@
 ---
 @import "variables.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: $native-font;
@@ -538,3 +542,5 @@ a:hover {
 @import "maerke-card-in-content";
 @import "price-calculator";
 @import "blog";
+@import "glorified";
+@import "slipout";

@@ -30,6 +30,8 @@ rawSearch = function(recovery) {
         listener(value, recovery);
     });
 
+    document.body.classList = "";
+
     titleTag.innerHTML = "Søg: " + value + " | Mærkelex";
     renderMatches(matches);
     hideSponsor();

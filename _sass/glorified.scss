@@ -1,0 +1,231 @@
+$glorified-splash-min-height: $mobile;
+
+.glorified {
+    /** re-reset because this max-width is changed below **/
+    header .container {
+        max-width: 1100px;
+    }
+
+    .cover {
+        height: 100vh;
+        min-height: $glorified-splash-min-height;
+        top: 0;
+        border-bottom: 20px solid $blue;
+
+        @media (max-width: $small) {
+            position: fixed;
+        }
+    }
+
+    .cover-img {
+        height: calc(100% + 10px);
+    }
+
+    .maerke-splash {
+        position: relative;
+        z-index: 2;
+        height: calc(100vh - 110px);
+        min-height: $glorified-splash-min-height;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        box-sizing: border-box;
+        padding: 40px;
+        padding-left: 60px;
+
+        @media (max-width: $small) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            height: auto;
+            min-height: calc(100vh - 40px);
+        }
+
+        @media (max-width: $tiny) {
+            padding: 20px;
+        }
+    }
+
+    .maerke-splash__image {
+        box-sizing: border-box;
+
+        @media (max-width: $mobile) {
+            width: 150px;
+        }
+
+        img {
+            border: 5px solid $background-grey;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+    }
+
+    .maerke-splash__info {
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @media (max-width: $small) {
+            margin-left: 0;
+        }
+
+        h1 {
+            background: $background-grey;
+            padding: 8px 20px;
+            font-weight: 400;
+            margin: 0;
+            margin-bottom: 7px;
+        }
+
+        .maerke-splash__age {
+            background: $background-grey;
+            padding: 6px 20px;
+            margin-bottom: 7px;
+            font-size: 1.2em;
+        }
+
+        .maerke-splash__actions {
+            margin-bottom: 35px;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+
+            @media (max-width: $small) {
+                margin-bottom: 0;
+            }
+
+            .maerke-splash__action {
+                padding: 6px 12px;
+                display: inline-block;
+                text-decoration: none;
+                margin-right: 7px;
+                margin-bottom: 7px;
+                font-weight: 600;
+                font-size: 1.07em;
+                transition: background 0.3s;
+            }
+
+            .maerke-splash__action--buy {
+                background: $blue;
+                color: white;
+
+                &:before {
+                    content: ' ';
+                    background: url('/img/ic_shopping_cart_white_24px.svg');
+                    background-size: contain;
+                    width: 1em;
+                    height: 1.21em;
+                    background-repeat: no-repeat;
+                    vertical-align: middle;
+                    display: inline-block;
+                }
+
+                &:hover {
+                    background: lighten($blue, 4%);
+                }
+            }
+
+            .maerke-splash__action--read {
+                background: darken($orange, 4%);
+                color: white;
+
+                &:hover {
+                    background: $orange;
+                }
+            }
+        }
+
+        .maerke-splash__tags {
+            display: flex;
+            flex-direction: row;
+
+            .tag {
+                margin-right: 7px;
+                background: $background-grey;
+                border-bottom: 4px solid $orange;
+                border-top: 4px solid $background-grey;
+                text-shadow: none;
+                font-weight: normal;
+                color: black;
+                border-radius: 0 0 6px 6px;
+                padding: 1px 8px;
+                transition: transform 0.3s, border-color 0.7s ease-out;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    border-bottom-color: $blue;
+                }
+            }
+        }
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .main-maerke-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px * 2 + 40px;
+
+        @media (max-width: $small) {
+            border-top: 20px solid $blue;
+        }
+    }
+
+    .page-description-color {
+        @media (max-width: $mobile) {
+            padding: 20px;
+        }
+
+        padding-bottom: 28px; /* replaces bottom's margin-top which is set to 0 below */
+    }
+
+    .btn.buylink {
+        width: 100%;
+    }
+
+    figure {
+        background: white;
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+
+        img, svg {
+            max-width: 100%;
+        }
+
+        figcaption {
+            text-align: left;
+            font-size: 0.9em;
+        }
+
+        .figure__license {
+            font-size: 0.75em;
+            opacity: 0.5;
+        }
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    .purchase-form {
+        max-width: 500px;
+    }
+
+    footer {
+        position: relative; /* otherwise it is covered by the cover */
+        z-index: 1;
+        margin-top: 0; /* is replaced by margin-bottom on .page-description-color */
+    }
+}
