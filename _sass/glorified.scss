@@ -11,6 +11,10 @@ $glorified-splash-min-height: $mobile;
         min-height: $glorified-splash-min-height;
         top: 0;
         border-bottom: 20px solid $blue;
+
+        @media (max-width: $small) {
+            position: fixed;
+        }
     }
 
     .cover-img {
@@ -35,7 +39,7 @@ $glorified-splash-min-height: $mobile;
             align-items: flex-start;
             justify-content: flex-end;
             height: auto;
-            min-height: calc(100vh - 110px);
+            min-height: 100vh;
         }
 
         @media (max-width: 460px) {
@@ -73,11 +77,6 @@ $glorified-splash-min-height: $mobile;
             font-weight: 400;
             margin: 0;
             margin-bottom: 7px;
-
-            @media (max-width: $small) {
-                position: sticky;
-                top: 10px;
-            }
         }
 
         .maerke-splash__age {

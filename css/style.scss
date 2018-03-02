@@ -2,6 +2,10 @@
 ---
 @import "variables.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: $native-font;
