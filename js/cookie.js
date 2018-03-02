@@ -37,6 +37,9 @@ function showWelcomeMessage() {
     var welcomeMessage = elementFromHtml('<div class="first-visit-welcome"><div class="first-visit-welcome-image"></div><div class="first-visit-welcome-text"><h2>Velkommen til Mærkelex!</h2><p>Vi prøver at samle alle forløbs- og dueligheds&#173;mærker fra danske spejder&#173;korps, inklusiv de hjemme&#173;lavede, som folk selv laver og sælger.</p><p>Hvis du finder ud af at vi mangler et mærke, eller der står noget på siden der er forkert, kan du <a href="mailto:kontakt@mærkelex.dk">sende os en email</a>.</p><div class="first-visit-welcome-remover">Fjern besked</div></div></div>');
 
     var container = document.querySelector(".intro-message");
+    if(!container) {
+        return;
+    }
     container.insertBefore(welcomeMessage, container.firstChild);
 
     document.querySelector(".first-visit-welcome-remover").addEventListener("click", function(event) {
