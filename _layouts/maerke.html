@@ -63,11 +63,17 @@ layout: default
       {% if page.price %}
       <div class="purchase-form">
         <div class="btn-container">
-          <a class="btn buylink" id="order-expand-btn">Køb fra Mærkelex</a>
+          <a class="btn buylink" id="order-expand-btn">
+            {% if page.preorder %}
+              Forudbestil fra Mærkelex
+            {% else %}
+              Køb fra Mærkelex
+            {% endif %}
+          </a>
         </div>
         <form method="post" action="{{ site.paymentsSiteUrl }}" id="order-form" class="hidden-order">
           <span class="collapse-purchase">&lsaquo;</span>
-          <h2>Køb {{page.name}} mærke</h2>
+          <h2>{% if page.preorder %}Forudbestil{% else %}Køb{% endif %} {{ page.name }} mærke</h2>
           <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
           <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}">
           <div class="order-part">
@@ -169,6 +175,13 @@ layout: default
               Vi leverer i hele landet, men desværre ikke internationalt.
               <a href="mailto:kontakt@maerkelex.dk">Kontakt os</a> for en særlig aftale, hvis du ønsker international levering.
           </p>
+          {% if page.preorder %}
+            <p>
+              Du foretager en forudbestilling.
+              Det betyder at pengene trækkes med det sammen, og mærket samt kvittering for køb sendes så snart lager haves.
+              Der kan gå op til et par måneder fra din bestilling til du modtager mærkerne, alt efter hvor lang tid det tager at få mærket produceret.
+            </p>
+          {% endif %}
           <button class="btn buylink">Bestil mærke</button>
         </form>
       </div>

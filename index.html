@@ -17,7 +17,11 @@ title: Søg efter spejdermærker
         {% assign m_highlight_class = m.highlight %}
         {% if m.price != null %}
           {% assign m_purchasable = "purchasable" %}
-          {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
+          {% if m.preorder %}
+            {% assign m_highlight_text = "<strong>Forudbestil</strong>" %}
+          {% else %}
+            {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
+          {% endif %}
         {% elsif m_highlight_class == "popular" %}
           {% assign m_highlight_text = "Mest populære!" %}
         {% elsif m_highlight_class == "new" %}

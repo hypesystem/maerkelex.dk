@@ -121,7 +121,7 @@ function renderResults(matches) {
         {% assign m_image = "' + match.image + '" %}
         {% assign m_name = "' + match.name + '" %}
         {% assign m_highlight_class = "' + (match.highlight || '') + '" %}
-        {% assign m_highlight_text = "' + (match.price ? '<strong>Køb for ' + match.price + ' kr</strong>' : match.highlight == 'popular' ? 'Mest populære!' : match.highlight == 'new' ? 'Nyhed!' : 'Læs mere') + '" %}
+        {% assign m_highlight_text = "' + (match.price ? (match.preorder ? '<strong>Forudbestil</strong>' : '<strong>Køb for ' + match.price + ' kr</strong>') : match.highlight == 'popular' ? 'Mest populære!' : match.highlight == 'new' ? 'Nyhed!' : 'Læs mere') + '" %}
         {% assign m_purchasable = "' + (match.price ? 'purchasable' : '') + '" %}
         {% capture maerke_result %}'{% include maerkebox.html %}';{% endcapture %}
         return {{ maerke_result | strip_newlines }}
