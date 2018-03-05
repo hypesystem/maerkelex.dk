@@ -2,6 +2,7 @@
 name: Velvære
 tags:
 - uofficielt
+date_added: 2018-01-29
 image: velvaere.jpg
 buylink: https://www.facebook.com/velvaeremaerke
 highlight: new

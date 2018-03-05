@@ -2,6 +2,7 @@
 name: Outsider
 tags:
 - uofficielt
+date_added: 2018-02-23
 image: outsider.jpg
 coverimage: cover-bivuak.jpg
 highlight: new
