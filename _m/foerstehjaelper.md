@@ -7,7 +7,7 @@ coverimage: cover-firstaid1.jpg
 image: foerstehjaelper.jpg
 buylink: https://maerkmig.dk/products/forstehjaelper
 highlight: new
-date_added: 2017-12-28
+date: 2017-12-28
 ---
 Har du givet førstehjælp? Vis det på din uniform - og gør det igen!
 

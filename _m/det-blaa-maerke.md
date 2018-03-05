@@ -5,7 +5,7 @@ tags:
 age: 6+
 image: det-blaa-maerke.jpg
 buylink: http://www.herfoelgespejderne.dk/maerke
-date_added: 2018-01-26
+date: 2018-01-26
 ---
 Spejdermærket "Det Blå Mærke" er et hvervningsmærke, som gives til de spejdere som hverver nye
 spejdere til ens gruppe.

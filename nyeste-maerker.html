@@ -1,0 +1,22 @@
+---
+layout: default-no-container
+title: Nyeste mærker
+---
+<div class="container align-center">
+    <div class="content">
+        <div class="align-center">
+            <h1>Seneste tilføjede mærker</h1>
+        </div>
+        {% assign sorted_m = site.m | sort: "date" | reverse %}
+        {% for m in sorted_m %}
+          {% if m.date %}
+            {% assign m_url = m.url %}
+            {% assign m_first_tag = m.tags.first %}
+            {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
+            {% assign m_image = m.image %}
+            {% assign m_name = m.name %}
+            {% include maerkebox.html %}
+          {% endif %}
+        {% endfor %}
+    </div>
+</div>

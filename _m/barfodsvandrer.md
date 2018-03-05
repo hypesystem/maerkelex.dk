@@ -7,7 +7,7 @@ tags:
 coverimage: cover-hike.jpg
 image: barfodsvandrer.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2016456401919732/
-date_added: 2017-10-26
+date: 2017-10-26
 ---
 Barfodsvandrer er lavet som en uofficiel fortsættelse til DDS' almindelige vandremærker i 5, 10 og 20 km. udgave. Reglerne er de samme som DDS´ vandremærker, det skal blot foregå uden fodtøj.
 
