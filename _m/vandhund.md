@@ -8,7 +8,7 @@ coverimage: cover-wave.jpg
 image: vandhund.jpg
 buylink: https://www.facebook.com/dgpsoendersoe1/
 highlight: new
-date: 2017-11-18
+date_added: 2017-11-18
 ---
 ### Regler:
 Der skal bades mindst én gang om ugen 12 uger i træk - man bestemmer selv årstiden.

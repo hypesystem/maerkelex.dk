@@ -8,7 +8,7 @@ coverimage: cover-wave.jpg
 image: plasket-x-12.jpg
 buylink: https://www.facebook.com/dgpsoendersoe1/
 highlight: new
-date: 2017-11-18
+date_added: 2017-11-18
 ---
 ### Regler:
 Der skal bades i "naturligt" vand (hav, sø, fjord eller bælt) én gang om måneden i et år - 12 gange i alt.

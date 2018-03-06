@@ -8,7 +8,7 @@ age: 8+
 image: kfum-svanemaerket.jpg
 buylink: https://www.55nord.dk/kfum-spejderne/soegeside/maerker-1/svanemaerket
 infolink: https://spejdernet.dk/badges/svanemaerket/
-date: 2017-12-19
+date_added: 2017-12-19
 ---
 Svanemærkeprojektet er et partnerskab mellem KFUM-Spejderne i Danmark og Miljømærkning Danmark. Projektets formål er at øge spejdernes kendskab til Svanemærket.
 
