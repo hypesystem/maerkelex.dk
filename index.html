@@ -17,6 +17,17 @@ title: Søg efter spejdermærker
           {% assign m_name = m.name %}
           {% assign m_highlight_class = "new" %}
           {% assign m_highlight_text = "Nyhed" %}
+
+          {% assign m_purchasable = "" %}
+            {% if m.price != null %}
+              {% if m.preorder %}
+                {% assign m_highlight_text = "<strong>Forudbestil</strong>" %}
+              {% else %}
+                {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
+              {% endif %}
+              {% assign m_highlight_text = false %}
+            {% endif %}
+            
           {% include maerkebox.html %}
         {% endif %}
       {% endfor %}

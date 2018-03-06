@@ -15,6 +15,18 @@ title: Nyeste mærker
             {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
             {% assign m_image = m.image %}
             {% assign m_name = m.name %}
+
+            {% assign m_purchasable = "" %}
+            {% if m.price != null %}
+              {% assign m_purchasable = "purchasable" %}
+              {% if m.preorder %}
+                {% assign m_highlight_text = "<strong>Forudbestil</strong>" %}
+              {% else %}
+                {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
+              {% endif %}
+              {% assign m_highlight_text = false %}
+            {% endif %}
+
             {% include maerkebox.html %}
           {% endif %}
         {% endfor %}
