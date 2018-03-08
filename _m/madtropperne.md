@@ -4,6 +4,7 @@ tags:
 - uofficielt
 - forløb
 image: madtropperne.jpg
+coverimage: cover-madtropperne.jpg
 price: 7
 age: 10-17
 highlight: new
