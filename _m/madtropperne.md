@@ -28,7 +28,7 @@ Læs mere om Madtropperne, som er et projekt fra Madkulturen, på <a href="http:
 <figure>
     <iframe src="https://www.youtube.com/embed/l2An9_03Plc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <figcaption>
-        <strong>Madtropperne på Spejdernes Lejr</strong>
+        <strong>Madtropperne på Spejdernes Lejr.</strong>
         I 2012 blev Madtropperne introduceret som en aktivitet på den tværkorpslige lejr, Spejdernes Lejr.
         I denne video ses aktiviteten fra lejren efter, Spejdernes Lejr 2017.
         <div class="figure__license">
@@ -53,9 +53,11 @@ Spejderne søger viden om, hvornår forskellige frugter og grøntsager er i sæs
 - Spejderlederen eller spejderne køber herefter ind og sørger for at have varerne klar til 3. gang.
 
 <figure>
-    <img src="/img/madtropperne-tomatsuppe.jpg">
+    <a href="/img/madtropperne-tomatsuppe.jpg" target="_blank">
+        <img src="/img/madtropperne-tomatsuppe.jpg">
+    </a>
     <figcaption>
-        <strong>Opskrift på tomatsuppe</strong>
+        <strong>Opskrift på tomatsuppe.</strong>
         Tomatsuppen er en god basis at bruge, når man tester hvordan forskellig smag påvirker en ret.
         <div class="figure__license">
             &copy; Madkulturen.

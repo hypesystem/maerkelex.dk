@@ -284,6 +284,27 @@ a:hover {
       height: 185px;
     }
   }
+
+  figure {
+    background: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+
+    img {
+      max-height: 400px;
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      text-align: left;
+
+      .figure__license {
+        font-size: 0.9em;
+        color: rgba(0,0,0,0.4);
+      }
+    }
+  }
 }
 
 .page-image {
