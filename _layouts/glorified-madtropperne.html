@@ -1,0 +1,297 @@
+{% capture page_description %}{% if page.description %}{{ page.description | strip_html | replace:'"',"'" }}{% else %}Her kan du finde mærker (spejdermærker) for Det Danske Spejderkorps (DDS), KFUM eller De Grønne Pigespejdere, samt alle de uofficielle mærker der florerer i Danmark.{% endif %}{% endcapture %}
+{% capture page_title %}{% if page.type == "maerke" %}{{ page.name }}{% else %}{{ page.title }}{% endif %} | Mærkelex{% endcapture %}
+<!DOCTYPE html>
+<html lang="da" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="trustpilot-one-time-domain-verification-id" content="tgRt4yhZqYVmDDHJZ5LS251Z03eSjNDsdDai2yLQ"/>
+        <title>{{ page_title }}</title>
+        <meta name="description" content="Mærkelex er et leksikon over spejdermærker. {{ page_description }}">
+
+        <meta property="og:title" content="{{ page_title }}">
+        <meta property="og:site_name" content="Mærkelex">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://xn--mrkelex-mxa.dk{{ page.url }}">
+        <meta property="og:image" content="http://xn--mrkelex-mxa.dk/img/{% if page.type == 'blogpost' %}blog/{{ page.image }}{% elsif page.image %}compressed/{{ page.image }}{% else %}fb-img.jpg{% endif %}">
+        <meta property="og:description" content="{{ page_description }}">
+        <meta property="og:locale" content="da_DK">
+
+        <link rel="preload" as="font" href="{{ site.baseurl }}/font/OpenSans-Regular.ttf" type="font/ttf">
+
+        <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/img/favicon.png">
+        <link rel="shortcut icon" type="image/svg+xml" href="{{ site.baseurl }}/img/logo.svg">
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
+        <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
+        <link rel="mask-icon" href="{{ site.baseurl }}/safari-pinned-tab.svg" color="#fbab44">
+        <meta name="apple-mobile-web-app-title" content="M&aelig;rkelex">
+        <meta name="application-name" content="M&aelig;rkelex">
+        <meta name="theme-color" content="#f5f5f5">
+        <script>/* SERVICE WORKER */
+            if(navigator.serviceWorker) {
+                window.addEventListener("load", function() {
+                    navigator.serviceWorker.register("/sw.js").then(function(registration) {
+                        console.log("[sw.js] Registration with scope", registration.scope);
+                    }, function(error) {
+                        console.error("[sw.js] Registration failed", error);
+                    });
+                });
+            }
+        </script>
+        <script>
+            function debounced(fun, timeout) {
+                if(!timeout) {
+                    timeout = 250;
+                }
+                var i = 0;
+                return function() {
+                    var myI = ++i;
+                    var args = Array.prototype.slice.call(arguments);
+                    setTimeout(function() {
+                        if(i > myI) {
+                            return;
+                        }
+                        fun.apply(fun, args);
+                    }, timeout);
+                };
+            }
+        </script>
+    </head>
+    <body ontouchstart="" class="glorified glorified-white">
+        {% include header.html %}
+        <main>
+            <div class="container align-center">
+                <div class="content">
+                    <div class="cover">
+                        <picture>
+                            <source srcset="{{ site.baseurl }}/img/covers/{{ page.coverimage-mobile }}" media="(max-width: 600px)">
+                            <source srcset="{{ site.baseurl }}/img/covers/{{ page.coverimage }}" media="(min-width: 601px)">
+                            <img src="{{ site.baseurl }}/img/covers/{{ page.coverimage }}" alt="{{ page.name | remove: "&#173;" }}">
+                        </picture>
+                    </div>
+                    <div class="maerke-splash">
+                        <div class="maerke-splash__image">
+                            <img src="{{ site.baseurl }}/img/compressed/{{ page.image }}" alt='{{ page.name | remove: "&#173;" }} spejdermærke'>
+                        </div>
+                        <div class="maerke-splash__info">
+                            <h1>{{ page.name }}</h1>
+                            {% if page.age %}
+                                <div class="maerke-splash__age">Egnet til {{ page.age }} år</div>
+                            {% else %}
+                                <div class="maerke-splash__age">Egnet til alle aldre</div>
+                            {% endif %}
+                            <div class="maerke-splash__actions">
+                                {% if page.price %}
+                                    <a href="#buy" class="maerke-splash__action maerke-splash__action--buy" data-action-buy>
+                                        {{ page.price }} kr.
+                                    </a>
+                                {% endif %}
+                                <a href="#badge-info" class="maerke-splash__action maerke-splash__action--read">
+                                    Læs om mærket
+                                </a>
+                            </div>
+                            <div class="maerke-splash__tags">
+                                {% for tag in page.tags %}
+                                    <a class="tag" href="{{ site.baseurl }}/?search=tag:{{ tag }}" data-tag-link>{{ tag }}</a>
+                                {% endfor %}
+                            </div>
+                            <script>
+                                var tagLinks = document.querySelectorAll("[data-tag-link]");
+                                for(var i = 0; i < tagLinks.length; i++) {
+                                    setUpTagLinkListener(tagLinks[i]);
+                                }
+                                function setUpTagLinkListener(tagLink) {
+                                    tagLink.addEventListener("click", function(e) {
+                                    ga("send", "event", "Badge", "taglink_click", tagLink.innerHTML);
+                                    });
+                                }
+                            </script>
+                        </div>
+                        <script>
+                            (function() {
+                                let header = document.querySelector("header");
+                                header.classList.add("hide");
+                                header.classList.remove("show");
+                            })();
+                        </script>
+                    </div>
+                    <div class="main-maerke-content" id="badge-info">
+                        <div class="page-description-color">
+                            {{ page.description }}
+                            {{ page.content }}
+                            {% if page.soldout %}
+                            <p>
+                                <div style="background: rgba(0,0,0,0.025); padding: 15px; font-size: 0.8em;">
+                                    <strong>Mærket er midlertidigt udsolgt.</strong>
+                                    Vi har bestilt flere hos leverandøren, og de er på vej.
+                                    Hvis du bestiller nu, kan der gå et par uger, før vi får sendt mærket.
+                                    Vi holder dig selvfølgelig opdateret pr. mail.
+                                </div>
+                            </p>
+                            {% endif %}
+                            <div class="btn-container">
+                                {% if page.infolink %}
+                                    <a target="noopener" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
+                                {% endif %}
+                                {% unless page.price %}
+                                    <a target="noopener" href="{{ page.buylink }}" class="btn buylink">Køb mærket her</a>
+                                {% endunless %}
+                            </div>
+                            {% if page.price %}
+                            <div class="purchase-form" id="buy">
+                                <div class="btn-container">
+                                    <a class="btn buylink" id="order-expand-btn">Køb fra Mærkelex</a>
+                                </div>
+                                <form method="post" action="{{ site.paymentsSiteUrl }}" id="order-form" class="hidden-order">
+                                    <span class="collapse-purchase">&lsaquo;</span>
+                                    <h2>Køb {{page.name}} mærke</h2>
+                                    <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
+                                    <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}">
+                                    <div class="order-part">
+                                    <h3>Vælg antal</h3>
+                                    <label for="count">
+                                        <input class="count-preview" type="number" name="count" value="1" id="count">
+                                        mærke(r) til {{ page.price }} kr stk = <strong class="total-preview"><span class="total-preview-price">{{ page.price }}</span> kr</strong>
+                                    </label>
+                                    <script>
+                                        var countPreview = document.querySelector(".count-preview");
+                                        var totalPreview = document.querySelector(".total-preview-price");
+                                        var badgePrice = {{ page.price }};
+
+                                        document.querySelector("#count").addEventListener("change", function() {
+                                            var count = this.value;
+                                            countPreview.innerHTML = count;
+                                            totalPreview.innerHTML = count * badgePrice;
+                                        });
+
+                                        function expandOrderForm() {
+                                            document.querySelector("#order-form").className = "show-order";
+                                            document.querySelector("#order-expand-btn").style.display = "none";
+                                        };
+
+                                        document.querySelector("#order-expand-btn").addEventListener("click", function() {
+                                            expandOrderForm();
+                                        });
+
+                                        document.querySelector("[data-action-buy]").addEventListener("click", function() {
+                                            expandOrderForm();
+                                            document.querySelector('#order-form').scrollIntoView({
+                                                behavior: 'smooth',
+                                                block: "start",
+                                                inline: "nearest"
+                                            });
+                                        });
+
+                                        document.querySelector(".collapse-purchase").addEventListener("click", function() {
+                                            document.querySelector("#order-form").className = "hidden-order";
+                                            setTimeout(function(){document.querySelector("#order-expand-btn").style.display = "block"}, 220);
+                                        });
+                                    </script>
+                                    </div>
+                                    <div class="invoicing-address-part">
+                                    <h3>Faktureringsadresse</h3>
+                                    <label for="invoicing-name">
+                                        Navn:
+                                        <input type="text" name="invoicing-name" id="invoicing-name">
+                                    </label>
+                                    <label for="invoicing-address">
+                                        Vej og husnummer:
+                                        <input type="text" name="invoicing-address" id="invoicing-address">
+                                    </label>
+                                    <div class="city-info-container">
+                                        <label for="invoicing-postal-code" class="postal-code">
+                                            Postnr.:
+                                            <input type="text" name="invoicing-postal-code" id="invoicing-postal-code">
+                                        </label>
+                                        <label for="invoicing-city" class="city">
+                                            By:
+                                            <input type="text" name="invoicing-city" id="invoicing-city">
+                                        </label>
+                                    </div>
+                                    <label for="delivery-address-differs" class="checkbox-label">
+                                        <input type="checkbox" name="delivery-address-differs" id="delivery-address-differs">
+                                        Leveringsadressen er forskellig fra faktureringsadressen
+                                    </label>
+                                    </div>
+                                    <div class="delivery-address-part">
+                                    <h3>Leveringsadresse</h3>
+                                    <label for="delivery-name">
+                                        Navn:
+                                        <input type="text" name="delivery-name" id="delivery-name">
+                                    </label>
+                                    <label for="delivery-address">
+                                        Vej og husnummer:
+                                        <input type="text" name="delivery-address" id="delivery-address">
+                                    </label>
+                                    <div class="city-info-container">
+                                        <label for="delivery-postal-code" class="postal-code">
+                                            Postnr.:
+                                            <input type="text" name="delivery-postal-code" id="delivery-postal-code">
+                                        </label>
+                                        <label for="delivery-city" class="city">
+                                            By:
+                                            <input type="text" name="delivery-city" id="delivery-city">
+                                        </label>
+                                    </div>
+                                    </div>
+                                    <script>
+                                        var deliveryPart = document.querySelector(".delivery-address-part");
+                                        document.querySelector("#delivery-address-differs").addEventListener("change", function() {
+                                            if(this.checked) {
+                                                deliveryPart.style = "display: block;";
+                                            }
+                                            else {
+                                                deliveryPart.style = "";
+                                            }
+                                        });
+                                    </script>
+                                    <div class="contact-information-part">
+                                        <h3>Kontaktinformation</h3>
+                                        <label for="email">
+                                            Email:
+                                            <input type="email" name="email" id="email">
+                                        </label>
+                                        <label for="phone-number">
+                                            Telefonnummer:
+                                            <input type="tel" name="phone-number" id="phone-number">
+                                        </label>
+                                    </div>
+                                    <p>
+                                        Levering koster {{ page.shippingPrice | default: site.defaultShippingPrice }} kr.
+                                        Vi leverer i hele landet, men desværre ikke internationalt.
+                                        <a href="mailto:kontakt@maerkelex.dk">Kontakt os</a> for en særlig aftale, hvis du ønsker international levering.
+                                    </p>
+                                    <button class="btn buylink">Bestil mærke</button>
+                                </form>
+                            </div>
+                            {% endif %}
+                            <script>
+                            document.querySelector(".buylink").addEventListener("click", function(e) {
+                                ga("send", "event", "Badge", "buylink_click", "{{ page.url }}");
+                            });
+                            </script>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% include footer.html %}
+        <script src="{{ site.baseurl }}/js/raw-search.js" defer></script>
+        <script src="{{ site.baseurl }}/js/header-scroll.js" defer></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-57878677-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script src="{{ site.baseurl }}/js/cookie.js" defer></script>
+    </body>
+</html>

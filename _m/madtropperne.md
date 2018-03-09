@@ -1,10 +1,12 @@
 ---
+layout: glorified-madtropperne
 name: Madtropperne
 tags:
 - uofficielt
 - forløb
 image: madtropperne.jpg
 coverimage: cover-madtropperne.jpg
+coverimage-mobile: cover-madtropperne--mobile.jpg
 price: 7
 age: 10-17
 highlight: new
