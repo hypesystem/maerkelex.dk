@@ -6,6 +6,7 @@ image: outsider.jpg
 coverimage: cover-bivuak.jpg
 highlight: new
 buylink: https://www.facebook.com/OutsiderMaerket
+date_added: 2018-02-23
 ---
 Du skal sove ude i 104 dage 2 dage per uge.
 
