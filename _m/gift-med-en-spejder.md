@@ -6,7 +6,7 @@ age: 18+
 image: gift-med-en-spejder.jpg
 coverimage: cover-marriage.jpg
 price: 40
-date_added: 2018-08-19
+date_added: 2017-08-19
 ---
 Én gang spejder, altid ...
 

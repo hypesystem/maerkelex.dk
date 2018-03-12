@@ -30,7 +30,11 @@ title: Søg efter spejdermærker
           {% include maerkebox.html %}
         {% endif %}
       {% endfor %}
-
+      <div class="cta-frontpage">
+        <a class="btn btn--new-badges" href="/nyeste-maerker/">Se nye mærker</a>
+        <a class="btn btn--shop" href="/shop/">Køb mærker</a>
+      </div>
+      
       <!-- All badges -->
       {% assign sorted_m = site.m | sort: "name" %}
       {% for m in sorted_m limit:24 %}
