@@ -67,7 +67,11 @@
             <div class="container align-center">
                 <div class="content">
                     <div class="cover">
-                        <div class="cover-img" {% if page.coverimage %} style="background-image: url('{{ site.baseurl }}/img/covers/{{ page.coverimage }}');"{% endif %}></div>
+                        <picture>
+                            <source srcset="{{ site.baseurl }}/img/covers/{{ page.coverimage-mobile }}" media="(max-width: 600px)">
+                            <source srcset="{{ site.baseurl }}/img/covers/{{ page.coverimage }}" media="(min-width: 601px)">
+                            <img src="{{ site.baseurl }}/img/covers/{{ page.coverimage }}" alt="{{ page.name | remove: "&#173;" }}">
+                        </picture>
                     </div>
                     <div class="maerke-splash">
                         <div class="maerke-splash__image">
