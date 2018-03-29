@@ -8,7 +8,7 @@ coverimage: cover-madtropperne.jpg
 price: 7
 age: 10-17
 highlight: new
-date_added: 2018-03-09
+date_added: 2018-03-29
 ---
 Det er vigtigt at kunne lave god mad – både fordi det smager dejligt, og fordi maden giver energi til aktiviteter.
 Det handler også om at kunne klare sig selv, og at forstå madens vej fra jord til bord.
@@ -21,8 +21,8 @@ Så tag Madtroppernes spejdermærke og lær at lave lækker og simpel mad over b
 Aktiviteten tager udgangspunkt i <a href="http://madkulturen.dk/fileadmin/user_upload/madkulturen.dk/Dokumenter/WEB_MADTROPPERNE_HAANDBOGEN.pdf" rel="noopener" target="_blank">Madtroppernes Kulinariske Håndbog</a>. Her har vi samlet tips og tricks til jer. I kan bl.a. læse om de fem grundsmage, finde gode grundopskrifter til nem og lækker spejdermad – og hvis I har mod på det – vilde urter I kan plukke i naturen.
 
 Det tager 2-3 gange (ca. 2 timer pr. gang) at tage Madtroppernes mærke, hvis forløbet er forberedt.
-
 Der skal laves 3 aktiviteter, og der er en vurdering til sidst, for at se om man lever op til kravene og kan få mærket.
+
 Læs mere om Madtropperne, som er et projekt fra Madkulturen, på <a href="http://madkulturen.dk/servicemenu/nyhed/nyhed/alle-elskede-madtropperne/" target="_blank" rel="noopener">deres hjemmeside</a>.
 
 <figure>
@@ -37,7 +37,7 @@ Læs mere om Madtropperne, som er et projekt fra Madkulturen, på <a href="http:
     </figcaption>
 </figure>
 
-## Aktivitet 1: Lav en ret ud fra en af opskrifterne fra Madtroppernes Kulinariske Håndbog
+## Aktivitet 1: Lav en ret ud fra en af opskrift&shy;erne fra Madtroppernes Kulinariske Håndbog
 
 To og to laver spejderne en ret fra Madtroppernes Kulinariske Håndbog. Retten serveres for resten af patruljen. Tag en snak om, hvad der gik godt og hvad I måske ville gøre anderledes næste gang.
 
