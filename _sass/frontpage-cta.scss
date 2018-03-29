@@ -1,0 +1,58 @@
+.cta-frontpage {
+  float: left;
+  width: 100%;
+  padding: 20px 5px;
+  padding-top: 10px;
+  display: flex;
+  box-sizing: border-box;
+
+  @media(max-width: $mobile) {
+    width: 50%;
+    flex-direction: column;
+    padding: 0 5px;
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    font-weight: 600;
+
+    @media(max-width: $mobile) {
+      padding: 20px 10px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .btn--shop,
+  .btn--new-badges {
+    &::before {
+      content: ' ';
+      background-image: url(/img/icons/ic_shopping_cart_white_24px.svg);
+      background-size: contain;
+      width: 1em;
+      height: 1.21em;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 5px;
+
+      @media(max-width: $mobile) {
+        width: 3em;
+        height: 2em;
+        background-position: center;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .btn--new-badges {
+    &::before {
+      background-image: url(/img/icons/ic_new_releases_white_24px.svg);
+    }
+  }
+}

@@ -54,9 +54,12 @@ a:hover {
 .content {
     text-align: left;
     width: 900px;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
     margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cover {
@@ -560,6 +563,14 @@ a:hover {
   }
 }
 
+.jumbotron {
+  width: 100%;
+
+  p:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+
 @import "header.scss";
 @import "tag";
 @import "advanced-search.scss";
@@ -574,3 +585,4 @@ a:hover {
 @import "blog";
 @import "glorified";
 @import "slipout";
+@import "frontpage-cta";

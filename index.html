@@ -6,6 +6,36 @@ title: Søg efter spejdermærker
 
 <div class="container align-center">
     <div class="content">
+      <!-- Latest Badges -->
+      {% assign sorted_m = site.m | sort: "date_added" | reverse %}
+      {% for m in sorted_m limit:3 %}
+        {% if m.date_added %}
+          {% assign m_url = m.url %}
+          {% assign m_first_tag = m.tags.first %}
+          {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
+          {% assign m_image = m.image %}
+          {% assign m_name = m.name %}
+          {% assign m_purchasable = "" %}
+          {% assign m_highlight_class = "new" %}
+          {% assign m_highlight_text = "Nyhed" %}
+          {% if m.price != null %}
+            {% assign m_purchasable = "purchasable" %}
+            {% if m.preorder %}
+              {% assign m_highlight_text = "<strong>Forudbestil</strong>" %}
+            {% else %}
+              {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
+            {% endif %}
+          {% endif %}
+
+          {% include maerkebox.html %}
+        {% endif %}
+      {% endfor %}
+      <div class="cta-frontpage">
+        <a class="btn btn--new-badges" href="/nyeste-maerker/">Se flere nye mærker</a>
+        <a class="btn btn--shop" href="/shop/">Køb mærker</a>
+      </div>
+      
+      <!-- All badges -->
       {% assign sorted_m = site.m | sort: "name" %}
       {% for m in sorted_m limit:24 %}
         {% assign m_url = m.url %}
