@@ -8,7 +8,8 @@ buylink: https://www.facebook.com/groups/spejdermaerker/permalink/21240486244938
 date_added: 2018-04-06
 ---
 ### Regler:
-- Spejderen/spejderne skal overnatte i telt 1 gang hver måned i et år. 
-- Spejderen/spejderne skal selv stille teltet op og tage det ned hver gang (må gerne få hjælp, hvis det er mikro/ mini spejder).
-- Valgfrit telt. 
+- Spejderen skal overnatte i telt 1 gang hver måned i et år.
+- Spejderen skal selv stille teltet op og tage det ned hver gang. Hvis det er mikro eller mini spejdere, må de gerne få hjælp med at sætte teltet op.
+- Valgfrit telt.
+- Det er tilladt at sove flere i samme telt, hvis flere spejdere tager mærket samtidig, eller man ønsker selvskab.
 - Mærket kan tages i kombination med andre mærker.
