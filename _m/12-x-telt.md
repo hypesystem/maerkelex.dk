@@ -1,5 +1,5 @@
 ---
-name: 12 x TELT
+name: 12 x telt
 tags:
 - uofficielt
 - forløb
@@ -8,7 +8,7 @@ buylink: https://www.facebook.com/groups/spejdermaerker/permalink/21240486244938
 date_added: 2018-04-06
 ---
 ### Regler:
-- Spejderen/ spejderne skal overnatte i telt 1 gang hver måned i et år. 
-- Spejderen/ spejderne skal selv stille teltet op og tage det ned hver gang (må gerne få hjælp, hvis det er mikro/ mini spejder).
+- Spejderen/spejderne skal overnatte i telt 1 gang hver måned i et år. 
+- Spejderen/spejderne skal selv stille teltet op og tage det ned hver gang (må gerne få hjælp, hvis det er mikro/ mini spejder).
 - Valgfrit telt. 
-- mærket kan tages i kombination med andre mærker.
+- Mærket kan tages i kombination med andre mærker.
