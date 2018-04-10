@@ -1,0 +1,78 @@
+.first-visit-welcome {
+  width: 900px;
+  background: $orange;
+  position: relative;
+  height: 300px;
+  transition: all 0.75s;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+
+  @media screen and (max-width: $small) {
+    height: auto;
+    max-height: 600px;
+    margin-bottom: 0;
+  }
+
+  &.hidden {
+    margin-top: -340px;
+  
+    @media screen and (max-width: $small) {
+      margin-top: -10px;
+      max-height: 0px;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.first-visit-welcome-remover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+  z-index: 3;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+
+  @media screen and (max-width: $small) {
+    position: static;
+  }
+}
+
+.first-visit-welcome:hover .first-visit-welcome-remover {
+  opacity: 1;
+}
+
+.first-visit-welcome-image {
+  background-image: url('../img/welcome-message-01.png');
+  height: 300px;
+  display: inline-block;
+  width: 400px;
+  background-size: cover;
+  vertical-align: middle;
+  background-position: center;
+  filter: saturate(130%) contrast(120%);
+
+  @media screen and (max-width: $small) {
+    display: none;
+  }
+}
+
+.first-visit-welcome-text {
+  display: inline-block;
+  width: 500px;
+  vertical-align: middle;
+
+  @media screen and (max-width: $small) {
+    max-width: 500px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  a {
+    color: black;
+  }
+}

@@ -1,0 +1,193 @@
+.maerke-col {
+  box-sizing: border-box;
+  width: 33.33333%;
+  padding: 0 5px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: $small) {
+    width: 50%;
+  }
+}
+
+.maerke-box {
+  width: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 0 4px rgba(0,0,0,0.2), 0 0 10px rgba(255, 255, 255, 1) inset;
+  background-color: white;
+  color: inherit;
+  text-decoration: inherit;
+  overflow: hidden;
+  transition: transform 0.2s;
+  position: relative;
+  display: block;
+  padding-top: 10px;
+
+  .maerke-link {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  img {
+    height: 200px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    transition: all 0.2s ease;
+  
+    &:hover {
+      transform:scale(1.1);
+    }
+  
+    @media screen and (max-width: $small) {
+      height: 40vw;
+      margin-top: 6vw;
+    }
+  }
+
+  .maerke-info {
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    color: #fafafa;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    @media screen and (max-width: $small) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 8px;
+    }
+
+    div {
+      padding: 5px;
+      font-size: 0.8em;
+      padding: 5px 8px;
+      font-weight: bold;
+      transition: background 0.2s;
+      border-radius: 3px;
+      margin-bottom: 5px;
+      text-align: center;
+      box-sizing: border-box;
+      border: 1px;
+      border-style: solid;
+      background-color: #fff;
+      background-color: rgba(255,255,255,0.95);
+      position: relative;
+      z-index: 3;
+    
+      @media screen and (max-width: $small) {
+        margin: 0 1vw;
+        font-size: 2.8vw;
+        padding: 0.67vw 1.07vw;
+      }
+    }
+  }
+
+  .maerke-age {
+    color: $blue;
+    border-color: $blue;
+  
+    @media screen and (max-width: $small) {
+      width: calc(43% - 2px);
+    }
+  }
+
+  .maerke-corps {
+    text-transform: capitalize;
+    color: gray;
+    border-color: gray;
+  
+    @media screen and (max-width: $small) {
+      width: calc(57% - 2px);
+    }
+  
+    img {
+      height: 100%;
+    }
+  
+    &.DDS {
+      border-color: #003466;
+      color: #003466;
+    }
+  
+    &.pigespejdere {
+      border-color: #005723;
+      color: #005723;
+    }
+  
+    &.KFUM-Spejderne {
+      border-color: #006649;
+      color: #006649;
+    }
+  }
+
+  .card-content {
+    position: relative;
+    height: 50px;
+    text-align: center;
+
+    h3 {
+      font-size: 1.2em;
+      font-weight: 600;
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 0 10px;
+
+      @media screen and (max-width: $small) {
+        font-size: 0.9rem;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .card-link {
+    border-top: 1px solid rgba(160,160,160,0.2);
+    padding: 10px;
+    text-align: center;
+
+    a {
+      text-transform: uppercase;
+      font-size: 15px;
+      text-decoration: none;
+    }
+  }
+
+  &.highlight-popular {
+    box-shadow: 1px 0 0px $orange, -1px 0 0 $orange, -1px -1px 0 $orange, 1px -1px 0 $orange, 0 0 13px $orange;
+    overflow: hidden;
+
+    .card-link {
+      background: $orange;
+      color: white;
+    }
+  }
+  
+  &.highlight-new {
+    box-shadow: 1px 0 0px $green, -1px 0 0 $green, -1px -1px 0 $green, 1px -1px 0 $green, 0 0 13px $green;
+    overflow: hidden;
+
+    .card-link {
+      background: $green;
+      color: white;
+    }
+  }
+
+  &.purchasable {
+    .card-link {
+      background: $blue;
+      color: white;
+    }
+  }
+}
