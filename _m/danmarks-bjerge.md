@@ -10,8 +10,6 @@ date_added: 2018-04-14
 ---
 Dette er en fantastisk mulighed for at komme rundt i Danmark og se steder man ellers ikke ville komme.
 
-Se mere på Facebooksiden "Danmarks bjerge - fra det laveste til det højeste".
-
 ### Anbefaling:
 Køb eller lån bogen "Danmarks Bjerge" af Roger Pihl, da den er udgangspunktet for at finde "bjergene" og den indeholder fine beskrivelser om adgangsforhold til de enkelte bjerge. Husk at det er ikke alle steder man må færdes året rundt.
 
@@ -20,3 +18,10 @@ Hver gang man har gået 1000 meter i højden, må man sy én vignette på med de
 Der er ingen tidsfrist.
 
 Mærket består af 10 forskellige dele, som kan købes samlet eller enkeltvis.
+
+<figure>
+  <img src="/img/info/danmarks-bjerge-vignetter.jpg" alt="danmarks bjerge mærke og vignetter">
+  <figcaption>
+    Mærket består af 10 forskellige dele. Vignetterne ses i højre side af billedet.
+  </figcaption>
+</figure>
