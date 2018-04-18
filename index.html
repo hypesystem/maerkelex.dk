@@ -26,6 +26,9 @@ title: Søg efter spejdermærker
               {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
             {% endif %}
           {% endif %}
+          {% if m.discontinued != null %}
+            {% assign m_discontiued = "discontiued" %}
+          {% endif %}
 
           {% include maerkebox.html %}
         {% endif %}
@@ -45,6 +48,9 @@ title: Søg efter spejdermærker
         {% assign m_name = m.name %}
         {% assign m_purchasable = "" %}
         {% assign m_highlight_class = m.highlight %}
+        {% if m.discontinued != null %}
+          {% assign m_discontinued = "discontiued" %}
+        {% endif %}
         {% if m.price != null %}
           {% assign m_purchasable = "purchasable" %}
           {% if m.preorder %}

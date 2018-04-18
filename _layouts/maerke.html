@@ -47,18 +47,24 @@ layout: default
       </p>
       {% endif %}
       <div class="btn-container">
-        {% if page.infolink %}
-        <a target="noopener" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
+        {% if page.discontinued %}
+          <a class="btn btn--disabled">Mærket er udgået</a>
+        {% else %}
+          {% if page.infolink %}
+          <a target="noopener" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
+          {% endif %}
+          {% unless page.price %}
+          <a target="noopener" href="{{ page.buylink }}" class="btn buylink">Køb mærket</a>
+          {% endunless %}
         {% endif %}
-        {% unless page.price %}
-        <a target="noopener" href="{{ page.buylink }}" class="btn buylink">Køb mærket</a>
-        {% endunless %}
       </div>
       {% unless page.price %}
-      <div style="font-size: 0.8em; margin-top: 1em;">
-        {% capture buylink_domain %}{{ page.buylink | split: "/" | slice: 2 }}{% endcapture %}
-        Mærket sælges af en ekstern mærkesælger via {{ buylink_domain | remove_first: "www." | truncate: 20, "…" }}
-      </div>
+        {% unless page.discontinued %}
+        <div style="font-size: 0.8em; margin-top: 1em;">
+          {% capture buylink_domain %}{{ page.buylink | split: "/" | slice: 2 }}{% endcapture %}
+          Mærket sælges af en ekstern mærkesælger via {{ buylink_domain | remove_first: "www." | truncate: 20, "…" }}
+        </div>
+        {% endunless %}
       {% endunless %}
       {% if page.price %}
       <div class="purchase-form">

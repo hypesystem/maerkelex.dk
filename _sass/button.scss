@@ -19,3 +19,11 @@ input[type=submit] {
     color: white;
   }
 }
+
+.btn--disabled {
+  opacity: .65;
+
+  &:hover {
+    cursor: not-allowed;
+  }
+}
