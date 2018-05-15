@@ -63,6 +63,7 @@ $glorified-splash-min-height: $mobile;
 
         img {
             border: 5px solid $background-grey;
+            border-radius: $rounding--small;
             box-sizing: border-box;
             max-width: 100%;
         }
@@ -84,6 +85,7 @@ $glorified-splash-min-height: $mobile;
             font-weight: 400;
             margin: 0;
             margin-bottom: 7px;
+            border-radius: $rounding--small;
         }
 
         .maerke-splash__age {
@@ -91,6 +93,7 @@ $glorified-splash-min-height: $mobile;
             padding: 6px 20px;
             margin-bottom: 7px;
             font-size: 1.2em;
+            border-radius: $rounding--small;
         }
 
         .maerke-splash__actions {
@@ -112,6 +115,7 @@ $glorified-splash-min-height: $mobile;
                 font-weight: 600;
                 font-size: 1.07em;
                 transition: background 0.3s;
+                border-radius: $rounding--small;
             }
 
             .maerke-splash__action--buy {
@@ -130,7 +134,7 @@ $glorified-splash-min-height: $mobile;
                 }
 
                 &:hover {
-                    background: lighten($blue, 4%);
+                    background: $blue--light
                 }
             }
 
@@ -151,18 +155,16 @@ $glorified-splash-min-height: $mobile;
             .tag {
                 margin-right: 7px;
                 background: $background-grey;
-                border-bottom: 4px solid $orange;
-                border-top: 4px solid $background-grey;
+                border: 1px solid $dark;
+                border-radius: $rounding--large;
                 text-shadow: none;
                 font-weight: normal;
                 color: black;
-                border-radius: 0 0 6px 6px;
-                padding: 1px 8px;
                 transition: transform 0.3s, border-color 0.7s ease-out;
 
                 &:hover {
                     transform: translateY(-2px);
-                    border-bottom-color: $blue;
+                    border-color: $blue;
                 }
             }
         }

@@ -5,14 +5,25 @@ $tiny: 460px;
 
 // Colors:
 $orange: rgb(251, 171, 68);
+$orange--light: lighten($orange, 4%);
 $darkorange: darken($orange, 15%);
+
 $blue: rgb(8, 159, 218);
+$blue--light: lighten($blue, 4%);
 $darkblue: darken($blue, 15%);
 $shadowonblue: rgb(11, 93, 125);
+
 $green: #45BF55;
+$green--light: lighten($green, 4%);
+
 $dark: rgb(50, 50, 60);
 $font-color: #212529;
 $background-grey: rgb(245, 245, 245);
+$grey--light: rgba(160,160,160,0.2);
+
+// Other styles
+$rounding--small: 4px;
+$rounding--large: 24px;
 
 // Fonts:
 $native-font:

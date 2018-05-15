@@ -106,20 +106,20 @@ layout: default
             <h3>Faktureringsadresse</h3>
             <label for="invoicing-name">
                 Fuldt navn:
-                <input type="text" name="invoicing-name" id="invoicing-name">
+                <input type="text" name="invoicing-name" id="invoicing-name" autocomplete="name">
             </label>
             <label for="invoicing-address">
                 Vej og husnummer:
-                <input type="text" name="invoicing-address" id="invoicing-address">
+                <input type="text" name="invoicing-address" id="invoicing-address" autocomplete="shipping street-address">
             </label>
             <div class="city-info-container">
               <label for="invoicing-postal-code" class="postal-code">
                   Postnr.:
-                  <input type="text" name="invoicing-postal-code" id="invoicing-postal-code">
+                  <input type="text" name="invoicing-postal-code" id="invoicing-postal-code" autocomplete="shipping postal-code">
               </label>
               <label for="invoicing-city" class="city">
                   By:
-                  <input type="text" name="invoicing-city" id="invoicing-city">
+                  <input type="text" name="invoicing-city" id="invoicing-city" autocomplete="shipping locality">
               </label>
             </div>
             <label for="delivery-address-differs" class="checkbox-label">
@@ -163,11 +163,11 @@ layout: default
             <h3>Kontaktinformation</h3>
             <label for="email">
                 Email:
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" autocomplete="email">
             </label>
             <label for="phone-number">
                 Telefonnummer:
-                <input type="tel" name="phone-number" id="phone-number">
+                <input type="tel" name="phone-number" id="phone-number" autocomplete="tel">
             </label>
           </div>
           <p>
