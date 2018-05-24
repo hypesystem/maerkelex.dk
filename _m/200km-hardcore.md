@@ -32,6 +32,9 @@ Kun de sejeste spejdere kan gå 200km på kun 80 timer.
 
 Der er ingen krav om at man skal sove en bestemt mængde. Det er op til spejderne selv at styrer hvor meget de vil, eller ikke vil, sove.
 
+> Vi gik til vores taljer blødte...
+*Dines Nøddegaard Erschens om hans 200 km tur med KleptoKlan.*
+
 
 
 Hvis du ikke kan nå det på 80 timer, kan du stadig prøve at tage den [normale version af 200 km mærket](/m/200km).

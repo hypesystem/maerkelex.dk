@@ -1,0 +1,24 @@
+blockquote {
+  margin: 40px 20px;
+
+  p {
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: .02em;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: $darkblue;
+    display: block;
+    margin-bottom: 1.2rem;
+    padding: 0;
+  }
+
+  em {
+    display: block;
+    font-size: 14px;
+    margin-top: 15px;
+    color: $font-color;
+    font-style: normal;
+  }
+}
