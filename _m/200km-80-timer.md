@@ -30,11 +30,9 @@ Kun de sejeste spejdere kan gå 200km på kun 80 timer.
 ### Krav for at få mærket:
 - Du skal gå 200 km på 80 timer eller under.
 
-Der er ingen krav om at man skal sove en bestemt mængde. Det er op til spejderne selv at styrer hvor meget de vil, eller ikke vil, sove.
+Der er ingen krav om at man skal sove en bestemt mængde. Det er op til spejderne selv at styre hvor meget de vil, eller ikke vil, sove.
 
 > Vi gik til vores taljer blødte...
 *Dines Nøddegaard Erschens om hans 200 km tur med KleptoKlan.*
-
-
 
 Hvis du ikke kan nå det på 80 timer, kan du stadig prøve at tage den [normale version af 200 km mærket](/m/200km).
