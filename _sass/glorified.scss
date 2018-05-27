@@ -46,7 +46,7 @@ $glorified-splash-min-height: $mobile;
             align-items: flex-start;
             justify-content: flex-end;
             height: auto;
-            min-height: calc(100vh - 40px);
+            min-height: calc(100vh - 60px);
         }
 
         @media (max-width: $tiny) {
@@ -184,6 +184,7 @@ $glorified-splash-min-height: $mobile;
         margin-left: auto;
         margin-right: auto;
         max-width: 500px * 2 + 40px;
+        width: 100%;
 
         @media (max-width: $small) {
             border-top: 20px solid $blue;
@@ -221,6 +222,40 @@ $glorified-splash-min-height: $mobile;
             font-size: 0.75em;
             opacity: 0.5;
         }
+    }
+    
+    hr {
+      margin: 35px 0;
+    }
+
+    .glorified-aside {
+      width: 400px;
+      padding: 15px;
+      margin-left: 25px;
+      margin-bottom: 25px;
+      box-sizing: border-box;
+      float: right;
+      background: white;
+
+      @media (max-width: $mobile) {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+        float: none;
+      }
+
+      h3 {
+        text-align: center;
+        margin-top: 0;
+      }
+
+      ul {
+        padding-left: 25px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
     }
 
     p {
