@@ -2,8 +2,7 @@
 name: Engle Spejd
 tags:
 - uofficielt
-coverimage: cover-hike.jpg
-image: barfodsvandrer.jpg
+image: engle-spejd.jpg
 buylink: https://www.facebook.com/Engle-spejd-2037202553271872
 date_added: 2017-07-05
 ---
