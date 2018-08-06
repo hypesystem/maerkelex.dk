@@ -4,8 +4,8 @@ tags:
 - uofficielt
 - forløb
 image: parloeb.jpg
-buylink: http://missing.url
-date_added: 2018-08-01
+buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2155948597970511/
+date_added: 2018-08-06
 ---
 5 timer. 
 
