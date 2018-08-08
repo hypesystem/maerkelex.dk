@@ -108,14 +108,14 @@ title: Prisberegner
                         </tr>
                         <tr class="row-emphasis">
                             <td>Din profit</td>
-                            <td class="calc2-profit-field">7,2</td>
+                            <td class="calc2-profit-field">6,88</td>
                         </tr>
                         <tr>
                             <td>
                                 Mærkelex' gebyr*
-                                <span class="explain">(5% af pris før moms)</span>
+                                <span class="explain">(7% af pris før moms)</span>
                             </td>
-                            <td class="calc2-maerkelex-field">0,8</td>
+                            <td class="calc2-maerkelex-field">1,12</td>
                         </tr>
                         <tr>
                             <td>Pris før moms</td>
@@ -132,7 +132,7 @@ title: Prisberegner
                 Lav aftale
             </a>
             <div class="note">
-                * Udover gebyret på 5% tager Mærkelex 3 kr pr. transaktion.<br>
+                * Udover gebyret på 7% tager Mærkelex 3 kr pr. transaktion.<br>
             </div>
             <div class="note">
                 Med denne model hjælper Mærkelex dig ved at tage imod kortbetaling for dine mærker.
@@ -246,7 +246,7 @@ title: Prisberegner
             calculation1ProfitField.innerText = prettyNumber((priceBeforeVat - productionPrice) * numberOfBadges);
 
             // calculation 2
-            var calculation2MaerkelexFee = priceBeforeVat * 0.05;
+            var calculation2MaerkelexFee = priceBeforeVat * 0.07;
             calculation2MaerkelexFeeField.innerText = prettyNumber((calculation2MaerkelexFee) * numberOfBadges);
             calculation2ProfitField.innerText = prettyNumber((priceBeforeVat - calculation2MaerkelexFee - productionPrice) * numberOfBadges);
 
