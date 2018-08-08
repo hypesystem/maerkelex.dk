@@ -5,7 +5,7 @@ tags:
 - forløb
 image: mini-hejk-5km.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2167945460104158/
-date_added: 2018-08-06
+date_added: 2018-08-08
 ---
 Mærket henvender sig til de spejdere der ikke har den store erfaring med at vandre med rygsæk og skal øve sig i det.
 

@@ -5,7 +5,7 @@ tags:
 - forløb
 image: 5-roulader.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2188174258081278/
-date_added: 2018-08-06
+date_added: 2018-08-08
 ---
 Der findes et bacon-mærke til hovedretten og et regnbueis-mærke til dessert. Hvad så hvis man i mellemtiden bliver lækkersulten efter lidt kage … her findes nu Roulade-mærket.
 

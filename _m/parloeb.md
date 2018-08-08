@@ -5,7 +5,7 @@ tags:
 - forløb
 image: parloeb.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2155948597970511/
-date_added: 2018-08-06
+date_added: 2018-08-08
 ---
 5 timer. 
 
