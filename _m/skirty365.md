@@ -7,7 +7,6 @@ tags:
 age: 6+
 image: skirty365.jpg
 price: 35
-preorder: true
 date_added: 2018-08-07
 ---
 Skirty365 - nederdel, også til daglig!
