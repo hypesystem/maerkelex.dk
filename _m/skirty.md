@@ -7,7 +7,6 @@ tags:
 age: 6+
 image: skirty.jpg
 price: 25
-preorder: true
 ---
 Skirty - Nederdelemærket er pigespejdernes modtykke til shorts- og vikingemærket.
 
