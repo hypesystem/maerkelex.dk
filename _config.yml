@@ -29,4 +29,4 @@ defaults:
 future: true
 
 paymentsSiteUrl: "https://salg.mærkelex.dk"
-defaultShippingPrice: 20
+defaultShippingPrice: 25
