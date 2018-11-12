@@ -3,7 +3,7 @@ name: Madmor/madfar
 tags:
 - uofficielt
 age: 18+
-image: madmor.jpg
+image: madmor-madfar.jpg
 buylink: http://shorty.tac-case.dk/index.php/madmor-madfar-pandekagevender
 date_added: 2018-11-08
 ---
