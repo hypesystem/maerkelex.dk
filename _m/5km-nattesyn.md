@@ -2,7 +2,7 @@
 name: 5km Nattesyn
 tags:
 - uofficielt
-- duelighed
+- forløb
 image: 5km-nattesyn.jpg
 age: 6+
 buylink: https://www.facebook.com/photo.php?fbid=10216908245329534
