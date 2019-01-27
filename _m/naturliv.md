@@ -7,7 +7,7 @@ age: 6+
 coverimage: cover-nature.jpg
 image: naturliv.jpg
 buylink: https://www.rasmus-rask.dk/nyt-maerke
-date_added: 2018-12-31
+date_added: 2019-01-27
 ---
 Naturliv mærket handler om, at man skal gøre noget godt for livet i naturen og samtidig lære og forstå hvorfor, vi gør de ting/hvorfor det er godt for livet i naturen.
 

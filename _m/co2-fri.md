@@ -7,6 +7,7 @@ age: 6-16
 coverimage: cover-bike.jpg
 image: co2-fri.jpg
 buylink: https://www.facebook.com/CO2-fri-224198818516658/
+date_added: 2019-01-27
 ---
 Kan du klare udfordringen? 
 
