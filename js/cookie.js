@@ -40,6 +40,9 @@ function showCookieNotice() {
         loadFathom();
         setUserHasAcceptedCookies();
         cookieNotice.className += " hidden";
+        setTimeout(function() {
+            cookieNotice.parentElement.removeChild(cookieNotice);
+        }, 3000);
     });
 }
 
@@ -87,6 +90,10 @@ function setUserHasVisitedBefore() {
 
 function setUserHasAcceptedCookies() {
     document.cookie = "maerkelexCookieNoticeAccepted=1;expires=" + new Date(Date.now() + (1000 * 60 * 60 * 24 * 365)).toUTCString() + ";path=/";
+}
+
+function removeUserCookieAcceptCookie() {
+    document.cookie = 'maerkelexCookieNoticeAccepted=1;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT';
 }
 
 function hideSponsor() {
