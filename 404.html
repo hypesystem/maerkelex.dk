@@ -1,44 +1,46 @@
 ---
-layout: default
+layout: default-no-container
 title: Side findes ikke
 ---
-<h1>Denne her side findes ikke...</h1>
-<p>
-    Du er endt på en side, der ikke findes.
-    Hvis du mener at siden <em>burde</em> findes, må du meget gerne sende os en mail på <a href="mailto:kontakt@maerkelex.dk">kontakt@mærkelex.dk</a> med stien <strong class="page-link-container"></strong>.
-</p>
-<script>
-    document.querySelector(".page-link-container").innerHTML = location.pathname;
-</script>
-<h2 class="inspiration-title" style="display: none;">Du kunne også læse om...</h2>
-<div class="inspiration-container"></div>
-<script>
-    var getInspiration = debounced(function() {
-        if(!searchData) {
-            return getInspiration();
+<div class="container">
+    <h1>Denne her side findes ikke...</h1>
+    <p>
+        Du er endt på en side, der ikke findes.
+        Hvis du mener at siden <em>burde</em> findes, må du meget gerne sende os en mail på <a href="mailto:kontakt@maerkelex.dk">kontakt@mærkelex.dk</a> med stien <strong class="page-link-container"></strong>.
+    </p>
+    <script>
+        document.querySelector(".page-link-container").innerHTML = location.pathname;
+    </script>
+    <h2 class="inspiration-title" style="display: none;">Du kunne også læse om...</h2>
+    <div class="inspiration-container"></div>
+    <script>
+        var getInspiration = debounced(function() {
+            if(!searchData) {
+                return getInspiration();
+            }
+            document.querySelector(".inspiration-container").innerHTML = renderResults(shuffle(searchData).slice(0,3));
+            document.querySelector(".inspiration-title").style = "";
+        });
+        getInspiration();
+
+        function shuffle(array) {
+            array = array.slice();
+            for(var i = array.length - 1; i > 0; i--) {
+                var randomIndex = Math.floor(Math.random() * (i + 1));
+                var randomElement = array[randomIndex];
+                array[randomIndex] = array[i];
+                array[i] = randomElement;
+            }
+            return array;
         }
-        document.querySelector(".inspiration-container").innerHTML = renderResults(shuffle(searchData).slice(0,3));
-        document.querySelector(".inspiration-title").style = "";
-    });
-    getInspiration();
-    
-    function shuffle(array) {
-        array = array.slice();
-        for(var i = array.length - 1; i > 0; i--) {
-            var randomIndex = Math.floor(Math.random() * (i + 1));
-            var randomElement = array[randomIndex];
-            array[randomIndex] = array[i];
-            array[i] = randomElement;
-        }
-        return array;
-    }
-</script>
-<script>
-    var notifyGoogleAnalyticsOf404 = debounced(function() {
-        if(!ga) {
-            return notifyGoogleAnalyticsOf404();
-        }
-        ga("send", "event", "NotFound", location.pathname);
-    });
-    notifyGoogleAnalyticsOf404();
-</script>
+    </script>
+    <script>
+        var notifyGoogleAnalyticsOf404 = debounced(function() {
+            if(!ga) {
+                return notifyGoogleAnalyticsOf404();
+            }
+            ga("send", "event", "NotFound", location.pathname);
+        });
+        notifyGoogleAnalyticsOf404();
+    </script>
+</div>
