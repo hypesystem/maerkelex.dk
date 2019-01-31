@@ -1,29 +1,48 @@
 (function showCookieNoticeIfFirstVisit() {
     if(!userHasVisitedBefore()) {
-        showCookieNotice();
         showWelcomeMessage();
         setUserHasVisitedBefore();
+    }
+
+    if(!userHasAcceptedCookies()) {
+        showCookieNotice();
+    }
+    else {
+        loadFathom();
     }
 })();
 
 function userHasVisitedBefore() {
+    return aCookieMatches(/^maerkelexUserVisitedBefore=/);
+}
+
+function aCookieMatches(regex) {
     var cookies = document.cookie.split(";");
     if(cookies.length < 1) {
         return false;
     }
     cookies = cookies.filter(function(cookie) {
-        return cookie.trim().match(/^maerkelexCookieNoticeShown=/);
+        return cookie.trim().match(regex);
     });
     var cookie = cookies[0];
     return !!cookie;
 }
 
+function userHasAcceptedCookies() {
+    return aCookieMatches(/^maerkelexCookieNoticeAccepted=/);
+}
+
 function showCookieNotice() {
-    var cookieNotice = elementFromHtml('<div class="cookieNotice">Vi bruger cookies for at forbedre bruger&#173;oplevelsen. Ved at bruge siden giver du dit samtykke til at vi samler anonym information om hvilke sider der besøges mest på siden.</div>');
+    var cookieNotice = elementFromHtml('<div class="cookieNotice">Hvis du giver os lov, bruger vi en cookie til at holde styr på hvor mange unikke besøgende vi får. Vi går meget op i brugeres privatliv, og sender ingen data videre til trejdeparter. <a href="/privatliv/">Læs mere.</a> <button>Acceptér</button></div>');
 
     document.body.appendChild(cookieNotice);
-    cookieNotice.addEventListener("click", function(event) {
-        this.className += " hidden";
+    cookieNotice.querySelector("button").addEventListener("click", function(event) {
+        loadFathom();
+        setUserHasAcceptedCookies();
+        cookieNotice.className += " hidden";
+        setTimeout(function() {
+            cookieNotice.parentElement.removeChild(cookieNotice);
+        }, 3000);
     });
 }
 
@@ -31,6 +50,20 @@ function elementFromHtml(html) {
     var utilityDiv = document.createElement("div");
     utilityDiv.innerHTML = html;
     return utilityDiv.firstChild;
+}
+
+function loadFathom() {
+    (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+    })(document, window, '//fathom.k8s.deranged.dk/tracker.js', 'fathom');
+    fathom('set', 'siteId', 'UHLDU');
+    fathom('trackPageview');
 }
 
 function showWelcomeMessage() {
@@ -52,7 +85,15 @@ function showWelcomeMessage() {
 }
 
 function setUserHasVisitedBefore() {
-    document.cookie = "maerkelexCookieNoticeShown=1;expires=" + new Date(Date.now() + (1000 * 60 * 60 * 24 * 365)).toUTCString() + ";path=/";
+    document.cookie = "maerkelexUserVisitedBefore=1;expires=" + new Date(Date.now() + (1000 * 60 * 60 * 24 * 365)).toUTCString() + ";path=/";
+}
+
+function setUserHasAcceptedCookies() {
+    document.cookie = "maerkelexCookieNoticeAccepted=1;expires=" + new Date(Date.now() + (1000 * 60 * 60 * 24 * 365)).toUTCString() + ";path=/";
+}
+
+function removeUserCookieAcceptCookie() {
+    document.cookie = 'maerkelexCookieNoticeAccepted=1;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT';
 }
 
 function hideSponsor() {

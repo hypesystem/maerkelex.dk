@@ -4,21 +4,27 @@
     right: 0;
     width: 100%;
     max-width: 350px;
-    text-align: center;
+    text-align: left;
     background: $dark;
     color: white;
     font-size: 0.7em;
     padding: 10px;
-    cursor: pointer;
     transition: bottom 1.5s;
     z-index: 3000;
     box-sizing: border-box;
-}
-@media(max-width: 930px){
-  .cookieNotice {
-    max-width: 100%;
-  }
-}
-.cookieNotice.hidden {
-    bottom: -400px;
+
+    &.hidden {
+        bottom: -400px;
+    }
+
+    @media(max-width: 930px){
+        max-width: 100%;
+    }
+
+    button {
+        padding: 4px 8px;
+        margin: 6px 0 2px;
+        border-radius: 2px;
+        cursor: pointer;
+    }
 }
