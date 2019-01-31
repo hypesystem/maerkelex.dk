@@ -3,8 +3,12 @@
         showWelcomeMessage();
         setUserHasVisitedBefore();
     }
+
     if(!userHasAcceptedCookies()) {
         showCookieNotice();
+    }
+    else {
+        loadFathom();
     }
 })();
 
@@ -33,6 +37,7 @@ function showCookieNotice() {
 
     document.body.appendChild(cookieNotice);
     cookieNotice.querySelector("button").addEventListener("click", function(event) {
+        loadFathom();
         setUserHasAcceptedCookies();
         cookieNotice.className += " hidden";
     });
@@ -42,6 +47,20 @@ function elementFromHtml(html) {
     var utilityDiv = document.createElement("div");
     utilityDiv.innerHTML = html;
     return utilityDiv.firstChild;
+}
+
+function loadFathom() {
+    (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+    })(document, window, '//fathom.k8s.deranged.dk/tracker.js', 'fathom');
+    fathom('set', 'siteId', 'UHLDU');
+    fathom('trackPageview');
 }
 
 function showWelcomeMessage() {
