@@ -99,17 +99,6 @@
                                     <a class="tag" href="{{ site.baseurl }}/?search=tag:{{ tag }}" data-tag-link>{{ tag }}</a>
                                 {% endfor %}
                             </div>
-                            <script>
-                                var tagLinks = document.querySelectorAll("[data-tag-link]");
-                                for(var i = 0; i < tagLinks.length; i++) {
-                                    setUpTagLinkListener(tagLinks[i]);
-                                }
-                                function setUpTagLinkListener(tagLink) {
-                                    tagLink.addEventListener("click", function(e) {
-                                    ga("send", "event", "Badge", "taglink_click", tagLink.innerHTML);
-                                    });
-                                }
-                            </script>
                         </div>
                         <script>
                             (function() {
@@ -269,11 +258,6 @@
                                 </form>
                             </div>
                             {% endif %}
-                            <script>
-                            document.querySelector(".buylink").addEventListener("click", function(e) {
-                                ga("send", "event", "Badge", "buylink_click", "{{ page.url }}");
-                            });
-                            </script>
                         </div>
                         </div>
                     </div>
@@ -283,15 +267,6 @@
         {% include footer.html %}
         <script src="{{ site.baseurl }}/js/raw-search.js" defer></script>
         <script src="{{ site.baseurl }}/js/header-scroll.js" defer></script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-57878677-2', 'auto');
-            ga('send', 'pageview');
-        </script>
         <script src="{{ site.baseurl }}/js/cookie.js" defer></script>
     </body>
 </html>
