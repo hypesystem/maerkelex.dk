@@ -61,7 +61,7 @@ function loadFathom() {
         m=f.getElementsByTagName('script')[0];
         o.async=1; o.src=t; o.id='fathom-script';
         m.parentNode.insertBefore(o,m)
-    })(document, window, '//fathom.k8s.deranged.dk/tracker.js', 'fathom');
+    })(document, window, '//analytics.maerkelex.dk/tracker.js', 'fathom');
     fathom('set', 'siteId', 'UHLDU');
     fathom('trackPageview');
 }
