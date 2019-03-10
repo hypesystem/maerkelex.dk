@@ -8,7 +8,7 @@ image: rollespejd-soelv.jpg
 price: 20
 date_added: 2019-03-09
 ---
-RolleSpejd mærket er til de spejdere/grupper, som har lidt ekstra fantasi-ramme på aktiviteterne - hvor det ligefrem bliver til rollespil.
+RolleSpejd-mærket er til de spejdere/grupper, som har lidt ekstra fantasi-ramme på aktiviteterne - hvor det ligefrem bliver til rollespil.
  
 Samtidig ønsker vi med mærket at vise spejderledere, at spejderne har utroligt meget til fælles med rollespillere.
 RolleSpejd mærket er opdelt i 3 niveauer: Bronze, Sølv og Guld.
@@ -26,15 +26,15 @@ RolleSpejd mærket er opdelt i 3 niveauer: Bronze, Sølv og Guld.
 
 ## Sådan tager du mærkerne:
 
-**BRONZE:**
+**[BRONZE](/m/rollespejd-bronze/):**
 - Deltag i et live-rollespil - selvfølgelig med dit tørklæde på.
 - Færdiggør mindst 1 ting fra Aktivitetslisten.
 
-**SØLV:**
+**SØLV (dette mærke):**
 - Overnat til et live-rollespil - selvfølgelig med dit tørklæde på.
 - Færdiggør mindst 3 ting fra Aktivitetslisten.
 
-**GULD:**
+**[GULD](/m/rollespejd-guld/):**
 - Arranger dit eget live-rollespil (for minimum 42 deltagere) - selvfølgelig med dit tørklæde på.
 - Færdiggør mindst 7 ting fra Aktivitetslisten.
 
