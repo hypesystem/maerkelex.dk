@@ -6,7 +6,6 @@ tags:
 - rollespil
 image: rollespejd-soelv.jpg
 price: 20
-preorder: true
 date_added: 2019-03-09
 ---
 RolleSpejd mærket er til de spejdere/grupper, som har lidt ekstra fantasi-ramme på aktiviteterne - hvor det ligefrem bliver til rollespil.
