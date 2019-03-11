@@ -5,7 +5,7 @@ tags:
 - forløb
 age: 6+
 image: 5km-uden-oejne.jpg
-buylink: https://www.facebook.com/photo.php?fbid=10216908246369560
+buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2261430557422314/
 date_added: 2018-11-12
 ---
 To personer skal gå sammen, mens de holder fat i et tørklæde med en hånd hver.
