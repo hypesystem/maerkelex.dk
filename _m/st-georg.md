@@ -1,5 +1,5 @@
 ---
-name: St. Georgs dag
+name: St. Georgsdag
 tags:
 - uofficielt
 - forløb
