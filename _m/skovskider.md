@@ -7,7 +7,7 @@ age: 12+
 coverimage: cover-nature.jpg
 image: skovskider.jpg
 buylink: https://www.facebook.com/skovskidermaerket
-preorder: true
+
 price: 25
 ---
 Skovskidermærket er et spejdermærke til voksne der benytter naturen som toilet når de dyrker friluftsliv. Det handler om at "skide i skoven med stil".
