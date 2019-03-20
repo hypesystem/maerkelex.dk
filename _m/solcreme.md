@@ -1,11 +1,11 @@
 ---
-name: 5km påske&shy;tur
+name: Solcreme
 tags:
 - uofficielt
 - duelighed
 age: 6+
 image: solcreme.jpg
-buylink: noref
+buylink: https://charlottenlundspejderne.dk/solcrem-maerket
 date_added: 2019-03-18
 ---
 Mærket er udviklet af Gekko, som er minispejder i Charlottenlund gruppe i Det Danske Spejderkorps.
