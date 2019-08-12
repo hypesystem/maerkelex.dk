@@ -1,6 +1,7 @@
 ---
 name: Verdensmål
 tags:
+- tværkorpslig
 - DDS
 - KFUM-Spejderne
 - De grønne pigespejdere
