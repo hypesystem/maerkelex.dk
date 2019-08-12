@@ -1,0 +1,76 @@
+---
+layout: default
+permalink: privatliv/
+title: Privatlivs- og databehandlingspolitik
+---
+<article class="col content-col">
+    <h1>Privatlivs- og databehandlingspolitik</h1>
+    <p>
+        Vi gemmer kun den information om brugere, som vi har brug for at opbevare.
+        Vi tjener penge på at sælge mærker, det er primært derigennem vi opbevarer data.
+    </p>
+    <h2>Cookies</h2>
+    <p>
+        For at holde styr på hvor mange unikke besøgende vi har på siden, bruger vi en enkelt cookie &ndash; men den bliver først sat når brugere accepterer vores brug af cookies.
+        (Derudover bruger vi cookies til at holde styr på om en person er førstegangsbesøgende, og om de har accepteret vores brug af cookies.)
+    </p>
+    <p>
+        Vi bruger <a href="https://usefathom.com/" target="_blank" rel="noopener">Fathom Analytics</a> til at samle brugerinformation.
+        Fathom er lavet til at være GDPR-compliant, og man kan køre sin egen version.
+        Det betyder at data om vores brugere ikke ryger ud til tredjeparter, men kun kan tilgås af os.
+    </p>
+    <p>
+        Vi bruger kun dataen til at måle antal besøgende, samt hvilke sider de navigerer rundt på.
+    </p>
+    <h2>Databehandling</h2>
+    <p>
+        Når man køber mærker direkte fra os (mærkerne kan ses <a href="/shop/">i vores shop</a>) opbevarer vi information i henhold til regnskabsloven.
+        Det er et lovkrav at vi holder styr på hvem vores kunder er, inklusiv navn, adresse og kontaktinformation.
+        Det er den eneste information vi beder om, og den eneste information vi opbevarer.
+    </p>
+    <p>
+        Vi sammenholder ikke data fra kunder med nogen andre datakilder, så vores eneste formål med at opbevare dataen er at overholde regnskabsloven, og kunne sende erstatningsordrer hvis mærker ikke kommer frem.
+    </p>
+    <h2>Spørgsmål og kommentarer?</h2>
+    <p>
+        Hvis du har spørgsmål eller kommentarer til vores databehandlings- og privatlivspraksis, må du meget gerne tage fat i os på email <a href="mailto:kontakt@maerkelex.dk">kontakt@maerkelex.dk</a>.
+        Vi er altid meget åbne for dialogen.
+    </p>
+</article>
+<aside class="col aside-col">
+    <h1>Cookie-tilkendegivelse</h1>
+    <p>
+        Du har i øjeblikket <strong id="accepted-cookies-status">ikke accepteret cookies på siden</strong>.
+    </p>
+    <p>
+        Du kan til enhver tid <a href="#" id="remove-cookie-assent">fjerne din accept af cookies</a>.
+    </p>
+</aside>
+<script>
+    window.addEventListener("load", function() {
+        var acceptedCookiesStatus = document.getElementById("accepted-cookies-status");
+
+        function updateAcceptedCookiesStatus() {
+            if(userHasAcceptedCookies()) {
+                acceptedCookiesStatus.innerText = "accepteret cookies på siden";
+            }
+            else {
+                acceptedCookiesStatus.innerText = "ikke accepteret cookies på siden";
+            }
+        }
+        
+        updateAcceptedCookiesStatus();
+
+        document.getElementById("remove-cookie-assent").addEventListener("click", function(e) {
+            e.preventDefault();
+
+            removeUserCookieAcceptCookie();
+            updateAcceptedCookiesStatus();
+            showCookieNotice();
+
+            return false;
+        });
+
+        setInterval(updateAcceptedCookiesStatus, 1000);
+    });
+</script>

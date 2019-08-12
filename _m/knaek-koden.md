@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - forløb
 image: knaek-koden.jpg
-buylink: https://skarridsoe.gruppe.dds.dk/node/575
+buylink: https://www.jyderupspejderne.dk/knaekkoden-maerket
 date_added: 2018-04-06
 age: 10+
 ---

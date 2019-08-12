@@ -5,9 +5,6 @@ var titleTag = document.head.querySelector("title");
 onSearchListeners.push(function(value, recovery) {
     if(!recovery) {
         addSearchHistoryFrame(value);
-        if(ga) {
-            ga('send', 'pageview', "/?search=" + value);
-        }
     }
 });
 
