@@ -7,7 +7,7 @@ tags:
 - DDS-færdighedesmærke
 - førstehjælp
 image: dds-troester.jpg
-age: 4-6
+age: 3-6
 buylink: https://www.spejdersport.dk/faerdighedsmaerke-troester.aspx
 infolink: https://dds.dk/index.php/maerke/troster
 ---

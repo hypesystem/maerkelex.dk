@@ -4,7 +4,6 @@ tags:
 - DDS
 - DDS-færdighedsmærke
 - hejk
-age: 6+
 image: vandremaerke.jpg
 buylink: https://www.spejdersport.dk/faerdighedsmaerke-vandremaerker.aspx
 infolink: https://dds.dk/maerke/vandremaerker-5-100-km
