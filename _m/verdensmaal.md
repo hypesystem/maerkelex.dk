@@ -5,6 +5,7 @@ tags:
 - DDS
 - KFUM-Spejderne
 - De grønne pigespejdere
+- forløb
 image: verdensmaal.jpg
 buylink: https://www.spejdersport.dk/verdensmaal.aspx
 infolink: https://spejderne.dk/wp-content/uploads/2018/04/byg-en-bedre-verden-onlinemagasin-opslag.pdf
