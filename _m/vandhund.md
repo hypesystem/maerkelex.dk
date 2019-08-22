@@ -7,7 +7,6 @@ tags:
 coverimage: cover-wave.jpg
 image: vandhund.jpg
 buylink: https://www.facebook.com/dgpsoendersoe1/
-highlight: new
 date_added: 2017-11-18
 ---
 ### Regler:
