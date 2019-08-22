@@ -4,7 +4,6 @@ tags:
 - uofficielt
 image: outsider.jpg
 coverimage: cover-bivuak.jpg
-highlight: new
 buylink: https://www.facebook.com/OutsiderMaerket
 date_added: 2018-02-23
 ---
