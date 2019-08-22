@@ -4,7 +4,6 @@ tags:
 - uofficielt
 image: velvaere.jpg
 buylink: https://www.facebook.com/velvaeremaerke
-highlight: new
 date_added: 2018-01-29
 ---
 Hvad handler spejder egentlig om? Hvad skal man lave til et spejdermøde? Kan man få nok
