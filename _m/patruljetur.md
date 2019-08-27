@@ -10,7 +10,7 @@ date_added: 2019-08-27
 Mærket tages ved at man tager på tur uden leder i sin patrulje.
 
 ### Krav til mærket:
-- Patruljen skal selv planlægge turen(min 24 timer).
+- Patruljen skal selv planlægge turen (min 24 timer).
 - Patruljen skal selv lave program for turen.
 - Patruljen skal selv finde ud af hvordan de kommer til/fra og rundt på turen.
 - Patruljen skal selv finde ud af hvordan de skal sove.
