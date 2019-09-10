@@ -7,7 +7,7 @@ tags:
 age: 6+
 image: spejd365.jpg
 highlight: popular
-buylink: https://spejd365.squarespace.com/shop/spejd365
+buylink: https://www.spejd365.dk/
 ---
 For at tage Spejd365 skal spejderen gå med spejdertørklæde i et år.
 
