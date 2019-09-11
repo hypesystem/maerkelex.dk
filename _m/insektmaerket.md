@@ -18,7 +18,7 @@ Indhente information om de valgte insekter. Hvor kommer de fra? hvad spiser de?
 Hvorfor er insekter gode at spise?
 
 **Andet møde:**
-Tilberede de udvalgte insekter på forskellige måder – bålet er altid et hit fx ristet
+Tilberede de udvalgte insekter på forskellige måder – bålet er altid et hit f.eks. ristede
 fårekyllinger med dip.
 
 ## Opskrifter:
@@ -26,5 +26,5 @@ Google er en rigtig god ven – der kan findes mange opskrifter som er simple og
 opfordre til at man ikke ”gemmer” insekter for meget væk, da formålet er at få oplevelse at spise
 insekter. Så en kødsauce med hakket insekter er ikke anvendeligt til dette mærke, da spejderne
 ikke vil få muligheden for at smage insektet rigtigt.
-Insekterne kan købes forskellige steder – igen brug google, da det hurtigt kan ændre sig hvor man
+Insekterne kan købes forskellige steder – igen brug Google, da det hurtigt kan ændre sig hvor man
 kan købe dem henne.
