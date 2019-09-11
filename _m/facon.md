@@ -1,5 +1,5 @@
 ---
-name: Facon
+name: Faconmærket
 tags:
 - uofficielt
 image: facon.jpg
