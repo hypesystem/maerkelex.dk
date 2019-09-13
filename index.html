@@ -71,6 +71,7 @@ title: Søg efter spejdermærker
             e.preventDefault();
             searchBar.value = "";
             search();
+            setTimeout(() => window.scrollTo(0, 0), 500);
             return false;
         });
     </script>
