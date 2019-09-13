@@ -34,33 +34,36 @@ title: Søg efter spejdermærker
         <a class="btn btn--new-badges" href="/nyeste-maerker/">Se flere nye mærker</a>
         <a class="btn btn--shop" href="/shop/">Køb mærker</a>
       </div>
-      
-      <!-- All badges -->
-      {% assign sorted_m = site.m | sort: "name" %}
-      {% for m in sorted_m limit:24 %}
-        {% assign m_url = m.url %}
-        {% assign m_first_tag = m.tags.first %}
-        {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
-        {% assign m_image = m.image %}
-        {% assign m_name = m.name %}
-        {% assign m_purchasable = "" %}
-        {% assign m_highlight_class = m.highlight %}
-        {% if m.price != null %}
-          {% assign m_purchasable = "purchasable" %}
-          {% if m.preorder %}
-            {% assign m_highlight_text = "<strong>Forudbestil</strong>" %}
-          {% else %}
-            {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
-          {% endif %}
-        {% elsif m_highlight_class == "popular" %}
-          {% assign m_highlight_text = "Mest populære!" %}
-        {% elsif m_highlight_class == "new" %}
-          {% assign m_highlight_text = "Nyhed!" %}
-        {% else %}
-          {% assign m_highlight_text = false %}
-        {% endif %}
-        {% include maerkebox.html %}
-      {% endfor %}
+
+    <!-- Few badges -->
+    <style type="text/css">
+      .badge-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    </style>
+    <div class="badge-container"></div>
+    <script>
+      var loadBadges = debounced(function() {
+        if(!searchData) {
+            return loadBadges();
+        }
+        document.querySelector(".badge-container").innerHTML = renderResults(shuffle(searchData).slice(0,9));
+      });
+      loadBadges();
+
+      function shuffle(array) {
+          array = array.slice();
+          for(var i = array.length - 1; i > 0; i--) {
+            var randomIndex = Math.floor(Math.random() * (i + 1));
+            var randomElement = array[randomIndex];
+            array[randomIndex] = array[i];
+            array[i] = randomElement;
+          }
+          return array;
+      }
+    </script>
 
     <a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
     <script>
