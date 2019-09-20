@@ -6,7 +6,7 @@ tags:
 - vand
 coverimage: cover-wave.jpg
 image: plasket-x-12.jpg
-buylink: https://www.facebook.com/dgpsoendersoe1/
+buylink: https://www.facebook.com/dgpsoendersoegruppe/
 date_added: 2017-11-18
 ---
 ### Regler:
