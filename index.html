@@ -49,7 +49,7 @@ title: Søg efter spejdermærker
         if(!searchData) {
             return loadBadges();
         }
-        document.querySelector(".badge-container").innerHTML = renderResults(shuffle(searchData).slice(0,9));
+        document.querySelector(".badge-container").innerHTML = renderResults(shuffle(searchData).slice(0,12));
       });
       loadBadges();
 
@@ -65,7 +65,7 @@ title: Søg efter spejdermærker
       }
     </script>
 
-    <a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
+    <a class="btn see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
     <script>
         document.querySelector(".see-more-button").addEventListener("click", function(e) {
             e.preventDefault();

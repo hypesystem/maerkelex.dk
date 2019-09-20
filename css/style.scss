@@ -69,21 +69,9 @@ a {
 }
 
 .see-more-button {
-    display: block;
-    text-align: center;
-    background: $blue;
-    color: white;
-    text-decoration: none;
-    margin-top: 30px;
+    margin: 0 5px 30px;
     padding: 20px 0;
-    transition: background 0.2s;
-    float: left;
     width: 100%;
-
-    &:hover {
-      color: white;
-      background: $darkblue;
-  }
 }
 
 .intro-message {
