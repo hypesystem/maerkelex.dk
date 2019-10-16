@@ -1,4 +1,4 @@
-$darker-border-color: darken($grey--light, 40%);
+$grey--dark: darken($grey--light, 40%);
 
 .maerke-col {
   box-sizing: border-box;
@@ -198,14 +198,14 @@ $darker-border-color: darken($grey--light, 40%);
 
   // hover effects
   &:hover {
-    border-color: $darker-border-color;
+    border-color: $grey--dark;
 
     img {
       transform: scale(1.1);
     }
 
     .card-link {
-      border-color: $darker-border-color;
+      border-color: $grey--dark;
     }
 
     &.highlight-popular {

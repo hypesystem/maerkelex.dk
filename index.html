@@ -76,24 +76,53 @@ title: Søg efter spejdermærker
         });
     </script>
 
-<section>
-  <h2>Seneste blog post:</h2>
-  {% assign blog_sorted = site.blog | sort: "date" | reverse %}
-  {% for blog in blog_sorted limit:1 %}
-      {% assign blog_url = blog.url | replace: "/index", "/" %}
-  <div class="blog-card">
-      <a class="blog-card__link" href="{{ blog_url }}">
-          <div class="blog-card__image" style="background-image: url('{{ site.baseurl }}{% if blog.image %}{{ blog_url }}{{ blog.image }}{% else %}/img/covers/cover-{{ blog.image_stock }}.jpg{% endif %}')"></div>
-          <div class="blog-card__description">
-              <p class="blog-card__date">{{ blog.da_date }}</p>
-              <h2 class="blog-card__title">{{ blog.title }}</h2>
-              <p class="blog-card__summary">
-                  {% if blog.summary %}{{ blog.summary }}{% else %}{% assign paragraphs = blog.content | split: "<p>" %}{{ paragraphs[1] | split: "</p>" | first | strip_html | strip }}{% endif %}
-              </p>
+    <section>
+      <h2>Seneste blog post:</h2>
+      {% assign blog_sorted = site.blog | sort: "date" | reverse %}
+      {% for blog in blog_sorted limit:1 %}
+          {% assign blog_url = blog.url | replace: "/index", "/" %}
+          <div class="blog-card">
+              <a class="blog-card__link" href="{{ blog_url }}">
+                  <div class="blog-card__image" style="background-image: url('{{ site.baseurl }}{% if blog.image %}{{ blog_url }}{{ blog.image }}{% else %}/img/covers/cover-{{ blog.image_stock }}.jpg{% endif %}')"></div>
+                  <div class="blog-card__description">
+                      <p class="blog-card__date">{{ blog.da_date }}</p>
+                      <h2 class="blog-card__title">{{ blog.title }}</h2>
+                      <p class="blog-card__summary">
+                          {% if blog.summary %}{{ blog.summary }}{% else %}{% assign paragraphs = blog.content | split: "<p>" %}{{ paragraphs[1] | split: "</p>" | first | strip_html | strip }}{% endif %}
+                      </p>
+                  </div>
+              </a>
           </div>
-      </a>
-  </div>
-  {% endfor %}
-</section>
+      {% endfor %}
+    </section>
+
+    <section class="cards-section">
+      <h2>Andre links:</h2>
+      <div class="cards">
+          <a class="card card--half" href="https://www.facebook.com/maerkelex/">
+              <img class="card__logo" src="{{ site.baseurl }}/img/facebook.png" alt="facebook icon">
+              <div class="card__description">
+                <p class="card__sub-title">Følg med på vores</p>
+                <h2 class="card__title">Facebook side</h2>
+              </div>
+            </a>
+
+            <a class="card card--half" href="{{ site.baseurl }}/prisberegner/">
+              <img class="card__logo" src="{{ site.baseurl }}/img/icons/ic_shopping_cart_black_24px.svg" alt="mærkelex salg icon">
+              <div class="card__description">
+                <p class="card__sub-title">Sælg dine egne mærker her?</p>
+                <h2 class="card__title">Læs om Mærkelex Salg</h2>
+              </div>
+            </a>
+
+            <a class="card card--half" href="{{ site.baseurl }}/hvem-er/">
+              <img class="card__logo" src="{{ site.baseurl }}/img/icons/people_black_24px.svg" alt="om os icon">
+              <div class="card__description">
+                <p class="card__sub-title">Læs lidt om Mærkelex</p>
+                <h2 class="card__title">Hvem er vi?</h2>
+              </div>
+            </a>
+      </div>
+    </section>
   </div>
 </div>

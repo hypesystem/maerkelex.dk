@@ -20,6 +20,7 @@ $dark: rgb(50, 50, 60);
 $font-color: #212529;
 $background-grey: rgb(245, 245, 245);
 $grey--light: rgba(160,160,160,0.2);
+$grey--dark: darken($grey--light, 40%);
 
 // Other styles
 $rounding--small: 4px;
