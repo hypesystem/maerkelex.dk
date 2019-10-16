@@ -1,3 +1,19 @@
+// Frontpage stuff
+.blog-section {
+  background: darken($grey--body, 10%);
+  padding: 40px 0;
+}
+
+.blog-section__title,
+.blog-section__content {
+  margin-top: 0;
+}
+
+.blog-section__content {
+  padding: 0 5px;
+}
+
+// Blog cards for both blog and frontpage
 .blog-card {
   background-color: white;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
