@@ -157,7 +157,7 @@
   flex-direction: row;
   justify-content: space-around;
 
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $mobile) {
     flex-direction: column;;
   }
 }
@@ -165,7 +165,7 @@
 .btn+.btn {
   margin-left: 10px;
 
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $mobile) {
     margin-left: 0;
     margin-top: 10px;
   }

@@ -144,7 +144,7 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: $mobile) {
     .price-calculator {
         .price-inputs {
             display: block;

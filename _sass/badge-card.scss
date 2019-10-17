@@ -6,7 +6,7 @@ $darker-border-color: darken($grey--light, 40%);
   padding: 0 5px;
   margin-bottom: 10px;
 
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $mobile) {
     width: 50%;
   }
 }
@@ -36,7 +36,7 @@ $darker-border-color: darken($grey--light, 40%);
     display: block;
     transition: all 0.2s ease;
   
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $mobile) {
       height: 40vw;
       margin-top: 6vw;
     }
@@ -53,7 +53,7 @@ $darker-border-color: darken($grey--light, 40%);
     flex-direction: column;
     align-items: flex-end;
     
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $mobile) {
       width: 100%;
       flex-direction: row;
       justify-content: space-between;
@@ -78,7 +78,7 @@ $darker-border-color: darken($grey--light, 40%);
       position: relative;
       z-index: 3;
     
-      @media screen and (max-width: $small) {
+      @media screen and (max-width: $mobile) {
         margin: 0 1vw;
         font-size: 2.8vw;
         padding: 0.67vw 1.07vw;
@@ -90,7 +90,7 @@ $darker-border-color: darken($grey--light, 40%);
     color: $blue;
     border-color: $blue;
   
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $mobile) {
       width: calc(43% - 2px);
     }
   }
@@ -100,7 +100,7 @@ $darker-border-color: darken($grey--light, 40%);
     color: gray;
     border-color: gray;
   
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $mobile) {
       width: calc(57% - 2px);
     }
   
@@ -138,7 +138,7 @@ $darker-border-color: darken($grey--light, 40%);
       width: 100%;
       padding: 0 10px;
 
-      @media screen and (max-width: $small) {
+      @media screen and (max-width: $mobile) {
         font-size: 0.9rem;
         text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
         margin-bottom: 10px;

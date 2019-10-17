@@ -20,7 +20,7 @@
     color: $font-color;
     text-decoration: none;
 
-    @media(max-width: $mobile) {
+    @media(max-width: $small) {
       flex-direction: column;
     }
   }
@@ -32,7 +32,7 @@
     background-size: cover;
     background-position: center;
 
-    @media(max-width: $mobile) {
+    @media(max-width: $small) {
       width: 100%;
       height: 50vw;
       min-height: 0;
@@ -49,7 +49,7 @@
     width: 40%;
     padding: 20px;
 
-    @media(max-width: $mobile) {
+    @media(max-width: $small) {
       width: 100%;
     }
   }
