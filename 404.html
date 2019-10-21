@@ -34,13 +34,4 @@ title: Side findes ikke
             return array;
         }
     </script>
-    <script>
-        var notifyGoogleAnalyticsOf404 = debounced(function() {
-            if(!ga) {
-                return notifyGoogleAnalyticsOf404();
-            }
-            ga("send", "event", "NotFound", location.pathname);
-        });
-        notifyGoogleAnalyticsOf404();
-    </script>
 </div>

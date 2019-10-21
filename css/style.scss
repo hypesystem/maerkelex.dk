@@ -12,7 +12,7 @@ body {
     font-weight: 400;
     color: $font-color;
     line-height: 1.5;
-    background: rgb(245, 245, 245);
+    background: $grey--body;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -69,21 +69,9 @@ a {
 }
 
 .see-more-button {
-    display: block;
-    text-align: center;
-    background: $blue;
-    color: white;
-    text-decoration: none;
-    margin-top: 30px;
+    margin: 10px 5px 30px;
     padding: 20px 0;
-    transition: background 0.2s;
-    float: left;
     width: 100%;
-
-    &:hover {
-      color: white;
-      background: $darkblue;
-  }
 }
 
 .intro-message {
@@ -119,6 +107,7 @@ a {
 @import "badge-card.scss";
 @import "badge-page.scss";
 @import "button.scss";
+@import "card.scss";
 @import "tag";
 @import "advanced-search.scss";
 @import "cookie-notice";

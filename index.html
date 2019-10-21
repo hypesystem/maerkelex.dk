@@ -5,46 +5,19 @@ title: Søg efter spejdermærker
 {% include sponsored-badges.html %}
 
 <div class="container align-center">
-    <div class="content">
-      <!-- Latest Badges -->
-      {% assign sorted_m = site.m | sort: "date_added" | reverse %}
-      {% for m in sorted_m limit:3 %}
-        {% if m.date_added %}
-          {% assign m_url = m.url %}
-          {% assign m_first_tag = m.tags.first %}
-          {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
-          {% assign m_image = m.image %}
-          {% assign m_name = m.name %}
-          {% assign m_purchasable = "" %}
-          {% assign m_highlight_class = "new" %}
-          {% assign m_highlight_text = "Nyhed" %}
-          {% if m.price != null %}
-            {% assign m_purchasable = "purchasable" %}
-            {% if m.preorder %}
-              {% assign m_highlight_text = "<strong>Forudbestil</strong>" %}
-            {% else %}
-              {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
-            {% endif %}
-          {% endif %}
-
-          {% include maerkebox.html %}
-        {% endif %}
-      {% endfor %}
-      <div class="cta-frontpage">
-        <a class="btn btn--new-badges" href="/nyeste-maerker/">Se flere nye mærker</a>
-        <a class="btn btn--shop" href="/shop/">Køb mærker</a>
-      </div>
-      
-      <!-- All badges -->
-      {% assign sorted_m = site.m | sort: "name" %}
-      {% for m in sorted_m limit:24 %}
+  <div class="content">
+    <!-- Latest Badges -->
+    {% assign sorted_m = site.m | sort: "date_added" | reverse %}
+    {% for m in sorted_m limit:3 %}
+      {% if m.date_added %}
         {% assign m_url = m.url %}
         {% assign m_first_tag = m.tags.first %}
         {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
         {% assign m_image = m.image %}
         {% assign m_name = m.name %}
         {% assign m_purchasable = "" %}
-        {% assign m_highlight_class = m.highlight %}
+        {% assign m_highlight_class = "new" %}
+        {% assign m_highlight_text = "Nyhed" %}
         {% if m.price != null %}
           {% assign m_purchasable = "purchasable" %}
           {% if m.preorder %}
@@ -52,26 +25,119 @@ title: Søg efter spejdermærker
           {% else %}
             {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
           {% endif %}
-        {% elsif m_highlight_class == "popular" %}
-          {% assign m_highlight_text = "Mest populære!" %}
-        {% elsif m_highlight_class == "new" %}
-          {% assign m_highlight_text = "Nyhed!" %}
-        {% else %}
-          {% assign m_highlight_text = false %}
         {% endif %}
-        {% include maerkebox.html %}
-      {% endfor %}
 
-    <a class="see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
+        {% include maerkebox.html %}
+      {% endif %}
+    {% endfor %}
+    <div class="cta-frontpage">
+      <a class="btn btn--new-badges" href="/nyeste-maerker/">Se flere nye mærker</a>
+      <a class="btn btn--shop" href="/shop/">Køb mærker</a>
+    </div>
+
+    <!-- Few badges -->
+    <style type="text/css">
+      .badge-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    </style>
+    <div class="badge-container"></div>
+    <script>
+      var loadBadges = debounced(function() {
+        if(!searchData) {
+            return loadBadges();
+        }
+        document.querySelector(".badge-container").innerHTML = renderResults(shuffle(searchData).slice(0,6));
+      });
+      loadBadges();
+
+      function shuffle(array) {
+          array = array.slice();
+          for(var i = array.length - 1; i > 0; i--) {
+            var randomIndex = Math.floor(Math.random() * (i + 1));
+            var randomElement = array[randomIndex];
+            array[randomIndex] = array[i];
+            array[i] = randomElement;
+          }
+          return array;
+      }
+    </script>
+
+    <a class="btn see-more-button" href="{{ site.baseurl }}/?search=">Se alle mærker</a>
     <script>
         document.querySelector(".see-more-button").addEventListener("click", function(e) {
             e.preventDefault();
             searchBar.value = "";
             search();
-            ga("set", "dimension1", highlightsEnabled);
-            ga("send", "event", "BadgeList", "view_all", "initial overview");
+            setTimeout(() => window.scrollTo(0, 0), 500);
             return false;
         });
     </script>
+
+  </div>
+</div>
+<section class="blog-section">
+  <div class="container align-center">
+    <div class="blog-section__content content">
+      <h2 class="blog-section__title">SENESTE BLOG POST</h2>
+      {% assign blog_sorted = site.blog | sort: "date" | reverse %}
+      {% for blog in blog_sorted limit:1 %}
+      {% assign blog_url = blog.url | replace: "/index", "/" %}
+      <div class="blog-card">
+        <a class="blog-card__link" href="{{ blog_url }}">
+          <div class="blog-card__image" style="background-image: url('{{ site.baseurl }}{% if blog.image %}{{ blog_url }}{{ blog.image }}{% else %}/img/covers/cover-{{ blog.image_stock }}.jpg{% endif %}')"></div>
+          <div class="blog-card__description">
+            <p class="blog-card__date">{{ blog.da_date }}</p>
+            <h2 class="blog-card__title">{{ blog.title }}</h2>
+            <p class="blog-card__summary">
+                {% if blog.summary %}{{ blog.summary }}{% else %}{% assign paragraphs = blog.content | split: "<p>" %}{{ paragraphs[1] | split: "</p>" | first | strip_html | strip }}{% endif %}
+            </p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<div class="container align-center">
+  <div class="content">
+    <section class="cards-section">
+      <div class="cards">
+        <a class="card card--half" href="https://www.facebook.com/maerkelex/">
+          <img class="card__logo" src="{{ site.baseurl }}/img/facebook.png" alt="facebook icon">
+          <div class="card__description">
+            <p class="card__sub-title">Følg med på vores</p>
+            <h2 class="card__title">Facebook side</h2>
+          </div>
+        </a>
+
+        <a class="card card--half" href="{{ site.baseurl }}/prisberegner/">
+          <img class="card__logo" src="{{ site.baseurl }}/img/icons/ic_shopping_cart_black_24px.svg" alt="mærkelex salg icon">
+          <div class="card__description">
+            <p class="card__sub-title">Sælg dine egne mærker her</p>
+            <h2 class="card__title">Læs om Mærkelex Salg</h2>
+          </div>
+        </a>
+
+        <a class="card card--half" href="{{ site.baseurl }}/hvem-er/">
+          <img class="card__logo" src="{{ site.baseurl }}/img/icons/people_black_24px.svg" alt="om os icon">
+          <div class="card__description">
+            <p class="card__sub-title">Læs lidt om Mærkelex</p>
+            <h2 class="card__title">Hvem er vi?</h2>
+          </div>
+        </a>
+
+        <a class="card card--half" href="{{ site.baseurl }}/faq/">
+          <img class="card__logo" src="{{ site.baseurl }}/img/icons/question_black_24px.svg" alt="faq icon">
+          <div class="card__description">
+            <p class="card__sub-title">Noget du ikke forstår?</p>
+            <h2 class="card__title">Se ofte stillede spørgsmål</h2>
+          </div>
+        </a>
+      </div>
+    </section>
   </div>
 </div>
