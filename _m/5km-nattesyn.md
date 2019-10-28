@@ -5,7 +5,7 @@ tags:
 - forløb
 image: 5km-nattesyn.jpg
 age: 6+
-buylink: https://www.facebook.com/photo.php?fbid=10216908245329534
+buylink: https://m.facebook.com/groups/1722782437953798?view=permalink&id=2261427154089321
 date_added: 2018-11-08
 ---
 Tages på en fællestur.
