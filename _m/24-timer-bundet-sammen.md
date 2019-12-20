@@ -3,7 +3,8 @@ name: 24 timer bundet sammen
 tags:
 - uofficielt
 image: 24-timer-bundet-sammen.jpg
-buylink: https://www.facebook.com/24-timer-bundet-sammen-spejderm%C3%A6rke-118240486243987/?modal=admin_todo_tour
+buylink: https://www.facebook.com/24-timer-bundet-sammen-spejderm%C3%A6rke-118240486243987
+date_added: 2019-12-20
 ---
 Når man tager mærket "24 timer bundet sammen" er det for at få et bedre samarbejde, styrke sit venskab og måske blive udfordret. Hvis du vil tage mærket, skal du sørge for at finde en du er gode venner med, så i kan gå på toilettet- og sove sammen. 
 
