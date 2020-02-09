@@ -15,7 +15,7 @@ title: Avanceret søgning
 {% endfor %}
 {% assign tags = tags_str | remove_first: "," | split: "," | sort %}
 
-<div class="advanced-search-container">
+<article class="col advanced-search-container">
   <h1>Avanceret søgning</h1>
   <p>
       Her kan du lære at bruge søgningen på Mærkelex.
@@ -48,7 +48,6 @@ title: Avanceret søgning
   </section>
 
   <section class="advanced-search-setting-box">
-
       <div class="ageInput">
         <div class="checkbox">
           <input type="checkbox" id="ageInputEnabled">
@@ -79,7 +78,7 @@ title: Avanceret søgning
         </div>
     </div>
   </section>
-</div>
+</article>
 
 <script>
     var ageSlider = document.querySelector("#ageInput");
