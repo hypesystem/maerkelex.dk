@@ -2,6 +2,7 @@
 name: 24 timer bundet sammen
 tags:
 - uofficielt
+- forløb
 image: 24-timer-bundet-sammen.jpg
 buylink: https://www.facebook.com/24-timer-bundet-sammen-spejderm%C3%A6rke-118240486243987
 date_added: 2019-12-20
