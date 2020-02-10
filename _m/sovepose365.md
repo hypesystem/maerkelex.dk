@@ -7,7 +7,7 @@ tags:
 age: 6+
 coverimage: cover-sleepingbag.jpg
 image: sovepose365.jpg
-buylink: https://www.spejd365.dk/product/sovepose365-maerke/
+price: 20
 ---
 Sovepose 365 er et helt nyt spejdermærke til dig, som gerne vil have en spændende udfordring i et år. For at tage dette mærke skal du sove i din sovepose (og/eller lagenpose) i et helt år. Altså hver nat. Mærket er let og sjovt at tage, men der er dog nogle få regler som du skal følge.
 
