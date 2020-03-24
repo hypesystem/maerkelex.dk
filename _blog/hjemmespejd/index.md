@@ -50,5 +50,5 @@ Det virker allerede nu som om der er mange mærkerammer og -designs at vælge fr
 
 Vi laver et Facebook-opslag med denne blog post hvor I er velkomne til at dele jeres ideer og tiltag. Vi vil gøre vores bedste for at samle op på alle de ideer vi hører, så I kan komme her for at få inspiration.
 
-Spejderhilsen
+Spejderhilsen  
 Niels og Anders fra Mærkelex
