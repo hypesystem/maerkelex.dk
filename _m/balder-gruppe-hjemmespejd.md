@@ -21,3 +21,5 @@ Når opgaven er løst får man et kryds. 10 krydser udløser et MÆRKE!!!
 Tidsfristen for løsning af alle 10 opgaver er søndag d. 29/3. Alle hjælpemidler er tilladt (både forældre, søskende og internet) med mindre andet bliver nævnt i opgaven.
 
 Husk.. Hvis opgaven er svær, er en forkert løsning stadig bedre end ingen løsning.
+
+Der findes [en læder-udgave af mærket](https://www.facebook.com/groups/6581285931/permalink/10157712916950932/), som man kan bruge i stedet (beskrivelsen ligger i [Facebook-gruppen Det Danske Spejderkorps](https://www.facebook.com/groups/6581285931/) og kræver medlemskab for at kunne tilgås).
