@@ -12,7 +12,7 @@ Samtidig er [Sundhedsstyrelsen og Statens Seruminstitut enige om deres anbefalin
 
 Det er en helt anderledes verden at skulle være spejder i. Alt det ugentlige arbejde er centreret omkring at mødes fysisk og lave aktiviteter sammen. Det kan vi ikke længere. Det er en stor del af både spejderes og lederes hverdag der pludselig er forsvundet.
 
-Det er heldigvis gået hurtigt! Der er adskillige spejderledere landet over, der har været i tænkeboks over, hvordan man kan lave spejderarbejde uden at mødes. Allerede d. 13. marts, altså to dage efter de første nedlukninger og [dagen før Danmark lukkede grænserne](https://www.dr.dk/nyheder/indland/statsministeren-danmarks-graenser-lukker-fra-klokken-12-i-morgen) var DDS Stenlænderne i gang med konceptet til et mærke, de kaldte Hjemmespejd. Nu er der opstået [et helt fællesskab omkring det](https://www.facebook.com/hjemmespejd/), og adskillige ledere og grupper er kommet med deres egne bud på hvordan man laver spejderaktiviteter hjemmefra.
+Der er mange spejderledere, der ikke mente at mangel på ugentlige møder, skulle komme i vejen for at kunne lave spejderarbejde, og det er gået hurtigt! Der er spejderledere landet over, der har været i tænkeboks over, hvordan man kan lave spejderarbejde uden at mødes. Allerede d. 13. marts, altså to dage efter de første nedlukninger og [dagen før Danmark lukkede grænserne](https://www.dr.dk/nyheder/indland/statsministeren-danmarks-graenser-lukker-fra-klokken-12-i-morgen) var DDS Stenlænderne i gang med konceptet til et mærke, de kaldte Hjemmespejd. Nu er der opstået [et helt fællesskab omkring det](https://www.facebook.com/hjemmespejd/), og adskillige ledere og grupper er kommet med deres egne bud på hvordan man laver spejderaktiviteter hjemmefra.
 
 I denne blog post udforsker vi de forskellige tilgange og tiltag der er opstået. Hvis du kender til noget, som vi ikke har med, må du gerne skrive til os på <kontakt@maerkelex.dk>. Vi kommer nemlig til løbende at opdatere siden her, efterhånden som vi hører om mere. Vi håber det kan inspirere alle de mange ledere og spejdere ude i landet til at holde spejderånden i live i denne tid.
 
@@ -24,7 +24,31 @@ Der har været megen aktivitet på diverse grupper for spejdere, især Facebook-
 
 Stenlænderne har lagt [deres tilgang](https://www.facebook.com/groups/6581285931/permalink/10157683508535932/) op til inspiration. De lægger løbende nye opgaver op til deres spejdere, som skal besvares (evt. med hjælp fra en voksen) via deres Facebook-gruppe. De planlægger i alt at lægge mange opgaver op, hvoraf man skal løse 10 for at få et mærke.
 
-[Østykkespejderne har lavet et opslag](https://www.facebook.com/groups/6581285931/permalink/10157688024280932/) hvor de beskriver de opgaver de løbende lægger op til deres spejdere, og fortsætter efterhånden som flere kommer til. De har blandt andet lagt et par kreative opgaver som ”digt en sang” og ”tegn dit bedste spejderminde” op. Bemærkelsesværdigt er Ølstykkespejdernes [opgave om oprydning i naturen](https://www.facebook.com/groups/6581285931/permalink/10157712874945932/), som lægger op til ansvarstagen for fællesskabet, selvom vi ikke kan ses.
+[Østykkespejderne Erik Harefod Gruppe har lavet et opslag](https://www.facebook.com/groups/6581285931/permalink/10157688024280932/) hvor de beskriver de opgaver de løbende lægger op til deres spejdere, og fortsætter efterhånden som flere kommer til. De har blandt andet lagt et par kreative opgaver som ”digt en sang” og ”tegn dit bedste spejderminde” op. Bemærkelsesværdigt er Ølstykkespejdernes [opgave om oprydning i naturen](https://www.facebook.com/groups/6581285931/permalink/10157712874945932/), som lægger op til ansvarstagen for fællesskabet, selvom vi ikke kan ses.
+
+FDF Mosede kører et koncept for deres FDFere der hedder [Kampen mod kedsomheden](https://www.facebook.com/groups/spejdermaerker/permalink/2677596385805727/), hvor de [lægger YouTube-videoer op hver uge](https://www.youtube.com/channel/UCkOAO1xaJG_Km8PuaGfQaLQ), med nye udfordringer. De viser også hvordan de selv løser udfordringerne (f.eks. at tage så mange t-shirts på som man kan på én gang), og det giver et personligt touch at kunne se lederne.
+
+MariagerSpejderne lægger [løbende hjemmespejd-opgaver op på deres Facebook-side](https://www.facebook.com/MariagerSpejderne), blandt andet kreative som "byg en båd af genbrugsmaterialer" eller "lav et gækkebrev", men også de anderledes, som "naturbingo" (hvor man skal ud og finde ting i naturen).
+
+Spejderpodcasten Snobrød og Feltspader har lavet [et afsnit om #hjemmespejd](https://soundcloud.com/snobroedogfeltspader/afsnit-99-hjemmespejd), hvor de snakker om alt det der er sket på Hjemmespejderfronten og hvordan det er at være spejder når der pludselig er isolation.
+
+Lumby-Stige gruppe har [lavet et Google Maps løb](www.lumby-stige.dk/nyhed.php?id=739), hvor man kan tage på spejderløb via Google Maps og svare på spørgsmål man kan finde svar på gennem Google Maps' street view feature.
+
+Ribe Trop har lavet ["garanteret Coronafri" digispejd](https://www.youtube.com/watch?v=etUJ68PuVOU) med [en masse små opgaver i diverse spejderfærdigheder](https://ribetrop.dk/hjemmespejd). Hver opgave har en sjov lille introduktionsvideo, der forklarer konceptet og har en helt særlig stil.
+
+Polarstjernen [har samlet inspiration](https://www.polarstjernen.dk/hjemmespejd) til deres spejdere fra diverse kilder, f.eks. en artikel med et interview med en naturvejleder om hjemmeaktiviteter fra Fyens Stiftstidende, og den britiske spejderorganisations [store samling af indeopgaver, *The Great Indoors*](https://www.scouts.org.uk/the-great-indoors/). De har også fundet et [kæmpe katalog over opgaver man kan lave derhjemme](https://www.polarstjernen.dk/files/2020-03/aktivteter%20spejder%20katalog.pdf), som er udarbejdet af to ledere i KFUM Sct. Knud, men som vi ikke har kunnet opspore andre steder på nettet.
+
+1\. Kokkedal [tager Balder Gruppes Hjemmespejd-mærke](https://www.1kokkedal.dk/hjemmespejd) og har lagt deres opgaver for mini, junior og trop op på deres hjemmeside.
+
+KFUM-spejderne i Svenstrup har [lavet 4 opgaver](https://grønspejder.dk/hjemmespejd/), en blanding af gåder og færdigheder.
+
+1\. Rønne [opfordrer til at tage med på JOTI](http://ronnespejder.dk/?p=20120), [*Jamboree On The Internet*](https://dds.dk/arrangement/jotajoti), en spejderlejr på internettet, der hvert år har omkring 1 million deltagere, og i år finder sted d. 3.-5. april.
+
+Ordrup Gruppe [lægger løbende Hjemmespejd-opgaver ud på deres hjemmeside](https://www.ordrupgruppe.dk/nyheder), og har blandt andet nogen hvor man også skal ud af huset, f.eks. [til Prinsesse Benediktes egetræ op Ermelundssletten](https://www.ordrupgruppe.dk/hjemmeopgave-uge-12-part-2). De har også en opgave med at [lave mad af skvadderkål](https://www.ordrupgruppe.dk/hjemmespejd-uge-13) som man selv plukker i naturen eller haven.
+
+Tuse Bjerg Spejderne har [brugt quiz-programmet Kahoot](https://www.tusebjerg.dk/hjemmespejd) til at lave udfordringer som deres spejdere kan løse hjemmefra. Det giver et sjovt konkurrence-element.
+
+3\. Vesterbro Vildgæssene har lavet et [omfattende hjemmespejd-forløb](https://www.3vv.dk/hjemmespejd) med to temaer: *Du og din familie* og *Spejderfærdigheder*. De lægger blandt andet op til at opbygge gode vaner om håndvask, få bevæget sig fra isolationen, og andre ting der kan gøre det nemmere at være isoleret. Som om det ikke var nok, har de *også* [lavet et Spejder-håndværks-forløb](https://www.3vv.dk/spejder-haandvaerk) hvor man skal bygge og lave forskellige ting, der enten er pæne eller kan bruges, og som tager udgangspunkt i forskellige typer materialer.
 
 ## Mærker for hjemmespejd
 
@@ -40,6 +64,20 @@ Voerladegård gruppe i KFUM-spejderne [har lavet deres eget Hjemmespejd-mærke](
 
 Afslutningsvis er der [Coronamærket](https://www.facebook.com/groups/spejdermaerker/permalink/2673175122914520/) som rammesætter 5 aktiviteter rammesat af to Skype-møder med en spejderleder. En spændende del af konceptet her er at ledere og spejdere får set hinanden i øjnene (omend digitalt) i forløbet. Mærkerne har [virus-tema og koster 20 kr stk](https://www.facebook.com/groups/spejdermaerker/permalink/2676441272587905/).
 
+Eftersom isolationsperioden er blevet forlænget, har Stenlænderne <a href="https://hjemmespejd.dk/paaskespejd" target="_blank" rel="noopener">lavet endnu et mærke</a>, kaldet Påskespejd, med endnu flere opgaver der kan laves hjemmefra.
+
+## I medierne
+
+Stenlænderne stod bag det første Hjemmespejd-mærke (se ovenfor), og [deres tilgang er blevet dækket i Lokalavisen Egedal](https://sn.dk/Lokalavisen-Egedal/Midt-i-krisen-Spejdergruppe-i-Stenloese-opfinder-hjemmespejd-/artikel/925108).
+
+Albertslund Posten har dækket [Skovgruppens brug af Hjemmespejd-mærket](https://sn.dk/Albertslund-Posten/Corona-beretning-Kom-til-hjemmespejd-med-Skovgruppen/artikel/926128).
+
+Mariagerspejdernes hjemmespejderopgaver, som de lægger op på deres Facebook-side, er [blevet dækket i FjordAvisen](https://www.fjordavisen.nu/mobil/ideer-til-aktiviteter-fra-mariagerspejderne/47424).
+
+Holbækspejderne har givet [deres bud på hjemmespejd](https://www.helsingordagblad.dk/2020/03/25/papirkopper-og-genbrugsraket-sjove-opgaver-for-boern/) i Helsingør Dagblad, og anbefaler blandt andet Stenlændernes Hjemmespejdermærke.
+
+TV Midtvest har [skrevet om Storaa Gruppes hjemmespejd](https://www.tvmidtvest.dk/coronavirus/baaltaending-og-insekthoteller-tag-et-spejdermaerke-som-fjernstudie).
+
 ## Hvad er det næste?
 
 Der er allerede sket meget kreativt på Hjemmespejd-fronten, og det ser ud til at vi nu har endnu et par ugers isolation at fylde ud med aktiviteter, og hvor vi skal være kreative for at holde gang i spejderiet.
@@ -52,3 +90,8 @@ Vi laver et Facebook-opslag med denne blog post hvor I er velkomne til at dele j
 
 Spejderhilsen  
 Niels og Anders fra Mærkelex
+
+<div style="font-size: 0.8em; background-color: #c9c9c9; padding: 10px;">
+    <strong>Opdateret 30. marts 2020:</strong>
+    Vi har tilføjet et afsnit om mediedækning af hjemmespejd og beskrivelser af FDF Mosede, Mariagerspejdernes, Ribe Trops, Lumby Stiges, Polarstjernens, 1. Kokkedals, KFUM-spejderne i Svenstrups, 1. Rønnes, Ordrup Gruppes, Tuse Bjerg Spejdernes og 3. Vesterbro Vildgæssenes hjemmespejd-aktiviteter. Vi har også tilføjet et link til podcastet Snobrød og Feltspader, der har lavet et afsnit om hjemmespejd. Vi har tilføjet Påskespejd-mærket og opdateret billedet for <a href="/m/coronamaerket">Coronamærket</a> til det endelige design.
+</div>
