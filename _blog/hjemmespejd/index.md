@@ -16,7 +16,7 @@ Der er mange spejderledere, der ikke mente at mangel på ugentlige møder, skull
 
 I denne blog post udforsker vi de forskellige tilgange og tiltag der er opstået. Hvis du kender til noget, som vi ikke har med, må du gerne skrive til os på <kontakt@maerkelex.dk>. Vi kommer nemlig til løbende at opdatere siden her, efterhånden som vi hører om mere. Vi håber det kan inspirere alle de mange ledere og spejdere ude i landet til at holde spejderånden i live i denne tid.
 
-<div style="font-size: 0.8em; background-color: #c9c9c9; padding: 10px; margin: 10px 0;">
+<div style="font-size: 0.8em; background-color: #c9c9c9; padding: 10px; margin: 40px 0;">
     <strong>Opdateret 30. marts 2020:</strong>
     Vi har tilføjet et afsnit om mediedækning af hjemmespejd og beskrivelser af FDF Mosede, Mariagerspejdernes, Ribe Trops, Lumby Stiges, Polarstjernens, 1. Kokkedals, KFUM-spejderne i Svenstrups, 1. Rønnes, Ordrup Gruppes, Tuse Bjerg Spejdernes og 3. Vesterbro Vildgæssenes hjemmespejd-aktiviteter. Vi har også tilføjet et link til podcastet Snobrød og Feltspader, der har lavet et afsnit om hjemmespejd. Vi har tilføjet Påskespejd-mærket og opdateret billedet for <a href="/m/coronamaerket">Coronamærket</a> til det endelige design.
 </div>
