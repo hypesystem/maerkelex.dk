@@ -9,6 +9,8 @@ coverimage: cover-home.jpg
 image: voerladegaard-hjemmespejd.jpg
 buylink: https://www.facebook.com/groups/105871033141263/permalink/1005253649869659/
 date_added: 2020-03-24
+price: 15
+preorder: true
 ---
 Rammerne er ikke så faste. Grupperne kan selv lave sit eget Hjemmespejd koncept, men hos os skal man løse 8 ud af 9 spejderopgaver inde 14. 4.
 
@@ -32,4 +34,9 @@ Vores 9 opgaver er dem her:
 
 9. Sy din sidste årsstjerne på uniformen (eller hvis der mangler andre mærker)
 
-(Beskrivelsen af mærket ligger i Facebook-gruppen [KFUM-Spejdere i Danmark](https://www.facebook.com/groups/105871033141263) og der kræves medlemskab før man kan se opslaget.)
+### Regler
+
+Hver uge i den officielle spejderfrie periode udsendes 2 opgaver. Opgaver løses og foto-dokumenteres.
+Mindst 80% af opgaverne skal løses for at man kan modtage mærket.
+
+Opgaverne kan varieres i sværhedsgrad alt efter gren og alder.
