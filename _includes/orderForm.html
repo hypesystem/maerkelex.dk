@@ -29,14 +29,17 @@
             expandOrderForm();
         });
 
-        document.querySelector("[data-action-buy]").addEventListener("click", function() {
-            expandOrderForm();
-            document.querySelector('#order-form').scrollIntoView({
-                behavior: 'smooth',
-                block: "start",
-                inline: "nearest"
+        var buyButton = document.querySelector("[data-action-buy]");
+        if(buyButton) {
+            buyButton.addEventListener("click", function() {
+                expandOrderForm();
+                document.querySelector('#order-form').scrollIntoView({
+                    behavior: 'smooth',
+                    block: "start",
+                    inline: "nearest"
+                });
             });
-        });
+        }
 
         document.querySelector(".collapse-purchase").addEventListener("click", function() {
             document.querySelector("#order-form").className = "hidden-order";
