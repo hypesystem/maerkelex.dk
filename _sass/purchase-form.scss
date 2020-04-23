@@ -111,4 +111,19 @@
   .checkbox-label {
     margin-top: 8px;
   }
+
+  .input-error {
+    border: 1px solid red;
+    box-shadow: 0 0 4px red;
+  }
+  .input-error-message {
+    color: red;
+    font-size: 0.8em;
+    height: 1.3em;
+    transition: height 0.3s, opacity 0.3s;
+  }
+  .input-error-message-hidden {
+    height: 0;
+    opacity: 0;
+  }
 }
