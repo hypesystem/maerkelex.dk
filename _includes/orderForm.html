@@ -8,16 +8,20 @@
     <label for="count">
         <input class="count-preview" type="number" name="count" value="1" id="count">
         mærke(r) til {{ page.price }} kr stk = <strong class="total-preview"><span class="total-preview-price">{{ page.price }}</span> kr</strong>
+        <div class="input-error-message input-error-message-hidden"></div>
     </label>
     <script>
         var countPreview = document.querySelector(".count-preview");
         var totalPreview = document.querySelector(".total-preview-price");
         var badgePrice = {{ page.price }};
 
-        document.querySelector("#count").addEventListener("change", function() {
-            var count = this.value;
-            countPreview.innerHTML = count;
-            totalPreview.innerHTML = count * badgePrice;
+        document.getElementById("count").addEventListener("change", function() {
+            if(this.value < 1) {
+                this.value = 1;
+            }
+
+            countPreview.innerHTML = this.value;
+            totalPreview.innerHTML = this.value * badgePrice;
         });
 
         function expandOrderForm() {
@@ -52,19 +56,23 @@
     <label for="invoicing-name">
         Navn:
         <input type="text" name="invoicing-name" id="invoicing-name" autocomplete="name">
+        <div class="input-error-message input-error-message-hidden"></div>
     </label>
     <label for="invoicing-address">
         Vej og husnummer:
         <input type="text" name="invoicing-address" id="invoicing-address" autocomplete="shipping street-address">
+        <div class="input-error-message input-error-message-hidden"></div>
     </label>
     <div class="city-info-container">
         <label for="invoicing-postal-code" class="postal-code">
             Postnr.:
             <input type="text" name="invoicing-postal-code" id="invoicing-postal-code" autocomplete="shipping postal-code">
+            <div class="input-error-message input-error-message-hidden"></div>
         </label>
         <label for="invoicing-city" class="city">
             By:
             <input type="text" name="invoicing-city" id="invoicing-city" autocomplete="shipping locality">
+            <div class="input-error-message input-error-message-hidden"></div>
         </label>
     </div>
     <label for="delivery-address-differs" class="checkbox-label">
@@ -77,19 +85,23 @@
     <label for="delivery-name">
         Navn:
         <input type="text" name="delivery-name" id="delivery-name">
+        <div class="input-error-message input-error-message-hidden"></div>
     </label>
     <label for="delivery-address">
         Vej og husnummer:
         <input type="text" name="delivery-address" id="delivery-address">
+        <div class="input-error-message input-error-message-hidden"></div>
     </label>
     <div class="city-info-container">
         <label for="delivery-postal-code" class="postal-code">
             Postnr.:
             <input type="text" name="delivery-postal-code" id="delivery-postal-code">
+            <div class="input-error-message input-error-message-hidden"></div>
         </label>
         <label for="delivery-city" class="city">
             By:
             <input type="text" name="delivery-city" id="delivery-city">
+            <div class="input-error-message input-error-message-hidden"></div>
         </label>
     </div>
     </div>
@@ -109,10 +121,12 @@
         <label for="email">
             Email:
             <input type="email" name="email" id="email" autocomplete="email">
+            <div class="input-error-message input-error-message-hidden"></div>
         </label>
         <label for="phone-number">
             Telefonnummer:
             <input type="tel" name="phone-number" id="phone-number" autocomplete="tel">
+            <div class="input-error-message input-error-message-hidden"></div>
         </label>
     </div>
     <p>
@@ -122,3 +136,101 @@
     </p>
     <button class="btn buylink">Bestil mærke</button>
 </form>
+<script>
+(function() {
+    var form = document.getElementById("order-form");
+
+    form.addEventListener("submit", function(event) {
+        var errors = {};
+
+        var count = form.count.value;
+        var email = form.email.value;
+        var phoneNumber = form["phone-number"].value;
+
+        if(!(/^.+@.+$/.test(email))) {
+            errors.email = "Ugyldig email";
+        }
+
+        if(!phoneNumber) {
+            errors["phone-number"] = "Mangler telefonnummer";
+        }
+
+        if(!count || count < 1) {
+            errors["count"] = "Du skal bestille mindst 1!";
+        }
+
+        var invoicing = {
+            name: form["invoicing-name"].value,
+            address: form["invoicing-address"].value,
+            postalCode: form["invoicing-postal-code"].value,
+            city: form["invoicing-city"].value
+        };
+
+        validateAddress(invoicing, "invoicing", errors);
+
+        var deliveryAddressDiffers = form["delivery-address-differs"].checked;
+
+        if(deliveryAddressDiffers) {
+            var delivery = {
+                name: form["delivery-name"].value,
+                address: form["delivery-address"].value,
+                postalCode: form["delivery-postal-code"].value,
+                city: form["delivery-city"].value
+            };
+
+            validateAddress(delivery, "delivery", errors);
+        }
+
+        if(!Object.keys(errors).length) {
+            return;
+        }
+
+        event.preventDefault();
+
+        Object.keys(errors).forEach(function(field) {
+            form[field].classList.add("input-error");
+            var errorMessageDisplay = form[field].parentElement.querySelector(".input-error-message");
+            errorMessageDisplay.classList.remove("input-error-message-hidden");
+            errorMessageDisplay.innerText = errors[field];
+        });
+    });
+
+    function validateAddress(obj, prefix, errors) {
+        if(!obj.name) {
+            errors[prefix + "-name"] = "Mangler navn";
+        }
+
+        if(!obj.address) {
+            errors[prefix + "-address"] = "Mangler leveringsadresse";
+        }
+
+        if(!obj.postalCode) {
+            errors[prefix + "-postal-code"] = "Mangler postnr";
+        }
+        else if(obj.postalCode.length !== 4) {
+            errors[prefix + "-postal-code"] = "Postnummer har forkert længde";
+        }
+        
+        if(!obj.city) {
+            errors[prefix + "-city"] = "Mangler by";
+        }
+    }
+
+    Array.prototype.forEach.call(form.elements, function(field) {
+        field.addEventListener("input", function() {
+            field.classList.remove("input-error");
+            field.parentElement.querySelector(".input-error-message").classList.add("input-error-message-hidden");
+        });
+    });
+
+    form.email.addEventListener("change", function() {
+        if((/^.+@.+\.(com|dk|org|eu|nu)$/.test(form.email.value))) {
+            return;
+        }
+
+        var errorMessageDisplay = form.email.parentElement.querySelector(".input-error-message");
+        errorMessageDisplay.classList.remove("input-error-message-hidden");
+        errorMessageDisplay.innerText = "Er du sikker på at det er den korrekte email?";
+    });
+})();
+</script>
