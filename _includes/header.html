@@ -56,7 +56,7 @@
         if (searchBarHadFocusAtMouseDown || searchBarHasFocus) {
           searchBarHadFocusAtMouseDown = false;
           searchBar.blur();
-          document.querySelector(".container").scrollIntoView();
+          document.querySelector("main").scrollIntoView();
           return true;
         }
         searchBar.focus();
