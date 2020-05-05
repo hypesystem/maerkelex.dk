@@ -19,6 +19,9 @@ I denne blog post udforsker vi de forskellige tilgange og tiltag der er opstået
 <div style="font-size: 0.8em; background-color: #c9c9c9; padding: 10px; margin: 40px 0;">
     <strong>Opdateret 30. marts 2020:</strong>
     Vi har tilføjet et afsnit om mediedækning af hjemmespejd og beskrivelser af FDF Mosede, Mariagerspejdernes, Ribe Trops, Lumby Stiges, Polarstjernens, 1. Kokkedals, KFUM-spejderne i Svenstrups, 1. Rønnes, Ordrup Gruppes, Tuse Bjerg Spejdernes og 3. Vesterbro Vildgæssenes hjemmespejd-aktiviteter. Vi har også tilføjet et link til podcastet Snobrød og Feltspader, der har lavet et afsnit om hjemmespejd. Vi har tilføjet Påskespejd-mærket og opdateret billedet for <a href="/m/coronamaerket">Coronamærket</a> til det endelige design.
+    <br><br>
+    <strong>Opdateret 5. maj 2020:</strong>
+    Vi har tilføjet beskrivelser af Mjølner Gruppe og 1. Søborg Gruppes hjemmespejd-aktiviteter. Desuden er billederne for Coronamærket og Flemmingspejdernes Hjemmespejderi opdateret, Stenlændernes Hjemmespejd er udgået, og Stenlændernes Hjemmespejd Expert er tilføjet.
 </div>
 
 ## Aktiviteter hjemmefra
@@ -54,6 +57,10 @@ Ordrup Gruppe [lægger løbende Hjemmespejd-opgaver ud på deres hjemmeside](htt
 Tuse Bjerg Spejderne har [brugt quiz-programmet Kahoot](https://www.tusebjerg.dk/hjemmespejd) til at lave udfordringer som deres spejdere kan løse hjemmefra. Det giver et sjovt konkurrence-element.
 
 3\. Vesterbro Vildgæssene har lavet et [omfattende hjemmespejd-forløb](https://www.3vv.dk/hjemmespejd) med to temaer: *Du og din familie* og *Spejderfærdigheder*. De lægger blandt andet op til at opbygge gode vaner om håndvask, få bevæget sig fra isolationen, og andre ting der kan gøre det nemmere at være isoleret. Som om det ikke var nok, har de *også* [lavet et Spejder-håndværks-forløb](https://www.3vv.dk/spejder-haandvaerk) hvor man skal bygge og lave forskellige ting, der enten er pæne eller kan bruges, og som tager udgangspunkt i forskellige typer materialer.
+
+Mjølner Gruppe har [koordineret deres hjemmespejd over Facebook](https://www.facebook.com/mjoelnergruppe), baseret på Balder Gruppes lædermærke (se nedenfor) men med deres egen tilgang. De holder virtuelle møder en gang om ugen, hvor spejderne ser hinanden og bliver præsenteret for nye udfordringer. De har blandt andet lavet gode gerninger og været kreative.
+
+1\. Søborg Gruppe har lavet en [Hjemmespejd-side](https://soeborggruppe.dk/hjemmespejd/) på deres hjemmeside, hvor de løbende lægger nye opgaver ud til gruppens spejdere. Der kommer en video fra en leder med hver opgave, så spejderne stadig kan se lederne. De har blandet andet holdt [spejder i Minecraft](https://soeborggruppe.dk/hjemmespejd/minecraft) og [i fællesskab lavet en St. Georgsdags-video](https://soeborggruppe.dk/hjemmespejd/st-georg). (For åbenhed: både Niels og Anders der står bag Mærkelex er medlemmer af 1. Søborg Gruppe, og har været involveret i gruppens hjemmespejd-forløb.)
 
 ## Mærker for hjemmespejd
 
