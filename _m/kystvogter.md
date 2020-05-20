@@ -4,8 +4,9 @@ tags:
 - uofficielt
 - forløb
 image: kystvogter.jpg
-buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2123939747838063/
 date_added: 2018-04-06
+price: 25
+preorder: true
 ---
 Gruppetur, men må også gerne tages individuelt.
 

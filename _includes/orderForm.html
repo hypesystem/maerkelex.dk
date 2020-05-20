@@ -3,53 +3,60 @@
     <h2>Køb {{page.name}} mærke</h2>
     <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
     <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}">
+    {% if page.preorder %}
+        <div class="preorder-part">
+            Denne bestilling er en forudbestilling. Det betyder at vi køber mærker ind baseret på hvor mange mærker der bestilles. Vi har altså ikke mærkerne på lager, og der kan gå op til 4 måneder med levering, afhængig af vores leverandørs produktionstid.
+            <br><br>
+            Ved forudbestillinger hæver vi pengene når du gennemfører købet, da det fungerer som en produktion til bestilling. Du modtager en ordrebekræftigelse med det samme.
+        </div>
+    {% endif %}
     <div class="order-part">
-    <h3>Vælg antal</h3>
-    <label for="count">
-        <input class="count-preview" type="number" name="count" value="1" id="count">
-        mærke(r) til {{ page.price }} kr stk = <strong class="total-preview"><span class="total-preview-price">{{ page.price }}</span> kr</strong>
-        <div class="input-error-message input-error-message-hidden"></div>
-    </label>
-    <script>
-        var countPreview = document.querySelector(".count-preview");
-        var totalPreview = document.querySelector(".total-preview-price");
-        var badgePrice = {{ page.price }};
+        <h3>Vælg antal</h3>
+        <label for="count">
+            <input class="count-preview" type="number" name="count" value="1" id="count">
+            mærke(r) til {{ page.price }} kr stk = <strong class="total-preview"><span class="total-preview-price">{{ page.price }}</span> kr</strong>
+            <div class="input-error-message input-error-message-hidden"></div>
+        </label>
+        <script>
+            var countPreview = document.querySelector(".count-preview");
+            var totalPreview = document.querySelector(".total-preview-price");
+            var badgePrice = {{ page.price }};
 
-        document.getElementById("count").addEventListener("change", function() {
-            if(this.value < 1) {
-                this.value = 1;
+            document.getElementById("count").addEventListener("change", function() {
+                if(this.value < 1) {
+                    this.value = 1;
+                }
+
+                countPreview.innerHTML = this.value;
+                totalPreview.innerHTML = this.value * badgePrice;
+            });
+
+            function expandOrderForm() {
+                document.querySelector("#order-form").className = "show-order";
+                document.querySelector("#order-expand-btn").style.display = "none";
+            };
+
+            document.querySelector("#order-expand-btn").addEventListener("click", function() {
+                expandOrderForm();
+            });
+
+            var buyButton = document.querySelector("[data-action-buy]");
+            if(buyButton) {
+                buyButton.addEventListener("click", function() {
+                    expandOrderForm();
+                    document.querySelector('#order-form').scrollIntoView({
+                        behavior: 'smooth',
+                        block: "start",
+                        inline: "nearest"
+                    });
+                });
             }
 
-            countPreview.innerHTML = this.value;
-            totalPreview.innerHTML = this.value * badgePrice;
-        });
-
-        function expandOrderForm() {
-            document.querySelector("#order-form").className = "show-order";
-            document.querySelector("#order-expand-btn").style.display = "none";
-        };
-
-        document.querySelector("#order-expand-btn").addEventListener("click", function() {
-            expandOrderForm();
-        });
-
-        var buyButton = document.querySelector("[data-action-buy]");
-        if(buyButton) {
-            buyButton.addEventListener("click", function() {
-                expandOrderForm();
-                document.querySelector('#order-form').scrollIntoView({
-                    behavior: 'smooth',
-                    block: "start",
-                    inline: "nearest"
-                });
+            document.querySelector(".collapse-purchase").addEventListener("click", function() {
+                document.querySelector("#order-form").className = "hidden-order";
+                setTimeout(function(){document.querySelector("#order-expand-btn").style.display = "block"}, 220);
             });
-        }
-
-        document.querySelector(".collapse-purchase").addEventListener("click", function() {
-            document.querySelector("#order-form").className = "hidden-order";
-            setTimeout(function(){document.querySelector("#order-expand-btn").style.display = "block"}, 220);
-        });
-    </script>
+        </script>
     </div>
     <div class="invoicing-address-part">
     <h3>Faktureringsadresse</h3>
@@ -134,7 +141,7 @@
         Vi leverer i hele landet, men desværre ikke internationalt.
         <a href="mailto:kontakt@maerkelex.dk">Kontakt os</a> for en særlig aftale, hvis du ønsker international levering.
     </p>
-    <button class="btn buylink">Bestil mærke</button>
+    <button class="btn buylink">{% if page.preorder %}Forudbestil{% else %}Bestil{% endif %} mærke</button>
 </form>
 <script>
 (function() {
