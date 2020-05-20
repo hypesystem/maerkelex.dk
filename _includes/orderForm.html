@@ -3,6 +3,13 @@
     <h2>Køb {{page.name}} mærke</h2>
     <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
     <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}">
+    {% if page.preorder %}
+        <div class="preorder-part">
+            Denne bestilling er en forudbestilling. Det betyder at vi køber mærker ind baseret på hvor mange mærker der bestilles. Vi har altså ikke mærkerne på lager, og der kan gå op til 4 måneder med levering, afhængig af vores leverandørs produktionstid.
+            <br><br>
+            Ved forudbestillinger hæver vi pengene når du gennemfører købet, da det fungerer som en produktion til bestilling. Du modtager en ordrebekræftigelse med det samme.
+        </div>
+    {% endif %}
     <div class="order-part">
         <h3>Vælg antal</h3>
         <label for="count">
@@ -134,7 +141,7 @@
         Vi leverer i hele landet, men desværre ikke internationalt.
         <a href="mailto:kontakt@maerkelex.dk">Kontakt os</a> for en særlig aftale, hvis du ønsker international levering.
     </p>
-    <button class="btn buylink">Bestil mærke</button>
+    <button class="btn buylink">{% if page.preorder %}Forudbestil{% else %}Bestil{% endif %} mærke</button>
 </form>
 <script>
 (function() {
