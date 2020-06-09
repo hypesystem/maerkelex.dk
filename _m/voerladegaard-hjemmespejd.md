@@ -10,7 +10,6 @@ image: voerladegaard-hjemmespejd.jpg
 buylink: https://www.facebook.com/groups/105871033141263/permalink/1005253649869659/
 date_added: 2020-03-24
 price: 15
-preorder: true
 ---
 Rammerne er ikke så faste. Grupperne kan selv lave sit eget Hjemmespejd koncept, men hos os skal man løse 8 ud af 9 spejderopgaver inde 14. 4.
 
