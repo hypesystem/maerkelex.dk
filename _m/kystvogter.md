@@ -6,7 +6,6 @@ tags:
 image: kystvogter.jpg
 date_added: 2018-04-06
 price: 25
-preorder: true
 ---
 Gruppetur, men må også gerne tages individuelt.
 
