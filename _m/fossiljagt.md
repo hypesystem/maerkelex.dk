@@ -3,7 +3,7 @@ name: Fossil&shy;jagt
 tags:
 - uofficielt
 - forløb
-age: 12+
+age: 6+
 image: fossiljagt.jpg
 coverimage: cover-field.jpg
 buylink: https://mærkerforalle.dk/maerker/1-fossil-jagt.html
