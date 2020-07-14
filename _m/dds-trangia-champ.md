@@ -4,6 +4,7 @@ tags:
 - DDS
 - DDS-fokusmærke
 - juniorspejder
+- trangia
 age: 10-12
 image: dds-trangia-champ.jpg
 buylink: https://www.spejdersport.dk/fokusmaerke-trangia-champ.aspx
