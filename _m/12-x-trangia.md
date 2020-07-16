@@ -3,6 +3,7 @@ name: 12x Trangia
 tags:
 - uofficielt
 - forløb
+- trangia
 age: 8+
 image: 12-x-trangia.jpg
 coverimage: cover-food.jpg
