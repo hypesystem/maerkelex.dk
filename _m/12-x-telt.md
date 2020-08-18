@@ -6,6 +6,8 @@ tags:
 image: 12-x-telt.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2124048624493842/
 date_added: 2018-04-06
+price: 25
+preorder: true
 ---
 ### Regler:
 - Spejderen skal overnatte i telt 1 gang hver måned i et år.
