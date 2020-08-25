@@ -3,6 +3,7 @@ name: Telty
 tags:
 - uofficielt
 - forløb
+- 365
 age: 10+
 image: telty.jpg
 buylink: http://shorty.tac-case.dk/index.php/telty-maerket
