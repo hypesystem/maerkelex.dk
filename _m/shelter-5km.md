@@ -4,6 +4,7 @@ tags:
 - uofficielt
 - forløb
 - shelter
+- 365
 age: 12+
 image: shelter-5km.jpg
 coverimage: cover-shelter.jpg
