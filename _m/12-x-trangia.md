@@ -4,6 +4,7 @@ tags:
 - uofficielt
 - forløb
 - trangia
+- 365
 age: 8+
 image: 12-x-trangia.jpg
 coverimage: cover-food.jpg
