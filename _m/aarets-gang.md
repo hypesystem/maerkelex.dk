@@ -3,6 +3,7 @@ name: Årets gang
 tags:
 - uofficielt
 - forløb
+- 365
 coverimage: cover-nature.jpg
 image: aarets-gang.jpg
 buylink: https://www.facebook.com/dgpsoendersoegruppe/
