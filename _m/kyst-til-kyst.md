@@ -7,7 +7,7 @@ tags:
 age: 12+
 coverimage: cover-hike.jpg
 image: kyst-til-kyst.jpg
-buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2334235783475124/
+buylink: https://www.facebook.com/groups/188834551748043/
 date_added: 2019-01-27
 ---
 Efter længere tids forhandling med kommunerne omkring Kyst til Kyststien, har jeg endelig fået lov til at lave og sælge mærket. 
