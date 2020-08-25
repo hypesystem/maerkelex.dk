@@ -3,6 +3,7 @@ name: 12 x telt
 tags:
 - uofficielt
 - forløb
+- 365
 image: 12-x-telt.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2124048624493842/
 date_added: 2018-04-06
