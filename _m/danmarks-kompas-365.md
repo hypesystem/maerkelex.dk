@@ -2,7 +2,7 @@
 name: Danmarks kompas 365
 tags:
 - uofficielt
-- Kompas
+- kompas
 - kort
 - 365
 age:
