@@ -3,6 +3,7 @@ name: Kirkegænger
 tags:
 - uofficielt
 - forløb
+- 365
 coverimage: cover-christianity.jpg
 image: kirkegaenger.jpg
 buylink: https://www.facebook.com/dgpsoendersoegruppe/
