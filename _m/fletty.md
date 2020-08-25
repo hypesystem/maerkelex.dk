@@ -3,6 +3,7 @@ name: Fletty
 tags:
 - uofficielt
 - forløb
+- 365
 coverimage: cover-friend.jpg
 image: fletty.jpg
 buylink: https://www.facebook.com/photo.php?fbid=2453652874680385&set=gm.2479918512240183
