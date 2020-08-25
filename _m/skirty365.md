@@ -4,6 +4,7 @@ tags:
 - uofficielt
 - forløb
 - nederdel
+- 365
 age: 6+
 image: skirty365.jpg
 price: 35
