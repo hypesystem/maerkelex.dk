@@ -1,5 +1,5 @@
 ---
-name: Danmarks Kompas 365
+name: Danmarks kompas 365
 tags:
 - uofficielt
 - Kompas
