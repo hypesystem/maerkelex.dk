@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - forløb
 image: danmarks-bjerge.jpg
-buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2134395500125821/
+buylink: https://www.facebook.com/groups/188834551748043/
 infolink: https://www.facebook.com/groups/1988527364724495/
 date_added: 2018-04-14
 ---
