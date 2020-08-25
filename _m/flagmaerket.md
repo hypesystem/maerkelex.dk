@@ -19,4 +19,4 @@ Vi har lavet det som et Forløbsmærke, da de så lige får lidt mere viden om D
 
 **Det skal spejderne have kendskab til:**
 - Historien om Dannebrog - officielle flagdage - reparation af Dannebrog - flagning med udenlandske flag - størrelse i forhold til flagstang.
-- Få mere inspiration på <a href="http://www.mgg.dk" target="noopener">www.mgg.dk</a> eller <a href="http://www.dahls-flag.dk" target="_blank">www.dahls-flag.dk</a>
+- Få mere inspiration på <a href="http://www.mgg.dk" target="_blank">www.mgg.dk</a> eller <a href="http://www.dahls-flag.dk" target="_blank">www.dahls-flag.dk</a>
