@@ -2,6 +2,7 @@
 name: Outsider
 tags:
 - uofficielt
+- 365
 image: outsider.jpg
 coverimage: cover-bivuak.jpg
 buylink: https://www.facebook.com/OutsiderMaerket
