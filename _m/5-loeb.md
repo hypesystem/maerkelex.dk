@@ -2,6 +2,7 @@
 name: 5 Løb
 tags:
 - uofficielt
+- 365
 image: 5-loeb.jpg
 age: 12+
 buylink: https://maerkmig.dk/products/5-lob
