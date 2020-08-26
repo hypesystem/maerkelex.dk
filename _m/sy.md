@@ -9,7 +9,7 @@ coverimage: cover-thread.jpg
 buylink: https://www.oelstykkespejderne.dk/maerker
 date_added: 2020-08-24
 ---
-Ølstykkespejdernes Symærket er 20 x 30 mm.
+Symærket er 20 x 30 mm.
 
 Målgruppen for symærket er generelt til 10 år og ældre; dog afhænger det også lidt af modenhed og ledere, og det kan tages som et kort forløb på 2-4 møder.
 
