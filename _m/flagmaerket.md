@@ -7,7 +7,7 @@ tags:
 age: 10-16
 coverimage: cover-flag.jpg
 image: flagmaerket.jpg
-buylink: https://www.facebook.com/groups/188834551748043/
+buylink: https://www.facebook.com/photo?fbid=10221038768792695&set=g.188834551748043
 ---
 Da Ølgod Spejderne er med til at sætte flagalle op i byen flere gange i løbet af året, tænkte vi at de havde fortjent et nyt mærke. Det er jo altid lørdage og søndage det foregår.
 
