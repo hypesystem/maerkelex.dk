@@ -7,7 +7,7 @@ tags:
 age: 8+
 coverimage: cover-hike.jpg
 image: baglaens.jpg
-buylink: https://www.facebook.com/groups/188834551748043/?ref=share
+buylink: https://www.facebook.com/photo?fbid=10221038686830646&set=g.188834551748043
 ---
 Du kan tage 5, 10, 15, 20 eller 30 km baglæns.
 
