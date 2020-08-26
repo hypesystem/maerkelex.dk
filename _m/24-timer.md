@@ -5,7 +5,7 @@ tags:
 - forløb
 age: 10+
 image: 24-timer.jpg
-buylink: https://www.facebook.com/groups/188834551748043/?ref=share
+buylink: https://www.facebook.com/photo?fbid=10221038691710768&set=g.188834551748043
 ---
 Ølgod Spejderne har lavet dette mærke til juniorerne, da de var misundelige på 36 timers mærket.
 
