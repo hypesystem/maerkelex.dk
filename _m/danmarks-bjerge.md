@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - forløb
 image: danmarks-bjerge.jpg
-buylink: https://www.facebook.com/groups/188834551748043/
+buylink: https://www.facebook.com/photo?fbid=10221038697670917&set=g.188834551748043
 infolink: https://www.facebook.com/groups/1988527364724495/
 date_added: 2018-04-14
 ---
