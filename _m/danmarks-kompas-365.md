@@ -8,7 +8,7 @@ tags:
 age:
 image: danmark_kompas_365.jpg
 coverimage: cover-hike.jpg
-buylink: https://www.facebook.com/groups/188834551748043/?ref=share
+buylink: https://www.facebook.com/photo?fbid=10221171720116395&set=g.188834551748043
 date_added: 2020-08-25
 ---
 For at få dette mærke skal du opfylde følgende krav:
