@@ -16,4 +16,4 @@ For at få mærket skal spejderne:
 - Samle et kilo skrald per person i patruljen
 - Tage ud og besøge en genbrugsstation
 
-Læs mere og find evt. materiale til forløbet [her](https://korinthefterskole-my.sharepoint.com/:w:/g/personal/grace_korinth-efterskole_dk/EcRUXXf6f5FGhsQhp3d3yVYBarkVC0fyDbT9sVnC54LjOw?rtime=tCynphgo2Eg).
+Læs mere og find evt. materiale til forløbet [her](https://docs.google.com/document/d/1-7NGjjEajrA9HgiAEioqfZGlxrt8MXAzEcNYTCi3Ei4/edit?fbclid=IwAR1LXBwMlIb5RdV1UwVlZXc5UaVjuq5VHSQybjiUdrCT5yYzkSvwmuPO6yc).
