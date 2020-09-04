@@ -1,13 +1,15 @@
 ---
-name: 5km Nattesyn
+name: Nattesyn
 tags:
 - uofficielt
 - forløb
-image: 5km-nattesyn.jpg
+image: nattesyn.jpg
 age: 6+
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2261427154089321/
 date_added: 2018-11-08
 ---
+**Mærket kan tages til både 5 og 10km**
+
 Tages på en fællestur.
 5km Vandretur i mørke. HELT mørke!
 
