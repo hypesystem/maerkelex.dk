@@ -4,6 +4,7 @@ tags:
 - uofficielt
 image: morgenbader.jpg
 coverimage: cover-swimming.jpg
+date_added: 2020-09-04
 buylink: https://www.waingunga-stammen.dk/nyt-maerke-morgenbader
 age: 6+
 ---
