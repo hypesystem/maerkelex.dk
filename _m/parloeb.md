@@ -7,6 +7,8 @@ image: parloeb.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2155948597970511/
 date_added: 2018-08-08
 ---
+**Mærket kan tages til 5 eller 10km**
+
 5 timer. 
 
 - for alle!  
