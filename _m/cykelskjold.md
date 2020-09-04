@@ -10,13 +10,13 @@ date_added: 2020-09-04
 buylink: https://natur-kompasset.dk/?page_id=22
 ---
 **I kan tage følgende skjold:**
-- 10km – cykles over 1 døgn (foreslåede aldersgruppe: 6 år +)
-- 25km – cykles over 1 døgn (foreslåede aldersgruppe: 8 år +)
-- 50km – cykles over 1 døgn, (foreslåede aldersgruppe: 11 år +)
-- 100km – cykles over 2 døgn, (foreslåede aldersgruppe: 14 år +)
-- 500km – cykles over 6 døgn, (foreslåede aldersgruppe: 16 år +)
+- 10km – cykles over 1 døgn (foreslåede aldersgruppe: 6 år+)
+- 25km – cykles over 1 døgn (foreslåede aldersgruppe: 8 år+)
+- 50km – cykles over 1 døgn, (foreslåede aldersgruppe: 11 år+)
+- 100km – cykles over 2 døgn, (foreslåede aldersgruppe: 14 år+)
+- 500km – cykles over 6 døgn, (foreslåede aldersgruppe: 16 år+)
 
-###Regler###
+### Regler ###
 
 - Alle distancer: Spejderne skal bruge cykelhjelm og kunne færdselsreglerne for cykling.
 
