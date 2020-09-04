@@ -6,6 +6,7 @@ tags:
 age: 6+
 coverimage: cover-bike.jpg
 image: cykelskjold.jpg
+date_added: 2020-09-04
 buylink: https://natur-kompasset.dk/?page_id=22
 ---
 **I kan tage følgende skjold:**
