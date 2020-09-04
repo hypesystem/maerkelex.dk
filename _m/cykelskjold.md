@@ -16,7 +16,7 @@ buylink: https://natur-kompasset.dk/?page_id=22
 - 100km – cykles over 2 døgn, (foreslåede aldersgruppe: 14 år +)
 - 500km – cykles over 6 døgn, (foreslåede aldersgruppe: 16 år +)
 
-###Regler###
+### Regler ###
 
 - Alle distancer: Spejderne skal bruge cykelhjelm og kunne færdselsreglerne for cykling.
 
