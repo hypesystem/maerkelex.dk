@@ -1,3 +1,4 @@
+---
 name: Zombie!
 tags:
 - uofficielt
@@ -5,7 +6,7 @@ tags:
 age: 10+
 coverimage: cover-nature.jpg
 image: zombie.jpg
-buylink: https://sites.google.com/view/zombiemaerket/om-m%C3%A6rket
+buylink: https://sites.google.com/view/zombiemaerket/bestil-m%C3%A6rket?authuser=0
 infolink: https://sites.google.com/view/zombiemaerket/om-m%C3%A6rket
 date_added: 2020-09-11
 ---
