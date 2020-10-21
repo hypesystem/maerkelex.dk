@@ -5,7 +5,7 @@ tags:
 age: 
 coverimage: cover-night.jpg
 image: natloeb.jpg
-buylink: www.mærkerforalle.dk
+buylink: https://www.mærkerforalle.dk
 date_added: 2020-10-21
 ---
 Dette mærke er for de nataktive sjæle, små som store.
