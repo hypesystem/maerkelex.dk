@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - hejk
 image: julehejk.jpg
-buylink: 
+buylink: https://www.herfoelgespejderne.dk/maerker
 date_added: 2020-12-07
 ---
 Julehejk er et mærke alle grene kan tage.
