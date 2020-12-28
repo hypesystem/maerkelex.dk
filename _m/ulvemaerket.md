@@ -8,7 +8,7 @@ date_added: 2020-12-27
 ---
 I 1918 blev den første spejderflok med drenge under 12 år grundlagt, og lige siden har vi i Rønne haft en 1. Rønne Flok med Ulveunger.
 
-Betegnelsen Ulveunger var Baden-Powells ide. Han brugte Junglebogen som fantasiramme – og her optræder også Ulveungerne
+Betegnelsen Ulveunger var Baden-Powells ide. Han brugte Junglebogen som fantasiramme – og her optræder også Ulveungerne.
 
 Vores Gruppe følger bestemt med tiden på alle måder, men vi fastholder, at vores yngre spejdere i alderen 7 – 10 år er Ulveunger i en Ulveflok.
 
