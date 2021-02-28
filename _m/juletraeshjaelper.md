@@ -3,8 +3,8 @@ name: Juletræshjælper
 tags:
 - uofficielt
 image: juletraeshjaelper.jpg
-infolink: http://shorty.tac-case.dk/index.php/juletraeshjaelper
-buylink: http://shorty.tac-case.dk/index.php/bestilling-eller-information
+infolink: http://xn--shortymrket-g9a.dk/juletraeshjaelper
+buylink: http://xn--shortymrket-g9a.dk/bestilling-eller-information
 ---
 Formålet er at vise, at man er en hjælpsom spejder der støtter sin gruppe og venner.
 
