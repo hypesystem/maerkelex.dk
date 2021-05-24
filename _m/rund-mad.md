@@ -4,7 +4,7 @@ tags:
 - uofficielt
 coverimage: cover-campfire2.jpg
 image: rund-mad.jpg
-buylink: https://xn--gyldenlvegruppe-cub.dk/sjovt-dumt-og-farligt
+buylink: 
 ---
 Mærket tages over en weekend (fredag- søndag).
 
