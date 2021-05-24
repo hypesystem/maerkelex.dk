@@ -4,6 +4,7 @@ tags:
 - uofficielt
 image: gruppeweekendmaerket.jpg
 buylink: https://www.facebook.com/Gruppeweekend-m%C3%A6rket-102679695307141/?tsid=0.6752824834591874
+date_added: 2021-05-24
 ---
 Mærket er egnet til alle aldre og et af de nyeste uofficielle mærker i en længere række af seje spejdermærker.
 
