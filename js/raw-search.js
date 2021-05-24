@@ -2,6 +2,10 @@
 ---
 var titleTag = document.head.querySelector("title");
 
+if(!window.onSearchListeners){
+    window.onSearchListeners = [];
+}
+
 onSearchListeners.push(function(value, recovery) {
     if(!recovery) {
         addSearchHistoryFrame(value);

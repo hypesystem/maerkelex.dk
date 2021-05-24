@@ -42,6 +42,35 @@ layout: default
         {% unless page.price %}
         <a target="noopener" href="{{ page.buylink }}" class="btn buylink">Gå til sælger</a>
         {% endunless %}
+        <script>
+          (function() {
+            var infolink = document.querySelector(".btn.infolink")
+
+            if(infolink) {
+              infolink.addEventListener("click", function(e) {
+                if(e.shiftKey || e.altKey || e.ctrlKey) {
+                  // If key modifiers are used, don't overwrite behavior
+                  return;
+                }
+                e.preventDefault();
+                location.href = "/info?m={{ page.id | split: '/' | last }}";
+              });
+            }
+
+            var buylink = document.querySelector(".btn.buylink");
+
+            if(buylink) {
+                buylink.addEventListener("click", function(e) {
+                  if(e.shiftKey || e.altKey || e.ctrlKey) {
+                  // If key modifiers are used, don't overwrite behavior
+                  return;
+                }
+                e.preventDefault();
+                location.href = "/koeb?m={{ page.id | split: '/' | last }}";
+              });
+            }
+          })();
+        </script>
       </div>
       {% unless page.price %}
       <div style="font-size: 0.8em; margin-top: 1em;">
