@@ -5,6 +5,7 @@ tags:
 coverimage: cover-campfire2.jpg
 image: rund-mad.jpg
 buylink: https://www.aarupspejderne.dk/salg-af-maerker
+date_added: 2021-06-09
 ---
 Mærket tages over en weekend (fredag- søndag).
 
