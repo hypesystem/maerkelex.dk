@@ -4,7 +4,7 @@ tags:
 - uofficielt
 image: pizzamok.jpg
 buylink: https://www.solskinstroppen.dk/pizzamok
-date_added: 2020-06-29
+date_added: 2021-06-29
 ---
 I 2020 opfandt Solskinstroppens mikro og miniér dette mærke, hvor det gælder om at lave og spise pizza i et helt døgn til alle måltider.
 

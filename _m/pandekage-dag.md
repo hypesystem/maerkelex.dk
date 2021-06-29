@@ -4,7 +4,7 @@ tags:
 - uofficielt
 image: pandekage-dag.jpg
 buylink: https://www.solskinstroppen.dk/pandekage-dag
-date_added: 2020-06-29
+date_added: 2021-06-29
 ---
 I 2019 lavede Solskinstroppen dette mærke til året sommerlejr på Nekselø.
 
