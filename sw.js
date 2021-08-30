@@ -11,7 +11,7 @@ self.addEventListener("install", function(e) {
                     "{{ site.baseUrl }}/manifest.json",
                     "{{ site.baseUrl }}/faq/",
                     "{{ site.baseUrl }}/hvem-er/",
-                    "{{ site.baseUrl }}/img/hvem-er.png",
+                    "{{ site.baseUrl }}/img/hvem-er.jpg",
                     "{{ site.baseUrl }}/reklamer/",
                     "{{ site.baseUrl }}/blog/",
                     "{{ site.baseUrl }}/font/OpenSans-Regular.ttf",
