@@ -22,7 +22,7 @@ Men for det meste er det os selv der har pakket og sendt mærkerne, og vi har k�
 
 Derfor har vi snakket om hvad vi skal gøre og én ting er vi enige om: vi vil bruge pengene på noget der kommer spejdere til gode.
 
-Vi er fint tilfredse med at det arbejde vi lægger i at drifte og ydvikle Mærkelex selv er en investering fra vores side. Så når vi vil lave noget der kommer spejdere til gode skal det gå ud over bare Mærkelex.
+Vi er fint tilfredse med at det arbejde vi lægger i at drifte og udvikle Mærkelex selv er en investering fra vores side. Så når vi vil lave noget der kommer spejdere til gode skal det gå ud over bare Mærkelex.
 
 Hvordan præcis det kommer til at se ud, vil vi dele mere om løbende. Det bliver noget større og mere komplekst end Mærkelex, noget der spiller til vores styrker som softwareudviklere, og noget vi ikke ville kunne lave med den tid vi har til rådighed udover vores fuldtidsarbejde, som vi gør med resten af Mærkelex.
 
