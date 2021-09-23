@@ -20,7 +20,7 @@ Det førte til at Niels sideløbende med kandidatuddannelsen (og sammen med et p
 
 Samtidig har det bare også været helt vildt hårdt at få en virksomhed op at stå, og få stabiliseret den. Især 2020 var et hårdt år. Så hårdt at vi var flere der sagde "så hårdt skal det ikke være igen". Og coronapandemien kunne ikke tage skylden for det. Vi blev nødt til at tænke os godt om og tage nogle svære valg om hvordan vores virksomhed skulle se ud. Det kunne vi snakke længe om og i mange detaljer, men effekten var denne: helt ind i første del af 2021 var der rigtig meget pres på, og vi har simpelthen ikke haft overskud til så meget udover at drifte Mærkelex.
 
-Nå ja, og så var på barsel i nogle måneder i sommeren 2021.
+Nå ja, og så var Niels på barsel i nogle måneder i sommeren 2021.
 
 Men nu er vi så småt ved at være tilbage, og det står klart for os at det er vigtigt for os at have tid til at udvikle Mærkelex. Så det er værd lige at tage pulsen på hvor Mærkelex er henne, så vi kan beslutte hvad der skal ske nu.
 
