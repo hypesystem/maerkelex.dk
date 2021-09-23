@@ -5,6 +5,7 @@ tags:
 image: superspejd.jpg
 buylink: https://sites.google.com/view/superspejd/start
 date_added: 2021-01-10
+highlight: popular
 ---
 For at få mærket skal du gennemføre den første opgave og derudover mindst syv af de øvrige ni:
 

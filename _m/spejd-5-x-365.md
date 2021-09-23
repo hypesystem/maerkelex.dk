@@ -8,6 +8,7 @@ age: 6+
 image: spejd365x5.jpg
 buylink: https://www.facebook.com/Spejd-5-365-103331335035288/
 date_added: 2021-01-10
+highlight: popular
 ---
 For at tage Spejd 5 x 365 skal spejderen gå med spejdertørklæde i 5 år.
 
