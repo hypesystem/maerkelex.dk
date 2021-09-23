@@ -8,7 +8,7 @@ D. 27. februar 2021 er det nærmeste vi har haft på en rund fødselsdag for Mæ
 
 ![Niels og Anders fra Mærkelex står foran en Mærkelex-plakat](/img/covers/cover-niels-og-anders.jpg)
 
-I 2015 havde vi gået og snakket lidt om ideen bag Mærkelex, og i februar 2016 satte vi os ned en weekend for at bygge den første udgave af en oversigt over spejdermærker. Målet var at have et enkelt sted at sæge på alle mærker, og finde inspiration til møder og forløb. Både fra andre lederes uofficielle mærker, og fra mærkerne i de andre korps. Den første version blev bygget på under en uges arbejdstid, og det mest tidskrævende var at indsamle mærkebilleder og -beskrivelser af alle de mærker vi kunne finde.
+I 2015 havde vi gået og snakket lidt om ideen bag Mærkelex, og i februar 2016 satte vi os ned en weekend for at bygge den første udgave af en oversigt over spejdermærker. Målet var at have et enkelt sted at sæge på alle mærker, og finde inspiration til møder og forløb. Både fra andre lederes uofficielle mærker, og fra mærkerne i de andre korps. Den første version blev bygget på under en uges arbejdstid, og det mest tidskrævende var at indsamle billeder og beskrivelser af alle de mærker vi kunne finde.
 
 Dengang var vi begge to relativt tidligt i vores karrierer som softwareudviklere. Niels var ansat i sit første fuldtidsjob efter en række studiejobs under bacheloruddannelsen. Anders arbejdede i et lille konsulentfirma med nogle kollegaer fra hans uddannelses praktiksted.
 
