@@ -7,7 +7,6 @@ age: 10+
 coverimage: cover-campfire.jpg
 image: bacon.jpg
 buylink: http://www.herfoelgespejderne.dk/maerke
-highlight: popular
 ---
 Spejdermærket "Baconmærket" er et mærke som der har været ønske om hos Herfølgespejderne.
 Dette mad-mærke kunne være et sjovt twist til en overnatningsweekend eller tur.
