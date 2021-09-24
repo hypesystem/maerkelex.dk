@@ -13,4 +13,4 @@ For at kunne bære mærket kan du bl.a:
 - Deltage i aktiviteter ved salg af juletræer.
 - Hjælpe din spejdergruppe med at “nette”og sælge juletræer.
 
-**For at kunne se købsinformation om dette mærke skal du være en del af (Facebook-gruppen "Spejdermærker")[https://www.facebook.com/groups/spejdermaerker/].
+**For at kunne se købsinformation om dette mærke skal du være en del af [Facebook-gruppen "Spejdermærker"](https://www.facebook.com/groups/spejdermaerker/).**
