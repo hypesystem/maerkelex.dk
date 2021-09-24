@@ -13,3 +13,5 @@ Mundaflæsning og tegnsprog kan hjælpe på vej.
 Der skal være en person der IKKE bærer høreværn i forhold til færdsel i trafikken!
 
 Samarbejde, anderledes kommunikation og skærpede sanser. 
+
+**For at kunne se købsinformation om dette mærke skal du være en del af [Facebook-gruppen "Spejdermærker"](https://www.facebook.com/groups/spejdermaerker/).**
