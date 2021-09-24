@@ -13,3 +13,5 @@ Regler:
 - Forskellige varianter, ikke ens! 
 - Alle hjemmelavede, gerne egne bagte boller! 
 - Min. 1 over bål/trangia, men gerne flere! 
+
+**For at kunne se købsinformation om dette mærke skal du være en del af [Facebook-gruppen "Spejdermærker"](https://www.facebook.com/groups/spejdermaerker/).**
