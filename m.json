@@ -18,7 +18,11 @@
       "highlight": {% if m.highlight %}"{{ m.highlight }}"{% else %}null{% endif %},
       "price": {% if m.price %}{{ m.price }}{% else %}null{% endif %},
       "shippingPrice": {% if m.shippingprice %}{{ m.shippingprice }}{% else %}null{% endif %},
-      "preorder": {% if m.preorder %}true{% else %}false{% endif %}
+      "preorder": {% if m.preorder %}true{% else %}false{% endif %},
+      "buylinkRequiresFacebookGroupMembership": {% if m.buylink_requires_facebook_group_membership %}{
+        "name": "{{ m.buylink_requires_facebook_group_membership.name }}",
+        "url": "{{ m.buylink_requires_facebook_group_membership.url }}"
+      }{% else %}null{% endif %}
     }{% unless forloop.last %},{% endunless %}{% endfor %}
   ],
   "defaultShippingPrice": {{ site.defaultShippingPrice }}
