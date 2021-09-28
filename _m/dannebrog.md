@@ -5,6 +5,9 @@ tags:
 coverimage: cover-flag.jpg
 image: dannebrog.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2475432956022072/
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
 date_added: 2019-08-19
 ---
 I anledningen af Dannebrogs 800 år 15. Juni 2019, har Danmarks-Samfundet i Kolding får lavet et broderet mærke.

@@ -8,6 +8,9 @@ age: 8+
 coverimage: cover-tent.jpg
 image: kitkat.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2425678964330805/
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
 date_added: 2019-08-19
 ---
 Der er mange grupper der bruger de nye nylon tunnel telte. Begejstringen for de gamle KITKAT telte kan måske fornyes med dette mærke.

@@ -6,6 +6,9 @@ tags:
 age: 6+
 image: uden-oejne.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2261430557422314/
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
 date_added: 2018-11-12
 ---
 **Mærket kan tages til både 5 og 10 kilometer**

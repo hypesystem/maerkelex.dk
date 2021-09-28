@@ -7,6 +7,9 @@ age: 8+
 image: sover-alene-sammen.jpg
 coverimage: cover-hammock.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2741071142791584
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
 date_added: 2020-07-14
 ---
 Regler:
