@@ -5,6 +5,9 @@ tags:
 - forløb
 image: parloeb.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2155948597970511/
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
 date_added: 2018-08-08
 ---
 **Mærket kan tages til 5 eller 10km**

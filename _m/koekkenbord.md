@@ -7,6 +7,9 @@ age: 12+
 coverimage: cover-knot.jpg
 image: koekkenbord.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2425683130997055/
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
 date_added: 2019-08-19
 ---
 Begejstringen for flotte og korrekte besnørringer kan måske hjælpes lidt på vej med dette mærke.

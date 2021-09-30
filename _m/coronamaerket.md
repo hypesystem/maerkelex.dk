@@ -8,6 +8,9 @@ age: 8+
 coverimage: cover-home.jpg
 image: coronamaerket.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2676441272587905/
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
 date_added: 2020-03-24
 ---
 Coronamærket er et mærke man kan tage derhjemme, uden at man behøves at mødes fysisk. Der er i stedet et virtuelt møde som en del af programmet. Inden jeg bestiller en masse mærker hjem, vil jeg lige høre, om der er andre, der kunne være interresseret i mærket?

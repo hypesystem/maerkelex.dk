@@ -35,6 +35,14 @@ layout: default
         </div>
       </p>
       {% endif %}
+      {% if page.buylink_requires_facebook_group_membership %}
+      <p>
+        <div style="background: rgba(0,0,0,0.025); padding: 15px; font-size: 0.8em;">
+          <strong>Vær opmærksom på:</strong>
+          For at kunne se købsinformation om dette mærke skal du være medlem af Facebook-gruppen <a href="{{ page.buylink_requires_facebook_group_membership.url }}" target="_blank" rel="noopener">{{ page.buylink_requires_facebook_group_membership.name }}</a>.
+        </div>
+      </p>
+      {% endif %}
       <div class="btn-container">
         {% if page.infolink %}
         <a target="noopener" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>

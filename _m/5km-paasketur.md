@@ -6,6 +6,9 @@ tags:
 age: 6+
 image: 5km-paasketur.jpg
 buylink: https://www.facebook.com/photo.php?fbid=10216815357727402
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
 date_added: 2018-11-12
 ---
 - 5 km Vandretur.

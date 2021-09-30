@@ -7,6 +7,9 @@ tags:
 coverimage: cover-friend.jpg
 image: fletty.jpg
 buylink: https://www.facebook.com/photo.php?fbid=2453652874680385&set=gm.2479918512240183
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
 date_added: 2019-09-20
 age: 10+
 ---

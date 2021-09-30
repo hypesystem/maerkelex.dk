@@ -102,15 +102,24 @@
             .leaving-container .btn-container {
                 margin: 3rem 0;
             }
+            .leaving-container p {
+                max-width: 500px;
+                width: 100%;
+            }
         </style>
         <div class="leaving-container">
             <h1>Du forlader nu Mærkelex.</h1>
 
-            <p>Du er på vej til en side på <span data-url>en ekstern side</span> styret af sælgeren af <span data-badge-name>mærket</span></p>
+            <p>Du er på vej til en side på <span data-url>en ekstern side</span> styret af sælgeren af <span data-badge-name>mærket</span>.</p>
+
+            <p data-link-requires-membership style="display: none;">
+                For at kunne se opslaget om mærket, skal du være medlem af Facebook-gruppen <a href="#" data-facebook-group-link target="_blank" rel="noopener">Gruppe</a>.
+                Når du er medlem, peger linket direkte på det relevante opslag i gruppen, hvor du kan læse om mærket.
+            </p>
 
             <div class="btn-container">
                 <a href="/" data-back-link class="btn infolink">Tilbage til Mærkelex</a>
-                <a data-link class="btn buylink" href="#">Fortsæt (<span data-time-left>10 sekunder</span>)</a>
+                <a data-link class="btn buylink" href="#">Fortsæt <span data-time-left></span></a>
             </div>
         </div>
 
@@ -127,16 +136,26 @@
                     document.querySelector("[data-link]").setAttribute("href", m.{{ page.url_field }});
                     document.querySelector("[data-back-link]").setAttribute("href", m.url);
 
-                    var timeLeftElement = document.querySelector("[data-time-left]");
-                    var secondsLeft = 10;
-                    setInterval(function() {
-                        timeLeftElement.innerText = secondsLeft + " sekunder";
-                        if(secondsLeft > 0) {
-                            secondsLeft--;
-                            return;
-                        }
-                        location.href = m.buylink;
-                    }, 999);
+                    var linkRequiresGroupMembership = m.buylinkRequiresFacebookGroupMembership && "{{ page.url_field }}" === "buylink";
+
+                    if(linkRequiresGroupMembership) {
+                        document.querySelector("[data-link-requires-membership]").style = "display: block;";
+                        var groupLink = document.querySelector("[data-facebook-group-link]");
+                        groupLink.innerText = m.buylinkRequiresFacebookGroupMembership.name;
+                        groupLink.setAttribute("href", m.buylinkRequiresFacebookGroupMembership.url);
+                    }
+                    else {
+                        var timeLeftElement = document.querySelector("[data-time-left]");
+                        var secondsLeft = 10;
+                        setInterval(function() {
+                            timeLeftElement.innerText = "(" + secondsLeft + " sekunder)";
+                            if(secondsLeft > 0) {
+                                secondsLeft--;
+                                return;
+                            }
+                            location.href = m.buylink;
+                        }, 999);
+                    }
                 });
             })();
         </script>

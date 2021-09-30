@@ -4,6 +4,9 @@ tags:
 - uofficielt
 image: burger-24.jpg
 buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2762884600610238/
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
 date_added: 2021-09-24
 ---
 Et døgn med burgere!
@@ -13,5 +16,3 @@ Regler:
 - Forskellige varianter, ikke ens! 
 - Alle hjemmelavede, gerne egne bagte boller! 
 - Min. 1 over bål/trangia, men gerne flere! 
-
-**For at kunne se købsinformation om dette mærke skal du være en del af [Facebook-gruppen "Spejdermærker"](https://www.facebook.com/groups/spejdermaerker/).**

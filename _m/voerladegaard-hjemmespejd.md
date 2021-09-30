@@ -7,7 +7,6 @@ tags:
 age: 6+
 coverimage: cover-home.jpg
 image: voerladegaard-hjemmespejd.jpg
-buylink: https://www.facebook.com/groups/105871033141263/permalink/1005253649869659/
 date_added: 2020-03-24
 price: 15
 ---
