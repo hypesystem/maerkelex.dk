@@ -4,11 +4,11 @@ image: landstraef1.jpg
 date: 2021-10-12
 da_date: 12. oktober 2021
 ---
-![Niels og Anders står i forgrunden. Deltagerne på deres workshop på Landstræf kan ses i baggrunden.](landstraef1.jpg)
-
 Når man er involveret i noget længe nok, kan man ikke undgå at få en ret god ide om det.
 
 Mærkelex er ret centralt placeret i verdenen af spejder&shy;mærker. Især er vi tæt knyttet til fællesskabet omkring de uofficielle spejder&shy;mærker, som ledere og spejdere i Danmark selv finder på og deler med andre, til inspiration og motivation.
+
+![Niels og Anders står i forgrunden. Deltagerne på deres workshop på Landstræf kan ses i baggrunden.](landstraef1.jpg)
 
 Det betyder at vi i løbet af de sidste par år har hørt om stort set alt der har rørt sig på den front -- og vi vil meget gerne dele vores historier med andre.
 Vi har hørt en masse forskellige synspunkter på hvad et godt spejdermærke er, og hvordan man bør bruge spejder&shy;mærker i de forskellige korps.
