@@ -1,6 +1,6 @@
 ---
 title: Mærkelex og penge
-date: 2020-11-04
+date: 2021-11-04
 da_date: "4. november 2021"
 image_stock: opsparing
 ---
