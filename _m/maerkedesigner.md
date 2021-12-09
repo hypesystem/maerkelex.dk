@@ -17,10 +17,18 @@ Ved at tage mærkedesigner mærket er spejderne med til at højne diversiteten, 
 
 ### For at gøre sig fortjent til mærket skal man:
 
-1. I kan starte med at lave en brainstorm: Kom med ideer til jeres mærke. Hvad kunne være sjovt, fedt, sejt? Skal det være et forløbsmærke, færdighedsmærke, aktivitetsmærke, eller et lejermærke? Husk at det gerne må være bare lidt spejder-relevant ;-).
-2. Så skal I blive enige om, hvilken ide i går videre med. Kompromis kan blive nødvendigt.
-3. Bagefter skal I finde på regler for jeres nye mærke. Husk at lave en klar formulering som ikke kan misforstås. Det kan være en god ide at formulere 5 - 10 punkter som man skal gennemføre, før man får jeres mærke. Det kan hjælpe at få nogle andres input på jeres regler. Spørg en anden patrulje eller nogle andre spejdervenner hvordan de forstår de regler, I har skrevet. Passer det med det I mente? Kan I rette i beskrivelsen, så det bliver mere klart hvad I mener?
-4. Så skal der tegnes skitser, af hvordan i vil have at jeres mærke skal se ud. Beslut jer for en af skitserne, og lav en mere detaljeret version.
-5. Nu skal i have fremstillet mærket. Det kan I gøre, enten hjælp fra en professionel, eller selv. Hvis I vælger at bruge en professionel kan vi anbefale f.eks. [Køhler Emblemer](https://emblemer.dk/) eller [Jysk Emblem Fabrik](https://www.jef.dk/da/). I selv opsøge dem eller teamet på Mærkelex kan hjælpe jer. De kan kontaktes på mail <kontakt@maerkelex.dk>.
-6. Tage dit eget mærke. Alle aktive medlemmer i patruljen skal tage det, og man skal minimum være 2 spejdere der samarbejder om at lave et mærke.
-7. Sæt mærket til salg, hvis der er mulighed for det. Fx. på Mærkelex.
+**1. Brainstorm:** I kan starte med at lave en brainstorm: Kom med ideer til jeres mærke. Hvad kunne være sjovt, fedt, sejt? Skal det være et forløbsmærke, færdighedsmærke, aktivitetsmærke, eller et lejermærke? Husk at det gerne må være bare lidt spejder-relevant 😉.
+
+**2. Endelig ide:** Så skal I blive enige om, hvilken ide i går videre med. Kompromis kan blive nødvendigt.
+
+**3. Regler:** Bagefter skal I finde på regler for jeres nye mærke. Husk at lave en klar formulering som ikke kan misforstås. Det kan være en god ide at formulere 5 - 10 punkter som man skal gennemføre, før man får jeres mærke.
+
+Det kan hjælpe at få nogle andres input på jeres regler. Spørg en anden patrulje eller nogle andre spejdervenner hvordan de forstår de regler, I har skrevet. Passer det med det I mente? Kan I rette i beskrivelsen, så det bliver mere klart hvad I mener?
+
+**4. Skitse:** Så skal der tegnes skitser, af hvordan i vil have at jeres mærke skal se ud. Beslut jer for en af skitserne, og lav en mere detaljeret version.
+
+**5. Fremstil:** Nu skal i have fremstillet mærket. Det kan I gøre, enten hjælp fra en professionel, eller selv. Hvis I vælger at bruge en professionel kan vi anbefale f.eks. [Køhler Emblemer](https://emblemer.dk/) eller [Jysk Emblem Fabrik](https://www.jef.dk/da/). Enten kan I selv opsøge dem, eller [kontakte teamet bag Mærkelex](/kontakt) og få dem til at hjælpe jer.
+
+**6. Tag mærket selv:** Tage dit eget mærke. Alle aktive medlemmer i patruljen skal tage det, og man skal minimum være 2 spejdere der samarbejder om at lave et mærke.
+
+**7. Salg:** Sæt mærket til salg, hvis der er mulighed for det. Fx. på Mærkelex.
