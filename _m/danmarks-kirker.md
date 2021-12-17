@@ -41,4 +41,4 @@ Du behøver ikke deltage i en gudstjeneste i kirken - men du må selvfølgelig m
 Men du skal som minimum gå ind og se kirken indvendigt for at den tæller med.
 
 
-Find evt. inspiration til hvilke kirker du vil besøge på [www.danske-kirker.dk](www.danske-kirker.dk)
+Find evt. inspiration til hvilke kirker du vil besøge på [danske-kirker.dk](https://www.danske-kirker.dk/index.php/en/)
