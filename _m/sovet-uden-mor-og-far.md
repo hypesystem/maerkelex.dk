@@ -19,5 +19,3 @@ Jeg har sovet uden mor og far mærket, er lavet til Mikro og Mini spejdere. Der 
 - Turen skal vare mindst 24 timer
 - INGEN ringe / skrive med mor/far
 - man SKAL have sovet.
-
-Skal man bruge mere end 10, eller et andet antal, så "tilmeld" flere. så opdaretes kurven.
