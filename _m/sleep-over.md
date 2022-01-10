@@ -6,7 +6,6 @@ tags:
 age: 3+
 image: sleep-over.jpg
 coverimage: cover-sleepy.jpg
-preorder: true
 date_added: 2021-11-17
 price: 20
 ---
