@@ -4,7 +4,6 @@ tags:
 - uofficielt
 age: 12+
 image: maerkedesigner.jpg
-preorder: true
 date_added: 2021-12-06
 price: 20
 ---
