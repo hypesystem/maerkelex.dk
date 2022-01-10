@@ -1,5 +1,5 @@
 ---
-name: Fastelavns Mærke
+name: Faste&shy;lavns-mærke
 tags:
 - uofficielt
 image: fastelavns-maerke.jpg
