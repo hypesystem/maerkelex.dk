@@ -20,9 +20,9 @@ Ide forslag:
 - Hvordan var en spejderlejr for 25, 50, 75, 100 år?
 - Hvilke ændring har spejderløftet gennemgået gennem tiden?
 - Betydning og udseende af uniformen gennem tiden.
-- Se filmen »Jamboree« fra 1924 på dfi.dk.
+- Se filmen »Jamboree« fra 1924 på [dfi.dk](https://www.dfi.dk/).
 - Besøge et spejdermuseet.
-- Hør podcasten afsnittene »Spejderne kommer til Danmark« (Spejderliv.dk).
+- Hør podcasten afsnittene »Spejderne kommer til Danmark« ([Spejderliv.dk](https://spejderliv.dk/)).
 - Læs kapitelet 18 i bogen »Spejderliv« udgave 2021.
 - Lav en youtube film om BP.
 - Lav en quiz om BP.
