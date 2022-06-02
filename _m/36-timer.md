@@ -23,5 +23,5 @@ Det er en god idé at være flere sammen om at tage mærket, for ellers bliver d
 
 Hvilke aktiviteter I laver er op til jer selv, men fællesbetegnelsen for dem skal være spejderaktiviteter.
 
-De sejeste kan gøre mærket Xtreme, og dermed fortjene et X til at sætte på mærket.
+De sejeste kan gøre mærket Xtreme, og dermed fortjene [et X til at sætte på mærket](/m/dgp-x-maerket).
 For at x'e mærket skal man holde sig vågen i 48 timer. Man må maksimalt tage 2 powernaps af 20 minutters varighed (og de kan ikke bruges som en på 40 minutter). Derudover er reglerne de samme.

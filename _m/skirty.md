@@ -40,4 +40,4 @@ Vil du X'e Skirty - Nederdelemærket, så tager du det bare med bare ben...
 Hotpants/cykelshorts til over knæet og strømper til under knæet er dog tilladt.
 
 X'er man mærket, må man sy et rødt X ovenpå mærket.
-Det røde X kan [købes fra 55Nord](https://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/x-maerket-de-groenne-pigespejdere).
+Det røde X kan [findes her](/m/dgp-x-maerket).
