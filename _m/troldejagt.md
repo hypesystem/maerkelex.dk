@@ -4,11 +4,8 @@ tags:
 - uofficielt
 - forløb
 image: troldejagt.jpg
-buylink: https://www.facebook.com/groups/spejdermaerker/permalink/3011885535710142/
+buylink: https://www.facebook.com/Stevns-Nord-Spejderm%C3%A6rker-100367819332328
 date_added: 2022-02-06
-buylink_requires_facebook_group_membership:
-  name: Spejdermærker
-  url: https://www.facebook.com/groups/spejdermaerker/
 ---
 Mærket er udarbejdet efter aftale og i samarbejde med kunstneren Thomas Dambo, der står bag troldene bygget af genbrugsmateriale, der er at finde både i ind- og udland. I kan læse meget mere om troldene her:
 - [thomasdambo.com](http://www.thomasdambo.com)
