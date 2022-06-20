@@ -1,5 +1,5 @@
 ---
-name: Hjælpermærke
+name: Hjælpermærket (Lortetjans)
 tags:
 - uofficielt
 image: hjaelpermaerke.jpg
