@@ -70,7 +70,8 @@
       margin-bottom: 8px;
   }
 
-  input {
+  input,
+  select {
       padding: 5px 8px;
       margin-top: 3px;
       font-size: 1.1em;
@@ -78,6 +79,7 @@
       border: 1px solid #a5a5a5;
       border-radius: $rounding--small;
       box-shadow: none;
+      background-color: #fff;
 
       &:focus {
         box-shadow: 0 0 0 .125em rgba(50,115,220,.25);
@@ -91,7 +93,8 @@
 
   input[type=text],
   input[type=tel],
-  input[type=email] {
+  input[type=email],
+  select {
       display: block;
       width: 100%;
   }

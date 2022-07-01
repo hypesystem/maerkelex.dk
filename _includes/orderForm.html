@@ -59,58 +59,80 @@
         </script>
     </div>
     <div class="invoicing-address-part">
-    <h3>Faktureringsadresse</h3>
-    <label for="invoicing-name">
-        Navn:
-        <input type="text" name="invoicing-name" id="invoicing-name" autocomplete="name">
-        <div class="input-error-message input-error-message-hidden"></div>
-    </label>
-    <label for="invoicing-address">
-        Vej og husnummer:
-        <input type="text" name="invoicing-address" id="invoicing-address" autocomplete="shipping street-address">
-        <div class="input-error-message input-error-message-hidden"></div>
-    </label>
-    <div class="city-info-container">
-        <label for="invoicing-postal-code" class="postal-code">
-            Postnr.:
-            <input type="text" name="invoicing-postal-code" id="invoicing-postal-code" autocomplete="shipping postal-code">
+        <h3>Faktureringsadresse</h3>
+        <label for="invoicing-name">
+            Navn:
+            <input type="text" name="invoicing-name" id="invoicing-name" autocomplete="name">
             <div class="input-error-message input-error-message-hidden"></div>
         </label>
-        <label for="invoicing-city" class="city">
-            By:
-            <input type="text" name="invoicing-city" id="invoicing-city" autocomplete="shipping locality">
+        <label for="invoicing-address">
+            Vej og husnummer:
+            <input type="text" name="invoicing-address" id="invoicing-address" autocomplete="shipping street-address">
             <div class="input-error-message input-error-message-hidden"></div>
         </label>
-    </div>
-    <label for="delivery-address-differs" class="checkbox-label">
-        <input type="checkbox" name="delivery-address-differs" id="delivery-address-differs">
-        Leveringsadressen er forskellig fra faktureringsadressen
-    </label>
+        <div class="city-info-container">
+            <label for="invoicing-postal-code" class="postal-code">
+                Postnr.:
+                <input type="text" name="invoicing-postal-code" id="invoicing-postal-code" autocomplete="shipping postal-code">
+                <div class="input-error-message input-error-message-hidden"></div>
+            </label>
+            <label for="invoicing-city" class="city">
+                By:
+                <input type="text" name="invoicing-city" id="invoicing-city" autocomplete="shipping locality">
+                <div class="input-error-message input-error-message-hidden"></div>
+            </label>
+        </div>
+        <div>
+            <label for="invoicing-country" class="country">
+                Land:
+                <select type="text" name="invoicing-country" id="invoicing-country" autocomplete="shipping country">
+                    <option>Danmark</option>
+                    <option>Sverige</option>
+                    <option>Norge</option>
+                    <option>Tyskland</option>
+                    <option>Færøerne</option>
+                </select>
+                <div class="input-error-message input-error-message-hidden"></div>
+            </label>
+        </div>
+        <label for="delivery-address-differs" class="checkbox-label">
+            <input type="checkbox" name="delivery-address-differs" id="delivery-address-differs">
+            Leveringsadressen er forskellig fra faktureringsadressen
+        </label>
     </div>
     <div class="delivery-address-part">
-    <h3>Leveringsadresse</h3>
-    <label for="delivery-name">
-        Navn:
-        <input type="text" name="delivery-name" id="delivery-name">
-        <div class="input-error-message input-error-message-hidden"></div>
-    </label>
-    <label for="delivery-address">
-        Vej og husnummer:
-        <input type="text" name="delivery-address" id="delivery-address">
-        <div class="input-error-message input-error-message-hidden"></div>
-    </label>
-    <div class="city-info-container">
-        <label for="delivery-postal-code" class="postal-code">
-            Postnr.:
-            <input type="text" name="delivery-postal-code" id="delivery-postal-code">
+        <h3>Leveringsadresse</h3>
+        <label for="delivery-name">
+            Navn:
+            <input type="text" name="delivery-name" id="delivery-name">
             <div class="input-error-message input-error-message-hidden"></div>
         </label>
-        <label for="delivery-city" class="city">
-            By:
-            <input type="text" name="delivery-city" id="delivery-city">
+        <label for="delivery-address">
+            Vej og husnummer:
+            <input type="text" name="delivery-address" id="delivery-address">
             <div class="input-error-message input-error-message-hidden"></div>
         </label>
-    </div>
+        <div class="city-info-container">
+            <label for="delivery-postal-code" class="postal-code">
+                Postnr.:
+                <input type="text" name="delivery-postal-code" id="delivery-postal-code">
+                <div class="input-error-message input-error-message-hidden"></div>
+            </label>
+            <label for="delivery-city" class="city">
+                By:
+                <input type="text" name="delivery-city" id="delivery-city">
+                <div class="input-error-message input-error-message-hidden"></div>
+            </label>
+        </div>
+        <div>
+            <label for="delivery-country" class="country">
+                Land:
+                <select type="text" name="delivery-country" id="delivery-country">
+                    <option>Danmark</option>
+                </select>
+                <div class="input-error-message input-error-message-hidden"></div>
+            </label>
+        </div>
     </div>
     <script>
         var deliveryPart = document.querySelector(".delivery-address-part");
