@@ -6,6 +6,9 @@ image: pingvin-52.jpg
 buylink: https://www.facebook.com/KFUM-spejderne-p%C3%A5-toppen-106437668756430
 date_added: 2022-06-17
 ---
+Opfindere: Søskende Laura (FDF Skanderborg-Stilling), Sara & Ronja (begge KFUM Ejer Bavnehøj).
+Mærket er lavet i samarbejde med de tre opfindere, FDF Skanderborg-Stilling og KFUM Ejer Bavnehøj.
+
 Du skal bade i åbent vand en gang om ugen, i et helt år. (Åbent vand = sø, å, hav, flod, fjord eller bælt).
 Du har 4 bufferuger. Det vil sige, at hvis du ikke kan bade, så bliver de uger sat bagpå. Altså er du først færdig efter 1 år plus bufferuger.
 
