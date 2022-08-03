@@ -28,5 +28,6 @@ defaults:
 
 future: true
 
-paymentsSiteUrl: "https://salg.mærkelex.dk"
+paymentsSiteUrl: "http://localhost:4004"
 defaultShippingPrice: 25
+internationalShippingPrice: 50

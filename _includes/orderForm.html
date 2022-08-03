@@ -86,11 +86,7 @@
             <label for="invoicing-country" class="country">
                 Land:
                 <select type="text" name="invoicing-country" id="invoicing-country" autocomplete="shipping country">
-                    <option>Danmark</option>
-                    <option>Sverige</option>
-                    <option>Norge</option>
-                    <option>Tyskland</option>
-                    <option>Færøerne</option>
+                    {% include country-list.html %}
                 </select>
                 <div class="input-error-message input-error-message-hidden"></div>
             </label>
@@ -128,7 +124,7 @@
             <label for="delivery-country" class="country">
                 Land:
                 <select type="text" name="delivery-country" id="delivery-country">
-                    <option>Danmark</option>
+                    {% include country-list.html %}
                 </select>
                 <div class="input-error-message input-error-message-hidden"></div>
             </label>
@@ -159,8 +155,7 @@
         </label>
     </div>
     <p>
-        Levering koster {{ page.shippingPrice | default: site.defaultShippingPrice }} kr.
-        Vi leverer i hele landet, men desværre ikke internationalt.
+        Levering i Danmark koster {{ page.shippingPrice | default: site.defaultShippingPrice }} kr. International levering koster {{ site.internationalShippingPrice }} kr.
         <a href="mailto:kontakt@maerkelex.dk">Kontakt os</a> for en særlig aftale, hvis du ønsker international levering.
     </p>
     <button class="btn buylink">{% if page.preorder %}Forudbestil{% else %}Bestil{% endif %} mærke</button>
