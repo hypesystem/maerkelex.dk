@@ -1,5 +1,4 @@
-<option>Danmark</option>
-<option>Sverige</option>
-<option>Norge</option>
-<option>Tyskland</option>
-<option>Færøerne</option>
+<!-- country-list -->
+{% for country in site.shippingCountries %}
+  <option>{{ country }}</option>
+{% endfor %}

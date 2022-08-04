@@ -31,3 +31,10 @@ future: true
 paymentsSiteUrl: "https://salg.mærkelex.dk"
 defaultShippingPrice: 25
 internationalShippingPrice: 50
+
+shippingCountries:
+- Danmark
+- Sverige
+- Norge
+- Deutschland
+- Føroyar
