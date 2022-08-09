@@ -7,8 +7,8 @@ tags:
 age: 12+
 image: foody.jpg
 coverimage: cover-campfire.jpg
-buylink: http://xn--shortymrket-g9a.dk/bestilling-eller-information
-infolink: http://xn--shortymrket-g9a.dk/foody
+buylink: https://shorty.tac-case.dk/index.php/bestilling-eller-information
+infolink: https://shorty.tac-case.dk/index.php/foody
 ---
 
 ## Duelighedstegnet som gør spejdere til mesterkokke

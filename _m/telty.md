@@ -6,8 +6,8 @@ tags:
 - 365
 age: 10+
 image: telty.jpg
-infolink: http://xn--shortymrket-g9a.dk/telty-maerket
-buylink: http://xn--shortymrket-g9a.dk/bestilling-eller-information
+infolink: https://shorty.tac-case.dk/index.php/telty-maerket
+buylink: https://shorty.tac-case.dk/index.php/bestilling-eller-information
 date_added: 2018-11-07
 ---
 TELTY mærket kan du erhverve efter følgende regler:
