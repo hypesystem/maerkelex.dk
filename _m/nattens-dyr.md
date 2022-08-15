@@ -5,7 +5,7 @@ tags:
 - forløb
 image: nattens-dyr.jpg
 age: +6
-buylink: https://www.rasmus-rask.dk/nyt-maerke
+buylink: https://www.facebook.com/Naturlivsmaerkerne/
 date_added: 2022-08-05
 ---
 "Nattens Dyr" handler om at opleve og lære om de dyr, som er skumrings/natteaktive. Hvilke dyr det er, hvordan de skiller sig ud, og hvordan vi kan hjælpe dem. 

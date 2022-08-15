@@ -5,7 +5,7 @@ tags:
 - forløb
 image: de-fire-aarstider.jpg
 age: +6
-buylink: https://www.rasmus-rask.dk/nyt-maerke
+buylink: https://www.facebook.com/Naturlivsmaerkerne/
 date_added: 2022-08-05
 ---
 "De Fire Årstider" er et længere forløb, der handler om at gøre noget godt for livet i naturen i hver af de fire sæsoner. Hvem har "mest brug for" vores hjælp om vinteren og hvem har egentlig brug for den om sommeren – og hvilken slags? Har fugle brug for redekasser om vinteren? Eller skal vi tage dem ned? Har flagermus brug for deres skjul om sommeren?
