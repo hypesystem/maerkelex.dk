@@ -12,7 +12,7 @@
 <div class="purchase-container">
   <form class="purchase-form" method="post" action="{{ site.paymentsSiteUrl }}" id="order-form">
     <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
-    <input type="hidden" name="badges" value="">
+    <input type="hidden" name="badges" value="" id="js-badges-input">
     <div class="order-part">
         <h2>Leveringsoplysninger</h2>
         <label for="count">
@@ -130,6 +130,9 @@
 
 <script>
   (function() {
+    const badgesInputField = document.querySelector("#js-badges-input");
+    const emptyCartButton = document.querySelector(".js-empty-cart-button");
+
     function showCart() {
       const cart = fetchCart();
       console.warn("Current Cart:", cart);
@@ -144,6 +147,7 @@
       })
       badgeContainer.innerHTML = badgeElements;
       totalBadgeCountUI.textContent = totalBadgeCount;
+      badgesInputField.value = JSON.stringify(cart);
     }
 
     function fetchCart() {
@@ -162,9 +166,7 @@
         showCart();
     }
 
-    showCart()
-
-    const emptyCartButton = document.querySelector(".js-empty-cart-button");
+    showCart();
   
     emptyCartButton.addEventListener("click", function(){
         emptyCart()
