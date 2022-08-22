@@ -132,7 +132,7 @@
   (function() {
     function showCart() {
       const cart = fetchCart();
-      console.warn(cart)
+      console.warn("Current Cart:", cart);
 
       const badgeContainer = document.querySelector(".js-badges-in-cart");
       const totalBadgeCountUI = document.querySelector(".js-total-badge-count");
@@ -141,9 +141,7 @@
       cart.forEach(badge => {
         badgeElements += `<li>${badge.id}, ${badge.count} stk.</li>`;
         totalBadgeCount += parseInt(badge.count);
-        console.warn("totalBadgeCount", totalBadgeCountUI);
       })
-      console.log(totalBadgeCountUI)
       badgeContainer.innerHTML = badgeElements;
       totalBadgeCountUI.textContent = totalBadgeCount;
     }
@@ -153,7 +151,6 @@
         if (sessionStorageCart) {
             cart = JSON.parse(sessionStorageCart);
             if (cart) {
-                console.warn("cart Fetched", cart)
                 return cart;
             }
         }
@@ -161,7 +158,6 @@
     };
 
     function emptyCart() {
-        console.warn("empty")
         localStorage.setItem("cart", "[]")
         showCart();
     }
