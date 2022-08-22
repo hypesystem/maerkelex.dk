@@ -1,9 +1,9 @@
-.purchase-form {
-  #order-form {
+.purchase-container {
+  .purchase-form {
+    box-sizing: border-box;
     border: 1px solid #32323c;
     border-radius: $rounding--small;
     padding: 10px;
-    margin: 0 -10px;
     background: rgba(255, 255, 255, 0.80);
     position: relative;
     max-width: 500px;

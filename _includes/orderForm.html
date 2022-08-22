@@ -1,4 +1,4 @@
-<form method="post" action="{{ site.paymentsSiteUrl }}" id="order-form" class="hidden-order">
+<form class="purchase-form hidden-order" id="order-form" method="post" action="{{ site.paymentsSiteUrl }}">
     <span class="collapse-purchase">&lsaquo;</span>
     <h2>Køb {{page.name}} mærke</h2>
     <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
@@ -32,7 +32,8 @@
             });
 
             function expandOrderForm() {
-                document.querySelector("#order-form").className = "show-order";
+                document.querySelector("#order-form").classList.add("show-order");
+                document.querySelector("#order-form").classList.remove("hidden-order");
                 document.querySelector("#order-expand-btn").style.display = "none";
             };
 
@@ -53,7 +54,8 @@
             }
 
             document.querySelector(".collapse-purchase").addEventListener("click", function() {
-                document.querySelector("#order-form").className = "hidden-order";
+                document.querySelector("#order-form").classList.add("hidden-order");
+                document.querySelector("#order-form").classList.remove("show-order");
                 setTimeout(function(){document.querySelector("#order-expand-btn").style.display = "block"}, 220);
             });
         </script>
@@ -158,11 +160,36 @@
         Levering i Danmark koster {{ page.shippingPrice | default: site.defaultShippingPrice }} kr. International levering koster {{ site.internationalShippingPrice }} kr.
         <a href="mailto:kontakt@maerkelex.dk">Kontakt os</a> for en særlig aftale, hvis du ønsker international levering udover de tilgængelige lande.
     </p>
-    <button class="btn buylink">{% if page.preorder %}Forudbestil{% else %}Bestil{% endif %} mærke</button>
+    <div class="btn-container">
+        <button class="btn buylink">{% if page.preorder %}Forudbestil{% else %}Bestil{% endif %} mærke nu</button>
+        {% if page.preorder == undefined %}
+            <button id="add-to-basket" class="btn">Put mærke i kurv</button>
+        {% endif %}
+    </div>
 </form>
 <script>
 (function() {
     var form = document.getElementById("order-form");
+    var basketButton = document.getElementById("add-to-basket");
+
+    basketButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        let badge = {
+            count: form.count.value,
+            id: "{{ page.id | remove_first: "/m/" }}",
+        };
+
+        let localStorageCart = localStorage.getItem("cart");
+        if (localStorageCart) {
+            cart = JSON.parse(localStorageCart);
+        }
+        else {
+            cart = [];
+        }
+        cart.push(badge);
+        localStorage.setItem("cart", JSON.stringify(cart))
+        console.warn("Badge pushed to cart. Current cart:", cart);
+    });
 
     form.addEventListener("submit", function(event) {
         var errors = {};
