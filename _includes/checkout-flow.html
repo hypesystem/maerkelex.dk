@@ -152,13 +152,27 @@
       let badgeElements = "";
 
       cart.forEach((badge) => {
-        badgeElements += `<li>${badge.id}, ${badge.count} stk.</li>`;
+        badgeElements += `
+          <li>
+            ${badge.id}, ${badge.count} stk.
+            <button data-js-remove-badge data-badge-id="${badge.id}">
+              Fjern
+            </button>
+          </li>
+        `;
         totalBadgeCount += parseInt(badge.count);
       });
 
       badgeContainer.innerHTML = badgeElements;
       totalBadgeCountUI.textContent = totalBadgeCount;
       badgesInputField.value = JSON.stringify(cart);
+
+      const removeBageBtn = document.querySelectorAll("[data-js-remove-badge]");
+      removeBageBtn.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          removeBadgeFromCart(btn.dataset.badgeId, cart);
+        });
+      });
     }
 
     function fetchCart() {
@@ -174,6 +188,12 @@
 
     function emptyCart() {
       localStorage.setItem("cart", "[]");
+      showCart();
+    }
+
+    function removeBadgeFromCart(badgeId, cart) {
+      const updatedCart = cart.filter((data) => data.id != badgeId);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
       showCart();
     }
 
