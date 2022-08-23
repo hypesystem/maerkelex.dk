@@ -9,138 +9,138 @@
   </div>
 </div>
 <div class="purchase-container">
-    <form 
-        class="purchase-form"
-        method="post"
-        action="{{ site.paymentsSiteUrl }}"
-        id="order-form"
-    >
-    <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
-    <input type="hidden" name="badges" value="" id="js-badges-input">
+  <form class="purchase-form" method="post" action="{{ site.paymentsSiteUrl }}" id="order-form">
+    <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url" />
+    <input type="hidden" name="badges" value="" id="js-badges-input" />
     <div class="order-part">
-        <h2>Leveringsoplysninger</h2>
+      <h2>Leveringsoplysninger</h2>
     </div>
     <div class="invoicing-address-part">
-        <h3>Faktureringsadresse</h3>
-        <label for="invoicing-name">
-            Navn:
-            <input type="text" name="invoicing-name" id="invoicing-name" autocomplete="name">
-            <div class="input-error-message input-error-message-hidden"></div>
+      <h3>Faktureringsadresse</h3>
+      <label for="invoicing-name">
+        Navn:
+        <input type="text" name="invoicing-name" id="invoicing-name" autocomplete="name" />
+        <div class="input-error-message input-error-message-hidden"></div>
+      </label>
+      <label for="invoicing-address">
+        Vej og husnummer:
+        <input type="text" name="invoicing-address" id="invoicing-address" autocomplete="shipping street-address" />
+        <div class="input-error-message input-error-message-hidden"></div>
+      </label>
+      <div class="city-info-container">
+        <label for="invoicing-postal-code" class="postal-code">
+          Postnr.:
+          <input
+            type="text"
+            name="invoicing-postal-code"
+            id="invoicing-postal-code"
+            autocomplete="shipping postal-code"
+          />
+          <div class="input-error-message input-error-message-hidden"></div>
         </label>
-        <label for="invoicing-address">
-            Vej og husnummer:
-            <input type="text" name="invoicing-address" id="invoicing-address" autocomplete="shipping street-address">
-            <div class="input-error-message input-error-message-hidden"></div>
+        <label for="invoicing-city" class="city">
+          By:
+          <input type="text" name="invoicing-city" id="invoicing-city" autocomplete="shipping locality" />
+          <div class="input-error-message input-error-message-hidden"></div>
         </label>
-        <div class="city-info-container">
-            <label for="invoicing-postal-code" class="postal-code">
-                Postnr.:
-                <input type="text" name="invoicing-postal-code" id="invoicing-postal-code" autocomplete="shipping postal-code">
-                <div class="input-error-message input-error-message-hidden"></div>
-            </label>
-            <label for="invoicing-city" class="city">
-                By:
-                <input type="text" name="invoicing-city" id="invoicing-city" autocomplete="shipping locality">
-                <div class="input-error-message input-error-message-hidden"></div>
-            </label>
-        </div>
-        <div>
-            <label for="invoicing-country" class="country">
-                Land:
-                <select type="text" name="invoicing-country" id="invoicing-country" autocomplete="shipping country">
-                    {% include country-list.html %}
-                </select>
-                <div class="input-error-message input-error-message-hidden"></div>
-            </label>
-        </div>
-        <label for="delivery-address-differs" class="checkbox-label">
-            <input type="checkbox" name="delivery-address-differs" id="delivery-address-differs">
-            Leveringsadressen er forskellig fra faktureringsadressen
+      </div>
+      <div>
+        <label for="invoicing-country" class="country">
+          Land:
+          <select type="text" name="invoicing-country" id="invoicing-country" autocomplete="shipping country">
+            {% include country-list.html %}
+          </select>
+          <div class="input-error-message input-error-message-hidden"></div>
         </label>
+      </div>
+      <label for="delivery-address-differs" class="checkbox-label">
+        <input type="checkbox" name="delivery-address-differs" id="delivery-address-differs" />
+        Leveringsadressen er forskellig fra faktureringsadressen
+      </label>
     </div>
     <div class="delivery-address-part">
-        <h3>Leveringsadresse</h3>
-        <label for="delivery-name">
-            Navn:
-            <input type="text" name="delivery-name" id="delivery-name">
-            <div class="input-error-message input-error-message-hidden"></div>
+      <h3>Leveringsadresse</h3>
+      <label for="delivery-name">
+        Navn:
+        <input type="text" name="delivery-name" id="delivery-name" />
+        <div class="input-error-message input-error-message-hidden"></div>
+      </label>
+      <label for="delivery-address">
+        Vej og husnummer:
+        <input type="text" name="delivery-address" id="delivery-address" />
+        <div class="input-error-message input-error-message-hidden"></div>
+      </label>
+      <div class="city-info-container">
+        <label for="delivery-postal-code" class="postal-code">
+          Postnr.:
+          <input type="text" name="delivery-postal-code" id="delivery-postal-code" />
+          <div class="input-error-message input-error-message-hidden"></div>
         </label>
-        <label for="delivery-address">
-            Vej og husnummer:
-            <input type="text" name="delivery-address" id="delivery-address">
-            <div class="input-error-message input-error-message-hidden"></div>
+        <label for="delivery-city" class="city">
+          By:
+          <input type="text" name="delivery-city" id="delivery-city" />
+          <div class="input-error-message input-error-message-hidden"></div>
         </label>
-        <div class="city-info-container">
-            <label for="delivery-postal-code" class="postal-code">
-                Postnr.:
-                <input type="text" name="delivery-postal-code" id="delivery-postal-code">
-                <div class="input-error-message input-error-message-hidden"></div>
-            </label>
-            <label for="delivery-city" class="city">
-                By:
-                <input type="text" name="delivery-city" id="delivery-city">
-                <div class="input-error-message input-error-message-hidden"></div>
-            </label>
-        </div>
-        <div>
-            <label for="delivery-country" class="country">
-                Land:
-                <select type="text" name="delivery-country" id="delivery-country">
-                    {% include country-list.html %}
-                </select>
-                <div class="input-error-message input-error-message-hidden"></div>
-            </label>
-        </div>
+      </div>
+      <div>
+        <label for="delivery-country" class="country">
+          Land:
+          <select type="text" name="delivery-country" id="delivery-country">
+            {% include country-list.html %}
+          </select>
+          <div class="input-error-message input-error-message-hidden"></div>
+        </label>
+      </div>
     </div>
     <script>
-        var deliveryPart = document.querySelector(".delivery-address-part");
-        document.querySelector("#delivery-address-differs").addEventListener("change", function() {
-            if(this.checked) {
-                deliveryPart.style = "display: block;";
-            }
-            else {
-                deliveryPart.style = "";
-            }
-        });
+      var deliveryPart = document.querySelector(".delivery-address-part");
+      document.querySelector("#delivery-address-differs").addEventListener("change", function () {
+        if (this.checked) {
+          deliveryPart.style = "display: block;";
+        } else {
+          deliveryPart.style = "";
+        }
+      });
     </script>
     <div class="contact-information-part">
-        <h3>Kontaktinformation</h3>
-        <label for="email">
-            Email:
-            <input type="email" name="email" id="email" autocomplete="email">
-            <div class="input-error-message input-error-message-hidden"></div>
-        </label>
-        <label for="phone-number">
-            Telefonnummer:
-            <input type="tel" name="phone-number" id="phone-number" autocomplete="tel">
-            <div class="input-error-message input-error-message-hidden"></div>
-        </label>
+      <h3>Kontaktinformation</h3>
+      <label for="email">
+        Email:
+        <input type="email" name="email" id="email" autocomplete="email" />
+        <div class="input-error-message input-error-message-hidden"></div>
+      </label>
+      <label for="phone-number">
+        Telefonnummer:
+        <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" />
+        <div class="input-error-message input-error-message-hidden"></div>
+      </label>
     </div>
     <p>
-        Levering i Danmark koster {{ page.shippingPrice | default: site.defaultShippingPrice }} kr. International levering koster {{ site.internationalShippingPrice }} kr.
-        <a href="mailto:kontakt@maerkelex.dk">Kontakt os</a> for en særlig aftale, hvis du ønsker international levering udover de tilgængelige lande.
+      Levering i Danmark koster {{ page.shippingPrice | default: site.defaultShippingPrice }} kr. International levering
+      koster {{ site.internationalShippingPrice }} kr.
+      <a href="mailto:kontakt@maerkelex.dk">Kontakt os</a> for en særlig aftale, hvis du ønsker international levering
+      udover de tilgængelige lande.
     </p>
     <div class="btn-container">
       <button class="btn buylink">{% if page.preorder %}Forudbestil{% else %}Bestil{% endif %} mærke nu</button>
     </div>
   </form>
-
 </div>
 
 <script>
-  (function() {
+  (function () {
     const badgesInputField = document.querySelector("#js-badges-input");
     const emptyCartButton = document.querySelector(".js-empty-cart-button");
     const orderForm = document.querySelector("#order-form");
     const badgeContainer = document.querySelector(".js-badges-in-cart");
     const totalBadgeCountUI = document.querySelector(".js-total-badge-count");
 
-    emptyCartButton.addEventListener("click", function(){
-        emptyCart()
+    emptyCartButton.addEventListener("click", function () {
+      emptyCart();
     });
 
-    orderForm.addEventListener("submit", function(event) {
-        submitOrderForm();
+    orderForm.addEventListener("submit", function (event) {
+      submitOrderForm();
     });
 
     showCart();
@@ -151,10 +151,10 @@
       let totalBadgeCount = 0;
       let badgeElements = "";
 
-      cart.forEach(badge => {
+      cart.forEach((badge) => {
         badgeElements += `<li>${badge.id}, ${badge.count} stk.</li>`;
         totalBadgeCount += parseInt(badge.count);
-      })
+      });
 
       badgeContainer.innerHTML = badgeElements;
       totalBadgeCountUI.textContent = totalBadgeCount;
@@ -162,107 +162,106 @@
     }
 
     function fetchCart() {
-        let sessionStorageCart = localStorage.getItem("cart");
-        if (sessionStorageCart) {
-            cart = JSON.parse(sessionStorageCart);
-            if (cart) {
-                return cart;
-            }
+      let sessionStorageCart = localStorage.getItem("cart");
+      if (sessionStorageCart) {
+        cart = JSON.parse(sessionStorageCart);
+        if (cart) {
+          return cart;
         }
-        return [];
-    };
+      }
+      return [];
+    }
 
     function emptyCart() {
-        localStorage.setItem("cart", "[]")
-        showCart();
+      localStorage.setItem("cart", "[]");
+      showCart();
     }
 
     function submitOrderForm() {
-        var errors = {};
-  
-          var email = orderForm.email.value;
-          var phoneNumber = orderForm["phone-number"].value;
-  
-          if(!(/^.+@.+$/.test(email))) {
-              errors.email = "Ugyldig email";
-          }
-  
-          if(!phoneNumber) {
-              errors["phone-number"] = "Mangler telefonnummer";
-          }
-  
-          var invoicing = {
-              name: orderForm["invoicing-name"].value,
-              address: orderForm["invoicing-address"].value,
-              postalCode: orderForm["invoicing-postal-code"].value,
-              city: orderForm["invoicing-city"].value
-          };
-  
-          validateAddress(invoicing, "invoicing", errors);
-  
-          var deliveryAddressDiffers = orderForm["delivery-address-differs"].checked;
-  
-          if(deliveryAddressDiffers) {
-              var delivery = {
-                  name: orderForm["delivery-name"].value,
-                  address: orderForm["delivery-address"].value,
-                  postalCode: orderForm["delivery-postal-code"].value,
-                  city: orderForm["delivery-city"].value
-              };
-  
-              validateAddress(delivery, "delivery", errors);
-          }
-  
-          if(!Object.keys(errors).length) {
-              return;
-          }
-  
-          event.preventDefault();
-  
-          Object.keys(errors).forEach(function(field) {
-            orderForm[field].classList.add("input-error");
-              var errorMessageDisplay = orderForm[field].parentElement.querySelector(".input-error-message");
-              errorMessageDisplay.classList.remove("input-error-message-hidden");
-              errorMessageDisplay.innerText = errors[field];
-          });
-    }
-  
-      function validateAddress(obj, prefix, errors) {
-          if(!obj.name) {
-              errors[prefix + "-name"] = "Mangler navn";
-          }
-  
-          if(!obj.address) {
-              errors[prefix + "-address"] = "Mangler leveringsadresse";
-          }
-  
-          if(!obj.postalCode) {
-              errors[prefix + "-postal-code"] = "Mangler postnr";
-          }
-          else if(obj.postalCode.length !== 4) {
-              errors[prefix + "-postal-code"] = "Postnummer har forkert længde";
-          }
-          
-          if(!obj.city) {
-              errors[prefix + "-city"] = "Mangler by";
-          }
+      var errors = {};
+
+      var email = orderForm.email.value;
+      var phoneNumber = orderForm["phone-number"].value;
+
+      if (!/^.+@.+$/.test(email)) {
+        errors.email = "Ugyldig email";
       }
-  
-      Array.prototype.forEach.call(orderForm.elements, function(field) {
-          field.addEventListener("input", function() {
-              field.classList.remove("input-error");
-              field.parentElement.querySelector(".input-error-message").classList.add("input-error-message-hidden");
-          });
+
+      if (!phoneNumber) {
+        errors["phone-number"] = "Mangler telefonnummer";
+      }
+
+      var invoicing = {
+        name: orderForm["invoicing-name"].value,
+        address: orderForm["invoicing-address"].value,
+        postalCode: orderForm["invoicing-postal-code"].value,
+        city: orderForm["invoicing-city"].value,
+      };
+
+      validateAddress(invoicing, "invoicing", errors);
+
+      var deliveryAddressDiffers = orderForm["delivery-address-differs"].checked;
+
+      if (deliveryAddressDiffers) {
+        var delivery = {
+          name: orderForm["delivery-name"].value,
+          address: orderForm["delivery-address"].value,
+          postalCode: orderForm["delivery-postal-code"].value,
+          city: orderForm["delivery-city"].value,
+        };
+
+        validateAddress(delivery, "delivery", errors);
+      }
+
+      if (!Object.keys(errors).length) {
+        return;
+      }
+
+      event.preventDefault();
+
+      Object.keys(errors).forEach(function (field) {
+        orderForm[field].classList.add("input-error");
+        var errorMessageDisplay = orderForm[field].parentElement.querySelector(".input-error-message");
+        errorMessageDisplay.classList.remove("input-error-message-hidden");
+        errorMessageDisplay.innerText = errors[field];
       });
-  
-      orderForm.email.addEventListener("change", function() {
-          if((/^.+@.+\.(com|dk|org|eu|nu)$/.test(orderForm.email.value))) {
-              return;
-          }
-  
-          var errorMessageDisplay = orderForm.email.parentElement.querySelector(".input-error-message");
-          errorMessageDisplay.classList.remove("input-error-message-hidden");
-          errorMessageDisplay.innerText = "Er du sikker på at det er den korrekte email?";
+    }
+
+    function validateAddress(obj, prefix, errors) {
+      if (!obj.name) {
+        errors[prefix + "-name"] = "Mangler navn";
+      }
+
+      if (!obj.address) {
+        errors[prefix + "-address"] = "Mangler leveringsadresse";
+      }
+
+      if (!obj.postalCode) {
+        errors[prefix + "-postal-code"] = "Mangler postnr";
+      } else if (obj.postalCode.length !== 4) {
+        errors[prefix + "-postal-code"] = "Postnummer har forkert længde";
+      }
+
+      if (!obj.city) {
+        errors[prefix + "-city"] = "Mangler by";
+      }
+    }
+
+    Array.prototype.forEach.call(orderForm.elements, function (field) {
+      field.addEventListener("input", function () {
+        field.classList.remove("input-error");
+        field.parentElement.querySelector(".input-error-message").classList.add("input-error-message-hidden");
       });
+    });
+
+    orderForm.email.addEventListener("change", function () {
+      if (/^.+@.+\.(com|dk|org|eu|nu)$/.test(orderForm.email.value)) {
+        return;
+      }
+
+      var errorMessageDisplay = orderForm.email.parentElement.querySelector(".input-error-message");
+      errorMessageDisplay.classList.remove("input-error-message-hidden");
+      errorMessageDisplay.innerText = "Er du sikker på at det er den korrekte email?";
+    });
   })();
-  </script>
+</script>
