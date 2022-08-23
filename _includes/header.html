@@ -134,7 +134,7 @@
   <nav>
     <div class="nav-container">
       <a href="/shop/">Shop</a>
-      <a href="/kurv/">Kurv</a>
+      <a href="/kurv/" data-cart-link>Kurv</a>
       <a href="/nyeste-maerker/">Nyeste Mærker</a>
       <a href="/blog/">Blog</a>
       <a href="/faq/">FAQ</a>
@@ -145,3 +145,25 @@
     </div>
   </nav>
 </header>
+
+<script>
+  function fetchCart() {
+    let sessionStorageCart = localStorage.getItem("cart");
+    if (sessionStorageCart) {
+      cart = JSON.parse(sessionStorageCart);
+      if (cart) {
+        return cart;
+      }
+    }
+    return [];
+  }
+
+  function showNumberOfItemsInCart() {
+    const cartLink = document.querySelector("[data-cart-link]");
+    const cart = fetchCart();
+    if (cart.length) {
+      cartLink.innerHTML += ` (${cart.length})`;
+    }
+  }
+  showNumberOfItemsInCart();
+</script>
