@@ -6,11 +6,15 @@
       <button class="btn js-empty-cart-button">Tøm Kurv</button>
       <ul class="js-badges-in-cart"></ul>
     </div>
-
   </div>
 </div>
 <div class="purchase-container">
-  <form class="purchase-form" method="post" action="{{ site.paymentsSiteUrl }}" id="order-form">
+    <form 
+        class="purchase-form"
+        method="post"
+        action="{{ site.paymentsSiteUrl }}"
+        id="order-form"
+    >
     <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
     <input type="hidden" name="badges" value="" id="js-badges-input">
     <div class="order-part">
@@ -127,19 +131,31 @@
   (function() {
     const badgesInputField = document.querySelector("#js-badges-input");
     const emptyCartButton = document.querySelector(".js-empty-cart-button");
+    const orderForm = document.querySelector("#order-form");
+    const badgeContainer = document.querySelector(".js-badges-in-cart");
+    const totalBadgeCountUI = document.querySelector(".js-total-badge-count");
+
+    emptyCartButton.addEventListener("click", function(){
+        emptyCart()
+    });
+
+    orderForm.addEventListener("submit", function(event) {
+        submitOrderForm();
+    });
+
+    showCart();
 
     function showCart() {
       const cart = fetchCart();
       console.warn("Current Cart:", cart);
-
-      const badgeContainer = document.querySelector(".js-badges-in-cart");
-      const totalBadgeCountUI = document.querySelector(".js-total-badge-count");
       let totalBadgeCount = 0;
       let badgeElements = "";
+
       cart.forEach(badge => {
         badgeElements += `<li>${badge.id}, ${badge.count} stk.</li>`;
         totalBadgeCount += parseInt(badge.count);
       })
+
       badgeContainer.innerHTML = badgeElements;
       totalBadgeCountUI.textContent = totalBadgeCount;
       badgesInputField.value = JSON.stringify(cart);
@@ -161,19 +177,11 @@
         showCart();
     }
 
-    showCart();
+    function submitOrderForm() {
+        var errors = {};
   
-    emptyCartButton.addEventListener("click", function(){
-        emptyCart()
-    });
-
-      var form = document.getElementById("order-form");
-  
-      form.addEventListener("submit", function(event) {
-          var errors = {};
-  
-          var email = form.email.value;
-          var phoneNumber = form["phone-number"].value;
+          var email = orderForm.email.value;
+          var phoneNumber = orderForm["phone-number"].value;
   
           if(!(/^.+@.+$/.test(email))) {
               errors.email = "Ugyldig email";
@@ -184,22 +192,22 @@
           }
   
           var invoicing = {
-              name: form["invoicing-name"].value,
-              address: form["invoicing-address"].value,
-              postalCode: form["invoicing-postal-code"].value,
-              city: form["invoicing-city"].value
+              name: orderForm["invoicing-name"].value,
+              address: orderForm["invoicing-address"].value,
+              postalCode: orderForm["invoicing-postal-code"].value,
+              city: orderForm["invoicing-city"].value
           };
   
           validateAddress(invoicing, "invoicing", errors);
   
-          var deliveryAddressDiffers = form["delivery-address-differs"].checked;
+          var deliveryAddressDiffers = orderForm["delivery-address-differs"].checked;
   
           if(deliveryAddressDiffers) {
               var delivery = {
-                  name: form["delivery-name"].value,
-                  address: form["delivery-address"].value,
-                  postalCode: form["delivery-postal-code"].value,
-                  city: form["delivery-city"].value
+                  name: orderForm["delivery-name"].value,
+                  address: orderForm["delivery-address"].value,
+                  postalCode: orderForm["delivery-postal-code"].value,
+                  city: orderForm["delivery-city"].value
               };
   
               validateAddress(delivery, "delivery", errors);
@@ -212,12 +220,12 @@
           event.preventDefault();
   
           Object.keys(errors).forEach(function(field) {
-              form[field].classList.add("input-error");
-              var errorMessageDisplay = form[field].parentElement.querySelector(".input-error-message");
+            orderForm[field].classList.add("input-error");
+              var errorMessageDisplay = orderForm[field].parentElement.querySelector(".input-error-message");
               errorMessageDisplay.classList.remove("input-error-message-hidden");
               errorMessageDisplay.innerText = errors[field];
           });
-      });
+    }
   
       function validateAddress(obj, prefix, errors) {
           if(!obj.name) {
@@ -240,19 +248,19 @@
           }
       }
   
-      Array.prototype.forEach.call(form.elements, function(field) {
+      Array.prototype.forEach.call(orderForm.elements, function(field) {
           field.addEventListener("input", function() {
               field.classList.remove("input-error");
               field.parentElement.querySelector(".input-error-message").classList.add("input-error-message-hidden");
           });
       });
   
-      form.email.addEventListener("change", function() {
-          if((/^.+@.+\.(com|dk|org|eu|nu)$/.test(form.email.value))) {
+      orderForm.email.addEventListener("change", function() {
+          if((/^.+@.+\.(com|dk|org|eu|nu)$/.test(orderForm.email.value))) {
               return;
           }
   
-          var errorMessageDisplay = form.email.parentElement.querySelector(".input-error-message");
+          var errorMessageDisplay = orderForm.email.parentElement.querySelector(".input-error-message");
           errorMessageDisplay.classList.remove("input-error-message-hidden");
           errorMessageDisplay.innerText = "Er du sikker på at det er den korrekte email?";
       });
