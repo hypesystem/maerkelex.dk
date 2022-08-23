@@ -250,7 +250,10 @@
     Array.prototype.forEach.call(orderForm.elements, function (field) {
       field.addEventListener("input", function () {
         field.classList.remove("input-error");
-        field.parentElement.querySelector(".input-error-message").classList.add("input-error-message-hidden");
+        const inputErrorMessage = field.parentElement.querySelector(".input-error-message");
+        if (inputErrorMessage) {
+          inputErrorMessage.classList.add("input-error-message-hidden");
+        }
       });
     });
 
