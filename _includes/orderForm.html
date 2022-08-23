@@ -90,6 +90,8 @@
       let badge = {
         count: form.count.value,
         id: badgeId,
+        name: "{{ page.name }}",
+        image: "{{ page.image }}",
       };
       let cart = fetchCart();
       cart.push(badge);

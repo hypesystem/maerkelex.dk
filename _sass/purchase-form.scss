@@ -137,3 +137,14 @@
     opacity: 0;
   }
 }
+
+.checkout-flow-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-items: stretch;
+
+  @media(max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+}
