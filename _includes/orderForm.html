@@ -17,7 +17,7 @@
             Ved forudbestillinger hæver vi pengene når du gennemfører købet, da det fungerer som en produktion til bestilling. Du modtager en ordrebekræftigelse med det samme.
         </div>
     {% endif %}
-    <div class="order-part">
+    <div class="order-part" data-order-content>
         <h3>
             Vælg antal
         </h3>
@@ -69,18 +69,26 @@
             });
         </script>
     </div>
-    <div class="btn-container">
+    <div class="btn-container" data-order-content>
         <button class="btn buylink" id="buy-now">{% if page.preorder %}Forudbestil{% else %}Bestil{% endif %} mærke nu</button>
         {% if page.preorder == undefined %}
-            <button id="add-to-cart" class="btn btn--icon btn--icon-shop">Put mærke i kurv</button>
+        <button id="add-to-cart" class="btn btn--icon btn--icon-shop">Put mærke i kurv</button>
         {% endif %}
+    </div>
+    <div class="hide" data-added-to-cart-ui>
+        <p>Dine mærker tilføjet til kurven.</p>
+        <a href="/kurv/" class="btn btn--fullsize">
+            Gå til kurv
+        </a>
     </div>
 </form>
 <script>
 (function() {
-    var form = document.getElementById("order-form");
-    var addToCartButton = document.getElementById("add-to-cart");
-    var buyNowButton = document.getElementById("buy-now");
+    const form = document.getElementById("order-form");
+    const addToCartButton = document.getElementById("add-to-cart");
+    const buyNowButton = document.getElementById("buy-now");
+    const orderBadgeUi = document.querySelectorAll("[data-order-content");
+    const addedToCartUi = document.querySelector("[data-added-to-cart-ui]");
 
     function addBadgeToCart() {
         let badge = {
@@ -98,9 +106,17 @@
         console.warn("Badge pushed to cart. Current cart:", cart);
     };
 
+    function showBadgeInCartUi() {
+        orderBadgeUi.forEach(element => {
+            element.classList.add("hide");
+        });
+        addedToCartUi.classList.remove("hide");
+    }
+
     addToCartButton.addEventListener("click", function(event) {
         event.preventDefault();
         addBadgeToCart();
+        showBadgeInCartUi();
     });
 
     buyNowButton.addEventListener("click", function(event) {

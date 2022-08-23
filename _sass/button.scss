@@ -21,6 +21,11 @@ input[type=submit] {
   }
 }
 
+.btn--fullsize {
+  display: block;
+  width: 100%;
+}
+
 .btn--icon {
   &::before {
     content: ' ';
