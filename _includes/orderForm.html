@@ -78,23 +78,38 @@
 </form>
 <script>
   (function () {
+    const badgeId = "{{ page.id | remove_first: "/m/" }}";
     const form = document.getElementById("order-form");
     const addToCartButton = document.getElementById("add-to-cart");
     const buyNowButton = document.getElementById("buy-now");
     const orderBadgeUi = document.querySelectorAll("[data-order-content");
     const addedToCartUi = document.querySelector("[data-added-to-cart-ui]");
 
+    // Show user if current badge is in cart on pageload.
+    checkIfBadgeIsCart();
+
+    function fetchCart() {
+      const localStorageCart = localStorage.getItem("cart");
+      if (localStorageCart && JSON.parse(localStorageCart)) {
+        return JSON.parse(localStorageCart);
+      }
+      return [];
+    }
+
+    function checkIfBadgeIsCart() {
+      const cart = fetchCart();
+      const badgeAlreadyInCart = cart.find((data) => data.id === badgeId);
+      if (badgeAlreadyInCart) {
+        showBadgeInCartUi();
+      }
+    }
+
     function addBadgeToCart() {
       let badge = {
         count: form.count.value,
-        id: "{{ page.id | remove_first: "/m/" }}",
+        id: badgeId,
       };
-      let cart = [];
-
-      let localStorageCart = localStorage.getItem("cart");
-      if (localStorageCart && JSON.parse(localStorageCart)) {
-        cart = JSON.parse(localStorageCart);
-      }
+      let cart = fetchCart();
       cart.push(badge);
       localStorage.setItem("cart", JSON.stringify(cart));
       console.warn("Badge pushed to cart. Current cart:", cart);
