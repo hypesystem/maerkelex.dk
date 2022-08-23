@@ -1,89 +1,83 @@
-<form
-    class="purchase-form hidden-order"
-    id="order-form"
-    method="post"
-    action="{{ site.paymentsSiteUrl }}"
->
-    <span class="collapse-purchase">&lsaquo;</span>
-    <h2>
-        Køb {{page.name}} mærke
-    </h2>
-    <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url">
-    <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}">
-    {% if page.preorder %}
-        <div class="preorder-part">
-            Denne bestilling er en forudbestilling. Det betyder at vi køber mærker ind baseret på hvor mange mærker der bestilles. Vi har altså ikke mærkerne på lager, og der kan gå op til 4 måneder med levering, afhængig af vores leverandørs produktionstid.
-            <br><br>
-            Ved forudbestillinger hæver vi pengene når du gennemfører købet, da det fungerer som en produktion til bestilling. Du modtager en ordrebekræftigelse med det samme.
-        </div>
+<form class="purchase-form hidden-order" id="order-form" method="post" action="{{ site.paymentsSiteUrl }}">
+  <span class="collapse-purchase">&lsaquo;</span>
+  <h2>Køb {{page.name}} mærke</h2>
+  <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url" />
+  <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}"> {% if page.preorder %}
+  <div class="preorder-part">
+    Denne bestilling er en forudbestilling. Det betyder at vi køber mærker ind baseret på hvor mange mærker der
+    bestilles. Vi har altså ikke mærkerne på lager, og der kan gå op til 4 måneder med levering, afhængig af vores
+    leverandørs produktionstid.
+    <br /><br />
+    Ved forudbestillinger hæver vi pengene når du gennemfører købet, da det fungerer som en produktion til bestilling.
+    Du modtager en ordrebekræftigelse med det samme.
+  </div>
+  {% endif %}
+  <div class="order-part" data-order-content>
+    <h3>Vælg antal</h3>
+    <label for="count">
+      <input class="count-preview" type="number" name="count" value="1" id="count" />
+      mærke(r) til {{ page.price }} kr stk =
+      <strong class="total-preview"><span class="total-preview-price">{{ page.price }}</span> kr</strong>
+      <div class="input-error-message input-error-message-hidden"></div>
+    </label>
+    <script>
+      var countPreview = document.querySelector(".count-preview");
+      var totalPreview = document.querySelector(".total-preview-price");
+      var badgePrice = {{ page.price }};
+
+      document.getElementById("count").addEventListener("change", function() {
+          if(this.value < 1) {
+              this.value = 1;
+          }
+
+          countPreview.innerHTML = this.value;
+          totalPreview.innerHTML = this.value * badgePrice;
+      });
+
+      function expandOrderForm() {
+          document.querySelector("#order-form").classList.add("show-order");
+          document.querySelector("#order-form").classList.remove("hidden-order");
+          document.querySelector("#order-expand-btn").style.display = "none";
+      };
+
+      document.querySelector("#order-expand-btn").addEventListener("click", function() {
+          expandOrderForm();
+      });
+
+      var buyButton = document.querySelector("[data-action-buy]");
+      if(buyButton) {
+          buyButton.addEventListener("click", function() {
+              expandOrderForm();
+              document.querySelector('#order-form').scrollIntoView({
+                  behavior: 'smooth',
+                  block: "start",
+                  inline: "nearest"
+              });
+          });
+      }
+
+      document.querySelector(".collapse-purchase").addEventListener("click", function() {
+          document.querySelector("#order-form").classList.add("hidden-order");
+          document.querySelector("#order-form").classList.remove("show-order");
+          setTimeout(function(){document.querySelector("#order-expand-btn").style.display = "block"}, 220);
+      });
+    </script>
+  </div>
+  <div class="btn-container" data-order-content>
+    <button class="btn buylink" id="buy-now">
+      {% if page.preorder %}Forudbestil{% else %}Bestil{% endif %} mærke nu
+    </button>
+    {% if page.preorder == undefined %}
+    <button id="add-to-cart" class="btn btn--icon btn--icon-shop">Put mærke i kurv</button>
     {% endif %}
-    <div class="order-part" data-order-content>
-        <h3>
-            Vælg antal
-        </h3>
-        <label for="count">
-            <input class="count-preview" type="number" name="count" value="1" id="count">
-            mærke(r) til {{ page.price }} kr stk = <strong class="total-preview"><span class="total-preview-price">{{ page.price }}</span> kr</strong>
-            <div class="input-error-message input-error-message-hidden"></div>
-        </label>
-        <script>
-            var countPreview = document.querySelector(".count-preview");
-            var totalPreview = document.querySelector(".total-preview-price");
-            var badgePrice = {{ page.price }};
-
-            document.getElementById("count").addEventListener("change", function() {
-                if(this.value < 1) {
-                    this.value = 1;
-                }
-
-                countPreview.innerHTML = this.value;
-                totalPreview.innerHTML = this.value * badgePrice;
-            });
-
-            function expandOrderForm() {
-                document.querySelector("#order-form").classList.add("show-order");
-                document.querySelector("#order-form").classList.remove("hidden-order");
-                document.querySelector("#order-expand-btn").style.display = "none";
-            };
-
-            document.querySelector("#order-expand-btn").addEventListener("click", function() {
-                expandOrderForm();
-            });
-
-            var buyButton = document.querySelector("[data-action-buy]");
-            if(buyButton) {
-                buyButton.addEventListener("click", function() {
-                    expandOrderForm();
-                    document.querySelector('#order-form').scrollIntoView({
-                        behavior: 'smooth',
-                        block: "start",
-                        inline: "nearest"
-                    });
-                });
-            }
-
-            document.querySelector(".collapse-purchase").addEventListener("click", function() {
-                document.querySelector("#order-form").classList.add("hidden-order");
-                document.querySelector("#order-form").classList.remove("show-order");
-                setTimeout(function(){document.querySelector("#order-expand-btn").style.display = "block"}, 220);
-            });
-        </script>
-    </div>
-    <div class="btn-container" data-order-content>
-        <button class="btn buylink" id="buy-now">{% if page.preorder %}Forudbestil{% else %}Bestil{% endif %} mærke nu</button>
-        {% if page.preorder == undefined %}
-        <button id="add-to-cart" class="btn btn--icon btn--icon-shop">Put mærke i kurv</button>
-        {% endif %}
-    </div>
-    <div class="hide" data-added-to-cart-ui>
-        <p>Dine mærker tilføjet til kurven.</p>
-        <a href="/kurv/" class="btn btn--fullsize">
-            Gå til kurv
-        </a>
-    </div>
+  </div>
+  <div class="hide" data-added-to-cart-ui>
+    <p>Dine mærker tilføjet til kurven.</p>
+    <a href="/kurv/" class="btn btn--fullsize"> Gå til kurv </a>
+  </div>
 </form>
 <script>
-(function() {
+  (function () {
     const form = document.getElementById("order-form");
     const addToCartButton = document.getElementById("add-to-cart");
     const buyNowButton = document.getElementById("buy-now");
@@ -91,38 +85,38 @@
     const addedToCartUi = document.querySelector("[data-added-to-cart-ui]");
 
     function addBadgeToCart() {
-        let badge = {
-            count: form.count.value,
-            id: "{{ page.id | remove_first: "/m/" }}",
-        };
-        let cart = [];
+      let badge = {
+        count: form.count.value,
+        id: "{{ page.id | remove_first: "/m/" }}",
+      };
+      let cart = [];
 
-        let localStorageCart = localStorage.getItem("cart");
-        if (localStorageCart && JSON.parse(localStorageCart)) {
-            cart = JSON.parse(localStorageCart);
-        }
-        cart.push(badge);
-        localStorage.setItem("cart", JSON.stringify(cart))
-        console.warn("Badge pushed to cart. Current cart:", cart);
-    };
-
-    function showBadgeInCartUi() {
-        orderBadgeUi.forEach(element => {
-            element.classList.add("hide");
-        });
-        addedToCartUi.classList.remove("hide");
+      let localStorageCart = localStorage.getItem("cart");
+      if (localStorageCart && JSON.parse(localStorageCart)) {
+        cart = JSON.parse(localStorageCart);
+      }
+      cart.push(badge);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      console.warn("Badge pushed to cart. Current cart:", cart);
     }
 
-    addToCartButton.addEventListener("click", function(event) {
-        event.preventDefault();
-        addBadgeToCart();
-        showBadgeInCartUi();
+    function showBadgeInCartUi() {
+      orderBadgeUi.forEach((element) => {
+        element.classList.add("hide");
+      });
+      addedToCartUi.classList.remove("hide");
+    }
+
+    addToCartButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      addBadgeToCart();
+      showBadgeInCartUi();
     });
 
-    buyNowButton.addEventListener("click", function(event) {
-        event.preventDefault();
-        addBadgeToCart();
-        location.href = "/kurv/";
-    })
-})();
+    buyNowButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      addBadgeToCart();
+      location.href = "/kurv/";
+    });
+  })();
 </script>
