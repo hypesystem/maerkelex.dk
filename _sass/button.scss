@@ -20,3 +20,28 @@ input[type=submit] {
     color: white;
   }
 }
+
+.btn--icon {
+  &::before {
+    content: ' ';
+    background-size: contain;
+    width: 1em;
+    height: 1.21em;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+.btn--icon-shop {
+  &::before {  
+    background-image: url(/img/icons/ic_shopping_cart_white_24px.svg);
+  }
+}
+
+.btn--icon-new-badges {
+  &::before {
+    background-image: url(/img/icons/ic_new_releases_white_24px.svg);
+  }
+}
