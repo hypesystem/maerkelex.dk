@@ -1,5 +1,4 @@
-<form class="purchase-form hidden-order" id="order-form" method="post" action="{{ site.paymentsSiteUrl }}">
-  <span class="collapse-purchase">&lsaquo;</span>
+<form class="purchase-form" id="order-form" method="post" action="{{ site.paymentsSiteUrl }}">
   <h2>Køb {{page.name}} mærke</h2>
   <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url" />
   <input type="hidden" name="badge" value="{{ page.id | remove_first: "/m/" }}"> {% if page.preorder %}
@@ -34,33 +33,16 @@
           totalPreview.innerHTML = this.value * badgePrice;
       });
 
-      function expandOrderForm() {
-          document.querySelector("#order-form").classList.add("show-order");
-          document.querySelector("#order-form").classList.remove("hidden-order");
-          document.querySelector("#order-expand-btn").style.display = "none";
-      };
-
-      document.querySelector("#order-expand-btn").addEventListener("click", function() {
-          expandOrderForm();
-      });
-
       var buyButton = document.querySelector("[data-action-buy]");
       if(buyButton) {
-          buyButton.addEventListener("click", function() {
-              expandOrderForm();
-              document.querySelector('#order-form').scrollIntoView({
-                  behavior: 'smooth',
-                  block: "start",
-                  inline: "nearest"
-              });
-          });
+        buyButton.addEventListener("click", function() {
+            document.querySelector('#order-form').scrollIntoView({
+                behavior: 'smooth',
+                block: "start",
+                inline: "nearest"
+            });
+        });
       }
-
-      document.querySelector(".collapse-purchase").addEventListener("click", function() {
-          document.querySelector("#order-form").classList.add("hidden-order");
-          document.querySelector("#order-form").classList.remove("show-order");
-          setTimeout(function(){document.querySelector("#order-expand-btn").style.display = "block"}, 220);
-      });
     </script>
   </div>
   <div class="btn-container" data-order-content>
