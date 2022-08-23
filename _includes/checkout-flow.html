@@ -15,11 +15,6 @@
     <input type="hidden" name="badges" value="" id="js-badges-input">
     <div class="order-part">
         <h2>Leveringsoplysninger</h2>
-        <label for="count">
-          <input class="count-preview" type="number" name="count" value="1" id="count">
-          mærke(r) til {{ page.price }} kr stk = <strong class="total-preview"><span class="total-preview-price">{{ page.price }}</span> kr</strong>
-          <div class="input-error-message input-error-message-hidden"></div>
-      </label>
     </div>
     <div class="invoicing-address-part">
         <h3>Faktureringsadresse</h3>
@@ -177,7 +172,6 @@
       form.addEventListener("submit", function(event) {
           var errors = {};
   
-          var count = form.count.value;
           var email = form.email.value;
           var phoneNumber = form["phone-number"].value;
   
@@ -187,10 +181,6 @@
   
           if(!phoneNumber) {
               errors["phone-number"] = "Mangler telefonnummer";
-          }
-  
-          if(!count || count < 1) {
-              errors["count"] = "Du skal bestille mindst 1!";
           }
   
           var invoicing = {
