@@ -6,9 +6,13 @@
         <p class="mt-0">
           Du har <span class="js-total-badge-count">X</span> mærker i kurven.
         </p>
-        <button class="btn js-empty-cart-button">Tøm Kurv</button>
       </div>
       <div class="cart__items js-badges-in-cart"></div>
+      <div class="cart__actions">
+        <button class="btn btn--outline btn--fullsize js-empty-cart-button">
+          Tøm Kurv
+        </button>
+      </div>
     </div>
   </div>
   <div class="purchase-container">
@@ -125,7 +129,7 @@
         udover de tilgængelige lande.
       </p>
       <div class="btn-container">
-        <button class="btn buylink">{% if page.preorder %}Forudbestil{% else %}Bestil{% endif %} mærke nu</button>
+        <button class="btn btn--fullsize buylink">Gå til betaling</button>
       </div>
     </form>
   </div>

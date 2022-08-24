@@ -50,3 +50,9 @@ input[type=submit] {
     background-image: url(/img/icons/ic_new_releases_white_24px.svg);
   }
 }
+
+.btn--outline {
+  background: transparent;
+  color: $blue;
+  border: 1px solid $blue;
+}
