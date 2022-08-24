@@ -4,10 +4,35 @@
       <h2>Mærker du køber</h2>
       <div class="cart__header">
         <p class="mt-0">
-          Du har <span class="js-total-badge-count">X</span> mærker i kurven.
+          Du har <span data-total-badge-count>X</span> mærker i kurven.
         </p>
+        <script>
+          owbs.bind("cart", "[data-total-badge-count]", (cart) => {
+            return cart
+              .map((item) => item.count)
+              .reduce((a, b) => a + b, 0);
+          });
+        </script>
       </div>
-      <div class="cart__items js-badges-in-cart"></div>
+      <div class="cart__items" data-badge-list></div>
+      <script>
+        owbs.bind("cart", "[data-badge-list]", (cart) => {
+          return cart.map((badge) => `
+            <div class="cart-item">
+              <img class="cart-item__image" style="width: 100px;" src="{{ site.baseurl }}/img/compressed/${badge.image}" alt="${badge.name} spejdermærke">
+              <div>
+                <p>
+                  ${badge.name}, ${badge.count} stk.<br>
+                  <a href="/m/${badge.id}/">Gå til mærkeside</a><br>
+                  <a class="cart-item__remmove-action" data-js-remove-badge data-badge-id="${badge.id}">
+                    Slet fra kurv
+                  </a>
+                </p>
+              </div>
+            </div>
+          `).join("");
+        }, "html");
+      </script>
       <div class="cart__actions">
         <button class="btn btn--outline btn--fullsize btn--icon btn--clear-cart js-empty-cart-button">
           Tøm Kurv
@@ -19,6 +44,22 @@
     <form class="purchase-form" method="post" action="{{ site.paymentsSiteUrl }}" id="order-form">
       <input type="hidden" name="return-url" value="http://xn--mrkelex-mxa.dk{{ page.url }}" id="return-url" />
       <div data-badges-hidden-input-fields></div>
+      <script>
+        owbs.bind("cart", "[data-badges-hidden-input-fields]", (cart) => {
+          return cart.map((badge, index) => `
+            <input
+              type="hidden"
+              name="badges[${index}][id]"
+              value="${badge.id}"
+            >
+            <input
+              type="hidden"
+              name="badges[${index}][count]"
+              value="${badge.count}"
+            >
+          `).join("");
+        }, "html");
+      </script>
       <div class="order-part">
         <h2>Leveringsoplysninger</h2>
       </div>
@@ -137,11 +178,9 @@
 
 <script>
   (function () {
-    const hiddenBadgesInputFieldContainer = document.querySelector("[data-badges-hidden-input-fields]");
     const emptyCartButton = document.querySelector(".js-empty-cart-button");
     const orderForm = document.querySelector("#order-form");
     const badgeContainer = document.querySelector(".js-badges-in-cart");
-    const totalBadgeCountUI = document.querySelector(".js-total-badge-count");
 
     emptyCartButton.addEventListener("click", function () {
       emptyCart();
@@ -151,81 +190,23 @@
       submitOrderForm();
     });
 
-    showCart();
-
-    function showCart() {
-      const cart = fetchCart();
-      console.warn("Current Cart:", cart);
-      let totalBadgeCount = 0;
-      let badgeElements = "";
-      // Reset hidden input fields to make sure it is correct.
-      hiddenBadgesInputFieldContainer.innerHTML = "";
-
-      cart.forEach((badge, index) => {
-        badgeElements += `
-          <div class="cart-item">
-            <img class="cart-item__image" style="width: 100px;" src="{{ site.baseurl }}/img/compressed/${badge.image}" alt="${badge.name} spejdermærke">
-            <div>
-              <p>
-                ${badge.name}, ${badge.count} stk.<br>
-                <a href="/m/${badge.id}/">Gå til mærkeside</a><br>
-                <a class="cart-item__remmove-action" data-js-remove-badge data-badge-id="${badge.id}">
-                  Slet fra kurv
-                </a>
-              </p>
-            </div>
-          </div>
-        `;
-        totalBadgeCount += parseInt(badge.count);
-        createHiddenBadgeInputField(badge, index);
-      });
-
-      badgeContainer.innerHTML = badgeElements;
-      totalBadgeCountUI.textContent = totalBadgeCount;
-
+    owbs.on("cart", () => {
       const removeBageBtn = document.querySelectorAll("[data-js-remove-badge]");
       removeBageBtn.forEach((btn) => {
         btn.addEventListener("click", function () {
-          removeBadgeFromCart(btn.dataset.badgeId, cart);
+          removeBadgeFromCart(btn.dataset.badgeId);
         });
       });
-    }
-
-    function createHiddenBadgeInputField (badgeData, index) {
-      const inputId = document.createElement("input");
-      inputId.setAttribute("type", "hidden");
-      inputId.setAttribute("name", `badges[${index}][id]`);
-      inputId.setAttribute("value", badgeData.id);
-      //append to form element that you want .
-      hiddenBadgesInputFieldContainer.appendChild(inputId);
-
-      const inputCount = document.createElement("input");
-      inputCount.setAttribute("type", "hidden");
-      inputCount.setAttribute("name", `badges[${index}][count]`);
-      inputCount.setAttribute("value", badgeData.count);
-      hiddenBadgesInputFieldContainer.appendChild(inputCount);
-    }
-
-    function fetchCart() {
-      let sessionStorageCart = localStorage.getItem("cart");
-      if (sessionStorageCart) {
-        cart = JSON.parse(sessionStorageCart);
-        if (cart) {
-          return cart;
-        }
-      }
-      return [];
-    }
+    });
 
     function emptyCart() {
-      localStorage.setItem("cart", "[]");
-      showCart();
+      owbs.val.cart = [];
     }
 
-    function removeBadgeFromCart(badgeId, cart) {
+    function removeBadgeFromCart(badgeId) {
+      const cart = owbs.val.cart;
       const updatedCart = cart.filter((data) => data.id != badgeId);
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      showCart();
+      owbs.val.cart = updatedCart;
     }
 
     function submitOrderForm() {

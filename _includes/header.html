@@ -134,7 +134,7 @@
   <nav>
     <div class="nav-container">
       <a href="/shop/">Shop</a>
-      <a href="/kurv/" data-cart-link>Kurv</a>
+      <a href="/kurv/">Kurv<span data-cart-count-maybe></span></a>
       <a href="/nyeste-maerker/">Nyeste Mærker</a>
       <a href="/blog/">Blog</a>
       <a href="/faq/">FAQ</a>
@@ -147,23 +147,14 @@
 </header>
 
 <script>
-  function fetchCart() {
-    let sessionStorageCart = localStorage.getItem("cart");
-    if (sessionStorageCart) {
-      cart = JSON.parse(sessionStorageCart);
-      if (cart) {
-        return cart;
-      }
-    }
-    return [];
-  }
+  owbs.bind('cart', '[data-cart-count-maybe]', (cart) => {
+    const count = cart
+      .map((item) => item.count)
+      .reduce((a, b) => a + b, 0);
 
-  function showNumberOfItemsInCart() {
-    const cartLink = document.querySelector("[data-cart-link]");
-    const cart = fetchCart();
-    if (cart.length) {
-      cartLink.innerHTML += ` (${cart.length})`;
+    if(count > 0) {
+      return ` (${count})`;
     }
-  }
-  showNumberOfItemsInCart();
+    return "";
+  });
 </script>
