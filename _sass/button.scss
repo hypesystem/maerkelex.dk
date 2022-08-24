@@ -51,6 +51,18 @@ input[type=submit] {
   }
 }
 
+.btn--icon-payment {
+  &::before {
+    background-image: url(/img/icons/credit-card.png);
+  }
+}
+
+.btn--icon-back {
+  &::before {
+    background-image: url(/img/icons/arrow-left-circle.png);
+  }
+}
+
 .btn--outline {
   background: transparent;
   color: $blue;
