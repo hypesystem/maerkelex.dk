@@ -1,149 +1,80 @@
-{% capture page_description %}{% if page.description %}{{ page.description | strip_html | replace:'"',"'" }}{% else %}Her kan du finde mærker (spejdermærker) for Det Danske Spejderkorps (DDS), KFUM eller De Grønne Pigespejdere, samt alle de uofficielle mærker der florerer i Danmark.{% endif %}{% endcapture %}
-{% capture page_title %}{% if page.type == "maerke" %}{{ page.name }}{% else %}{{ page.title }}{% endif %} | Mærkelex{% endcapture %}
-<!DOCTYPE html>
-<html lang="da" prefix="og: http://ogp.me/ns#">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">
-        <meta name="trustpilot-one-time-domain-verification-id" content="tgRt4yhZqYVmDDHJZ5LS251Z03eSjNDsdDai2yLQ"/>
-        <title>{{ page_title }}</title>
-        <meta name="description" content="Mærkelex er et leksikon over spejdermærker. {{ page_description }}">
-
-        <meta property="og:title" content="{{ page_title }}">
-        <meta property="og:site_name" content="Mærkelex">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="http://xn--mrkelex-mxa.dk{{ page.url }}">
-        <meta property="og:image" content="http://xn--mrkelex-mxa.dk/img/{% if page.type == 'blogpost' %}blog/{{ page.image }}{% elsif page.image %}compressed/{{ page.image }}{% else %}fb-img.jpg{% endif %}">
-        <meta property="og:description" content="{{ page_description }}">
-        <meta property="og:locale" content="da_DK">
-
-        <link rel="preload" as="font" href="{{ site.baseurl }}/font/OpenSans-Regular.ttf" type="font/ttf">
-
-        <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/img/favicon.png">
-        <link rel="shortcut icon" type="image/svg+xml" href="{{ site.baseurl }}/img/logo.svg">
-        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
-
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
-        <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
-        <link rel="mask-icon" href="{{ site.baseurl }}/safari-pinned-tab.svg" color="#fbab44">
-        <meta name="apple-mobile-web-app-title" content="M&aelig;rkelex">
-        <meta name="application-name" content="M&aelig;rkelex">
-        <meta name="theme-color" content="#f5f5f5">
-        <script>/* SERVICE WORKER */
-            if(navigator.serviceWorker) {
-                window.addEventListener("load", function() {
-                    navigator.serviceWorker.register("/sw.js").then(function(registration) {
-                        console.log("[sw.js] Registration with scope", registration.scope);
-                    }, function(error) {
-                        console.error("[sw.js] Registration failed", error);
-                    });
-                });
-            }
-        </script>
-        <script>
-            function debounced(fun, timeout) {
-                if(!timeout) {
-                    timeout = 250;
-                }
-                var i = 0;
-                return function() {
-                    var myI = ++i;
-                    var args = Array.prototype.slice.call(arguments);
-                    setTimeout(function() {
-                        if(i > myI) {
-                            return;
-                        }
-                        fun.apply(fun, args);
-                    }, timeout);
-                };
-            }
-        </script>
-    </head>
-    <body ontouchstart="" class="glorified glorified-white">
-        {% include header.html %}
-        <main>
-            <div class="container align-center">
-                <div class="content">
-                    <div class="cover">
-                        <picture>
-                            <source srcset="{{ site.baseurl }}/img/covers/{{ page.coverimage-mobile }}" media="(max-width: 600px)">
-                            <source srcset="{{ site.baseurl }}/img/covers/{{ page.coverimage }}" media="(min-width: 601px)">
-                            <img src="{{ site.baseurl }}/img/covers/{{ page.coverimage }}" alt="{{ page.name | remove: "&#173;" }}">
-                        </picture>
-                    </div>
-                    <div class="maerke-splash">
-                        <div class="maerke-splash__image">
-                            <img src="{{ site.baseurl }}/img/compressed/{{ page.image }}" alt='{{ page.name | remove: "&#173;" }} spejdermærke'>
-                        </div>
-                        <div class="maerke-splash__info">
-                            <h1>{{ page.name }}</h1>
-                            {% if page.age %}
-                                <div class="maerke-splash__age">Egnet til {{ page.age }} år</div>
-                            {% else %}
-                                <div class="maerke-splash__age">Egnet til alle aldre</div>
-                            {% endif %}
-                            <div class="maerke-splash__actions">
-                                {% if page.price %}
-                                    <a href="#buy" class="maerke-splash__action maerke-splash__action--buy" data-action-buy>
-                                        {{ page.price }} kr.
-                                    </a>
-                                {% endif %}
-                                <a href="#badge-info" class="maerke-splash__action maerke-splash__action--read">
-                                    Læs om mærket
-                                </a>
-                            </div>
-                            <div class="maerke-splash__tags">
-                                {% for tag in page.tags %}
-                                    <a class="tag" href="{{ site.baseurl }}/?search=tag:{{ tag }}" data-tag-link>{{ tag }}</a>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        <script>
-                            (function() {
-                                let header = document.querySelector("header");
-                                header.classList.add("header--hide");
-                                header.classList.remove("header--show");
-                            })();
-                        </script>
-                    </div>
-                    <div class="main-maerke-content" id="badge-info">
-                        <div class="page-description-color">
-                            {{ page.description }}
-                            {{ page.content }}
-                            {% if page.soldout %}
-                            <p>
-                                <div style="background: rgba(0,0,0,0.025); padding: 15px; font-size: 0.8em;">
-                                    <strong>Mærket er midlertidigt udsolgt.</strong>
-                                    Vi har bestilt flere hos leverandøren, og de er på vej.
-                                    Hvis du bestiller nu, kan der gå et par uger, før vi får sendt mærket.
-                                    Vi holder dig selvfølgelig opdateret pr. mail.
-                                </div>
-                            </p>
-                            {% endif %}
-                            <div class="btn-container">
-                                {% if page.infolink %}
-                                    <a target="noopener" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
-                                {% endif %}
-                                {% unless page.price %}
-                                    <a target="noopener" href="{{ page.buylink }}" class="btn buylink">Køb mærket her</a>
-                                {% endunless %}
-                            </div>
-                            {% if page.price %}
-                            <div class="purchase-container" id="buy">
-                                {% include orderForm.html %}
-                            </div>
-                            {% endif %}
-                        </div>
-                        </div>
-                    </div>
+---
+layout: default-no-container
+bodyClass: glorified glorified-white
+---
+<div class="container align-center">
+    <div class="content">
+        <div class="cover">
+            <picture>
+                <source srcset="{{ site.baseurl }}/img/covers/{{ page.coverimage-mobile }}" media="(max-width: 600px)">
+                <source srcset="{{ site.baseurl }}/img/covers/{{ page.coverimage }}" media="(min-width: 601px)">
+                <img src="{{ site.baseurl }}/img/covers/{{ page.coverimage }}" alt="{{ page.name | remove: "&#173;" }}">
+            </picture>
+        </div>
+        <div class="maerke-splash">
+            <div class="maerke-splash__image">
+                <img src="{{ site.baseurl }}/img/compressed/{{ page.image }}" alt='{{ page.name | remove: "&#173;" }} spejdermærke'>
+            </div>
+            <div class="maerke-splash__info">
+                <h1>{{ page.name }}</h1>
+                {% if page.age %}
+                    <div class="maerke-splash__age">Egnet til {{ page.age }} år</div>
+                {% else %}
+                    <div class="maerke-splash__age">Egnet til alle aldre</div>
+                {% endif %}
+                <div class="maerke-splash__actions">
+                    {% if page.price %}
+                        <a href="#buy" class="maerke-splash__action maerke-splash__action--buy" data-action-buy>
+                            {{ page.price }} kr.
+                        </a>
+                    {% endif %}
+                    <a href="#badge-info" class="maerke-splash__action maerke-splash__action--read">
+                        Læs om mærket
+                    </a>
+                </div>
+                <div class="maerke-splash__tags">
+                    {% for tag in page.tags %}
+                        <a class="tag" href="{{ site.baseurl }}/?search=tag:{{ tag }}" data-tag-link>{{ tag }}</a>
+                    {% endfor %}
                 </div>
             </div>
-        </main>
-        {% include footer.html %}
-        <script src="{{ site.baseurl }}/js/raw-search.js" defer></script>
-        <script src="{{ site.baseurl }}/js/header-scroll.js" defer></script>
-        <script src="{{ site.baseurl }}/js/cookie.js" defer></script>
-    </body>
-</html>
+            <script>
+                (function() {
+                    let header = document.querySelector("header");
+                    header.classList.add("header--hide");
+                    header.classList.remove("header--show");
+                })();
+            </script>
+        </div>
+        <div class="main-maerke-content" id="badge-info">
+            <div class="page-description-color">
+                {{ page.description }}
+                {{ page.content }}
+                {% if page.soldout %}
+                <p>
+                    <div style="background: rgba(0,0,0,0.025); padding: 15px; font-size: 0.8em;">
+                        <strong>Mærket er midlertidigt udsolgt.</strong>
+                        Vi har bestilt flere hos leverandøren, og de er på vej.
+                        Hvis du bestiller nu, kan der gå et par uger, før vi får sendt mærket.
+                        Vi holder dig selvfølgelig opdateret pr. mail.
+                    </div>
+                </p>
+                {% endif %}
+                <div class="btn-container">
+                    {% if page.infolink %}
+                        <a target="noopener" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
+                    {% endif %}
+                    {% unless page.price %}
+                        <a target="noopener" href="{{ page.buylink }}" class="btn buylink">Køb mærket her</a>
+                    {% endunless %}
+                </div>
+                {% if page.price %}
+                <div class="purchase-container" id="buy">
+                    {% include orderForm.html %}
+                </div>
+                {% endif %}
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
