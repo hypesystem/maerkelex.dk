@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Mærkelex website",
   "scripts": {
-    "build": "owbs-build --output _includes/owbs.min.js",
-    "start": "npm run build && jekyll serve"
+    "build:owbs": "owbs-build --output _includes/owbs.min.js",
+    "build:jekyll": "jekyll build",
+    "build": "npm run build:owbs && npm run build:jekyll",
+    "start": "npm run build:owbs && jekyll serve"
   },
   "repository": {
     "type": "git",
