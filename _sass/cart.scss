@@ -1,0 +1,24 @@
+.cart__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-item {
+  display: flex;
+}
+
+
+.cart-item__image {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.cart-item__remmove-action {
+  cursor: pointer;
+  color: $darkorange;
+}
+
+.cart__actions {
+  margin-top: 20px;
+}

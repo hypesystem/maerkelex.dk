@@ -102,12 +102,14 @@ a {
   }
 }
 
+@import "_utils.scss";
 @import "header.scss";
 @import "first-visit-banner.scss";
 @import "badge-card.scss";
 @import "badge-page.scss";
 @import "button.scss";
 @import "card.scss";
+@import "cart.scss";
 @import "tag";
 @import "advanced-search.scss";
 @import "cookie-notice";

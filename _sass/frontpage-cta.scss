@@ -28,31 +28,14 @@
     }
   }
 
-  .btn--shop,
-  .btn--new-badges {
+  .btn--icon {
     &::before {
-      content: ' ';
-      background-image: url(/img/icons/ic_shopping_cart_white_24px.svg);
-      background-size: contain;
-      width: 1em;
-      height: 1.21em;
-      background-repeat: no-repeat;
-      vertical-align: middle;
-      display: inline-block;
-      margin-right: 5px;
-
       @media(max-width: $mobile) {
         width: 3em;
         height: 2em;
         background-position: center;
         margin-right: 0;
       }
-    }
-  }
-
-  .btn--new-badges {
-    &::before {
-      background-image: url(/img/icons/ic_new_releases_white_24px.svg);
     }
   }
 }

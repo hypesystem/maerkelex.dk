@@ -1,9 +1,9 @@
-.purchase-form {
-  #order-form {
+.purchase-container {
+  .purchase-form {
+    box-sizing: border-box;
     border: 1px solid #32323c;
     border-radius: $rounding--small;
     padding: 10px;
-    margin: 0 -10px;
     background: rgba(255, 255, 255, 0.80);
     position: relative;
     max-width: 500px;
@@ -135,5 +135,16 @@
   .input-error-message-hidden {
     height: 0;
     opacity: 0;
+  }
+}
+
+.checkout-flow-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-items: stretch;
+
+  @media(max-width: $mobile) {
+    grid-template-columns: 1fr;
   }
 }

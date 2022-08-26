@@ -204,7 +204,7 @@ $glorified-splash-min-height: $mobile;
         padding-bottom: 28px; /* replaces bottom's margin-top which is set to 0 below */
     }
 
-    .btn.buylink {
+    .btn-container .btn {
         width: 100%;
     }
 
@@ -268,7 +268,7 @@ $glorified-splash-min-height: $mobile;
         margin-bottom: 1em;
     }
 
-    .purchase-form {
+    .purchase-container {
         max-width: 500px;
     }
 

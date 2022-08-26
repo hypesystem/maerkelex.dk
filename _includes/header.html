@@ -134,6 +134,7 @@
   <nav>
     <div class="nav-container">
       <a href="/shop/">Shop</a>
+      <a href="/kurv/">Kurv<span data-cart-count-maybe></span></a>
       <a href="/nyeste-maerker/">Nyeste Mærker</a>
       <a href="/blog/">Blog</a>
       <a href="/faq/">FAQ</a>
@@ -144,3 +145,16 @@
     </div>
   </nav>
 </header>
+
+<script>
+  owbs.bind('cart', '[data-cart-count-maybe]', (cart) => {
+    const count = cart
+      .map((item) => item.count)
+      .reduce((a, b) => a + b, 0);
+
+    if(count > 0) {
+      return ` (${count})`;
+    }
+    return "";
+  });
+</script>

@@ -6,16 +6,16 @@ window.addEventListener("scroll", function(){
     if (st > lastScrollTop && st > 100){
         thresholdPassedYet = true;
         // downscroll code
-        if(!header.classList.contains("hide")){
-            header.classList.remove("show");
-                header.className += "hide";
+        if(!header.classList.contains("header--hide")){
+            header.classList.remove("header--show");
+                header.classList.add("header--hide");
             }
     }
     else if(thresholdPassedYet) {
         // upscroll code
-        if(!header.classList.contains("show")){
-            header.classList.remove("hide");
-            header.className += "show";
+        if(!header.classList.contains("header--show")){
+            header.classList.remove("header--hide");
+            header.classList.add("header--show");
         }
     }
     lastScrollTop = st;

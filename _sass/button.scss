@@ -20,3 +20,51 @@ input[type=submit] {
     color: white;
   }
 }
+
+.btn--fullsize {
+  display: block;
+  width: 100%;
+}
+
+.btn--icon {
+  &::before {
+    content: ' ';
+    background-size: contain;
+    width: 1em;
+    height: 1.21em;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+.btn--icon-shop {
+  &::before {  
+    background-image: url(/img/icons/ic_shopping_cart_white_24px.svg);
+  }
+}
+
+.btn--icon-new-badges {
+  &::before {
+    background-image: url(/img/icons/ic_new_releases_white_24px.svg);
+  }
+}
+
+.btn--icon-payment {
+  &::before {
+    background-image: url(/img/icons/credit-card.png);
+  }
+}
+
+.btn--icon-back {
+  &::before {
+    background-image: url(/img/icons/arrow-left-circle.png);
+  }
+}
+
+.btn--outline {
+  background: transparent;
+  color: $blue;
+  border: 1px solid $blue;
+}

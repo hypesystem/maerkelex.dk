@@ -7,7 +7,7 @@ header {
   position: sticky;
   top: 0;
 
-  &.hide {
+  &.header--hide {
     transform: translateY(-115px);
   }
 
