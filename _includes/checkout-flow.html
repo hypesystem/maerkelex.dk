@@ -34,7 +34,7 @@
         }, "html");
       </script>
       <div class="cart__actions">
-        <button class="btn btn--outline btn--fullsize btn--icon btn--clear-cart js-empty-cart-button">
+        <button class="btn btn--outline btn--fullsize btn--icon btn--clear-cart" data-empty-cart-button>
           Tøm Kurv
         </button>
       </div>
@@ -178,9 +178,8 @@
 
 <script>
   (function () {
-    const emptyCartButton = document.querySelector(".js-empty-cart-button");
+    const emptyCartButton = document.querySelector("[data-empty-cart-button]");
     const orderForm = document.querySelector("#order-form");
-    const badgeContainer = document.querySelector(".js-badges-in-cart");
 
     emptyCartButton.addEventListener("click", function () {
       emptyCart();
