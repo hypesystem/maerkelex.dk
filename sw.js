@@ -1,6 +1,6 @@
 ---
 ---
-{% capture cacheName %}maerkelex-cache-v1.0.1-{{ site.time | replace: ' ', '-' | replace: ':', '-' | replace: '+', '' }}{% endcapture %}
+{% capture cacheName %}maerkelex-cache-v1.1.0-{{ site.time | replace: ' ', '-' | replace: ':', '-' | replace: '+', '' }}{% endcapture %}
 self.addEventListener("install", function(e) {
     e.waitUntil(
         caches
@@ -53,10 +53,16 @@ self.addEventListener("fetch", function(e) {
         caches
             .open("{{ cacheName }}")
             .then(function(cache) {
+                const networkResponsePromise = fetch(e.request);
+
+                e.waitUntil(networkResponsePromise.then(function(networkResponse) {
+                    return cache.put(e.request, networkResponse.clone());
+                }));
+
                 return cache
                     .match(e.request)
                     .then(function(response) {
-                        return response || fetch(e.request);
+                        return response || networkResponsePromise;
                     });
             })
     );
