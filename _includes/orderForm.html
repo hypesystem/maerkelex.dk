@@ -71,23 +71,14 @@
     const form = document.getElementById("order-form");
     const addToCartButton = document.getElementById("add-to-cart");
     const buyNowButton = document.getElementById("buy-now");
-    const orderBadgeUi = document.querySelectorAll("[data-order-content");
+    const orderBadgeUi = document.querySelectorAll("[data-order-content]");
     const addedToCartUi = document.querySelector("[data-added-to-cart-ui]");
 
     // Show user if current badge is in cart on pageload.
     checkIfBadgeIsCart();
 
-    function fetchCart() {
-      const localStorageCart = localStorage.getItem("cart");
-      if (localStorageCart && JSON.parse(localStorageCart)) {
-        return JSON.parse(localStorageCart);
-      }
-      return [];
-    }
-
     function checkIfBadgeIsCart() {
-      const cart = fetchCart();
-      const badgeAlreadyInCart = cart.find((data) => data.id === badgeId);
+      const badgeAlreadyInCart = owbs.val.cart.find((data) => data.id === badgeId);
       if (badgeAlreadyInCart) {
         showBadgeInCartUi();
       }
@@ -95,14 +86,14 @@
 
     function addBadgeToCart() {
       let badge = {
-        count: form.count.value,
+        count: parseInt(form.count.value),
         id: badgeId,
         name: "{{ page.name }}",
         image: "{{ page.image }}",
       };
-      let cart = fetchCart();
+      const cart = owbs.val.cart;
       cart.push(badge);
-      localStorage.setItem("cart", JSON.stringify(cart));
+      owbs.val.cart = cart;
       console.warn("Badge pushed to cart. Current cart:", cart);
     }
 

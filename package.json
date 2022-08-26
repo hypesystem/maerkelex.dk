@@ -1,0 +1,24 @@
+{
+  "name": "maerkelex.dk",
+  "version": "1.0.0",
+  "description": "Mærkelex website",
+  "scripts": {
+    "build:owbs": "owbs-build --output _includes/owbs.min.js",
+    "build:jekyll": "jekyll build",
+    "build": "npm run build:owbs && npm run build:jekyll",
+    "start": "npm run build:owbs && jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypesystem/maerkelex.dk.git"
+  },
+  "author": "Mærkelex <kontakt@maerkelex.dk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hypesystem/maerkelex.dk/issues"
+  },
+  "homepage": "https://github.com/hypesystem/maerkelex.dk#readme",
+  "dependencies": {
+    "owbs": "^0.2.7"
+  }
+}
