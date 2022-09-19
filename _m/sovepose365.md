@@ -19,4 +19,4 @@ Sovepose 365 er et helt nyt spejdermærke til dig, som gerne vil have en spænde
 - Mærket kan tages både inde og ude.
 - Mærket kan tages i alle former for soveposer.
 - Det tæller ikke for en bufferdag, hvis du låner en vens sovepose.
-- Der må gerne vær lynet flere soveposer sammen (Vi gør opmærksom på at det kan være skadeligt for nogle soveposer at være lynet sammen).
+- Der må gerne være lynet flere soveposer sammen (Vi gør opmærksom på at det kan være skadeligt for nogle soveposer at være lynet sammen).
