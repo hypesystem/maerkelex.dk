@@ -7,6 +7,7 @@ self.addEventListener("install", function(e) {
             .open("{{ cacheName }}")
             .then(function(cache) {
                 return cache.addAll([
+                    "{{ site.baseUrl }}",
                     "{{ site.baseUrl }}/",
                     "{{ site.baseUrl }}/manifest.json",
                     "{{ site.baseUrl }}/faq/",
@@ -14,6 +15,9 @@ self.addEventListener("install", function(e) {
                     "{{ site.baseUrl }}/img/hvem-er.jpg",
                     "{{ site.baseUrl }}/reklamer/",
                     "{{ site.baseUrl }}/blog/",
+                    "{{ site.baseUrl }}/shop/",
+                    "{{ site.baseUrl }}/kurv/",
+                    "{{ site.baseUrl }}/nyeste-maerker/",
                     "{{ site.baseUrl }}/font/OpenSans-Regular.ttf",
                     "{{ site.baseUrl }}/font/OpenSans-Light.ttf",
                     "{{ site.baseUrl }}/img/logo.svg",
