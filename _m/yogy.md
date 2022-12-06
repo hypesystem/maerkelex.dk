@@ -5,8 +5,7 @@ tags:
 - forløb
 image: yogy.jpg
 age: 10+
-infolink: https://shorty.tac-case.dk/index.php/yogy-maerket
-buylink: https://shorty.tac-case.dk/index.php/bestilling-eller-information
+buylink: https://shorty.tac-case.dk/index.php/yogy-maerket
 date_added: 2018-11-08
 ---
 Det er et wellness oplevelsesmærke, hvor bl.a. sommerlejren kan bruges til de længerevarende aktiviteter.

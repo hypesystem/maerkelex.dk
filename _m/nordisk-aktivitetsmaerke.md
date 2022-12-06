@@ -5,8 +5,7 @@ tags:
 - forløb
 image: nordisk-aktivitetsmaerke.jpg
 age: 6+
-infolink: https://shorty.tac-case.dk/index.php/nordisk-aktivitets-maerke
-buylink: https://shorty.tac-case.dk/index.php/bestilling-eller-information
+buylink: https://shorty.tac-case.dk/index.php/nordisk-aktivitets-maerke
 date_added: 2018-11-08
 ---
 Mærket sender spejderne på opdagelse i nordiske lande, hvor der skal arbejdes med spejderarbejde, friluftsliv, kultur/samfund, kunsthåndværk og spisevaner i de forskellige lande.
