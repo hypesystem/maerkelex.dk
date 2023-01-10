@@ -1,6 +1,6 @@
 ---
 layout: blogpost
-permalink: dit-nye-maerke/
+permalink: opret-maerke/
 title: Få nye mærker på Mærkelex
 ---
 Har du selv lavet et nyt mærke eller er der et vi ikke kender? Send gerne en besked så vi kan få det op på siden!
