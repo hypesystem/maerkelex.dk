@@ -1,5 +1,5 @@
 ---
-name: "Mini" knob
+name: Mini knob
 tags:
 - uofficielt
 image: mini-knob.jpg
