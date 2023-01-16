@@ -76,9 +76,21 @@ function matchesMaerke(maerke, term) {
     }
 
     var valueRegex = new RegExp(term, "i");
+
+    if(!maerke.name) {
+        console.warn("Ugyldigt mærke. Et mærke uden `name` blev fundet i listen af mærker, og blev sprunget over i søgningen.");
+        return false;
+    }
+
     if(maerke.name.replace(/&.+;/, '').match(valueRegex)) {
         return true;
     }
+    
+    if(!maerke.tags || !Array.isArray(maerke.tags)) {
+        console.warn("Ugyldigt mærke. Et mærke uden `tags` eller hvor `tags` ikke var en liste blev fundet i listen af mærker, og blev sprunget over i søgningen.");
+        return false;
+    }
+
     for(var i = 0; i < maerke.tags.length; i++) {
         var tag = maerke.tags[i];
         if(tag.match(valueRegex)) {
