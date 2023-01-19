@@ -3,11 +3,11 @@ name: Bålmagere
 tags:
 - De grønne pigespejdere
 - forløb
-age: 5-9
+age: 5+
 coverimage: cover-campfire2.jpg
 image: dgp-baalmager.jpg
-infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spirer-groensmutter/den-seje/baalmager/
-buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/baalmager-de-groenne-pigespejdere
+infolink: https://pigespejder.dk/om-at-lave-aktiviteter/maerker/
+buylink: https://www.spejdersport.dk/catalogsearch/result/?q=b%C3%A5lmagere
 ---
 Lejrbålet er en traditionel spejderaktivitet og med dette mærke,
 skal spirerne lave og opleve et rigtigt spejderlejrbål med alt, hvad det indebærer!
