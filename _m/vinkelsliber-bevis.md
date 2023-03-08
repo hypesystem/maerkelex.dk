@@ -7,7 +7,7 @@ buylink: https://www.xn--mrkeshop-j0a.dk/
 date_added: 2023-03-08
 age: 18+
 ---
-### VÆR OBS PÅ GÆLDENDE LOVGIBNING PÅ OMRÅDET
+### VÆR OBS PÅGÆLDENDE LOVGIVNING PÅ OMRÅDET
 
 Mærket er for klanen der mangler et fedt mærke.
 
