@@ -31,6 +31,6 @@ For at tage mærket skal man lave 5 forskellige smage på 5 forskellige måder. 
 - Gryde over bål
 - Trangia
 
-Se link til popcorn maskine: (https://www.youtube.com/watch?v=QutJVj9r-7U)[https://www.youtube.com/watch?v=QutJVj9r-7U].
+Se link til popcorn maskine: [https://www.youtube.com/watch?v=QutJVj9r-7U](https://www.youtube.com/watch?v=QutJVj9r-7U).
 
 Mærket er lavet af chenoa der er minispejder i Ballerup spejdergruppe.
