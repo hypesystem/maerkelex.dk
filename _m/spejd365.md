@@ -9,6 +9,7 @@ age: 6+
 image: spejd365.jpg
 price: 20
 highlight: popular
+preorder: true
 ---
 For at tage Spejd365 skal spejderen gå med spejdertørklæde i et år.
 
