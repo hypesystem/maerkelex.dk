@@ -183,7 +183,7 @@ title: Indkøbskurv
           </div>
         </form>
       </div>
-    </section>      
+    </section>
   </div>
 </div>
 
@@ -280,8 +280,6 @@ title: Indkøbskurv
 
       if (!obj.postalCode) {
         errors[prefix + "-postal-code"] = "Mangler postnr";
-      } else if (obj.postalCode.length !== 4) {
-        errors[prefix + "-postal-code"] = "Postnummer har forkert længde";
       }
 
       if (!obj.city) {
