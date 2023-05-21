@@ -8,7 +8,7 @@ tags:
 age: 12+
 image: shelter-5km.jpg
 coverimage: cover-shelter.jpg
-buylink: https://www.facebook.com/Shelter5km-mærket-106109317793322/about/
+buylink: https://www.facebook.com/people/Shelter5km-m%C3%A6rket/100067553795226/
 date_added: 2020-07-02
 ---
 Regler for Shelter+5km mærket:
