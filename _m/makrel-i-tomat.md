@@ -5,7 +5,7 @@ tags:
 - forløb
 age: 12+
 image: makrel-i-tomat.jpg
-buylink: https://www.maribospejderne.dk/makrel-i-tomat-1kg
+buylink: https://www.maribospejderne.dk/begivenhed/bestilling-af-maerker
 date_added: 2020-05-05
 ---
 Mærket går ud på, at man som enkel person skal spise 1 kilo makrel i tomat.
