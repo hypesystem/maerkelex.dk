@@ -8,8 +8,7 @@ tags:
 age: 5-9
 coverimage: cover-knife.jpg
 image: dgp-dolkemaerket.jpg
-infolink: http://pigespejder.dk/forside/for-pigespejdere/aktiviteter/?user_aktbase_pi1[search]=find%20aktiviteter&user_aktbase_pi1[actid]=304&user_aktbase_pi1[pointer]=11
-buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/dolkemaerke-pigespejder-inkl--laedersnor
+buylink: https://www.spejdersport.dk/de-groenne-pigespejdere-dolkemaerke-inkl-laedersnor
 ---
 Formål: Tjek om smutterne har forstået hvad dolkemærket indeholder
 

@@ -3,10 +3,12 @@ name: Grænse&#173;boksere
 tags:
 - De grønne pigespejdere
 - forløb
+- udgået
 age: 5-9
 image: dgp-graenseboksere.jpg
 infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spirer-groensmutter/den-modige/graenseboksere/
 buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/graenseboksere-de-groenne-pigespejdere
+discontinued: true
 ---
 Dyr har en anden måde at bevæge sig på end mennesker. Det vil sige, at de
 på nogle måder er begrænset i forhold til os mennesker, der går på to ben og

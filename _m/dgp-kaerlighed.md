@@ -5,8 +5,8 @@ tags:
 - forløb
 age: 5-16
 image: dgp-kaerlighed.jpg
-infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/engagementsmaerker/pige/kaerlighed/
-buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/kaerlighed-maerke
+infolink: https://pigespejder.dk/om-at-lave-aktiviteter/maerker/
+buylink: https://www.spejdersport.dk/catalogsearch/result/?q=De+Gr%C3%B8nne+Pigespejdere+K%C3%A6rlighed
 ---
 En stor del af en piges hverdag og tanker handler om kærlighed. Det kan være kærlighed til sine
 forældre, mellem prinser og prinsesser i historier, forelskelse i skolens lækreste fyr osv. Målet
