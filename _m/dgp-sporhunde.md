@@ -3,10 +3,12 @@ name: Sporhunde
 tags:
 - De grønne pigespejdere
 - forløb
+- udgået
 age: 5-9
 image: dgp-sporhunde.jpg
 infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spirer-groensmutter/den-seje/sporhunde/
 buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/sporhunde-maerke
+discontinued: true
 ---
 Når man er en ægte sporhund, så har man næse for at finde vej, selvom man
 måske er faret en lille smule vild. Som Sporhunde skal spirerne træne sig i at se

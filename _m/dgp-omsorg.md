@@ -3,10 +3,12 @@ name: Omsorg
 tags:
 - De grønne pigespejdere
 - forløb
+- udgået
 age: 5-16
 image: dgp-omsorg.jpg
 infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/engagementsmaerker/tro-og-etik/omsorg/
 buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/omsorg-maerke-de-groenne-pigespejdere
+discontinued: true
 ---
 Omdrejningspunktet for mærket "Omsorg" er i høj grad sladder. Idéen med at beskæftige sig
 med sladder, er dobbel. Det er vigtigt, at pigerne får fornemmelsen af, at det at tale bag ryggen

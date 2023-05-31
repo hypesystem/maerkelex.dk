@@ -3,10 +3,12 @@ name: REDOK
 tags:
 - De grønne pigespejdere
 - forløb
+- udgået
 age: 9-16
 image: dgp-redok.jpg
 infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spejdere-seniorspejdere/overleveren/redok/
 buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/redok-de-groenne-pigespejdere
+discontinued: true
 ---
 Formålet med dette mærke er at lære pigerne en specifik spejderfærdighed, som vil åbne deres øjne
 for en hemmelig verden – som måske ikke er så hemmelig endda? For koder bruges overalt, og det

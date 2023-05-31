@@ -3,10 +3,12 @@ name: Modig
 tags:
 - De grønne pigespejdere
 - forløb
+- udgået
 age: 5-9
 image: dgp-modig.jpg
 infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spirer-groensmutter/den-modige/modig/
 buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/modig-maerke
+discontinued: true
 ---
 Med udfordringsmærket Modig drager spirerne ind i Disneys magiske
 univers i tegnefilmen af samme navn. De vil nemlig gerne være lige så modige
