@@ -44,6 +44,11 @@ layout: default
       </p>
       {% endif %}
       <div class="btn-container">
+        {% if page.discontinued %}
+            <div class="btn btn--disabled">
+              Sælges ikke længere
+            </div>
+        {% else %}
         {% if page.infolink %}
         <a target="noopener" href="{{ page.infolink }}" class="btn infolink">Læs mere</a>
         {% endif %}
@@ -79,12 +84,17 @@ layout: default
             }
           })();
         </script>
+        {% endif %}
       </div>
       {% unless page.price %}
-      <div style="font-size: 0.8em; margin-top: 1em;">
-        {% capture buylink_domain %}{{ page.buylink | split: "/" | slice: 2 }}{% endcapture %}
-        Mærket sælges af en ekstern mærkesælger via {{ buylink_domain | remove_first: "www." | truncate: 20, "…" }}
-      </div>
+        <div style="font-size: 0.8em; margin-top: 1em;">
+          {% capture buylink_domain %}{{ page.buylink | split: "/" | slice: 2 }}{% endcapture %}
+          {% if page.discontinued %}
+            Mærket blev solgt af {{ buylink_domain | remove_first: "www." | truncate: 20, "…" }} men er desværre udgået.
+          {% else %}
+            Mærket sælges af en ekstern mærkesælger via {{ buylink_domain | remove_first: "www." | truncate: 20, "…" }}
+          {% endif %}
+        </div>
       {% endunless %}
       {% if page.price %}
       <div class="purchase-container">
