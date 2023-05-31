@@ -3,10 +3,12 @@ name: Hjem
 tags:
 - De grønne pigespejdere
 - forløb
+- udgået
 age: 5-16
 image: dgp-hjem.jpg
 infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/engagementsmaerker/verdensborger/hjem/
 buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/hjem-maerke
+discontinued: true
 ---
 Danske pigespejdere skal vide, at de er en del af det store globale pigespejderarbejde. De skal
 opleve, at vi som pigespejdere har et fælles værdisæt, der gør, at vi sammen kan – og bør – spille

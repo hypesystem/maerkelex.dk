@@ -3,10 +3,12 @@ name: Urbanister
 tags:
 - De grønne pigespejdere
 - forløb
+- udgået
 age: 9-16
 image: dgp-urbanister.jpg
 infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spejdere-seniorspejdere/stifinderen/urbanister/
 buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/urbanister-de-groenne-pigespejdere
+discontinued: true
 ---
 Grafitti, streetstyle, parkour, jumpstyle, break dance, hip hop, rap, beatbox, harajuku! Om du er fra
 provinsen eller bor i byen, så er det New York, Berlin, Tokyo og andre af de største byer i verden,

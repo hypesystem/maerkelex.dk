@@ -5,8 +5,8 @@ tags:
 - forløb
 age: 5-9
 image: dgp-skovtrolde.jpg
-infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spirer-groensmutter/den-nysgerrige/skovtrolde/
-buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/skovtrolde-maerke
+infolink: https://pigespejder.dk/om-at-lave-aktiviteter/maerker/
+buylink: https://www.spejdersport.dk/catalogsearch/result/?q=Spejderm%C3%A6rke+skovtrolde
 ---
 Som Skovtrolde skal spirerne blive klogere på træer – ikke mindst hyldetræer. De
 skal nemlig på et løb, der handler om træer, de skal lege legen "kram et træ", og

@@ -5,8 +5,8 @@ tags:
 - forløb
 age: 5-16
 image: dgp-mig-og-mine.jpg
-infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/engagementsmaerker/verdensborger/mig-og-mine-10-mio-veninder/
-buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/mig-og-mine-10-mio--veninder-maerke
+infolink: https://pigespejder.dk/om-at-lave-aktiviteter/maerker/
+buylink: https://www.spejdersport.dk/catalogsearch/result/?q=Spejderm%C3%A6rke+Mig+Og+Mine+10+Mio.+Veninder
 ---
 Danske pigespejdere skal vide, at de er en del af det store globale pigespejderarbejde. De skal
 opleve, at vi som pigespejdere har et fælles værdisæt, der gør, at vi sammen kan – og bør – spille
@@ -22,4 +22,4 @@ Pigerne skal introduceres til pigespejdernes verdensorganisation WAGGGS og få e
 fornemmelse af, hvordan de selv er en del af et større netværk. De fem verdensspejdercentre
 (Afrika, Mexico, England, Schweiz og Indien) præsenteres for pigerne. Hvor ligger centrene? Hvad
 er der specielt ved dem? Hvilke aktiviteter laver man på centrene osv.? Pigerne skal finde ligheder
-mellem spejdere fra forskellige lande; Hvad har vi til fælles? 
+mellem spejdere fra forskellige lande; Hvad har vi til fælles?

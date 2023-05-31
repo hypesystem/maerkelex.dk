@@ -3,10 +3,12 @@ name: På farten!
 tags:
 - De grønne pigespejdere
 - forløb
+- udgået
 age: 9-16
 image: dgp-paa-farten.jpg
 infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spejdere-seniorspejdere/vovehalsen/paa-farten/
 buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/paa-farten-de-groenne-pigespejdere
+discontinued: true
 ---
 Kan du lide fart og adrenalinsus, så vil du blive udfordret på begge dele i denne udfordring!
 I dette mærke skal der fart over feltet. I skal afprøve forskellige transportmidler, som kan skaffe jer

@@ -5,8 +5,8 @@ tags:
 - forløb
 age: 9-16
 image: dgp-klatretoeser.jpg
-infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spejdere-seniorspejdere/vovehalsen/klatretoeser/
-buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/klatretoeser-de-groenne-pigespejdere
+infolink: https://pigespejder.dk/om-at-lave-aktiviteter/maerker/
+buylink: https://www.spejdersport.dk/catalogsearch/result/?q=spejderm%C3%A6rke+klatret%C3%B8ser
 ---
 Dette mærke har til formål at lære pigerne at klatre i træer og samtidig introducere
 dem til endnu flere klatreformer, redskaber og metoder, end det, de måske har prøvet

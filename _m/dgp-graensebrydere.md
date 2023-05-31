@@ -3,10 +3,12 @@ name: Grænse&#173;brydere
 tags:
 - De grønne pigespejdere
 - forløb
+- udgået
 age: 9-16
 image: dgp-graensebrydere.jpg
 infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spejdere-seniorspejdere/vovehalsen/graensebrydere/
 buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/graensebryder-maerke
+discontinued: true
 ---
 Grænser kan være rigtig mange ting. Der er grænser mellem lande, grænser mellem mennesker og
 personlige grænser man kan udfordre og overskride. Grænserne kan eksistere inde i hovedet på

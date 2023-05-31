@@ -5,8 +5,8 @@ tags:
 - forløb
 age: 9-16
 image: dgp-vildmarkspiger.jpg
-infolink: http://pigespejder.dk/forside/for-pigespejdere/aktivitetsmateriale/udfordringsmaerker-for-spejdere-seniorspejdere/overleveren/vildmarkspiger/
-buylink: http://www.55nord.dk/de-gr%C3%B8nne-pigespejdere/shop-de-groenne-pigespejdere/maerker-2/vildmarkspiger-de-groenne-pigespejdere
+infolink: https://pigespejder.dk/om-at-lave-aktiviteter/maerker/
+buylink: https://www.spejdersport.dk/catalogsearch/result/?q=Spejderm%C3%A6rke+vildmarkspiger
 ---
 Dette udfordringsmærke udfordrer primært pigernes kreative og tekniske evner til at se
 og skaffe, udtænke og opfinde forskellige måder, hvor man kan bruge naturens
