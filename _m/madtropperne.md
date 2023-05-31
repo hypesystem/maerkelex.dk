@@ -7,7 +7,6 @@ image: madtropperne.jpg
 coverimage: cover-madtropperne.jpg
 price: 7
 age: 10-17
-highlight: new
 date_added: 2018-03-29
 ---
 Det er vigtigt at kunne lave god mad – både fordi det smager dejligt, og fordi maden giver energi til aktiviteter.
