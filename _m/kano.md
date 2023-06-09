@@ -6,7 +6,7 @@ tags:
 age: 10+
 coverimage: cover-beaver.jpg
 image: kano.jpg
-buylink: https://www.facebook.com/groups/spejdermaerker/permalink/2396696307229071/
+buylink: https://www.facebook.com/groups/spejdermaerker/permalink/3078366289062066/
 buylink_requires_facebook_group_membership:
   name: Spejdermærker
   url: https://www.facebook.com/groups/spejdermaerker/
