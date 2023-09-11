@@ -1,5 +1,5 @@
 ---
-name: 48 timer i sovepose
+name: 48 timer i Sovepose
 tags:
 - uofficielt
 - forløb
