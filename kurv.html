@@ -38,6 +38,14 @@ title: Indkøbskurv
                       </a>
                     </p>
                   </div>
+                  <div class="cart-adjust">
+                      <a class="cart-item__adjust-action" data-js-increase-badge-amount data-badge-id="${badge.id}">
+                      + 1
+                      </a>
+                      <a class="cart-item__adjust-action" data-js-decrease-badge-amount data-badge-id="${badge.id}">
+                      - 1
+                      </a>
+                  </div>
                 </div>
               `).join("");
             }, "html");
@@ -207,6 +215,18 @@ title: Indkøbskurv
           removeBadgeFromCart(btn.dataset.badgeId);
         });
       });
+      const increaseBadgeBtn = document.querySelectorAll("[data-js-increase-badge-amount]");
+      increaseBadgeBtn.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          increaseBadgeAmountInCart(btn.dataset.badgeId);
+        });
+      });
+      const decreaseBadgeBtn = document.querySelectorAll("[data-js-decrease-badge-amount]");
+      decreaseBadgeBtn.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          decreaseBadgeAmountInCart(btn.dataset.badgeId);
+        });
+      });
     });
 
     function emptyCart() {
@@ -216,6 +236,18 @@ title: Indkøbskurv
     function removeBadgeFromCart(badgeId) {
       const cart = owbs.val.cart;
       const updatedCart = cart.filter((data) => data.id != badgeId);
+      owbs.val.cart = updatedCart;
+    }
+
+    function increaseBadgeAmountInCart(badgeId) {
+      const cart = owbs.val.cart;
+      const updatedCart = cart.map((data) => { if(data.id == badgeId) data.count++; return data;})
+      owbs.val.cart = updatedCart;
+    }
+
+    function decreaseBadgeAmountInCart(badgeId) {
+      const cart = owbs.val.cart;
+      const updatedCart = cart.map((data) => { if(data.id == badgeId) data.count--; return data;}).filter((data) => data.count >= 1);
       owbs.val.cart = updatedCart;
     }
 
