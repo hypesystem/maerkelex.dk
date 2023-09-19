@@ -24,10 +24,9 @@
   justify-content: center;
   align-items: center;
   width: auto;
-  margin-left: auto;
 }
 
-.cart-adjust a {
+.cart-adjust .cart-item__adjust-action {
   cursor: pointer;
   width: 2rem;
   user-select: none;
@@ -44,16 +43,20 @@
   border-radius: 10px;
 }
 
-.cart-adjust a:hover {
+.cart-adjust .cart-item__adjust-action:hover {
   transition: 10ms;
   border-width: 0px 0px 1.5px 1.5px;
   margin-right: 5.5px;
 }
 
-.cart-adjust a:hover:active {
+.cart-adjust .cart-item__adjust-action:active {
   transition: 10ms;
   border-width: 3px 3px 0px 0px;
   margin-right: 4px;
+}
+
+.spacer {
+  flex-grow: 1;
 }
 
 .cart__actions {
