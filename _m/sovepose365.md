@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - forløb
 - sovepose
-- 365
+- "365"
 age: 6+
 coverimage: cover-sleepingbag.jpg
 image: sovepose365.jpg

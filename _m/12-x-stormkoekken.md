@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - forløb
 - trangia
-- 365
+- "365"
 age: 10+
 image: 12-x-stormkoekken.jpg
 coverimage: cover-food.jpg

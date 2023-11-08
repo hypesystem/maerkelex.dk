@@ -3,7 +3,7 @@ name: Skjorty
 tags:
 - uofficielt
 - forløb
-- 365
+- "365"
 image: skjorty.jpg
 buylink: https://shorty.tac-case.dk/index.php/scoutrail/skjorty
 ---
