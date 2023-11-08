@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - forløb
 - tørklæde
-- 365
+- "365"
 age: 6+
 image: spejd365.jpg
 price: 20

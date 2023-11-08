@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - forløb
 - vand
-- 365
+- "365"
 coverimage: cover-wave.jpg
 image: plasket-x-12.jpg
 buylink: https://www.facebook.com/dgpsoendersoegruppe/

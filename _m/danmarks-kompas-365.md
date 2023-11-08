@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - kompas
 - kort
-- 365
+- "365"
 age:
 image: danmark_kompas_365.jpg
 coverimage: cover-hike.jpg
