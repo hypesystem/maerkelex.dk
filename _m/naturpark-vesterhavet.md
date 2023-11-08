@@ -1,11 +1,8 @@
 ---
 name: Naturpark Vesterhavet
 tags:
-- tværkorpslig
 - forløb
-- DDS
-- KFUM
-- FDF
+- uofficielt
 image: naturpark-vesterhavet.jpg
 buylink: https://naturparkvesterhavet.dk/spejdermaerke/
 date_added: 2023-11-08
