@@ -4,8 +4,11 @@ tags:
 - uofficielt
 - jul
 image: julesokkerne.jpg
-buylink: lisahuese.design@gmail.com
-date_added: 2023-12-04
+buylink: https://www.facebook.com/groups/spejdermaerker/permalink/3459113047654053/
+buylink_requires_facebook_group_membership:
+  name: Spejdermærker
+  url: https://www.facebook.com/groups/spejdermaerker/
+date_added: 2023-12-05
 ---
 Hvis du elsker fjollede sokker og jul så er dette mærke lige noget for dig!
 Regler:
