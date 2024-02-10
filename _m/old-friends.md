@@ -5,6 +5,7 @@ tags:
 image: old-friends.jpg
 buylink: https://www.facebook.com/groups/1580608399359233/?mibextid=oMANbw
 date_added: 2024-02-09
+age: 30+
 ---
 Gennem livet møder vi mange mennesker.  
 Nogle bliver vores venner for livet, mens andre glider ud af vores liv af forskellige årsager.  
