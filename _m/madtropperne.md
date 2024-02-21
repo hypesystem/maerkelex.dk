@@ -5,7 +5,7 @@ tags:
 - forløb
 image: madtropperne.jpg
 coverimage: cover-madtropperne.jpg
-price: 15
+price: 20
 age: 10-17
 date_added: 2018-03-29
 ---
