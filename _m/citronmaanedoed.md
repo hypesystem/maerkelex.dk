@@ -1,5 +1,5 @@
 ---
-name: Citronmånedød-mærket 
+name: Citronmånedød-mærket
 tags:
 - uofficielt
 - mad
