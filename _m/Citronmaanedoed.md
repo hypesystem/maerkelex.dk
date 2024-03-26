@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - mad
 image: citronmaane-deod.jpg
-buylink:  https://www.facebook.com/knobmaerke/
+buylink: https://www.facebook.com/knobmaerke/
 date_added: 2024-22-03
 ---
 For at tage mærket Cirtonmåne-død skal man spise 2 Dancake Citronmåne á 350g på 10 minutter.
@@ -22,5 +22,3 @@ Regler
 Størrelsen på mærket er 4,5 cm i diameter.
 
 Mærket koster 20kr. stk. + 50kr. for porto i Danmark.
-
- 
