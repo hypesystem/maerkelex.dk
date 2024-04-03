@@ -3,10 +3,11 @@ name: Citronmånedød-mærket
 tags:
 - uofficielt
 - mad
-image: citronmaane-deod.jpg
-buylink: https://www.facebook.com/knobmaerke/
+image: citronmaanedoed.jpg
+buylink:  https://www.facebook.com/knobmaerke/
+date_added: 2024-04-03
 ---
-For at tage mærket Cirtonmåne-død skal man spise 2 Dancake Citronmåne á 350g på 10 minutter.
+For at tage mærket Citronmåne-død skal man spise 2 Dancake Citronmåne á 350g på 10 minutter.
 
 ### Regler
 
