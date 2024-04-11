@@ -90,7 +90,7 @@ layout: default
         <div style="font-size: 0.8em; margin-top: 1em;">
           {% capture buylink_domain %}{{ page.buylink | split: "/" | slice: 2 }}{% endcapture %}
           {% if page.discontinued %}
-            Mærket blev solgt af {{ buylink_domain | remove_first: "www." | truncate: 20, "…" }} men er desværre udgået.
+            Mærket blev solgt på {{ buylink_domain | remove_first: "www." | truncate: 20, "…" }} men er desværre udgået.
           {% else %}
             Mærket sælges af en ekstern mærkesælger via {{ buylink_domain | remove_first: "www." | truncate: 20, "…" }}
           {% endif %}
