@@ -6,6 +6,7 @@ tags:
 image: mad-paa-baal-verden-rundt.jpg
 buylink: shop.charlottenlundspejderne.dk
 date_added: 2024-04-19
+
 ---
 ### Formål 
 Du og dine spejderkammerater skal lave 3 retters menu, på bål, én gang hver måned.
