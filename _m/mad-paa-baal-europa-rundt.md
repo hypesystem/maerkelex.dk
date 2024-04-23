@@ -3,7 +3,7 @@ name: Mad på bål Europa rundt på 12 måneder
 tags:
 - uofficielt
 - forløb
-image: mad-paa-baal-europa.jpg
+image: mad-paa-baal-europa-rundt.jpg
 buylink: shop.charlottenlundspejderne.dk
 date_added: 2024-04-19
 ---
