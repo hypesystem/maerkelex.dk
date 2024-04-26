@@ -5,7 +5,8 @@ tags:
 - forløb
 - "365"
 image: sov-med-spejderbamse-365.jpg
-date_added: 2024-04-23
+buylink: https://1sonderbro.dk/begivenhed/sov-med-spejderbamse-365
+date_added: 2024-04-24
 ---
 ### Formål
 Sov Med Spejderbamse 365 mærket går ud på at du skal sove med din spejderbamse i et år og at det ikke er pinligt at sove med bamser.
