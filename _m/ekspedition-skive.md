@@ -3,7 +3,7 @@ name: Ekspedition Skive
 tags:
 - uofficielt
 image: ekspedition-skive.jpg
-buylink: https://roslev-gruppe.gruppesite.dk/
+buylink: https://roslev-gruppe.gruppesite.dk/nyheder/maerker-der-tages-pt/
 date_added: 2024-06-13
 ---
 
