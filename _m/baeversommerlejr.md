@@ -2,9 +2,11 @@
 name: Bæversommerlejr
 tags:
 - uofficielt
+age: 6-8
 image: baeversommerlejr.jpg
 buylink: https://kfumk.dk/produkt-kategori/lejr/
 date_added: 2024-06-13
+
 ---
 
 ### Beskrivelse
