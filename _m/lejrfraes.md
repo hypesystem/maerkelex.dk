@@ -5,7 +5,7 @@ tags:
 image: lejrfraes.jpg
 buylink: https://www.baldergruppe.dk/lejrfraes-maerke
 date_added: 2024-06-18
-age: 12
+age: 12+
 ---
 ### Information om mærket 
 
