@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - mad
 image: citronmaane-maerket.jpg
-buylink: https://www.facebook.com/profile.php?id=100090400092782
+buylink: https://roskildegruppe.dk/maerkebestilling/
 date_added: 2023-02-20
 ---
 For at tage mærket skal man spise 1 Dancake citronmåne á 350g på 10 minutter
