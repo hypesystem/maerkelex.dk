@@ -1,10 +1,9 @@
 ---
-name: "&#x22;Den våde sovepose&#x22; knæk Tabu"
+name: Den våde sovepose knæk Tabu
 tags:
 - uofficielt
 - forløb
 image: den-vaade-sovepose.jpg
-buylink: https://1sonderbro.dk/begivenhed/den-vaade-sovepose-knaek-tabu
 date_added: 2023-11-17
 ---
 Mærket er lavet for at aftabuisere sengevædning og fjerne den skam der ofte følger disse børn og unge.
@@ -25,5 +24,8 @@ Lad os sørge for, at vi løfter dette blyholdige tæppe, der hersker over natli
 
 LAD OS SAMMEN BRYDE TABUET! 
 
+
+For køb af mærke skriv venligst til følgende mail:
+marnni@hotmail.com
 Ved køb af mærket, føler der også en lille pamflet med info om sengevædning.
 
