@@ -4,8 +4,11 @@ tags:
 - uofficielt
 - forløb
 image: den-vaade-sovepose.jpg
+buylink: https://www.facebook.com/groups/1498415847482888
 date_added: 2023-11-17
 ---
+### Beskrivelse ###
+
 Mærket er lavet for at aftabuisere sengevædning og fjerne den skam der ofte følger disse børn og unge.
 
 I Danmark er der omkring 50.000 børn og unge som tisser i sengen i løbet af natten. En del af disse børn og unge er spejdere. En del af dem tager ikke med på de spændende ture som grupperne arrangerer, hvis der er mere end 1 overnatning, fordi der fortsat er et stort tabu omkring det at tisse i sengen.
@@ -20,12 +23,10 @@ Vær med til at knække tabuet!
 Uvidenhed om grunde til ufrivillig vandladning er et problem. Få viden om emnet, og vær den gode kammerat som hjælper dem, som har dette problem, og ikke tør tage på tur. Få en god snak i gruppen, uden at der kommer navn på, find ud af hvorfor nogle børn ikke kan holde sig tørre om natten. 
 
 Jeg kommer gerne ud til jer som gruppe, hvis I har lyst til at høre om det, og forklarer hvorfor nogle børn tisser i soveposen. Du kan skrive til marnni@hotmail.com, og vi kan lave en aftale. 
+
 Lad os sørge for, at vi løfter dette blyholdige tæppe, der hersker over natlig enuresis/sengevædning, for at befri børn og familier for en bekymring, som så mange af dem deler. Samt at vise nye spejdere i gruppen, at vi taler åbent om tingene, og at hos os spejdere er sengevædning ikke et tabu - intet barn kan gøre for det. 
 
 LAD OS SAMMEN BRYDE TABUET! 
 
-
-For køb af mærke skriv venligst til følgende mail:
-marnni@hotmail.com
 Ved køb af mærket, føler der også en lille pamflet med info om sengevædning.
 
