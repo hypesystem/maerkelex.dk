@@ -4,9 +4,9 @@
   "description": "Mærkelex website",
   "scripts": {
     "build:owbs": "owbs-build --output _includes/owbs.min.js",
-    "build:jekyll": "jekyll build",
+    "build:jekyll": "npx @11ty/eleventy",
     "build": "npm run build:owbs && npm run build:jekyll",
-    "start": "npm run build:owbs && jekyll serve"
+    "start": "npm run build:owbs && npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
