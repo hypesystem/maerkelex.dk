@@ -18,7 +18,7 @@
                   {% capture m_age %}{% if m.age %}{{ m.age }} år{% else %}Alle aldre{% endif %}{% endcapture %}
                   {% assign m_image = m.image %}
                   {% assign m_name = m.name %}
-                  {% include maerkebox.html %}
+                  {% include 'maerkebox.html' %}
               {% endif %}
           {% endfor %}
       {% endfor %}

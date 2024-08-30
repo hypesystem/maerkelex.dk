@@ -26,7 +26,7 @@ title: Køb mærker
                 {% else %}
                     {% assign m_highlight_text = "<strong>Køb for " | append: m.price | append: " kr</strong>" %}
                 {% endif %}
-                {% include maerkebox.html %}
+                {% include 'maerkebox.html' %}
             {% endif %}
         {% endfor %}
     </div>
