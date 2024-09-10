@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 $glorified-splash-min-height: $mobile;
 
 .glorified {
@@ -197,11 +199,10 @@ $glorified-splash-min-height: $mobile;
     }
 
     .page-description-color {
+        padding-bottom: 28px; /* replaces bottom's margin-top which is set to 0 below */
         @media (max-width: $mobile) {
             padding: 20px;
         }
-
-        padding-bottom: 28px; /* replaces bottom's margin-top which is set to 0 below */
     }
 
     .btn-container .btn {
