@@ -6,7 +6,7 @@ tags:
 - hejk
 coverimage: cover-hike.jpg
 image: makkermarch.jpg
-buylink: https://www.solskinstroppen.dk/makkermarch-0
+buylink: https://www.solskinstroppen.dk/makkermarch
 date_added: 2017-11-06
 ---
 ### Regler:
