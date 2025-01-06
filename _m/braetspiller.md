@@ -15,6 +15,6 @@ For at få mærket skal man:
 
 Sæt gerne 2-3 spejderaftener af til at nå igennem alle spejdernes yndlingsspil. Og også gerne en aften eller weekend til at besøge en BrætspilsCon eller BrætspilsCafé.
 
-Mærket er rundt, og 5 cm i diameter. Det er broderet.
+Mærket er rundt, og 42 mm i diameter . Det er broderet.
 
-Mærket koster 20 kr pr stk. Plus 20 kr i forsendelse. 
+Mærket koster 20kr.
