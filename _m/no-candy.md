@@ -5,7 +5,7 @@ tags:
 - forløb
 age: 6+
 image: no-candy.jpg
-buylink: https://www.herningspejder.dk/spejderne-6-kl-17-%C3%A5r/verdens-sejeste-m%C3%A6rke
+buylink: https://www.herningspejder.dk/enhederne/spejderne-6-kl-17-%C3%A5r/verdens-sejeste-m%C3%A6rke
 date_added: 2021-08-30
 ---
 Kort og godt INGEN slik i 365 dage.
