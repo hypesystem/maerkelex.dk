@@ -17,4 +17,4 @@ Spejder er noget man er hele tiden. Derfor er det også vigtigt at tage til spej
 - Reglerne må godt variere fra gruppe til gruppe. 
 - Mærket må godt tildeles spejdere der har fødselsdag i en ferie. på almindelige møde-aftener (fx. d. 27 december ) 
 
-
+Mærket findes også med en grøn uniform. Søg på Scouting in denmark.
