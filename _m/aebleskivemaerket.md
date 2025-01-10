@@ -4,7 +4,7 @@ tags:
 - uofficielt
 age: 10+
 image: aebleskivemaerket.jpg
-buylink: https://1sonderbro.dk/begivenhed/aebleskivemaerket-2024
+buylink: https://1sonderbro.dk/begivenhed/aebleskivemaerket-2025
 date_added: 2021-12-09
 ---
 20 æbleskiver på 15 min. Man må godt spise syltetøj og sukke til.... og det behøver ikke at være hjemmebagte æbleskiver.
