@@ -10,16 +10,16 @@ age: 6-11
 price: 13
 ---
 
-# Bliv fællesskabsforkæmper
+## Bliv fællesskabsforkæmper
 Mærket er en del af projektet ”Ensomhed og Fællesskab”, der består af aktivitetsmateriale, 
 film og undervisningsmateriale til børn i alderen 6-10 år, en helt ny sang af
 Sigurd Barrett og et inspirationsmateriale til lokalt engagement, hvor I kan finde ideer til,
 hvordan I kan gå sammen med andre i jeres lokalområde for at bekæmpe ensomhed.
 
-# Formål med mærket
+## Formål med mærket
 Alle har brug for at være en del af et fællesskab. Derfor sætter dette mærke fokus på, hvordan I hos jer sikrer, at alle føler sig som en del af fællesskabet, og hvordan I byder nye velkommen i jeres fællesskab.
 
-# Forløbet
+## Forløbet
 
 ## Fortæl børnene, hvorfor I arbejder med fællesskab
 Snak med dem om, hvad fællesskab egentlig er, hvorfor det er vigtigt etc. I kan også se
