@@ -26,7 +26,7 @@ Snak med dem om, hvad fællesskab egentlig er, hvorfor det er vigtigt etc. I kan
 (dele af) filmen om ensomhed og fællesskab, hvor Snapper og Topper finder ud af en
 masse om ensomhed og fællesskab. Og I kan synge den helt nye ensomheds-sang, som
 Sigurd Barrett har skrevet, som du kan finde tekst og noder til på ensomhedogfællesskab.dk
-Du kan finde inspiration til at tale om fællesskab i aktivitetsmaterialet på ensomhedogfællesskab.dk.
+Du kan finde inspiration til at tale om fællesskab under <a href="https://www.xn--ensomhedogfllesskab-vxb.dk/">”Fortæl børnene, hvorfor I arbejder med fællesskab”?</a> i aktivitetsmaterialet.
 
 ## 2 lege
 Vælg minimum 2 lege fra afsnittet <a href="https://www.xn--ensomhedogfllesskab-vxb.dk/aktivitetsmateriale/lege-samarbejde-og-grin">”Lege – samarbejde og grin”</a>i aktivitetsmaterialet. 
