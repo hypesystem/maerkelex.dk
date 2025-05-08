@@ -11,7 +11,7 @@ date_added: 2024-04-24
 Mærket henvender sig til alle spejdere som skal på tur eller lejr i Nordsjælland. Hvis man vil have et udflugtsted med opgaver, så er Hillerød nu klar med sit eget mærke, EKSPEDITION HILLERØD.
 Mærket er lavet med 15 poster omkring slottet, barokhaven og lidt rundt i byen.
 Hvis man vil tage en tur i svømmehallen, er dette en mulighed.
-Hvis man vil udvide turen kan man går op til spejderhytterne i Hillerød (Frydenlyst) og her finde yderlige opgaver, med mulighed for overnatning ved bookning hos grupperne.
+Hvis man vil udvide turen kan man går op til spejderhytterne i Hillerød (Frydenborg) og her finde yderlige opgaver, med mulighed for overnatning ved bookning hos grupperne.
 
 Mærket koster 15 kr og er 5 cm høj og 6 cm bred. 
 
