@@ -11,9 +11,9 @@ date_added: 2025-08-01
 Spejderne skal hjælpe med et bestemt antal opgaver i forbindelse med juletræssalg. Opgaver kan fx være hjælpe med at fælde træer, have en vagt ved salgboden eller lignende.Antallet af opgaver afhænger af spejdernes alder. Spejderne får en del af mærket hvert år de hjælpe med at sælge juletræer for gruppen. Første år får spejderne juletræet og de følgende år kan de få enten mærket med øksen eller mærket med spaden.
 
 ### Antal opgaver der skal løses for at gøre sig fortjent til mærket:
- • Familiespejdere og bævere (op til og med 1. klasse): 1 opgave
- • Ulve (2. og 3. klasse): 2 opgave
- • Junior og op (efter 3. klasse): 3 opgaver
+- Familiespejdere og bævere (op til og med 1. klasse): 1 opgave
+- Ulve (2. og 3. klasse): 2 opgave
+- Junior og op (efter 3. klasse): 3 opgaver
 
 ### Specifikationer
 Mærket sælges i tre dele, som kan købes enkeltvis. Hver del koster 15 kr.
