@@ -3,7 +3,7 @@ name: Ekspedition Esbjerg
 tags:
 - uofficielt
 image: ekspedition-esbjerg.jpg
-buylink: https://medlemsservice.spejdernet.dk/event/id/6602/register
+buylink: https://medlemsservice.spejdernet.dk/event/id/11319/register
 age: 10+
 date_added: 2023-05-18
 ---
