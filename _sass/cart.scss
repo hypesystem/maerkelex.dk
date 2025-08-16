@@ -19,6 +19,36 @@
   color: $darkorange;
 }
 
+.cart-adjust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  gap: 0.5rem;
+}
+
+.cart-adjust .cart-item__adjust-action {
+  cursor: pointer;
+  width: 2rem;
+  user-select: none;
+  text-align: center;
+  padding: 0.3rem 0.1rem;
+  border-radius: 0.3rem;
+  transition: 20ms;
+  background: transparent;
+  color: $blue;
+  border: 0.065rem solid $blue; 
+}
+
+.cart-adjust .cart-item__adjust-action:hover {
+  background: $blue--light;
+  color: white;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
 .cart__actions {
   margin-top: 20px;
 }
