@@ -4,10 +4,7 @@ tags:
 - uofficielt
 - hejk
 image: 2-kommuner-3km.jpg
-buylink: https://www.facebook.com/groups/spejdermaerker/permalink/3698259443739411/
-buylink_requires_facebook_group_membership:
-  name: Spejdermærker
-  url: https://www.facebook.com/groups/spejdermaerker/
+buylink: https://www.facebook.com/profile.php?id=100064659673091
 date_added: 2023-10-26
 age: 6+
 ---
