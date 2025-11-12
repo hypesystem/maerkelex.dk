@@ -3,7 +3,7 @@ name: Mørkemærket
 tags:
 - uofficielt
 image: moerkemaerket.jpg
-buylink: https://www.facebook.com/Stevns-Nord-Spejderm%C3%A6rker-100367819332328
+buylink: https://www.facebook.com/share/g/1LuAJhM1KJ/?mibextid=wwXIfr
 date_added: 2022-06-13
 age: 5-10
 ---

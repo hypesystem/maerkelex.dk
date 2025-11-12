@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - forløb
 image: troldejagt.jpg
-buylink: https://www.facebook.com/Stevns-Nord-Spejderm%C3%A6rker-100367819332328
+buylink: https://www.facebook.com/share/g/1LuAJhM1KJ/?mibextid=wwXIfr
 date_added: 2022-02-06
 ---
 Mærket er udarbejdet efter aftale og i samarbejde med kunstneren Thomas Dambo, der står bag troldene bygget af genbrugsmateriale, der er at finde både i ind- og udland. I kan læse meget mere om troldene her:
