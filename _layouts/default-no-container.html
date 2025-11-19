@@ -29,8 +29,12 @@
         <meta name="apple-mobile-web-app-title" content="M&aelig;rkelex">
         <meta name="application-name" content="M&aelig;rkelex">
         <meta name="theme-color" content="#f5f5f5">
+        <script src="{{ site.baseurl }}/js/raw-search.js" defer></script>
+        <script src="{{ site.baseurl }}/js/header-scroll.js" defer></script>
+        <script src="{{ site.baseurl }}/js/cookie.js" defer></script>
         <script>{% include owbs.min.js %}</script>
         <script>owbs.val.cart = owbs.val.cart || [];</script>
+        <script src="https://unpkg.com/@hotwired/turbo@7.1.0/dist/turbo.es2017-esm.js" type="module" defer></script>
         <script>/* SERVICE WORKER */
             if(navigator.serviceWorker) {
                 window.addEventListener("load", function() {
@@ -41,6 +45,21 @@
                     });
                 });
             }
+        </script>
+        <script>console.log("head scripts run");</script>
+        <script>
+            document.addEventListener('turbo:before-visit', (e) => console.log('turbo:before-visit', e));
+            document.addEventListener('turbo:visit', (e) => {
+                console.log('turbo:visit', e)
+            });
+            document.addEventListener('turbo:before-render', (e) => console.log('turbo:before-render', e));
+            document.addEventListener('turbo:render', (e) => {
+                console.log('turbo:render', e)
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                    console.log("didscroll(1)");
+                }, 500);
+            });
         </script>
         <script>
             function debounced(fun, timeout) {
@@ -67,8 +86,5 @@
             {{content}}
         </main>
         {% include footer.html %}
-        <script src="{{ site.baseurl }}/js/raw-search.js" defer></script>
-        <script src="{{ site.baseurl }}/js/header-scroll.js" defer></script>
-        <script src="{{ site.baseurl }}/js/cookie.js" defer></script>
     </body>
 </html>
