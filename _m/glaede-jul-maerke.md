@@ -14,4 +14,4 @@ Mærket kan tages af alle aldersgrupper. Der skal måske lidt forklarings hjælp
 Tidsrammen for at tage "Glæde Jul" mærket er fra 1. december til og med 25. december. 
 Der må gerne byttes om på rækkefølgen af opgaverne, hvis det ikke passer ind, men helst én god gerning pr. dag, ligesom låger i en julekalender.
 
-Ved betaling af mærket sendes "Glæde Jul" kalenderen over de gode gerninger på en pdf, så den kan printes ud (eller sendes) til de, som vil tage mærket.
+Glæde-Jul kalenderen hentes på bestillings siden; den ligger som kommentar under selve Mærket.
