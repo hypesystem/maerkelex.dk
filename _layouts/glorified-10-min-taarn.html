@@ -40,12 +40,14 @@ bodyClass: glorified glorified-white
             </div>
             <script>
                 (function() {
-                    let header = document.querySelector("header");
-                    header.classList.add("header--hide");
-                    header.classList.remove("header--show");
+                    setTimeout(function() {
+                        let header = document.querySelector("header");
+                        header.classList.add("header--hide");
+                        header.classList.remove("header--show");
+                    }, 500);
                 })();
             </script>
-        </div>
+        </div>  
         <div class="main-maerke-content" id="badge-info">
             <div class="page-description-color">
                 {{ page.description }}
