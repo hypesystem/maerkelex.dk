@@ -3,7 +3,7 @@ name: Faste&shy;lavns-mærke
 tags:
 - uofficielt
 image: fastelavns-maerke.jpg
-buylink: https://medlem.dds.dk/event/id/31284/register
+buylink: https://hjemmespejd.dk/badge
 date_added: 2022-01-10
 ---
 DDS Stenlænderne udviklede til deres fastelavn-hver-for-sig 2021 et fastelavns mærke.
