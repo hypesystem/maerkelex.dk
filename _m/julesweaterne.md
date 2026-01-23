@@ -18,5 +18,5 @@ Der er intet minimumskrav om hvor mange forskellige sweatre man skal bære, men 
 
 Hvis man går med 24 forskellige julesweatre i december må man sy et X over mærket. 
 
-Mærket koster 25 kr og 20 kr for fragt.
+Mærket koster 25 kr pr mærke + porto.
 
