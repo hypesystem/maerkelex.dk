@@ -17,4 +17,4 @@ Du skal gå med julesokker fra d. 1/12 til d. 24/12. Det skal minimum være 4 fo
 
 Hvis man går med 24 forskellige julesokker i december må man sy et X over mærket. 
 
-Mærket koster 25 kr og 20 kr for fragt.
+Mærket koster 25 kr pr mærke + porto.
