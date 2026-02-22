@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/hypesystem/maerkelex.dk#readme",
   "dependencies": {
-    "owbs": "^0.2.7"
+    "owbs": "^0.3.1"
   }
 }
