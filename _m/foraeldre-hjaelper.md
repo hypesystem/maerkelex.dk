@@ -3,7 +3,7 @@ name: Forældrehjælper
 tags:
 - uofficielt
 image: foraeldre-hjaelper.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2024-05-28
 ---
 ### Beskrivelse

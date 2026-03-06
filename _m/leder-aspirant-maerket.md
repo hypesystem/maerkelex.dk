@@ -3,7 +3,7 @@ name: Leder-aspirantmærket
 tags:
 - uofficielt
 image: leder-aspirant-maerke.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2019-09-11
 ---
 Som leder kender du sikkert alt til den værdi det giver dig at være leder for en flok spejdere.

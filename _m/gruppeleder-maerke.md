@@ -3,7 +3,7 @@ name: GruppeLEDER
 tags:
 - uofficielt
 image: gruppeLEDER.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 ---
 ### Formål 
 I gruppen kan der være mange ledere tilknyttet.

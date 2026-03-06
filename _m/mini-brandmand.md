@@ -3,7 +3,7 @@ name: Mini Brandmand
 tags:
 - uofficielt
 image: mini-brandslukker.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2023-01-09
 ---
 Tid: 2-3 møder eller en tur/overnatning.

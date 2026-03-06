@@ -3,7 +3,7 @@ name: Ledermærket
 tags:
 - uofficielt
 image: leder-maerke.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2019-09-11
 ---
 I gruppen kan der være mange spejdere tilknyttet - store som små.

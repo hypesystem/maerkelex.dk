@@ -3,7 +3,7 @@ name: Faconmærket
 tags:
 - uofficielt
 image: facon.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2019-09-11
 ---
 Spejdermærket "Faconmærket" er udviklet efter ønske om en mere vegansk tilgang til madlavningen.

@@ -4,7 +4,7 @@ tags:
 - uofficielt
 - duelighed
 image: rengoering.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2020-02-09
 ---
 Du kender det sikkert, der skal gøres rent og du bruger en del tid på at måtte forklare ungerne hvordan der

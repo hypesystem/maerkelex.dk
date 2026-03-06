@@ -7,7 +7,7 @@ tags:
 age: 8+
 coverimage: cover-tent.jpg
 image: kitkat.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2019-08-19
 ---
 Der er mange grupper der bruger de nye nylon tunnel telte. Begejstringen for de gamle KITKAT telte kan måske fornyes med dette mærke.
