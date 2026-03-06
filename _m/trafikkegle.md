@@ -3,7 +3,7 @@ name: Trafikkegle
 tags:
 - uofficielt
 image: trafikkegle.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 age: 3-10
 date_added: 2023-01-09
 ---

@@ -3,7 +3,7 @@ name: Familiekok
 tags:
 - uofficielt
 image: familiekok.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2023-01-09
 ---
 Tid: 3 møder

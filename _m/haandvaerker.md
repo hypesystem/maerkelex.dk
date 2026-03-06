@@ -3,7 +3,7 @@ name: Håndværker
 tags:
 - uofficielt
 image: haandvaerker.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2022-09-19
 ---
 Håndværker – hvad er det egentlig?

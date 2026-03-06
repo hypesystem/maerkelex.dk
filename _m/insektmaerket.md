@@ -3,7 +3,7 @@ name: Insektmærket
 tags:
 - uofficielt
 image: insektmaerket.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2019-09-11
 ---
 Insektet mærket er et mærke, som indbyder til fælles oplevelser, som for de fleste er helt ukendt.

@@ -3,7 +3,7 @@ name: Æg-cellente
 tags:
 - uofficielt
 image: aeg-cellente.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2019-09-11
 ---
 Æg-cellente er for jer der bare elsker æg.

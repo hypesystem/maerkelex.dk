@@ -6,7 +6,7 @@ tags:
 age: 12+
 coverimage: cover-knot.jpg
 image: koekkenbord.jpg
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 date_added: 2019-08-19
 ---
 Begejstringen for flotte og korrekte besnørringer kan måske hjælpes lidt på vej med dette mærke.

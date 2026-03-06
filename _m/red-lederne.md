@@ -4,7 +4,7 @@ tags:
 - uofficielt
 image: red-lederne.jpg
 date_added: 2022-09-20
-buylink: https://www.herfoelgespejderne.dk/maerker
+buylink: https://shop.herfoelgespejderne.dk/
 age: 10-12
 ---
 "Red lederne!" er et overraskelsesløb, som Herfølgespejderne har udsat juniorne for som en træning i at løse opgaver mere selvstændigt. Idéen med løbet er, at lederne ikke er til stede, og spejderne derfor selv skal finde ud af at organisere sig som en patrulje og gennemføre løbet. Løbet kan naturligvis tilrettelægges, så ens egne spejdere bliver presset tilpas udenfor deres comfort zone. Mødet kan afsluttes med en snak om, hvad spejderne har lært om sig selv og som patrulje.
