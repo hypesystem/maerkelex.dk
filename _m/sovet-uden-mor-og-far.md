@@ -7,7 +7,7 @@ age: 3+
 image: sovet-uden-mor-og-far.jpg
 coverimage: cover-sleepy.jpg
 date_added: 2021-12-21
-buylink: https://www.spejderne-holeby.dk/begivenhed/maerke-salg
+buylink: https://xn--mrkeshop-j0a.dk/
 ---
 Jeg har sovet uden mor og far mærket, er lavet til Mikro og Mini spejdere. Der har overnattet første gang.
 
