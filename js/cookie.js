@@ -64,6 +64,10 @@ function loadFathom() {
     })(document, window, '//analytics.xn--mrkelex-mxa.dk/tracker.js', 'fathom');
     fathom('set', 'siteId', 'UHLDU');
     fathom('trackPageview');
+
+    document.addEventListener('turbo:load', function(e) {
+        fathom('trackPageview');
+    });
 }
 
 function showWelcomeMessage() {
