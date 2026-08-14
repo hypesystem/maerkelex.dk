@@ -5,7 +5,7 @@ tags:
 - forløb
 - rollespil
 image: rollespejd-guld.jpg
-price: 20
+buylink: https://www.skjoldborgen.dk/rollespejd-maerkerne
 date_added: 2019-04-02
 ---
 {% include rollespejd-decription.md %}
