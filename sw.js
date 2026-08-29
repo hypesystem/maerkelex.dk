@@ -1,12 +1,13 @@
 ---
 ---
-{% capture cacheName %}maerkelex-cache-v1.0.1-{{ site.time | replace: ' ', '-' | replace: ':', '-' | replace: '+', '' }}{% endcapture %}
+{% capture cacheName %}maerkelex-cache-v1.1.0-{{ site.time | replace: ' ', '-' | replace: ':', '-' | replace: '+', '' }}{% endcapture %}
 self.addEventListener("install", function(e) {
     e.waitUntil(
         caches
             .open("{{ cacheName }}")
             .then(function(cache) {
                 return cache.addAll([
+                    "{{ site.baseUrl }}",
                     "{{ site.baseUrl }}/",
                     "{{ site.baseUrl }}/manifest.json",
                     "{{ site.baseUrl }}/faq/",
@@ -14,6 +15,9 @@ self.addEventListener("install", function(e) {
                     "{{ site.baseUrl }}/img/hvem-er.jpg",
                     "{{ site.baseUrl }}/reklamer/",
                     "{{ site.baseUrl }}/blog/",
+                    "{{ site.baseUrl }}/shop/",
+                    "{{ site.baseUrl }}/kurv/",
+                    "{{ site.baseUrl }}/nyeste-maerker/",
                     "{{ site.baseUrl }}/font/OpenSans-Regular.ttf",
                     "{{ site.baseUrl }}/font/OpenSans-Light.ttf",
                     "{{ site.baseUrl }}/img/logo.svg",
@@ -53,10 +57,16 @@ self.addEventListener("fetch", function(e) {
         caches
             .open("{{ cacheName }}")
             .then(function(cache) {
+                const networkResponsePromise = fetch(e.request);
+
+                e.waitUntil(networkResponsePromise.then(function(networkResponse) {
+                    return cache.put(e.request, networkResponse.clone());
+                }));
+
                 return cache
                     .match(e.request)
                     .then(function(response) {
-                        return response || fetch(e.request);
+                        return response || networkResponsePromise;
                     });
             })
     );
