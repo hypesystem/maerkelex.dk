@@ -3,7 +3,7 @@ name: Tag en ven med
 tags:
 - uofficielt
 image: tag-en-ven-med.jpg
-buylink: https://soenderborg.gruppesite.dk/maerker/
+buylink: https://soenderborg.kfumspejder.dk/maerker/
 date_added: 2024-01-23
 ---
 Tag en ven med mærket kan gives til en spejder, der har haft en ven med til et spejdermøde,

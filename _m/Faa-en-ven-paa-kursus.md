@@ -3,7 +3,7 @@ name: Få en ven på kursus
 tags:
 - uofficielt
 image: faa-en-ven-paa-kursus.jpg
-buylink: https://soenderborg.gruppesite.dk/maerker/
+buylink: https://soenderborg.kfumspejder.dk/maerker/
 date_added: 2026-01-14
 ---
 ### Beskrivelse

@@ -3,7 +3,7 @@ name: Selvstændig patrulje
 tags:
 - uofficielt
 image: selvstaendig-patrulje.jpg
-buylink: https://soenderborg.gruppesite.dk/maerker/
+buylink: https://soenderborg.kfumspejder.dk/maerker/
 date_added: 2025-06-05
 ---
 ### Beskrivelse
